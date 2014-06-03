@@ -107,3 +107,7 @@ set sidescroll=1
 if filereadable(expand("~/.vim/bundle/.installed"))
   so ~/.vim/settings.vim
 endif
+
+if filereadable(expand("~/.vimrc.local"))
+  so ~/.vimrc.local
+endif

@@ -4,6 +4,4 @@ if exists('loaded_gundo')
 
     " a little wider for wider screens
     let g:gundo_width = 60
-elseif exists('g:loaded_undotree')
-    let g:undotree_WindowLayout = 3
 end

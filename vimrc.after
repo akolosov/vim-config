@@ -93,6 +93,8 @@ if exists('loaded_gundo')
     map <C-z> <Esc>:GundoToggle<CR>
 elseif exists('g:loaded_undotree')
     map <C-z> <Esc>:UndotreeToggle<CR>
+    let g:undotree_WindowLayout = 3
+    let g:undotree_SplitWidth = 50
 endif
 
 map <C-b> <Esc>:YRShow<CR>

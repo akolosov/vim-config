@@ -64,7 +64,7 @@ upgrade_repo() {
 
       if [ "$1" = "$app_name" ]; then
           cd "$app_dir" &&
-          git pull origin "$git_branch"
+          git pull origin
       fi
 
       if [ "$1" = "vundle" ]; then

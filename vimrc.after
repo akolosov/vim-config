@@ -58,8 +58,26 @@ nmap ,/ <ESC>:TComment<CR>
 vmap ,/ <ESC>:TComment<CR>
 map ,/ <ESC>:TComment<CR>
 
-map <END> <ESC>A
-map <HOME> <ESC>I
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V> "+gP
+map <S-Insert> "+gP
+
+cmap <C-V> <C-R>+
+cmap <S-Insert> <C-R>+
+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+imap <S-Insert> <C-V>
+vmap <S-Insert> <C-V>
 
 imap <S-Tab> <Esc><<i
 nmap <S-Tab> <<

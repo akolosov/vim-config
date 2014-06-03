@@ -3,29 +3,22 @@
 app_name='vim-config'
 app_dir="$HOME/.vim"
 [ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-config.git'
-debug_mode='0'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
 
 ############################  BASIC SETUP TOOLS
 msg() {
-    printf '%b\n' "$1" >&2
+    echo "$1" >&2
 }
 
 success() {
     if [ "$ret" -eq '0' ]; then
-    msg "[✔] - ${1}${2}"
+        msg "[SUCCESS] - ${1}${2}"
     fi
 }
 
 error() {
-    msg "[✘] - ${1}${2}"
+    msg "[ERROR] - ${1}${2}"
     exit 1
-}
-
-debug() {
-    if [ "$debug_mode" -eq '1' ] && [ "$ret" -gt '1' ]; then
-      msg "An error occurred in function \"${FUNCNAME[$i+1]}\" on line ${BASH_LINENO[$i+1]}, we're sorry for that."
-    fi
 }
 
 program_exists() {
@@ -39,18 +32,6 @@ program_exists() {
 }
 
 ############################ SETUP FUNCTIONS
-
-do_backup() {
-    if [ -e "$2" ] || [ -e "$3" ] || [ -e "$4" ]; then
-        today=`date +%Y%m%d_%s`
-        for i in "$2" "$3" "$4"; do
-            [ -e "$i" ] && [ ! -L "$i" ] && mv "$i" "$i.$today";
-        done
-        ret="$?"
-        success "$1"
-        debug
-   fi
-}
 
 upgrade_repo() {
       msg "trying to update $1"
@@ -67,7 +48,6 @@ upgrade_repo() {
 
       ret="$?"
       success "$2"
-      debug
 }
 
 clone_repo() {
@@ -77,7 +57,6 @@ clone_repo() {
         git clone --recursive "$git_uri" "$app_dir"
         ret="$?"
         success "$1"
-        debug
     else
         upgrade_repo "$app_name"    "Successfully updated $app_name"
     fi
@@ -87,11 +66,10 @@ clone_vundle() {
     if [ ! -e "$HOME/.vim/bundle/vundle" ]; then
         git clone $VUNDLE_URI "$HOME/.vim/bundle/vundle"
     else
-        upgrade_repo "vundle"   "Successfully updated vundle"
+        upgrade_repo "vundle" "Successfully updated vundle"
     fi
     ret="$?"
     success "$1"
-    debug
 }
 
 create_symlinks() {
@@ -105,7 +83,6 @@ create_symlinks() {
 
     ret="$?"
     success "$1"
-    debug
 }
 
 setup_vundle() {
@@ -121,23 +98,17 @@ setup_vundle() {
     export SHELL="$system_shell"
 
     success "$1"
-    debug
 }
 
 ############################ MAIN()
 program_exists "vim" "To install $app_name you first need to install Vim."
 
-do_backup   "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" \
-        "$HOME/.vim" \
-        "$HOME/.vimrc" \
-        "$HOME/.gvimrc"
-
-clone_repo      "Successfully cloned $app_name"
+clone_repo "Successfully cloned $app_name"
 
 create_symlinks "Setting up vim symlinks"
 
-clone_vundle    "Successfully cloned vundle"
+clone_vundle "Successfully cloned vundle"
 
-setup_vundle    "Now updating/installing plugins using Vundle"
+setup_vundle "Now updating/installing plugins using Vundle"
 
-msg             "© `date +%Y` http://akolosov.github.io/"
+msg "(C) by http://akolosov.github.io/"

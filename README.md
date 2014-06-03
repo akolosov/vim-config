@@ -8,4 +8,4 @@ To install just run in terminal:
     curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - | sh
 ```
 
-... wait till success installed and have fun!
+... wait until successfully installed and have fun with VIM!

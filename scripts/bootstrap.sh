@@ -81,7 +81,7 @@ clone_repo() {
     program_exists "git" "Sorry, we cannot continue without GIT, please install it first."
 
     if [ ! -e "$app_dir" ]; then
-        git clone --recursive -b "$git_branch" "$git_uri" "$app_dir"
+        git clone --recursive "$git_uri" "$app_dir"
         ret="$?"
         success "$1"
         debug
@@ -112,25 +112,6 @@ create_symlinks() {
     lnif "$endpath/.vimrc.after, "      "$HOME/.vimrc.after"
     lnif "$endpath/.vimrc.before"       "$HOME/.vimrc.before"
 
-    # Useful for fork maintainers
-    touch  "$HOME/.vimrc.local"
-
-    if [ -e "$endpath/.vimrc.fork" ]; then
-        ln -sf "$endpath/.vimrc.fork" "$HOME/.vimrc.fork"
-    elif [ "$fork_maintainer" -eq '1' ]; then
-        touch "$HOME/.vimrc.fork"
-        touch "$HOME/.vimrc.after.fork"
-        touch "$HOME/.vimrc.before.fork"
-    fi
-
-    if [ -e "$endpath/.vimrc.bundles.fork" ]; then
-        ln -sf "$endpath/.vimrc.after.fork" "$HOME/.vimrc.after.fork"
-    fi
-
-    if [ -e "$endpath/.vimrc.before.fork" ]; then
-        ln -sf "$endpath/.vimrc.before.fork" "$HOME/.vimrc.before.fork"
-    fi
-
     ret="$?"
     success "$1"
     debug
@@ -141,7 +122,6 @@ setup_vundle() {
     export SHELL='/bin/sh'
 
     vim \
-        -u "$HOME/.vimrc.bundles" \
         "+set nomore" \
         +BundleInstall! \
         +BundleClean \

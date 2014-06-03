@@ -89,7 +89,11 @@ map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
 imap <A-left> <Esc>gTi
 
-map <C-Z> <Esc>:GundoToggle<CR>
+map <C-z> <Esc>:GundoToggle<CR>
+
+map <C-b> <Esc>:YRShow<CR>
+map <C-e> <Esc>:tabnew<CR>
+map ,n <Esc>:tabnew<CR>
 
 if has("gui_running")
   if has("gui_gtk2")

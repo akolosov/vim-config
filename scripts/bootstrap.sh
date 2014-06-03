@@ -72,11 +72,16 @@ clone_vundle() {
     success "$1"
 }
 
-create_symlinks() {
+create_dirs() {
     if [ ! -d "$app_dir/bundle" ]; then
         mkdir -p "$app_dir/bundle"
     fi
 
+    ret="$?"
+    success "$1"
+}
+
+create_symlinks() {
     ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
     ln -sf "$app_dir/vimrc.after" "$HOME/.vimrc.after"
     ln -sf "$app_dir/vimrc.before" "$HOME/.vimrc.before"
@@ -106,10 +111,12 @@ program_exists "vim" "To install $app_name you first need to install Vim."
 
 clone_repo "Successfully cloned $app_name"
 
-create_symlinks "Setting up vim symlinks"
+create_dirs "Setting up vim dirs"
 
 clone_vundle "Successfully cloned vundle"
 
 setup_vundle "Now updating/installing plugins using Vundle"
 
-msg "(C) by http://akolosov.github.io/"
+create_symlinks "Setting up vim symlinks"
+
+success "$app_name installed. For more information - http://akolosov.github.io/"

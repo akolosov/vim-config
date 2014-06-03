@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ############################  SETUP PARAMETERS
-app_name='vim-config'
+app_name='VIM-config'
 app_dir="$HOME/.vim"
 [ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-config.git'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
@@ -77,14 +77,17 @@ create_dirs() {
         mkdir -p "$app_dir/bundle"
     fi
 
+    ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
+
     ret="$?"
     success "$1"
 }
 
 create_symlinks() {
-    ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
     ln -sf "$app_dir/vimrc.after" "$HOME/.vimrc.after"
     ln -sf "$app_dir/vimrc.before" "$HOME/.vimrc.before"
+
+    touch "$HOME/.vim/bundle/.installed"
 
     ret="$?"
     success "$1"
@@ -94,12 +97,7 @@ setup_vundle() {
     system_shell="$SHELL"
     export SHELL='/bin/sh'
 
-    vim \
-        -u "$HOME/.vim/bundles.vim" \
-        "+set nomore" \
-        +BundleInstall! \
-        +BundleClean \
-        +qall
+    vim --noplugin +BundleInstall! +BundleClean +qall
 
     export SHELL="$system_shell"
 

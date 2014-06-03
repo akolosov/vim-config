@@ -90,6 +90,7 @@ setup_vundle() {
     export SHELL='/bin/sh'
 
     vim \
+        -u "$HOME/.vim/bundles.vim" \
         "+set nomore" \
         +BundleInstall! \
         +BundleClean \

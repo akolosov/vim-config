@@ -17,7 +17,7 @@ call vundle#rc()
 " let Vundle manage Vundle (required)
 Bundle "gmarik/vundle"
 
-" YADR's vundles are split up by category into smaller files
+" Vundles are split up by category into smaller files
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
 runtime ruby.vundle
@@ -29,10 +29,10 @@ runtime search.vundle
 runtime project.vundle
 runtime vim-improvements.vundle
 
-" The plugins listed in ~/.vim/.vundles.local will be added here to
+" The plugins listed in ~/.vim/vundles/local.vundle will be added here to
 " allow the user to add vim plugins to yadr without the need for a fork.
-if filereadable(expand("~/.vim/.vundles.local"))
-  source ~/.vim/.vundles.local
+if filereadable(expand("~/.vim/vundles/local.vundle"))
+  source ~/.vim/vundles/local.vundle
 endif
 
 "Filetype plugin indent on is required by vundle

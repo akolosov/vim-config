@@ -1,0 +1,81 @@
+set expandtab
+set mouse=a
+
+set ic                                              " игнорировать регистр при поиске
+set hls                                             " подсвечивать поиск
+set is                                              " использовать инкрементальный поиск
+
+set linebreak                                       " перенос по словам, а не по буквам
+set dy=lastline
+
+set encoding=utf-8                                  " set charset translation encoding
+set termencoding=utf-8                              " set terminal encoding
+set fileencoding=utf-8                              " set save encoding
+set fileencodings=utf8,koi8r,cp1251,cp866           " список предполагаемых кодировок, в порядке предпочтения
+
+set foldcolumn=5
+
+set autochdir
+
+imap <F2> <Esc>:w<CR>
+map  <F2> <Esc>:w<CR>
+
+imap <C-F2> <Esc>:wa<CR>
+map  <C-F2> <Esc>:wa<CR>
+
+map <C-y> <ESC>dd
+imap <C-y> <ESC>dd
+
+map <C-k> <ESC>d$
+imap <C-k> <ESC>d$
+
+map <C-w> <ESC>dw
+imap <C-w> <ESC>dw
+
+nmap ,qa :qa<CR>
+vmap ,qa <ESC>:qa<CR>
+map ,qa <ESC>:qa<CR>
+
+nmap ,qq <ESC>:qa!<CR>
+imap ,qq <ESC>:qa!<CR>
+vmap ,qq <ESC>:qa!<CR>
+map ,qq <ESC>:qa!<CR>
+
+nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
+imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
+
+nmap <F8> :TagbarToggle<CR>
+
+nmap ,t <ESC>:NERDTreeToggle<CR>
+vmap ,t <ESC>:NERDTreeToggle<CR>
+map ,t <ESC>:NERDTreeToggle<CR>
+
+imap <C-t> <ESC>:NERDTreeToggle<CR>
+nmap <C-t> <ESC>:NERDTreeToggle<CR>
+vmap <C-t> <ESC>:NERDTreeToggle<CR>
+
+nmap ,/ <ESC>:TComment<CR>
+vmap ,/ <ESC>:TComment<CR>
+map ,/ <ESC>:TComment<CR>
+
+map <END> <ESC>A
+map <HOME> <ESC>I
+
+imap <S-Tab> <Esc><<i
+nmap <S-Tab> <<
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Anonymous\ Pro\ 12
+  elseif has("gui_macvim")
+    set guifont=Anonymous\ Pro:h14
+  endif
+endif
+
+let g:gitgutter_sign_column_always = 1
+
+syntax enable
+set background=dark
+colorscheme distinguished
+
+redraw!

@@ -44,15 +44,15 @@ map ,qq <ESC>:qa!<CR>
 nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
 imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
 
-nmap <F8> :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>
 
-nmap ,t <ESC>:NERDTreeToggle<CR>
-vmap ,t <ESC>:NERDTreeToggle<CR>
-map ,t <ESC>:NERDTreeToggle<CR>
+nmap ,d <ESC>:NERDTreeToggle<CR>
+vmap ,d <ESC>:NERDTreeToggle<CR>
+map ,d <ESC>:NERDTreeToggle<CR>
 
-imap <C-t> <ESC>:NERDTreeToggle<CR>
-nmap <C-t> <ESC>:NERDTreeToggle<CR>
-vmap <C-t> <ESC>:NERDTreeToggle<CR>
+imap <C-d> <ESC>:NERDTreeToggle<CR>
+nmap <C-d> <ESC>:NERDTreeToggle<CR>
+vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
 nmap ,/ <ESC>:TComment<CR>
 vmap ,/ <ESC>:TComment<CR>

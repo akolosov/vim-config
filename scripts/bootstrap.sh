@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 ############################  SETUP PARAMETERS
-app_name='vim-conf'
+app_name='vim-config'
 app_dir="$HOME/.vim"
-[ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-conf.git'
+[ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-config.git'
 debug_mode='0'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
 

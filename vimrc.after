@@ -84,6 +84,9 @@ vmap <S-Tab> <
 imap <S-Tab> <Esc><<i
 nmap <S-Tab> <<
 
+map <A-right> <Esc>gt
+map <A-left> <Esc>gT
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Anonymous\ Pro\ 12

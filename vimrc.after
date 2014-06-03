@@ -86,6 +86,8 @@ nmap <S-Tab> <<
 
 map <A-right> <Esc>gt
 map <A-left> <Esc>gT
+imap <A-right> <Esc>gti
+imap <A-left> <Esc>gTi
 
 if has("gui_running")
   if has("gui_gtk2")

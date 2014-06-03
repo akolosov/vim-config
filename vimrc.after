@@ -89,6 +89,8 @@ map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
 imap <A-left> <Esc>gTi
 
+map <C-Z> <Esc>:GundoToggle<CR>
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Anonymous\ Pro\ 12

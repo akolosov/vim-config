@@ -5,4 +5,5 @@ tags
 view
 bundle/*
 backups/*
+sessions/*
 vundles/local.vundle

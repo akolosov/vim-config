@@ -89,9 +89,14 @@ map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
 imap <A-left> <Esc>gTi
 
-map <C-z> <Esc>:GundoToggle<CR>
+if exists('loaded_gundo')
+    map <C-z> <Esc>:GundoToggle<CR>
+elseif exists('g:loaded_undotree')
+    map <C-z> <Esc>:UndotreeToggle<CR>
+endif
 
 map <C-b> <Esc>:YRShow<CR>
+
 map <C-e> <Esc>:tabnew<CR>
 map ,n <Esc>:tabnew<CR>
 

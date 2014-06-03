@@ -13,12 +13,12 @@ msg() {
 
 success() {
     if [ "$ret" -eq '0' ]; then
-    msg "\e[32m[✔]\e[0m ${1}${2}"
+    msg "[✔] - ${1}${2}"
     fi
 }
 
 error() {
-    msg "\e[31m[✘]\e[0m ${1}${2}"
+    msg "[✘] - ${1}${2}"
     exit 1
 }
 
@@ -140,5 +140,4 @@ clone_vundle    "Successfully cloned vundle"
 
 setup_vundle    "Now updating/installing plugins using Vundle"
 
-msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://akolosov.github.io/"

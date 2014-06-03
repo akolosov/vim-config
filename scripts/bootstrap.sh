@@ -39,13 +39,6 @@ program_exists() {
 }
 
 ############################ SETUP FUNCTIONS
-lnif() {
-    if [ -e "$1" ]; then
-        ln -sf "$1" "$2"
-    fi
-    ret="$?"
-    debug
-}
 
 do_backup() {
     if [ -e "$2" ] || [ -e "$3" ] || [ -e "$4" ]; then
@@ -106,9 +99,9 @@ create_symlinks() {
         mkdir -p "$app_dir/bundle"
     fi
 
-    lnif "$app_dir/.vimrc"              "$HOME/.vimrc"
-    lnif "$app_dir/.vimrc.after, "      "$HOME/.vimrc.after"
-    lnif "$app_dir/.vimrc.before"       "$HOME/.vimrc.before"
+    ln -sf "$app_dir/.vimrc" "$HOME/.vimrc"
+    ln -sf "$app_dir/.vimrc.after" "$HOME/.vimrc.after"
+    ln -sf "$app_dir/.vimrc.before" "$HOME/.vimrc.before"
 
     ret="$?"
     success "$1"

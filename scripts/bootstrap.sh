@@ -99,9 +99,9 @@ create_symlinks() {
         mkdir -p "$app_dir/bundle"
     fi
 
-    ln -sf "$app_dir/.vimrc" "$HOME/.vimrc"
-    ln -sf "$app_dir/.vimrc.after" "$HOME/.vimrc.after"
-    ln -sf "$app_dir/.vimrc.before" "$HOME/.vimrc.before"
+    ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
+    ln -sf "$app_dir/vimrc.after" "$HOME/.vimrc.after"
+    ln -sf "$app_dir/vimrc.before" "$HOME/.vimrc.before"
 
     ret="$?"
     success "$1"

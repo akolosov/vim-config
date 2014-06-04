@@ -1,6 +1,6 @@
 Bundle "chrisbra/color_highlight.git"
 Bundle "itchyny/lightline.vim"
+Bundle "bling/vim-airline"
 Bundle "jby/tmux.vim.git"
-Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
 Bundle 'akolosov/vim-colors'

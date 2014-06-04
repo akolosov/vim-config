@@ -17,10 +17,10 @@ set foldcolumn=5
 
 set autochdir
 
-imap <F2> <Esc>:w<CR>
+imap <F2> <Esc>:w<CR>i
 map  <F2> <Esc>:w<CR>
 
-imap <C-F2> <Esc>:wa<CR>
+imap <C-F2> <Esc>:wa<CR>i
 map  <C-F2> <Esc>:wa<CR>
 
 map <C-y> <ESC>dd

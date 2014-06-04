@@ -1,1 +1,2 @@
-nnoremap <silent> <Leader><Space> :Goyo<CR>
+nnoremap <silent> <Leader><Space> :Goyo<CR>:NERDTreeClose<CR>
+

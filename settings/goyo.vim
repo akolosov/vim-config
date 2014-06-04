@@ -1,3 +1,5 @@
+let g:goyo_width = 120
+
 function! s:GoGoyo()
     execute 'Goyo'
     if exists('#goyo') == 1

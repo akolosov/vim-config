@@ -24,13 +24,13 @@ imap <C-F2> <Esc>:wa<CR>i
 map  <C-F2> <Esc>:wa<CR>
 
 map <C-y> <ESC>dd
-imap <C-y> <ESC>dd
+imap <C-y> <ESC>ddi
 
 map <C-k> <ESC>d$
-imap <C-k> <ESC>d$
+imap <C-k> <ESC>d$i
 
 map <C-w> <ESC>dw
-imap <C-w> <ESC>dw
+imap <C-w> <ESC>dwi
 
 nmap ,qa :qa<CR>
 vmap ,qa <ESC>:qa<CR>
@@ -45,7 +45,7 @@ vmap ,wq <ESC>:wqa!<CR>
 map ,wq <ESC>:wqa!<CR>
 
 nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
-imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
+imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>i
 
 nmap <C-t> :TagbarToggle<CR>
 

@@ -84,10 +84,10 @@ nmap <Leader>t<Space> :Tab / <CR>
 " imap <C-_> <ESC>:TComment<CR>i
 " map <C-_> <ESC>:TComment<CR>
 
-nmap <C-_> <ESC>:NERDComToggleComment<CR>
-vmap <C-_> <ESC>:NERDComToggleComment<CR>
-imap <C-_> <ESC>:NERDComToggleComment<CR>i
-map <C-_> <ESC>:NERDComToggleComment<CR>
+nmap <C-_> <plug>NERDComToggleComment<CR>
+vmap <C-_> <plug>NERDComToggleComment<CR>
+imap <C-_> <plug>NERDComToggleComment<CR>i
+map <C-_> <plug>NERDComToggleComment<CR>
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x

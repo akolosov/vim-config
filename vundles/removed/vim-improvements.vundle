@@ -1,0 +1,2 @@
+Bundle "vim-scripts/AnsiEsc.vim.git"
+Bundle "goldfeld/ctrlr.vim"

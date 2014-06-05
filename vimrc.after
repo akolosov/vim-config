@@ -66,6 +66,8 @@ imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>i
 
 nmap <C-t> :TagbarToggle<CR>
 
+nmap <C-g> :Gitv<CR>
+
 imap <C-d> <ESC>:NERDTreeToggle<CR>
 nmap <C-d> <ESC>:NERDTreeToggle<CR>
 vmap <C-d> <ESC>:NERDTreeToggle<CR>

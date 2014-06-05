@@ -83,8 +83,8 @@ nmap <Leader>t\ :Tab /\|<CR>
 nmap <Leader>t<Space> :Tab / <CR>
 
 nmap <C-_> <ESC>:TComment<CR>
-vmap <C-_> <ESC>:TComment<CR>
-imap <C-_> <ESC>:TCommentBlock<CR>i
+vmap <C-_> <ESC>:TCommentBlock<CR>
+imap <C-_> <ESC>:TComment<CR>i
 map <C-_> <ESC>:TComment<CR>
 
 " CTRL-X and SHIFT-Del are Cut

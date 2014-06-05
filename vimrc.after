@@ -115,11 +115,7 @@ map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
 imap <A-left> <Esc>gTi
 
-if exists('loaded_gundo')
-    map <C-z> <Esc>:GundoToggle<CR>
-elseif exists('g:loaded_undotree')
-    map <C-z> <Esc>:UndotreeToggle<CR>
-endif
+map <C-z> <Esc>:UndotreeToggle<CR>
 
 map <C-b> <Esc>:YRShow<CR>
 

@@ -74,6 +74,11 @@ vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 
+nmap <Leader>t= :Tab /=<CR>
+nmap <Leader>t, :Tab /,<CR>
+nmap <Leader>t\ :Tab /\|<CR>
+nmap <Leader>t<Space> :Tab / <CR>
+
 nmap <C-_> <ESC>:TComment<CR>
 vmap <C-_> <ESC>:TComment<CR>
 imap <C-_> <ESC>:TComment<CR>i

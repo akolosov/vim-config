@@ -32,17 +32,17 @@ imap <C-k> <ESC>d$i
 map <C-w> <ESC>dw
 imap <C-w> <ESC>dwi
 
-nmap ,qa :qa<CR>
-vmap ,qa <ESC>:qa<CR>
-map ,qa <ESC>:qa<CR>
+nmap <Leader>qa :qa<CR>
+vmap <Leader>qa <ESC>:qa<CR>
+map <Leader>qa <ESC>:qa<CR>
 
-nmap ,qq :qa!<CR>
-vmap ,qq <ESC>:qa!<CR>
-map ,qq <ESC>:qa!<CR>
+nmap <Leader>qq :qa!<CR>
+vmap <Leader>qq <ESC>:qa!<CR>
+map <Leader>qq <ESC>:qa!<CR>
 
-nmap ,wq :wqa!<CR>
-vmap ,wq <ESC>:wqa!<CR>
-map ,wq <ESC>:wqa!<CR>
+nmap <Leader>wq :wqa!<CR>
+vmap <Leader>wq <ESC>:wqa!<CR>
+map <Leader>wq <ESC>:wqa!<CR>
 
 nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
 imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>i
@@ -53,9 +53,9 @@ imap <C-d> <ESC>:NERDTreeToggle<CR>
 nmap <C-d> <ESC>:NERDTreeToggle<CR>
 vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
-nmap ,/ <ESC>:TComment<CR>
-vmap ,/ <ESC>:TComment<CR>
-map ,/ <ESC>:TComment<CR>
+nmap <Leader>/ <ESC>:TComment<CR>
+vmap <Leader>/ <ESC>:TComment<CR>
+map <Leader>/ <ESC>:TComment<CR>
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
@@ -97,7 +97,7 @@ endif
 map <C-b> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
-map ,n <Esc>:tabnew<CR>
+map <Leader>n <Esc>:tabnew<CR>
 
 if has("gui_running")
   if has("gui_gtk2")

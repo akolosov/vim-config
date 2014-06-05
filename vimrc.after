@@ -110,5 +110,6 @@ endif
 syntax enable
 set background=dark
 colorscheme distinguished
+AirlineTheme wombat
 
 redraw!

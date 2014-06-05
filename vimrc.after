@@ -15,7 +15,13 @@ set fileencodings=utf8,koi8r,cp1251,cp866           " список предпо�
 
 set foldcolumn=5
 
+set t_Co=256
+
+set pastetoggle=<F3>
+
 set autochdir
+
+nnoremap ; :
 
 imap <F2> <Esc>:w<CR>i
 map  <F2> <Esc>:w<CR>
@@ -53,9 +59,12 @@ imap <C-d> <ESC>:NERDTreeToggle<CR>
 nmap <C-d> <ESC>:NERDTreeToggle<CR>
 vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
-nmap <Leader>/ <ESC>:TComment<CR>
-vmap <Leader>/ <ESC>:TComment<CR>
-map <Leader>/ <ESC>:TComment<CR>
+nmap <silent> <Leader>/ :nohlsearch<CR>
+
+nmap <C-_> <ESC>:TComment<CR>
+vmap <C-_> <ESC>:TComment<CR>
+imap <C-_> <ESC>:TComment<CR>i
+map <C-_> <ESC>:TComment<CR>
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x

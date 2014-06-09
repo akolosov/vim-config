@@ -18,6 +18,9 @@ set termencoding=utf-8                              " set terminal encoding
 set fileencoding=utf-8                              " set save encoding
 set fileencodings=utf8,koi8r,cp1251,cp866           " список предполагаемых кодировок, в порядке предпочтения
 
+set wildmenu                                        " Show list instead of just completing
+set wildmode=list:longest,full                      " Command <Tab> completion, list matches, then longest common part, then all.
+
 set foldcolumn=5
 
 set t_Co=256
@@ -85,10 +88,9 @@ nmap <Leader>t, :Tab /,<CR>
 nmap <Leader>t\ :Tab /\|<CR>
 nmap <Leader>t<Space> :Tab / <CR>
 
-nmap <C-_> <ESC>:TComment<CR>
-vmap <C-_> <ESC>:TComment<CR>
+nmap <C-_> :TComment<CR>
+vmap <C-_> :TComment<CR>
 imap <C-_> <ESC>:TComment<CR>i
-map <C-_> <ESC>:TComment<CR>
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x

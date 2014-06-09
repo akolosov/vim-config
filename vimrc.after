@@ -28,6 +28,12 @@ set autochdir
 
 set noshowmode
 
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+else
+  set clipboard=unnamed
+endif
+
 nnoremap ; :
 
 imap <F2> <Esc>:w<CR>i

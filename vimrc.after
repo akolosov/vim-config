@@ -70,6 +70,16 @@ nmap <Leader>qw :wqa!<CR>
 vmap <Leader>qw <ESC>:wqa!<CR>
 map <Leader>qw <ESC>:wqa!<CR>
 
+imap <F10> <ESC>:qa!<CR>
+nmap <F10> :qa!<CR>
+vmap <F10> <ESC>:qa!<CR>
+map <F10> <ESC>:qa!<CR>
+
+imap <S-F10> <ESC>:wqa!<CR>
+nmap <S-F10> :wqa!<CR>
+vmap <S-F10> <ESC>:wqa!<CR>
+map <S-F10> <ESC>:wqa!<CR>
+
 nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
 imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>i
 

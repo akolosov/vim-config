@@ -153,4 +153,6 @@ set background=dark
 colorscheme distinguished
 AirlineTheme wombat
 
+autocmd vimenter * if !argc() | NERDTree | endif
+
 redraw!

@@ -22,13 +22,12 @@ let g:unite_source_menu_menus.mainmenu = {
             \     'description' : 'Unite main menu',
             \ }
 let g:unite_source_menu_menus.mainmenu.candidates = {
-            \   'Show MRU&Buffers' : 'Unite buffer file_mru',
-            \   'Show Files'       : 'Unite file',
-            \   'Find files'       : 'Unite find',
-            \   'Grep in files'    : 'Unite grep',
-            \   'Show Registers'   : 'Unite register',
-            \   'Show Bookmarks'   : 'Unite bookmark',
-            \   'Show Clipboard'   : 'Unite history/yank',
+            \   'Show MRU and Buffers'   : 'Unite buffer file_mru',
+            \   'Show Files and Dirs'    : 'Unite file',
+            \   'Find files by mask'     : 'Unite find',
+            \   'Grep in files'          : 'Unite grep',
+            \   'Show Registers'         : 'Unite register',
+            \   'Show Clipboard history' : 'Unite history/yank',
             \ }
 function g:unite_source_menu_menus.mainmenu.map(key, value)
     return {

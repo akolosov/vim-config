@@ -28,7 +28,7 @@ let g:unite_source_menu_menus.mainmenu.candidates = {
             \   'Grep in files'    : 'Unite grep',
             \   'Show Registers'   : 'Unite register',
             \   'Show Bookmarks'   : 'Unite bookmark',
-            \   'Show Output'      : 'Unite output',
+            \   'Show Clipboard'   : 'Unite history/yank',
             \ }
 function g:unite_source_menu_menus.mainmenu.map(key, value)
     return {

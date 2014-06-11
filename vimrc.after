@@ -18,8 +18,16 @@ set termencoding=utf-8                              " set terminal encoding
 set fileencoding=utf-8                              " set save encoding
 set fileencodings=utf8,koi8r,cp1251,cp866           " список предполагаемых кодировок, в порядке предпочтения
 
+set viminfo+=n$HOME/.vim/tmp/viminfo
+
 set wildmenu                                        " Show list instead of just completing
 set wildmode=list:longest,full                      " Command <Tab> completion, list matches, then longest common part, then all.
+set wildignore+=*.sw?                               " Vim swap files
+set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~         " Backup files
+set wildignore+=*.luac                              " Lua byte code
+set wildignore+=*.jar                               " java archives
+set wildignore+=*.pyc                               " Python byte code
+set wildignore+=*.stats                             " Pylint stats
 
 set foldcolumn=5
 
@@ -59,8 +67,8 @@ imap <C-k> <ESC>d$i
 map <C-w> <ESC>dw
 imap <C-w> <ESC>dwi
 
-imap <silent> <F9> <Esc>:Unite menu:mainmenu<CR>
-map  <silent> <F9> <Esc>:Unite menu:mainmenu<CR>
+imap <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+map  <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 
 nmap <ESC><ESC> :qa<CR>
 imap <ESC><ESC> <ESC>:qa<CR>

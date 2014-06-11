@@ -3,6 +3,7 @@ tags
 *.swp
 .VimballRecord
 view
+tmp/*
 bundle/*
 backups/*
 sessions/*

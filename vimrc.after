@@ -31,6 +31,8 @@ set autochdir
 
 set noshowmode
 
+set confirm
+
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 else

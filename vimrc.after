@@ -49,6 +49,8 @@ endif
 
 nnoremap ; :
 
+noremap <F1> <nop>
+
 imap <F2> <Esc>:w<CR>i
 map  <F2> <Esc>:w<CR>
 
@@ -69,11 +71,6 @@ imap <C-w> <ESC>dwi
 
 imap <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <F9> <Esc>:Unite -silent menu:mainmenu<CR>
-
-nmap <ESC><ESC> :qa<CR>
-imap <ESC><ESC> <ESC>:qa<CR>
-vmap <ESC><ESC> <ESC>:qa<CR>
-map <ESC><ESC> <ESC>:qa<CR>
 
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>
@@ -96,7 +93,7 @@ imap <C-d> <ESC>:NERDTreeToggle<CR>
 nmap <C-d> <ESC>:NERDTreeToggle<CR>
 vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
-nmap <silent> <Leader>/ :nohlsearch<CR>
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
 nmap <C-_> :TComment<CR>
 vmap <C-_> :TComment<CR>
@@ -139,6 +136,17 @@ map <C-b> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
 map <Leader>n <Esc>:tabnew<CR>
+
+map <Leader>r :call Replace()<CR>
+
+nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
+
+" Space for open/close folds if exist
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+au VimEnter * nested :call LoadSession()
+au VimLeave * :call UpdateSession()
 
 if has("gui_running")
   if has("gui_gtk2")

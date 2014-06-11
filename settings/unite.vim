@@ -14,4 +14,26 @@ let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 10
 
 " Красивые стрелочки
-let g:unite_candidate_icon="▷"
+let g:unite_candidate_icon="»"
+
+" Меню
+let g:unite_source_menu_menus = {}
+let g:unite_source_menu_menus.mainmenu = {
+            \     'description' : 'Unite main menu',
+            \ }
+let g:unite_source_menu_menus.mainmenu.candidates = {
+            \   'Buffers'      : 'Unite buffer file_mru',
+            \   'Tags'      : 'Unite tag',
+            \   'File'      : 'Unite file',
+            \   'Find'      : 'Unite find',
+            \   'Grep'      : 'Unite grep',
+            \   'Registers'      : 'Unite register',
+            \   'Bookmarks'      : 'Unite bookmark',
+            \   'Output'      : 'Unite output',
+            \ }
+function g:unite_source_menu_menus.mainmenu.map(key, value)
+    return {
+            \       'word' : a:key, 'kind' : 'command',
+            \       'action__command' : a:value,
+            \ }
+endfunction

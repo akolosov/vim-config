@@ -59,26 +59,10 @@ imap <C-k> <ESC>d$i
 map <C-w> <ESC>dw
 imap <C-w> <ESC>dwi
 
-nmap <Leader>q :q<CR>
-vmap <Leader>q <ESC>:q<CR>
-map <Leader>q <ESC>:q<CR>
-
-nmap <Leader>qa :qa<CR>
-vmap <Leader>qa <ESC>:qa<CR>
-map <Leader>qa <ESC>:qa<CR>
-
 nmap <ESC><ESC> :qa<CR>
 imap <ESC><ESC> <ESC>:qa<CR>
 vmap <ESC><ESC> <ESC>:qa<CR>
 map <ESC><ESC> <ESC>:qa<CR>
-
-nmap <Leader>qq :qa!<CR>
-vmap <Leader>qq <ESC>:qa!<CR>
-map <Leader>qq <ESC>:qa!<CR>
-
-nmap <Leader>qw :wqa!<CR>
-vmap <Leader>qw <ESC>:wqa!<CR>
-map <Leader>qw <ESC>:wqa!<CR>
 
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>

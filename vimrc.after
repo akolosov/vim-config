@@ -59,6 +59,9 @@ imap <C-k> <ESC>d$i
 map <C-w> <ESC>dw
 imap <C-w> <ESC>dwi
 
+imap <F9> <Esc>:Unite menu:mainmenu<CR>
+map  <F9> <Esc>:Unite menu:mainmenu<CR>
+
 nmap <ESC><ESC> :qa<CR>
 imap <ESC><ESC> <ESC>:qa<CR>
 vmap <ESC><ESC> <ESC>:qa<CR>

@@ -20,15 +20,6 @@ set fileencodings=utf8,koi8r,cp1251,cp866           " список предпо�
 
 set viminfo+=n$HOME/.vim/tmp/viminfo
 
-set wildmenu                                        " Show list instead of just completing
-set wildmode=list:longest,full                      " Command <Tab> completion, list matches, then longest common part, then all.
-set wildignore+=*.sw?                               " Vim swap files
-set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~         " Backup files
-set wildignore+=*.luac                              " Lua byte code
-set wildignore+=*.jar                               " java archives
-set wildignore+=*.pyc                               " Python byte code
-set wildignore+=*.stats                             " Pylint stats
-
 set foldcolumn=5
 
 set t_Co=256

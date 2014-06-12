@@ -82,10 +82,10 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
-set wildmode=list:longest
+set wildmode=list:longest,full
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
+set wildignore+=*vim/tmp/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
 set wildignore+=vendor/rails/**
@@ -94,7 +94,12 @@ set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
-
+set wildignore+=*.sw?
+set wildignore+=*.bak,*.?~,*.??~,*.???~,*.~
+set wildignore+=*.luac
+set wildignore+=*.jar
+set wildignore+=*.pyc
+set wildignore+=*.stats
 "
 
 " ================ Scrolling ========================

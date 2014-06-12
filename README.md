@@ -62,6 +62,24 @@ Shortcuts
 
 **ALT-Left** - Switch prev tab
 
+**hh** - Split window horizontaly
 
+**vv** - Split window verticaly
+
+**qq** - Close window
+
+**,#** - Surround a word with #{ruby interpolation}
+
+**,"** - Surround a word with "quotes"
+
+**,'** - Surround a word with 'single quotes'
+
+**,)** or **,(** - Surround a word with (parens)
+
+**,[** or **,]** - Surround a word with [brackets]
+
+**,{** or **,}** - Surround a word with {braces}
+
+**,ow** - Overwrite word, replace a word with what's in the yank buffer
 
 

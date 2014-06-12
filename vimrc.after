@@ -130,6 +130,9 @@ map <Leader>r :call Replace()<CR>
 
 nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
 
+" Swap words
+map <silent> <Leader>sw <Esc>bdwwP
+
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf

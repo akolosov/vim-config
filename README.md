@@ -48,6 +48,10 @@ Shortcuts
 
 **SHIFT-F2** - Save file as...
 
+**F3** - Toggle paste mode
+
+**F9** - Show Unite menu
+
 **F10** - Quit without saving
 
 **SHIFT-F10** - Quit with saving all files
@@ -58,7 +62,6 @@ Shortcuts
 
 **ALT-Left** - Switch prev tab
 
-**F9** - Show Unite menu
 
 
 

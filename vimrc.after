@@ -82,9 +82,6 @@ nmap <S-F10> :wqa!<CR>
 vmap <S-F10> <ESC>:wqa!<CR>
 map <S-F10> <ESC>:wqa!<CR>
 
-nmap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>
-imap <F4> <ESC>:silent !/usr/local/bin/ctags -R .<CR><ESC>:redraw!<CR>i
-
 nmap <C-t> :TagbarToggle<CR>
 
 nmap <C-g> :Gitv<CR>

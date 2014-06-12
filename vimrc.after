@@ -121,6 +121,7 @@ imap <S-Insert> <C-V>
 vmap <S-Insert> <C-V>
 
 vmap <Tab> >
+nnoremap <silent> <Tab> :wincmd w<CR>
 
 vmap <S-Tab> <
 imap <S-Tab> <Esc><<i

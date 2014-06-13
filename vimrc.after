@@ -68,6 +68,9 @@ nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>
 map <F10> <ESC>:qa!<CR>
 
+noremap <silent> <Esc><Esc><Esc> :qa!<CR>
+nnoremap <silent> qqq :qa!<CR>
+
 imap <S-F10> <ESC>:wqa!<CR>
 nmap <S-F10> :wqa!<CR>
 vmap <S-F10> <ESC>:wqa!<CR>
@@ -81,7 +84,7 @@ imap <C-d> <ESC>:NERDTreeToggle<CR>
 nmap <C-d> <ESC>:NERDTreeToggle<CR>
 vmap <C-d> <ESC>:NERDTreeToggle<CR>
 
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+noremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
 nmap <C-_> :TComment<CR>
 vmap <C-_> :TComment<CR>

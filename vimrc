@@ -32,6 +32,7 @@ syntax on
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=","
+let maplocalleader = '_'
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundle.vim

@@ -32,11 +32,11 @@ Shortcuts
 
 **CTRL-K** - Delete to EOL
 
-**CTRL-X** - Cut
+**CTRL-X** or **SHIFT-Del** - Cut
 
-**CTRL-C** - Copy
+**CTRL-C** or **CTRL-Ins** - Copy
 
-**CTRL-V** - Paste
+**CTRL-V** or **SHIFT-Ins** - Paste
 
 **CTRL-/** - Comment/Uncomment block
 
@@ -81,6 +81,8 @@ Shortcuts
 **,[** or **,]** - Surround a word with [brackets]
 
 **,{** or **,}** - Surround a word with {braces}
+
+**,r** - Replace word under cursor with user inputs
 
 **,rw** - Overwrite word, replace a word with what's in the yank buffer
 

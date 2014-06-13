@@ -108,11 +108,18 @@ exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 imap <S-Insert> <C-V>
 vmap <S-Insert> <C-V>
 
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
 vmap <Tab> >
 nnoremap <silent> <Tab> :wincmd w<CR>
 
 vmap <S-Tab> <
 imap <S-Tab> <Esc><<i
+
+" Allow using the repeat operator with a visual selection (!)
+vnoremap . :normal .<CR>
 
 map <A-right> <Esc>gt
 map <A-left> <Esc>gT
@@ -128,7 +135,6 @@ map <C-z> <Esc>:UndotreeToggle<CR>
 map <C-b> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
-map <Leader>n <Esc>:tabnew<CR>
 
 map <Leader>r :call Replace()<CR>
 
@@ -139,6 +145,26 @@ noremap <silent> <Leader>sw <Esc>bdwwP
 
 " Replace words
 noremap <silent> <Leader>rw "_diwhp
+
+" Code folding options
+nmap <leader>f0 :set foldlevel=0<CR>
+nmap <leader>f1 :set foldlevel=1<CR>
+nmap <leader>f2 :set foldlevel=2<CR>
+nmap <leader>f3 :set foldlevel=3<CR>
+nmap <leader>f4 :set foldlevel=4<CR>
+nmap <leader>f5 :set foldlevel=5<CR>
+nmap <leader>f6 :set foldlevel=6<CR>
+nmap <leader>f7 :set foldlevel=7<CR>
+nmap <leader>f8 :set foldlevel=8<CR>
+nmap <leader>f9 :set foldlevel=9<CR>
+
+" Git
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>ga :Git add -p %<CR>
 
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>

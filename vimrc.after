@@ -68,7 +68,7 @@ nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>
 map <F10> <ESC>:qa!<CR>
 
-noremap <silent> <Esc><Esc> :qa!<CR>
+noremap <silent> <Esc><Esc> :qa<CR>
 
 imap <S-F10> <ESC>:wqa!<CR>
 nmap <S-F10> :wqa!<CR>

@@ -56,7 +56,9 @@ Shortcuts
 
 **SHIFT-F10** - Quit with saving all files
 
-**ESC-ESC** - No highlight search
+**ESC-ESC** - No highlights search
+
+**,hl** - Toggle search highlighting on/off
 
 **ALT-Right** - Switch next tab
 
@@ -80,6 +82,6 @@ Shortcuts
 
 **,{** or **,}** - Surround a word with {braces}
 
-**,ow** - Overwrite word, replace a word with what's in the yank buffer
+**,rw** - Overwrite word, replace a word with what's in the yank buffer
 
 **,sw** - Swaps word under cursor and next word

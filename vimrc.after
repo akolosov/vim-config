@@ -119,6 +119,10 @@ map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
 imap <A-left> <Esc>gTi
 
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> hh <C-w>s
+nnoremap <silent> qq <C-w>c
+
 map <C-z> <Esc>:UndotreeToggle<CR>
 
 map <C-b> <Esc>:YRShow<CR>
@@ -131,7 +135,10 @@ map <Leader>r :call Replace()<CR>
 nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
 
 " Swap words
-map <silent> <Leader>sw <Esc>bdwwP
+noremap <silent> <Leader>sw <Esc>bdwwP
+
+" Replace words
+noremap <silent> <Leader>rw "_diwhp
 
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>

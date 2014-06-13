@@ -56,7 +56,9 @@ Shortcuts
 
 **SHIFT-F10** - Quit with saving all files
 
-**ESC-ESC** - No highlights search
+**ESC-ESC** - Quit and ask for save files
+
+**//** - No highlights search
 
 **,hl** - Toggle search highlighting on/off
 

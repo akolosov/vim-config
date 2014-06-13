@@ -48,8 +48,8 @@ map  <F2> <Esc>:w<CR>
 imap <C-F2> <Esc>:wa<CR>i
 map  <C-F2> <Esc>:wa<CR>
 
-imap <S-F2> <Esc>:w<SPACE>
-map  <S-F2> <Esc>:w<SPACE>
+imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map  <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 
 map <C-y> <ESC>dd
 imap <C-y> <ESC>ddi

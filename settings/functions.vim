@@ -50,3 +50,15 @@ function! ToggleQuote()
         execute "normal mzcs\"'`z"
     endif
 endfunction
+
+" Toggle readonly mode
+function! ToggleReadonly()
+  if &readonly
+    set noreadonly
+    set modifiable
+  else
+    set readonly
+    set nomodifiable
+  endif
+endfunction
+

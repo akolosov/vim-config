@@ -50,6 +50,8 @@ Shortcuts
 
 **F3** - Toggle paste mode
 
+**F4** - Toggle readonly mode
+
 **F9** - Show Unite menu
 
 **F10** - Quit without saving

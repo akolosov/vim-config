@@ -60,8 +60,10 @@ imap <C-k> <ESC>d$i
 map <C-w> <ESC>dw
 imap <C-w> <ESC>dwi
 
-imap <F9> <Esc>:Unite -silent menu:mainmenu<CR>
-map  <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
+
+imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>
@@ -173,6 +175,7 @@ nnoremap <silent> <leader>ga :Git add -p %<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()
 

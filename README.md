@@ -91,3 +91,5 @@ Shortcuts
 **,rw** - Overwrite word, replace a word with what's in the yank buffer
 
 **,sw** - Swaps word under cursor and next word in line
+
+**,ss** - Strip trailing whitespace

@@ -32,6 +32,18 @@ set noshowmode
 
 set confirm
 
+set gdefault                                        " Add the g flag to search/replace by default
+
+set binary
+
+set noeol                                           " Don’t add empty newlines at the end of files
+
+set cursorline                                      " Highlight current line
+
+set noerrorbells                                    " Disable error bells
+
+set shortmess=atI                                   " Don’t show the intro message when starting Vim
+
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 else
@@ -150,6 +162,9 @@ noremap <silent> <Leader>sw <Esc>bdwwP
 
 " Replace words
 noremap <silent> <Leader>rw "_diwhp
+
+" Strip trailing whitespace
+noremap <silent> <leader>ss :call StripWhitespace()<CR>
 
 " Code folding options
 nmap <silent> <leader>f0 :set foldlevel=0<CR>:set foldcolumn=0<CR>

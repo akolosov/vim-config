@@ -1,15 +1,13 @@
 " Creates a session
 function! MakeSession()
-    let b:sessionfile = 'project.vim'
-    exe "mksession! " . b:sessionfile
+    exe "mksession! " . g:sessionfile
 endfunction
 
 " Updates a session, BUT ONLY IF IT ALREADY EXISTS
 function! UpdateSession()
     if argc()==0
-        let b:sessionfile = "project.vim"
-        if (filereadable(b:sessionfile))
-            exe "mksession! " . b:sessionfile
+        if (filereadable(g:sessionfile))
+            exe "mksession! " . g:sessionfile
             echo "updating session"
         endif
     endif
@@ -18,15 +16,11 @@ endfunction
 " Loads a session if it exists
 function! LoadSession()
     if argc() == 0
-        let b:sessionfile = "project.vim"
-        if (filereadable(b:sessionfile))
-            exe 'source ' b:sessionfile
-        else
+        if (filereadable(g:sessionfile))
+            exe 'source ' g:sessionfile
+					else
             echo "No session loaded."
         endif
-    else
-        let b:sessionfile = ""
-        let b:sessiondir = ""
     endif
 endfunction
 

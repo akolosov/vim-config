@@ -74,9 +74,10 @@ imap <C-w> <ESC>dwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
+noremap <F6> :call SearchInFiles()<CR>
+noremap <S-F6> :Ag <cword><CR>
 noremap <F7> :call SearchInFile()<CR>
-noremap <C-F7> :call SearchInFiles()<CR>
-noremap <S-F7> :Ag <cword><CR>
+nnoremap <S-F7> :call Replace()<CR>
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
@@ -156,8 +157,6 @@ map <C-z> <Esc>:UndotreeToggle<CR>
 map <C-b> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
-
-map <Leader>r :call Replace()<CR>
 
 nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
 

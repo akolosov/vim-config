@@ -76,7 +76,7 @@ map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
 nnoremap <silent> <F6> :Ag <cword><CR>
 
-vnoremap <silent> <<F6> :<C-U>execute "Ag " . GetVisual()<CR>
+vnoremap <silent> <F6> :<C-U>execute "Ag " . GetVisual()<CR>
 
 noremap <S-F6> :call Replace()<CR>
 

@@ -52,6 +52,14 @@ Shortcuts
 
 **F4** - Toggle readonly mode
 
+**F6** - Search entire files in current directory (recursively)
+
+**SHIFT-F6** - Search word under cursor entire files in current directory (recursively)
+
+**F7** - Search in current file
+
+**SHIFT-F7** - Search next entry
+
 **F9** - Show Unite menu
 
 **F10** - Quit without saving

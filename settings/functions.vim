@@ -48,7 +48,7 @@ endfunction
 " Search in current file
 function! SearchInFile()
     let s:word = input("[IN CURRENT FILE] Search for: ")
-    :exe '/' . s:word . '/'
+    search('/' . s:word . '/')
     :unlet! s:word
 endfunction
 

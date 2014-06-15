@@ -76,8 +76,8 @@ map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
 noremap <F6> :call SearchInFiles()<CR>
 noremap <S-F6> :Ag <cword><CR>
-noremap <F7> :call SearchInFile()<CR>
-nnoremap <S-F7> :call Replace()<CR>
+noremap <F7> :let @/ = SearchInFile()<CR>
+nnoremap <S-F7> <Esc>n
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>

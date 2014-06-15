@@ -60,6 +60,8 @@ Shortcuts
 
 **SHIFT-F7** - Search next entry
 
+**CTRL-F7** - Search prev entry
+
 **F9** - Show Unite menu
 
 **F10** - Quit without saving

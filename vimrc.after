@@ -69,8 +69,8 @@ imap <C-y> <ESC>ddi
 map <C-k> <ESC>d$
 imap <C-k> <ESC>d$i
 
-map <C-w> <ESC>dw
-imap <C-w> <ESC>dwi
+map <C-w> <ESC>bdw
+imap <C-w> <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
@@ -82,6 +82,7 @@ noremap <S-F6> :call Replace()<CR>
 
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
+noremap <C-F7> <Esc>N
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>

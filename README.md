@@ -52,9 +52,9 @@ Shortcuts
 
 **F4** - Toggle readonly mode
 
-**F6** - Search entire files in current directory (recursively)
+**F6** - Search word under cursor or selected word entire files in current directory (recursively)
 
-**SHIFT-F6** - Search word under cursor entire files in current directory (recursively)
+**SHIFT-F6** - Search word under cursor and replace with user inputs
 
 **F7** - Search in current file
 
@@ -93,8 +93,6 @@ Shortcuts
 **,[** or **,]** - Surround a word with [brackets]
 
 **,{** or **,}** - Surround a word with {braces}
-
-**,r** - Replace word under cursor with user inputs
 
 **,rw** - Overwrite word, replace a word with what's in the yank buffer
 

@@ -74,8 +74,14 @@ imap <C-w> <ESC>dwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
+nnoremap <silent> <F6> :Ag <cword><CR>
+
+vnoremap <silent> <<F6> :<C-U>execute "Ag " . GetVisual()<CR>
+
+noremap <S-F6> :call Replace()<CR>
+
 noremap <F7> :let @/ = SearchInFile()<CR>
-nnoremap <S-F7> <Esc>n
+noremap <S-F7> <Esc>n
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>

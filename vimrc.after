@@ -145,7 +145,7 @@ imap <A-left> <Esc>gTi
 
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> hh <C-w>s
-nnoremap <silent> qq <C-w>c
+nnoremap <silent> qq :call CloseWindowOrKillBuffer()<CR>
 
 map <C-z> <Esc>:UndotreeToggle<CR>
 

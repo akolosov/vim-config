@@ -11,13 +11,13 @@ function! GetVisual()
 endfunction
 
 "grep the current word using K (mnemonic Kurrent)
-nnoremap <silent> K :Ag <cword><CR>
+nnoremap <silent> <F6> :Ag <cword><CR>
 
 "grep visual selection
-vnoremap K :<C-U>execute "Ag " . GetVisual()<CR>
+vnoremap <F6> :<C-U>execute "Ag " . GetVisual()<CR>
 
 "grep current word up to the next exclamation point using ,K
-nnoremap ,K viwf!:<C-U>execute "Ag " . GetVisual()<CR>
+nnoremap <S-F6> viwf!:<C-U>execute "Ag " . GetVisual()<CR>
 
 "grep for 'def foo'
 nnoremap <silent> ,gd :Ag 'def <cword>'<CR>

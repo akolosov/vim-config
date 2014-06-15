@@ -74,8 +74,6 @@ imap <C-w> <ESC>dwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
-noremap <F6> :call SearchInFiles()<CR>
-noremap <S-F6> :Ag <cword><CR>
 noremap <F7> :let @/ = SearchInFile()<CR>
 nnoremap <S-F7> <Esc>n
 

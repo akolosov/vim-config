@@ -74,6 +74,10 @@ imap <C-w> <ESC>dwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
+noremap <F7> :call SearchInFile()<CR>
+noremap <C-F7> :call SearchInFiles()<CR>
+noremap <S-F7> :Ag <cword><CR>
+
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 

@@ -30,6 +30,28 @@ function! LoadSession()
     endif
 endfunction
 
+" Search for files
+function! SearchForFiles()
+    let s:word = input("[IN FILENAMES] Search for: ")
+    :exe 'AgFile ' . s:word
+    :unlet! s:word
+endfunction
+
+
+" Search in files
+function! SearchInFiles()
+    let s:word = input("[IN FILES] Search for: ")
+    :exe 'Ag ' . s:word
+    :unlet! s:word
+endfunction
+
+" Search in current file
+function! SearchInFile()
+    let s:word = input("[IN CURRENT FILE] Search for: ")
+    :exe '/' . s:word
+    :unlet! s:word
+endfunction
+
 " Find && Replace in all opened buffers
 function! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")

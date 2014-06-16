@@ -74,12 +74,15 @@ imap <C-w> <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
+inoremap <silent> <F6> <Esc>:Ag <cword><CR>
 nnoremap <silent> <F6> :Ag <cword><CR>
-
 vnoremap <silent> <F6> :<C-U>execute "Ag " . GetVisual()<CR>
 
-noremap <S-F6> :call Replace()<CR>
+inoremap <S-F6> <Esc>:call Replace()<CR>i
+nnoremap <S-F6> :call Replace()<CR>
 
+inoremap <F7> <Esc>:let @/ = SearchInFile()<CR>i
+inoremap <S-F7> <Esc>ni
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
 

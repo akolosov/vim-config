@@ -50,7 +50,7 @@ endfunction
 " Find && Replace in all opened buffers
 function! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")
-    :execute 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
+    :execute '%s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
     :unlet! s:word
 endfunction
 

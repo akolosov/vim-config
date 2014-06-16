@@ -82,7 +82,6 @@ noremap <S-F6> :call Replace()<CR>
 
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
-noremap <C-F7> <Esc>N
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>

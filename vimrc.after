@@ -200,6 +200,11 @@ nnoremap <silent> <leader>ga :Git add -p %<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+nmap <M-Up> gUiw
+imap <M-Up> <Esc>gUiw<Esc>i
+nmap <M-Down> guiw
+imap <M-Down> <Esc>guiw<Esc>i
+
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()

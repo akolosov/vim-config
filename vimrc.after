@@ -155,6 +155,20 @@ imap <S-Tab> <Esc><<i
 " Allow using the repeat operator with a visual selection (!)
 vnoremap . :normal .<CR>
 
+" Text selection by SHIFT+Arrows
+imap <S-Up> <Esc>v<Up>
+imap <S-Down> <Esc>v<Down>
+imap <S-Left> <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+
 map <A-right> <Esc>gt
 map <A-left> <Esc>gT
 imap <A-right> <Esc>gti
@@ -228,3 +242,4 @@ colorscheme distinguished
 AirlineTheme wombat
 
 redraw!
+

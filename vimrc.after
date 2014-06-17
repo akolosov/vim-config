@@ -70,7 +70,7 @@ map <C-y> <ESC>dd
 imap <C-y> <ESC>ddi
 
 map <C-k> <ESC>d$
-imap <C-k> <ESC>d$i
+imap <C-k> <ESC><Right>d$i
 
 map <C-w> <ESC>bdw
 imap <C-w> <ESC>bdwi

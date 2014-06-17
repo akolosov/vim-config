@@ -76,6 +76,10 @@ Shortcuts
 
 **ALT-Left** - Switch prev tab
 
+**ALT-Up** - Upcase word under cursor
+
+**ALT-Down** - Downcase word under cursor
+
 **hh** - Split window horizontaly
 
 **vv** - Split window verticaly

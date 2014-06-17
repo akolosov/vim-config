@@ -6,7 +6,9 @@ function! s:GoGoyo()
       execute 'NERDTreeClose'
       execute 'set ruler'
     else
-      execute 'NERDTree'
+			if !argc()
+				execute 'NERDTree'
+			endif
     end
 endfunction
 

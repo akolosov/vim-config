@@ -97,7 +97,7 @@ nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>
 map <F10> <ESC>:qa!<CR>
 
-if &readonly
+if &readonly || argc()
 	noremap <silent> <Esc><Esc> :qa<CR>
 	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 endif

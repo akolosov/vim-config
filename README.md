@@ -42,11 +42,11 @@ Shortcuts
 
 **CTRL-B** - Show/Hide YankRing
 
-**F2** or **CTRL-S** - Save file
+**F2** - Save file
 
 **CTRL-F2** - Save all files
 
-**SHIFT-F2** or **CTRL-SHIFT-S** - Save file as...
+**SHIFT-F2** or **CTRL-S** - Save file as...
 
 **F3** - Toggle paste mode
 

@@ -168,6 +168,12 @@ vmap <S-Up> <Up>
 vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
+imap <S-End> <Esc>v<End>
+imap <S-Home> <Esc>v<Home>
+nmap <S-End> v<End>
+nmap <S-Home> v<Home>
+imap <S-End> <End>
+imap <S-Home> <Home>
 
 map <A-right> <Esc>gt
 map <A-left> <Esc>gT

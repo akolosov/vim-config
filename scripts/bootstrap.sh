@@ -2,6 +2,7 @@
 ############################  SETUP PARAMETERS
 app_name='VIM-config'
 app_dir="$HOME/.vim"
+
 [ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-config.git'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
 
@@ -29,6 +30,18 @@ program_exists() {
     if [ ! "$ret" -eq '0' ]; then
     error "$2"
     fi
+}
+
+do_backup() {
+    if [ -e "$2" ] || [ -e "$3" ] || [ -e "$4" ]; then
+        today=`date +%Y%m%d_%s`
+        for i in "$2" "$3" "$4"; do
+            [ -e "$i" ] && [ ! -L "$i" ] && mv "$i" "$i.$today";
+        done
+        ret="$?"
+        success "$1"
+        debug
+   fi
 }
 
 ############################ SETUP FUNCTIONS
@@ -106,6 +119,8 @@ setup_vundle() {
 
 ############################ MAIN()
 program_exists "vim" "To install $app_name you first need to install Vim."
+
+do_backup "Your old vim stuff has a suffix now and looks like .vim.`date +%Y%m%d%S`" "$HOME/.vim" "$HOME/.vimrc" "$HOME/.vimrc.after" "$HOME/.vimrc.before"
 
 clone_repo "Successfully cloned $app_name"
 

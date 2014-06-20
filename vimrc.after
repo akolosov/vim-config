@@ -234,6 +234,15 @@ au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiab
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()
 
+autocmd FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType coffee     setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Anonymous\ Pro\ for\ Powerline\ 12
@@ -248,4 +257,3 @@ colorscheme distinguished
 AirlineTheme wombat
 
 redraw!
-

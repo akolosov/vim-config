@@ -16,6 +16,8 @@ Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/
 Shortcuts
 =========
 
+**CTRL-A** - Select all text
+
 **CTRL-D** - Show/Hide NERDTree
 
 **CTRL-E** - Create new tab

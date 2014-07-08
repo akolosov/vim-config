@@ -230,6 +230,10 @@ imap <M-Up> <Esc>gUiw<Esc>i
 nmap <M-Down> guiw
 imap <M-Down> <Esc>guiw<Esc>i
 
+map <C-A> ggVG
+imap <C-A> <Esc>ggVG
+vmap <C-A> <Esc>ggVG
+
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()

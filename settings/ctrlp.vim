@@ -51,3 +51,5 @@ map ,jT :CtrlP test<CR>
 "Cmd-Shift-(M)ethod - jump to a method (tag in current file)
 "Ctrl-m is not good - it overrides behavior of Enter
 nnoremap <silent> <D-M> :CtrlPBufTag<CR>
+
+let g:ctrlp_dont_split = 'nerdtree'

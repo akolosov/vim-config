@@ -54,8 +54,8 @@ nnoremap ; :
 
 noremap <F1> <nop>
 
-imap <F2> <Esc>:w<CR>i
-map  <F2> <Esc>:w<CR>
+imap <F2>   <Esc>:w<CR>i
+map  <F2>   <Esc>:w<CR>
 
 imap <C-F2> <Esc>:wa<CR>i
 map  <C-F2> <Esc>:wa<CR>
@@ -63,17 +63,17 @@ map  <C-F2> <Esc>:wa<CR>
 imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 map  <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 
-imap <C-s> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-map  <C-s> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+imap <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map  <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 
-map <C-y> <ESC>dd
-imap <C-y> <ESC>ddi
+map  <C-y>  <ESC>dd
+imap <C-y>  <ESC>ddi
 
-map <C-k> <ESC>d$
-imap <C-k> <ESC><Right>d$i
+map  <C-k>  <ESC>d$
+imap <C-k>  <ESC><Right>d$i
 
-map <C-w> <ESC>bdw
-imap <C-w> <ESC>bdwi
+map  <C-w>  <ESC>bdw
+imap <C-w>  <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
@@ -95,7 +95,7 @@ map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>
-map <F10> <ESC>:qa!<CR>
+map  <F10> <ESC>:qa!<CR>
 
 if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_console_startup != 1 || g:nerdtree_tabs_open_on_gui_startup != 1)
 	noremap <silent> <Esc><Esc> :qa<CR>
@@ -105,15 +105,15 @@ endif
 imap <S-F10> <ESC>:wqa!<CR>
 nmap <S-F10> :wqa!<CR>
 vmap <S-F10> <ESC>:wqa!<CR>
-map <S-F10> <ESC>:wqa!<CR>
+map  <S-F10> <ESC>:wqa!<CR>
 
-nmap <C-t> :TagbarToggle<CR>
+nmap <C-t>   :TagbarToggle<CR>
 
-nmap <C-g> :Gitv<CR>
+nmap <C-g>   :Gitv<CR>
 
-imap <C-d> <ESC>:NERDTreeToggle<CR>
-nmap <C-d> <ESC>:NERDTreeToggle<CR>
-vmap <C-d> <ESC>:NERDTreeToggle<CR>
+imap <C-d>   <ESC>:NERDTreeToggle<CR>
+nmap <C-d>   <ESC>:NERDTreeToggle<CR>
+vmap <C-d>   <ESC>:NERDTreeToggle<CR>
 
 nnoremap <silent> // :nohlsearch<CR><Esc>
 
@@ -122,18 +122,18 @@ vmap <C-_> :TComment<CR>
 imap <C-_> <ESC>:TComment<CR>i
 
 " CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X> "+x
+vnoremap <C-X>   "+x
 vnoremap <S-Del> "+x
 
 " CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C> "+y
+vnoremap <C-C>      "+y
 vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V> "+gP
-map <S-Insert> "+gP
+map  <C-V>      "+gP
+map  <S-Insert> "+gP
 
-cmap <C-V> <C-R>+
+cmap <C-V>      <C-R>+
 cmap <S-Insert> <C-R>+
 
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
@@ -156,29 +156,29 @@ imap <S-Tab> <Esc><<i
 vnoremap . :normal .<CR>
 
 " Text selection by SHIFT+Arrows
-imap <S-Up> <Esc>v<Up>
-imap <S-Down> <Esc>v<Down>
-imap <S-Left> <Esc>v<Left>
+imap <S-Up>    <Esc>v<Up>
+imap <S-Down>  <Esc>v<Down>
+imap <S-Left>  <Esc>v<Left>
 imap <S-Right> <Esc>v<Right>
-nmap <S-Up> v<Up>
-nmap <S-Down> v<Down>
-nmap <S-Left> v<Left>
+nmap <S-Up>    v<Up>
+nmap <S-Down>  v<Down>
+nmap <S-Left>  v<Left>
 nmap <S-Right> v<Right>
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
+vmap <S-Up>    <Up>
+vmap <S-Down>  <Down>
+vmap <S-Left>  <Left>
 vmap <S-Right> <Right>
-imap <S-End> <Esc>v<End>
-imap <S-Home> <Esc>v<Home>
-nmap <S-End> v<End>
-nmap <S-Home> v<Home>
-vmap <S-End> <End>
-vmap <S-Home> <Home>
+imap <S-End>   <Esc>v<End>
+imap <S-Home>  <Esc>v<Home>
+nmap <S-End>   v<End>
+nmap <S-Home>  v<Home>
+vmap <S-End>   <End>
+vmap <S-Home>  <Home>
 
-map <A-right> <Esc>gt
-map <A-left> <Esc>gT
+map  <A-right> <Esc>gt
+map  <A-left>  <Esc>gT
 imap <A-right> <Esc>gti
-imap <A-left> <Esc>gTi
+imap <A-left>  <Esc>gTi
 
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> hh <C-w>s
@@ -225,14 +225,15 @@ nnoremap <silent> <leader>ga :Git add -p %<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
-nmap <M-Up> gUiw
-imap <M-Up> <Esc>gUiw<Esc>i
+nmap <M-Up>   gUiw
+imap <M-Up>   <Esc>gUiw<Esc>i
 nmap <M-Down> guiw
 imap <M-Down> <Esc>guiw<Esc>i
 
-map <C-A> ggVG
-imap <C-A> <Esc>ggVG
-vmap <C-A> <Esc>ggVG
+map  <C-A>    ggVG
+nmap <C-A>    ggVG
+imap <C-A>    <Esc>ggVG
+vmap <C-A>    <Esc>ggVG
 
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 au VimEnter * nested :call LoadSession()
@@ -252,6 +253,9 @@ if has("gui_running")
     set guifont=Anonymous\ Pro\ for\ Powerline\ 12
   elseif has("gui_macvim")
     set guifont=Anonymous\ Pro\ for\ Powerline:h14
+		let g:hybrid_use_iTerm_colors = 1
+	else
+		let g:hybrid_use_Xresources = 1
   endif
 endif
 

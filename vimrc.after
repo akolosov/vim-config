@@ -175,6 +175,7 @@ nmap <S-Home>  v<Home>
 vmap <S-End>   <End>
 vmap <S-Home>  <Home>
 
+" Alt-Left/Right - switch tab to left/right
 map  <A-right> <Esc>gt
 map  <A-left>  <Esc>gT
 imap <A-right> <Esc>gti
@@ -225,15 +226,22 @@ nnoremap <silent> <leader>ga :Git add -p %<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+" Alt-Up - upcase, Alt-Down - downcase
 nmap <M-Up>   gUiw
 imap <M-Up>   <Esc>gUiw<Esc>i
 nmap <M-Down> guiw
 imap <M-Down> <Esc>guiw<Esc>i
 
+" Ctrl-A - select all
 map  <C-A>    ggVG
 nmap <C-A>    ggVG
 imap <C-A>    <Esc>ggVG
 vmap <C-A>    <Esc>ggVG
+
+" Ctrl-J - show bookmarks
+imap <C-j> <Esc>ma
+vmap <C-j> <Esc>ma
+nmap <C-j> ma
 
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 au VimEnter * nested :call LoadSession()

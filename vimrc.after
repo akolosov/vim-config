@@ -271,6 +271,5 @@ endif
 syntax enable
 set background=dark
 colorscheme hybrid
-AirlineTheme wombat
+AirlineTheme hybrid
 
-redraw!

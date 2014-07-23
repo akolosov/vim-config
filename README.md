@@ -86,7 +86,7 @@ Shortcuts
 
 **vv** - Split window verticaly
 
-**qq** - Close window
+**!!** - Close window
 
 **,#** - Surround a word with #{ruby interpolation}
 

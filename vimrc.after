@@ -254,8 +254,6 @@ vmap <C-j> <Esc>ma
 nmap <C-j> ma
 
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
-au VimEnter * nested :call LoadSession()
-au VimLeave * :call UpdateSession()
 
 autocmd FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab

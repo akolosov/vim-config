@@ -1,2 +1,3 @@
 Bundle "itchyny/lightline.vim"
 Bundle "morhetz/gruvbox"
+Bundle "xsunsmile/showmarks.git"

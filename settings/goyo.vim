@@ -12,5 +12,4 @@ function! s:GoGoyo()
     end
 endfunction
 
-nnoremap <silent> <Leader><Space> :call <SID>GoGoyo()<CR>
 

@@ -227,6 +227,9 @@ nnoremap <silent> <leader>ga :Git add -p %<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+" ,<Space> - toggle goyo mode
+nnoremap <silent> <Leader><Space> :call <SID>GoGoyo()<CR>
+
 " Alt-Up - upcase, Alt-Down - downcase
 nmap <M-Up>   gUiw
 imap <M-Up>   <Esc>gUiw<Esc>i
@@ -266,6 +269,7 @@ if has("gui_running")
 	else
 		let g:hybrid_use_Xresources = 1
   endif
+	let g:airline_powerline_fonts = 1
 endif
 
 syntax enable

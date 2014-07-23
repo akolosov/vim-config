@@ -32,6 +32,9 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.readonly = '⭤'
 
 let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#trailing_format = 'T[%s]'
+let g:airline#extensions#whitespace#mixed_indent_format = 'M[%s]'
+
 let g:airline#extensions#nrrwrgn#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 let g:airline#extensions#syntastic#enabled = 1
@@ -42,5 +45,4 @@ let g:airline#extensions#bufferline#overwrite_variables = 1
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#close_symbol = '✗'
 

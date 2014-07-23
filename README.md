@@ -28,6 +28,8 @@ Shortcuts
 
 **CTRL-G** - Show GiTV
 
+**CTRL-J** - Show bookmarks
+
 **CTRL-Y** - Delete line
 
 **CTRL-W** - Delete word

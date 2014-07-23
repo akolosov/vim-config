@@ -44,6 +44,12 @@ set noerrorbells                                    " Disable error bells
 
 set shortmess=atI                                   " Don’t show the intro message when starting Vim
 
+set ttimeoutlen=50
+
+set ssop-=options
+
+set colorcolumn=100
+
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 else

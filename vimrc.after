@@ -257,7 +257,8 @@ endif
 
 syntax enable
 set background=dark
-colorscheme distinguished
+" colorscheme distinguished
+colorscheme hybrid
 AirlineTheme wombat
 
 redraw!

@@ -2,4 +2,5 @@ Bundle "chrisbra/color_highlight.git"
 Bundle "bling/vim-airline"
 Bundle "jby/tmux.vim.git"
 Bundle "xsunsmile/showmarks.git"
-Bundle 'akolosov/vim-colors'
+Bundle "akolosov/vim-colors"
+Bundle "w0ng/vim-hybrid"

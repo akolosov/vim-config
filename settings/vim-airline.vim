@@ -9,13 +9,13 @@ endif
 
 let g:airline_mode_map = {
     \ '__' : '-',
-    \ 'n'  : 'η',
-    \ 'i'  : 'λ',
-    \ 'R'  : 'γ',
-    \ 'c'  : 'φ',
-    \ 'v'  : 'ψ',
-    \ 'V'  : 'Ψ',
-    \ '' : '^Ψ',
+    \ 'n'  : 'λ',
+    \ 'i'  : 'θ',
+    \ 'R'  : 'χ',
+    \ 'c'  : 'ψ',
+    \ 'v'  : 'ω',
+    \ 'V'  : 'Ω',
+    \ '' : '^Ω',
     \ 's'  : 'δ',
     \ 'S'  : 'Δ',
     \ '' : '^Δ',
@@ -25,15 +25,15 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.linenr = 'λ'
+let g:airline_symbols.branch = 'β'
+let g:airline_symbols.paste = 'π'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.readonly = 'ρ'
 
 let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#whitespace#trailing_format = 'T[%s]'
-let g:airline#extensions#whitespace#mixed_indent_format = 'M[%s]'
+let g:airline#extensions#whitespace#trailing_format = 'τ[%s]'
+let g:airline#extensions#whitespace#mixed_indent_format = 'μ[%s]'
 
 let g:airline#extensions#nrrwrgn#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1

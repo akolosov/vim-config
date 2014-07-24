@@ -279,5 +279,5 @@ endif
 syntax enable
 set background=dark
 colorscheme hybrid
-AirlineTheme hybrid
+AirlineTheme badwolf
 

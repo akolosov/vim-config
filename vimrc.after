@@ -194,7 +194,7 @@ nnoremap <silent> !! :call CloseWindowOrKillBuffer()<CR>
 
 map <C-z> <Esc>:UndotreeToggle<CR>
 
-map <C-b> <Esc>:YRShow<CR>
+map <C-\> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
 

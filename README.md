@@ -44,7 +44,7 @@ Shortcuts
 
 **CTRL-/** - Comment/Uncomment block
 
-**CTRL-B** - Show/Hide YankRing
+**CTRL-\** - Show/Hide YankRing
 
 **F2** - Save file
 

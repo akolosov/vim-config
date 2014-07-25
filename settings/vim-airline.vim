@@ -9,7 +9,7 @@ endif
 
 let g:airline_mode_map = {
     \ '__' : '-',
-    \ 'n'  : 'N',
+    \ 'n'  : '⌘',
     \ 'i'  : 'I',
     \ 'R'  : 'R',
     \ 'c'  : 'C',

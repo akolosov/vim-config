@@ -200,6 +200,8 @@ map <C-\> <Esc>:YRShow<CR>
 
 map <C-e> <Esc>:tabnew<CR>
 
+map <C-l> <Esc>:VimShell<CR>
+
 nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
 
 " Swap words

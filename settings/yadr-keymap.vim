@@ -49,9 +49,6 @@ vmap <Leader>{ c{<C-R>"}<ESC>
 
 map <Leader>` ysiw`
 
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
-
 "Go to last edit location with <Leader>.
 nnoremap <Leader>. '.
 
@@ -59,15 +56,6 @@ nnoremap <Leader>. '.
 " <Leader>oq to open it back up (rare)
 nmap <silent> <Leader>qc :cclose<CR>
 nmap <silent> <Leader>qo :copen<CR>
-
-" ==============================
-" Window/Tab/Split Manipulation
-" ==============================
-" Move between split windows by using the four directions H<Leader> L<Leader> I<Leader> N
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-l> <C-w>l
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-j> <C-w>j
 
 " Make gf (go to file) create the file<Leader> if not existent
 nnoremap gf :e<cfile><CR>

@@ -28,7 +28,7 @@ set t_Co=256
 
 set pastetoggle=<F3>
 
-set autochdir
+set noautochdir
 
 set noshowmode
 

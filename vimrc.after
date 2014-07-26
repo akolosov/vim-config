@@ -13,6 +13,8 @@ set smartindent                                     " smart indenting
 set linebreak                                       " перенос по словам, а не по буквам
 set dy=lastline
 
+set laststatus=2
+
 set encoding=utf-8                                  " set charset translation encoding
 set termencoding=utf-8                              " set terminal encoding
 set fileencoding=utf-8                              " set save encoding
@@ -20,7 +22,7 @@ set fileencodings=utf8,koi8r,cp1251,cp866           " список предпо�
 
 set viminfo+=n$HOME/.vim/tmp/viminfo
 
-set foldcolumn=5
+set foldcolumn=3
 
 set t_Co=256
 

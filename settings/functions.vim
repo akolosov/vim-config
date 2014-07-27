@@ -62,25 +62,6 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 
-function! BufferDelete()
-	if &modified
-		echohl ErrorMsg
-		echomsg "Save before close!"
-		echohl NONE
-	else
-		if matchstr(expand("%"), 'NERD') != 'NERD'
-			let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-
-			if s:total_nr_buffers == 1
-				bdelete
-			else
-				bprevious
-				bdelete #
-			endif
-		endif
-	endif
-endfunction
-
 function! CloseWindowOrKillBuffer()
 	if &modified
 		echohl ErrorMsg
@@ -90,7 +71,6 @@ function! CloseWindowOrKillBuffer()
 		if matchstr(expand("%"), 'NERD') != 'NERD'
 			let s:number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
 			let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-
 
 			if s:number_of_windows_to_this_buffer > 1
 				wincmd c
@@ -118,4 +98,8 @@ function! GetVisual()
   return selection
 endfunction
 
-
+function! EnsureExists(path)
+	if !isdirectory(expand(a:path))
+		call mkdir(expand(a:path))
+	endif
+endfunction

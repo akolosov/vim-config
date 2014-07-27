@@ -1,6 +1,6 @@
 nnoremap ; :
 
-noremap <F1> <nop>
+noremap <F1> <Esc>
 
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
@@ -99,8 +99,8 @@ if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_co
 	noremap <silent> <Esc><Esc> :qa<CR>
 	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 else
-	noremap <silent> <Leader><Esc> :call BufferDelete()<CR>
-	inoremap <silent> <Esc><Esc> <Esc>:call BufferDelete()<CR>
+	noremap <silent> <Leader><Esc><Esc> :call BufferDelete()<CR>
+	inoremap <silent> <Esc><Esc><Esc> <Esc>:call BufferDelete()<CR>
 endif
 
 imap <S-F10> <ESC>:wqa!<CR>

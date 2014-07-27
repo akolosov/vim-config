@@ -26,8 +26,6 @@ Shortcuts
 
 **CTRL-T** - Show/Hide TagBar
 
-**CTRL-G** - Show GiTV
-
 **CTRL-J** - Show bookmarks
 
 **CTRL-Y** - Delete line
@@ -66,6 +64,8 @@ Shortcuts
 
 **F9** - Show Unite menu
 
+**SHIFT-F9** - Show GIT menu
+
 **F10** - Quit without saving
 
 **SHIFT-F10** - Quit with saving all files
@@ -73,8 +73,6 @@ Shortcuts
 **ESC-ESC** - Quit and ask for save files or close current window/buffer
 
 **//** - No highlights search
-
-**,hl** - Toggle search highlighting on/off
 
 **ALT-Right** - Switch next tab
 

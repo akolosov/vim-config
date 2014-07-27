@@ -2,6 +2,53 @@ nnoremap ; :
 
 noremap <F1> <nop>
 
+" <Leader># Surround a word with #{ruby interpolation}
+map <Leader># ysiw#
+vmap <Leader># c#{<C-R>"}<ESC>
+
+" <Leader>" Surround a word with "quotes"
+map <Leader>" ysiw"
+vmap <Leader>" c"<C-R>""<ESC>
+
+" <Leader>' Surround a word with 'single quotes'
+map <Leader>' ysiw'
+vmap <Leader>' c'<C-R>"'<ESC>
+
+" <Leader>) or <Leader>( Surround a word with (parens)
+" The difference is in whether a space is put in
+map <Leader>( ysiw(
+map <Leader>) ysiw)
+vmap <Leader>( c( <C-R>" )<ESC>
+vmap <Leader>) c(<C-R>")<ESC>
+
+" <Leader>[ Surround a word with [brackets]
+map <Leader>] ysiw]
+map <Leader>[ ysiw[
+vmap <Leader>[ c[ <C-R>" ]<ESC>
+vmap <Leader>] c[<C-R>"]<ESC>
+
+" <Leader>{ Surround a word with {braces}
+map <Leader>} ysiw}
+map <Leader>{ ysiw{
+vmap <Leader>} c{ <C-R>" }<ESC>
+vmap <Leader>{ c{<C-R>"}<ESC>
+
+map <Leader>` ysiw`
+
+"Go to last edit location with <Leader>.
+nnoremap <Leader>. '.
+
+" <Leader>qc to toggle quickfix window (where you have stuff like Ag)
+" <Leader>qo to open it back up (rare)
+nmap <silent> <Leader>qc :cclose<CR>
+nmap <silent> <Leader>qo :copen<CR>
+
+" Make gf (go to file)
+" Create the file if not existent
+nnoremap gf :e <cfile><CR>
+nnoremap gfw :sp +e <cfile><CR>
+nnoremap gft :tabe <cfile><CR>
+
 imap <F2>   <Esc>:w<CR>i
 map  <F2>   <Esc>:w<CR>
 

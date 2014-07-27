@@ -140,6 +140,14 @@ else
   set clipboard=unnamed
 endif
 
+" =================== GUI Settings ========================
+i" Disable the scrollbars (NERDTree)
+set guioptions-=r
+set guioptions-=L
+
+" Disable the macvim toolbar
+set guioptions-=T
+
 " ================ Custom Settings ========================
 if filereadable(expand("~/.vim/bundle/.installed"))
   so ~/.vim/settings.vim

@@ -184,12 +184,6 @@ nmap <S-Home>  v<Home>
 vmap <S-End>   <End>
 vmap <S-Home>  <Home>
 
-" Alt-Left/Right - switch tab to left/right
-map  <A-right> <Esc>gt
-map  <A-left>  <Esc>gT
-imap <A-right> <Esc>gti
-imap <A-left>  <Esc>gTi
-
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> hh <C-w>s
 nnoremap <silent> !! :call CloseWindowOrKillBuffer()<CR>
@@ -240,12 +234,6 @@ vnoremap <Space> zf
 " ,<Space> - toggle goyo mode
 nnoremap <silent> <Leader><Space> :call <SID>GoGoyo()<CR>
 
-" Alt-Up - upcase, Alt-Down - downcase
-nmap <M-Up>   gUiw
-imap <M-Up>   <Esc>gUiw<Esc>i
-nmap <M-Down> guiw
-imap <M-Down> <Esc>guiw<Esc>i
-
 " Ctrl-A - select all
 map  <C-A>    ggVG
 nmap <C-A>    ggVG
@@ -289,8 +277,19 @@ if has("gui_macvim")
 	map  [D  <Esc>gT
 	imap [C  <Esc>gti
 	imap [D  <Esc>gTi
-endif
+else
+	" Alt-Up - upcase, Alt-Down - downcase
+	nmap <M-Up>   gUiw
+	imap <M-Up>   <Esc>gUiw<Esc>i
+	nmap <M-Down> guiw
+	imap <M-Down> <Esc>guiw<Esc>i
 
+	" Alt-Left/Right - switch tab to left/right
+	map  <A-right> <Esc>gt
+	map  <A-left>  <Esc>gT
+	imap <A-right> <Esc>gti
+	imap <A-left>  <Esc>gTi
+endif
 
 syntax enable
 set background=dark

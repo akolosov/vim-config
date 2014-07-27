@@ -40,6 +40,6 @@ map ,jV :CtrlP vendor<CR>
 map ,jF :CtrlP factories<CR>
 map ,jT :CtrlP test<CR>
 
-let g:ctrlp_dont_split = 'NERD'
+let g:ctrlp_dont_split = 'NERD_tree_1'
 
 let g:ctrlp_map = '<leader>,'

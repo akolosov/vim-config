@@ -51,6 +51,9 @@ map  <F10> <ESC>:qa!<CR>
 if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_console_startup != 1 || g:nerdtree_tabs_open_on_gui_startup != 1)
 	noremap <silent> <Esc><Esc> :qa<CR>
 	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+else
+	noremap <silent> <Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+	inoremap <silent> <Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
 endif
 
 imap <S-F10> <ESC>:wqa!<CR>
@@ -129,7 +132,6 @@ vmap <S-Home>  <Home>
 
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> hh <C-w>s
-nnoremap <silent> !! :call CloseWindowOrKillBuffer()<CR>
 
 map <C-z> <Esc>:UndotreeToggle<CR>
 

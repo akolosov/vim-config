@@ -70,7 +70,7 @@ Shortcuts
 
 **SHIFT-F10** - Quit with saving all files
 
-**ESC-ESC** - Quit and ask for save files
+**ESC-ESC** - Quit and ask for save files or close current window/buffer
 
 **//** - No highlights search
 
@@ -87,8 +87,6 @@ Shortcuts
 **hh** - Split window horizontaly
 
 **vv** - Split window verticaly
-
-**!!** - Close window
 
 **,#** - Surround a word with #{ruby interpolation}
 

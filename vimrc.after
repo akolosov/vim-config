@@ -40,6 +40,9 @@ noremap <S-F7> <Esc>n
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 
+imap <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
+map  <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
+
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>

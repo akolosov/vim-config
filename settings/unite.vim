@@ -28,6 +28,7 @@ let g:unite_source_menu_menus.mainmenu.candidates = {
             \   'Grep in files'          : 'Unite grep',
             \   'Show registers'         : 'Unite register',
             \   'Show clipboard history' : 'Unite history/yank',
+						\		'Show GIT menu'					 : 'Unite menu:git',
             \ }
 function g:unite_source_menu_menus.mainmenu.map(key, value)
     return {
@@ -35,6 +36,25 @@ function g:unite_source_menu_menus.mainmenu.map(key, value)
             \       'action__command' : a:value,
             \ }
 endfunction
+
+let g:unite_source_menu_menus.git = {
+    \ 'description' : 'Unite GIT menu',
+    \}
+let g:unite_source_menu_menus.git.command_candidates = [
+    \['git status', 'Gstatus'],
+    \['git diff', 'Gdiff'],
+    \['git commit', 'Gcommit'],
+    \['git log', 'exe "silent Glog | Unite quickfix"'],
+    \['git blame', 'Gblame'],
+    \['git stage', 'Gwrite'],
+    \['git checkout', 'Gread'],
+    \['git rm', 'Gremove'],
+    \['git mv', 'exe "Gmove " input("destino: ")'],
+    \['git push', 'Git! push'],
+    \['git pull', 'Git! pull'],
+    \['git prompt', 'exe "Git! " input("comando git: ")'],
+    \['git cd', 'Gcd'],
+    \]
 
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 0

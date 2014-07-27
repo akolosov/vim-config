@@ -62,23 +62,23 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 
-" Intelligently close a window 
-" (if there are multiple windows into the same buffer)
-" or kill the buffer entirely if it's the last window looking into that buffer
-function! CloseWindowOrKillBuffer()
-  let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+function! BufferDelete()
+	if &modified
+		echohl ErrorMsg
+		echomsg "No write since last change. Not closing buffer."
+		echohl NONE
+	else
+		let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 
-  " We should never bdelete a nerd tree
-  if matchstr(expand("%"), 'NERD') == 'NERD'
-    wincmd c
-    return
-  endif
-
-  if number_of_windows_to_this_buffer > 1
-    wincmd c
-  else
-    bdelete
-  endif
+		if s:total_nr_buffers == 1
+			bdelete
+			echo "Buffer deleted. Created new buffer."
+		else
+			bprevious
+			bdelete #
+			echo "Buffer deleted."
+		endif
+	endif
 endfunction
 
 function! GetVisual()

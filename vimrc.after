@@ -96,11 +96,11 @@ vmap <F10> <ESC>:qa!<CR>
 map  <F10> <ESC>:qa!<CR>
 
 if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_console_startup != 1 || g:nerdtree_tabs_open_on_gui_startup != 1)
-	noremap <silent> <Esc><Esc><Esc> :qa<CR>
-	inoremap <silent> <Esc><Esc><Esc> <Esc>:qa<CR>
+	noremap <silent> <Leader><Esc> :qa<CR>
+	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 else
-	noremap <silent> <Esc><Esc><Esc> :call BufferDelete()<CR>
-	inoremap <silent> <Esc><Esc><Esc> <Esc>:call BufferDelete()<CR>
+	noremap <silent> <Leader><Esc> :call BufferDelete()<CR>
+	inoremap <silent> <Esc><Esc> <Esc>:call BufferDelete()<CR>
 endif
 
 imap <S-F10> <ESC>:wqa!<CR>

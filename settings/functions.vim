@@ -68,15 +68,17 @@ function! BufferDelete()
 		echomsg "No write since last change. Not closing buffer."
 		echohl NONE
 	else
-		let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+		if matchstr(expand("%"), 'NERD') != 'NERD'
+			let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 
-		if s:total_nr_buffers == 1
-			bdelete
-			echo "Buffer deleted. Created new buffer."
-		else
-			bprevious
-			bdelete #
-			echo "Buffer deleted."
+			if s:total_nr_buffers == 1
+				bdelete
+				echo "Buffer deleted. Created new buffer."
+			else
+				bprevious
+				bdelete #
+				echo "Buffer deleted."
+			endif
 		endif
 	endif
 endfunction

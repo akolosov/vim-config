@@ -273,12 +273,24 @@ if has("gui_running")
     set guifont=Anonymous\ Pro\ for\ Powerline\ 12
   elseif has("gui_macvim")
     set guifont=Anonymous\ Pro\ for\ Powerline:h14
-		let g:hybrid_use_iTerm_colors = 1
-	else
-		let g:hybrid_use_Xresources = 1
   endif
 	let g:airline_powerline_fonts = 1
 endif
+
+if has("gui_macvim")
+	" Alt-Up - upcase, Alt-Down - downcase
+	nmap [A   gUiw
+	imap [A   <Esc>gUiw<Esc>i
+	nmap [B   guiw
+	imap [B   <Esc>guiw<Esc>i
+
+	" Alt-Left/Right - switch tab to left/right
+	map  [C  <Esc>gt
+	map  [D  <Esc>gT
+	imap [C  <Esc>gti
+	imap [D  <Esc>gTi
+endif
+
 
 syntax enable
 set background=dark

@@ -99,7 +99,7 @@ if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_co
 	noremap <silent> <Esc><Esc> :qa<CR>
 	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 else
-	noremap <silent> <Leader><Esc><Esc> :call BufferDelete()<CR>
+	noremap <silent> <Esc><Esc><Esc> :call BufferDelete()<CR>
 	inoremap <silent> <Esc><Esc><Esc> <Esc>:call BufferDelete()<CR>
 endif
 

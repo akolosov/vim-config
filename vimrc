@@ -141,7 +141,7 @@ else
 endif
 
 " =================== GUI Settings ========================
-i" Disable the scrollbars (NERDTree)
+" Disable the scrollbars (NERDTree)
 set guioptions-=r
 set guioptions-=L
 

@@ -65,7 +65,7 @@ endfunction
 function! BufferDelete()
 	if &modified
 		echohl ErrorMsg
-		echomsg "No write since last change. Not closing buffer."
+		echomsg "Save before close!"
 		echohl NONE
 	else
 		if matchstr(expand("%"), 'NERD') != 'NERD'
@@ -76,6 +76,31 @@ function! BufferDelete()
 			else
 				bprevious
 				bdelete #
+			endif
+		endif
+	endif
+endfunction
+
+function! CloseWindowOrKillBuffer()
+	if &modified
+		echohl ErrorMsg
+		echomsg "Save before close!"
+		echohl NONE
+	else
+		if matchstr(expand("%"), 'NERD') != 'NERD'
+			let s:number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+			let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+
+
+			if s:number_of_windows_to_this_buffer > 1
+				wincmd c
+			else
+				if s:total_nr_buffers == 1
+					bdelete
+				else
+					bprevious
+					bdelete #
+				endif
 			endif
 		endif
 	endif

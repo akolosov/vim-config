@@ -49,10 +49,10 @@ let g:unite_source_menu_menus.git.command_candidates = [
     \['git stage', 'Gwrite'],
     \['git checkout', 'Gread'],
     \['git rm', 'Gremove'],
-    \['git mv', 'exe "Gmove " input("destino: ")'],
+    \['git mv', 'exe "Gmove " input("destination: ")'],
     \['git push', 'Git! push'],
     \['git pull', 'Git! pull'],
-    \['git prompt', 'exe "Git! " input("comando git: ")'],
+    \['git prompt', 'exe "Git! " input("git command: ")'],
     \['git cd', 'Gcd'],
     \]
 
@@ -78,3 +78,10 @@ elseif executable('ack')
     let g:unite_source_grep_recursive_opt=''
     let g:unite_source_grep_search_word_highlight = 1
 endif
+
+function! s:unite_settings()
+	nmap <buffer> <esc> <plug>(unite_exit)
+	imap <buffer> <esc> <plug>(unite_exit)
+endfunction
+
+autocmd FileType unite call s:unite_settings()

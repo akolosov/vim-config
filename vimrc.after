@@ -80,8 +80,8 @@ imap <C-y>  <ESC>ddi
 map  <C-k>  <ESC>d$
 imap <C-k>  <ESC><Right>d$i
 
-map  <C-w>  <ESC>bdw
-imap <C-w>  <ESC>bdwi
+map  <C-h>  <ESC>bdw
+imap <C-h>  <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 

@@ -99,6 +99,47 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" ================ Misc options =====================
+
+set expandtab
+set mouse=a
+set title
+set ignorecase                                      " игнорировать регистр при поиске
+set smartcase
+set hlsearch                                        " подсвечивать поиск
+set incsearch                                       " использовать инкрементальный поиск
+set autoindent                                      " indents if previous line was indented
+set smartindent                                     " smart indenting
+set linebreak                                       " перенос по словам, а не по буквам
+set dy=lastline
+set laststatus=2
+set encoding=utf-8                                  " set charset translation encoding
+set termencoding=utf-8                              " set terminal encoding
+set fileencoding=utf-8                              " set save encoding
+set fileencodings=utf8,koi8r,cp1251,cp866           " список предполагаемых кодировок, в порядке предпочтения
+set viminfo+=n$HOME/.vim/tmp/viminfo
+set foldcolumn=3
+set t_Co=256
+set pastetoggle=<F3>
+set noautochdir
+set noshowmode
+set confirm
+set gdefault                                        " Add the g flag to search/replace by default
+set binary
+set noeol                                           " Don’t add empty newlines at the end of files
+set cursorline                                      " Highlight current line
+set noerrorbells                                    " Disable error bells
+set shortmess=atI                                   " Don’t show the intro message when starting Vim
+set ttimeoutlen=50
+set ssop-=options
+set colorcolumn=100
+
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+else
+  set clipboard=unnamed
+endif
+
 " ================ Custom Settings ========================
 if filereadable(expand("~/.vim/bundle/.installed"))
   so ~/.vim/settings.vim

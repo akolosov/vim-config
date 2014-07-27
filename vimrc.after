@@ -1,63 +1,3 @@
-set expandtab
-set mouse=a
-set title
-
-set ignorecase                                      " игнорировать регистр при поиске
-set smartcase
-set hlsearch                                        " подсвечивать поиск
-set incsearch                                       " использовать инкрементальный поиск
-
-set autoindent                                      " indents if previous line was indented
-set smartindent                                     " smart indenting
-
-set linebreak                                       " перенос по словам, а не по буквам
-set dy=lastline
-
-set laststatus=2
-
-set encoding=utf-8                                  " set charset translation encoding
-set termencoding=utf-8                              " set terminal encoding
-set fileencoding=utf-8                              " set save encoding
-set fileencodings=utf8,koi8r,cp1251,cp866           " список предполагаемых кодировок, в порядке предпочтения
-
-set viminfo+=n$HOME/.vim/tmp/viminfo
-
-set foldcolumn=3
-
-set t_Co=256
-
-set pastetoggle=<F3>
-
-set noautochdir
-
-set noshowmode
-
-set confirm
-
-set gdefault                                        " Add the g flag to search/replace by default
-
-set binary
-
-set noeol                                           " Don’t add empty newlines at the end of files
-
-set cursorline                                      " Highlight current line
-
-set noerrorbells                                    " Disable error bells
-
-set shortmess=atI                                   " Don’t show the intro message when starting Vim
-
-set ttimeoutlen=50
-
-set ssop-=options
-
-set colorcolumn=100
-
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-else
-  set clipboard=unnamed
-endif
-
 nnoremap ; :
 
 noremap <F1> <nop>
@@ -232,7 +172,7 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
 " ,<Space> - toggle goyo mode
-nnoremap <silent> <Leader><Space> :call <SID>GoGoyo()<CR>
+nnoremap <silent> <Leader><Space> :GoGoyo<CR>
 
 " Ctrl-A - select all
 map  <C-A>    ggVG
@@ -244,6 +184,9 @@ vmap <C-A>    <Esc>ggVG
 imap <C-j> <Esc>ma
 vmap <C-j> <Esc>ma
 nmap <C-j> ma
+
+" Ctrl-P - Inserts the path of the currently edited file into a command
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 

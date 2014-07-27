@@ -21,6 +21,8 @@ let g:ctrlp_switch_buffer = 1
 " Additional mapping for buffer search
 nnoremap <silent> ,b :CtrlPBuffer<cr>
 nnoremap <silent> <C-b> :CtrlPBuffer<cr>
+vnoremap <silent> <C-b> <Esc>:CtrlPBuffer<cr>
+inoremap <silent> <C-b> <Esc>:CtrlPBuffer<cr>
 
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much

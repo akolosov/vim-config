@@ -1,6 +1,6 @@
 let g:goyo_width = 120
 
-function! s:GoGoyo()
+function! GoGoyo()
     execute 'Goyo'
     if exists('#goyo') == 1
       execute 'NERDTreeClose'
@@ -12,4 +12,4 @@ function! s:GoGoyo()
     end
 endfunction
 
-
+command! GoGoyo :call GoGoyo()

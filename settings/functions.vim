@@ -18,7 +18,7 @@ function! SearchInFile()
     let s:word = input("[IN CURRENT FILE] Search for: ")
     :execute '/' . s:word . '/'
     :unlet! s:word
-		return @/ 
+		return @/
 endfunction
 
 " Find && Replace in all opened buffers

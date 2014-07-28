@@ -266,17 +266,17 @@ endif
 
 if has("gui_macvim")
 	" Alt-Up - upcase, Alt-Down - downcase
-	nmap \033[A   gUiw
-	imap \033[A   <Esc>gUiw<Esc>i
-	nmap \033[B   guiw
-	imap \033[B   <Esc>guiw<Esc>i
+	nmap [A   gUiw
+	imap [A   <Esc>gUiw<Esc>i
+	nmap [B   guiw
+	imap [B   <Esc>guiw<Esc>i
 
 	if g:use_tabs == 1
 		" Alt-Left/Right - switch tab to left/right
-		nmap \033[C  gt
-		nmap \033[D  gT
-		imap \033[C  <Esc>gti
-		imap \033[D  <Esc>gTi
+		nmap [C  gt
+		nmap [D  gT
+		imap [C  <Esc>gti
+		imap [D  <Esc>gTi
 
 		" Shift-Alt-Left/Right - switch buffers to left/right
 		nmap \0330C  :bn<CR>
@@ -285,10 +285,10 @@ if has("gui_macvim")
 		imap \0330D  <Esc>:bp<CR>i
 	else
 		" Alt-Left/Right - switch buffers to left/right
-		nmap \033[C  :bn<CR>
-		nmap \033[D  :bp<CR>
-		imap \033[C  <Esc>:bn<CR>i
-		imap \033[D  <Esc>:bp<CR>i
+		nmap [C  :bn<CR>
+		nmap [D  :bp<CR>
+		imap [C  <Esc>:bn<CR>i
+		imap [D  <Esc>:bp<CR>i
 
 		" Shift-Alt-Left/Right - switch tab to left/right
 		nmap \0330C  gt

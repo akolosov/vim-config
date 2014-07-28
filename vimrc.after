@@ -84,13 +84,11 @@ inoremap <S-F7> <Esc>ni
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
 
-imap <silent> <S-F8> <Esc>:sball<CR>
-nmap <silent> <S-F8> :sball<CR>
+imap <silent> <S-A-F8> <Esc>:sball<CR>
+nmap <silent> <S-A-F8> :sball<CR>
 
-if g:use_tabs == 1
-	map <silent> <F8> <Esc>:bufdo tab split<CR>
-	map <silent> <F8> :bufdo tab split<CR>
-endif
+map <silent> <F8> <Esc>:bufdo tab split<CR>
+map <silent> <F8> :bufdo tab split<CR>
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
@@ -300,12 +298,24 @@ else
 		nmap <A-Left>   gT
 		imap <A-Right>  <Esc>gti
 		imap <A-Left>   <Esc>gTi
+
+		" Shift-Alt-Left/Right - switch buffers to lefs/right
+		nmap <S-A-Right>  :bn<CR>
+		nmap <S-A-Left>   :bp<CR>
+		imap <S-A-Right>  <Esc>:bn<CR>i
+		imap <S-A-Left>   <Esc>:bp<CR>i
 	else
 		" Alt-Left/Right - switch buffers to lefs/right
 		nmap <A-Right>  :bn<CR>
 		nmap <A-Left>   :bp<CR>
 		imap <A-Right>  <Esc>:bn<CR>i
 		imap <A-Left>   <Esc>:bp<CR>i
+
+		" Shift-Alt-Left/Right - switch tab to left/right
+		nmap <S-A-Right>  gt
+		nmap <S-A-Left>   gT
+		imap <S-A-Right>  <Esc>gti
+		imap <S-A-Left>   <Esc>gTi
 	endif
 endif
 

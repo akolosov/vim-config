@@ -277,12 +277,24 @@ if has("gui_macvim")
 		nmap [D  gT
 		imap [C  <Esc>gti
 		imap [D  <Esc>gTi
+
+		" Shift-Alt-Left/Right - switch buffers to left/right
+		nmap 0C  :bn<CR>
+		nmap 0D  :bp<CR>
+		imap 0C  <Esc>:bn<CR>i
+		imap 0D  <Esc>:bp<CR>i
 	else
 		" Alt-Left/Right - switch buffers to left/right
 		nmap [C  :bn<CR>
 		nmap [D  :bp<CR>
 		imap [C  <Esc>:bn<CR>i
 		imap [D  <Esc>:bp<CR>i
+
+		" Shift-Alt-Left/Right - switch tab to left/right
+		nmap 0C  gt
+		nmap 0D  gT
+		imap 0C  <Esc>gti
+		imap 0D  <Esc>gTi
 	endif
 
 else

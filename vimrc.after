@@ -84,11 +84,11 @@ inoremap <S-F7> <Esc>ni
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
 
-imap <silent> <S-A-F8> <Esc>:sball<CR>
-nmap <silent> <S-A-F8> :sball<CR>
-
 map <silent> <F8> <Esc>:bufdo tab split<CR>
 map <silent> <F8> :bufdo tab split<CR>
+
+imap <silent> <S-F8> <Esc>:sball<CR>
+nmap <silent> <S-F8> :sball<CR>
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>

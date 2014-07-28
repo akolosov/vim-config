@@ -133,6 +133,7 @@ set shortmess=atI                                   " Don’t show the intro mes
 set ttimeoutlen=50
 set ssop-=options
 set colorcolumn=100
+set switchbuf=usetab,newtab
 
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus

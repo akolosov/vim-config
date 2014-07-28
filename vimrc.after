@@ -264,100 +264,96 @@ if has("gui_running")
 	let g:airline_powerline_fonts = 1
 endif
 
-if g:running_os == "mac"
-	" Alt-k - upcase, Alt-j - downcase
-	nmap ˚ gUiw
-	imap ˚ <Esc>gUiw<Esc>i
-	nmap ∆ guiw
-	imap ∆ <Esc>guiw<Esc>i
+" Alt-k - upcase, Alt-j - downcase
+nmap ˚ gUiw
+imap ˚ <Esc>gUiw<Esc>i
+nmap ∆ guiw
+imap ∆ <Esc>guiw<Esc>i
 
-	if g:use_tabs == 1
-		" Alt-h/l - switch tab to left/right
-		nmap ¬ gt
-		nmap ˙ gT
-		imap ¬ <Esc>gti
-		imap ˙ <Esc>gTi
+" Alt-k - upcase, Alt-j - downcase
+nmap <A-k>   gUiw
+imap <A-k>   <Esc>gUiw<Esc>i
+nmap <A-j> guiw
+imap <A-j> <Esc>guiw<Esc>i
 
-		" Shift-Alt-h/l - switch buffers to left/right
-		nmap Ò :bn<CR>
-		nmap Ó :bp<CR>
-		imap Ò <Esc>:bn<CR>i
-		imap Ó <Esc>:bp<CR>i
-	else
-		" Alt-h/l - switch buffers to left/right
-		nmap ¬ :bn<CR>
-		nmap ˙ :bp<CR>
-		imap ¬ <Esc>:bn<CR>i
-		imap ˙ <Esc>:bp<CR>i
+" Alt-Up - upcase, Alt-Down - downcase
+nmap <A-Up>   gUiw
+imap <A-Up>   <Esc>gUiw<Esc>i
+nmap <A-Down> guiw
+imap <A-Down> <Esc>guiw<Esc>i
 
-		" Shift-Alt-h/l - switch tab to left/right
-		nmap Ò gt
-		nmap Ó gT
-		imap Ò <Esc>gti
-		imap Ó <Esc>gTi
-	endif
+if g:use_tabs == 1
+	" Alt-h/l - switch tab to left/right
+	nmap ¬ gt
+	nmap ˙ gT
+	imap ¬ <Esc>gti
+	imap ˙ <Esc>gTi
+
+	" Shift-Alt-h/l - switch buffers to left/right
+	nmap Ò :bn<CR>
+	nmap Ó :bp<CR>
+	imap Ò <Esc>:bn<CR>i
+	imap Ó <Esc>:bp<CR>i
+
+	" Alt-Left/Right - switch tab to left/right
+	nmap <A-l>  gt
+	nmap <A-h>   gT
+	imap <A-l>  <Esc>gti
+	imap <A-h>   <Esc>gTi
+
+	" Shift-Alt-Left/Right - switch buffers to lefs/right
+	nmap <S-A-l>  :bn<CR>
+	nmap <S-A-h>   :bp<CR>
+	imap <S-A-l>  <Esc>:bn<CR>i
+	imap <S-A-h>   <Esc>:bp<CR>i
+
+	" Alt-Left/Right - switch tab to left/right
+	nmap <A-Right>  gt
+	nmap <A-Left>   gT
+	imap <A-Right>  <Esc>gti
+	imap <A-Left>   <Esc>gTi
+
+	" Shift-Alt-Left/Right - switch buffers to lefs/right
+	nmap <S-A-Right>  :bn<CR>
+	nmap <S-A-Left>   :bp<CR>
+	imap <S-A-Right>  <Esc>:bn<CR>i
+	imap <S-A-Left>   <Esc>:bp<CR>i
 else
-	" Alt-k - upcase, Alt-j - downcase
-	nmap <A-k>   gUiw
-	imap <A-k>   <Esc>gUiw<Esc>i
-	nmap <A-j> guiw
-	imap <A-j> <Esc>guiw<Esc>i
+	" Alt-h/l - switch buffers to left/right
+	nmap ¬ :bn<CR>
+	nmap ˙ :bp<CR>
+	imap ¬ <Esc>:bn<CR>i
+	imap ˙ <Esc>:bp<CR>i
 
-	" Alt-Up - upcase, Alt-Down - downcase
-	nmap <A-Up>   gUiw
-	imap <A-Up>   <Esc>gUiw<Esc>i
-	nmap <A-Down> guiw
-	imap <A-Down> <Esc>guiw<Esc>i
+	" Shift-Alt-h/l - switch tab to left/right
+	nmap Ò gt
+	nmap Ó gT
+	imap Ò <Esc>gti
+	imap Ó <Esc>gTi
 
-	if g:use_tabs == 1
-		" Alt-Left/Right - switch tab to left/right
-		nmap <A-l>  gt
-		nmap <A-h>   gT
-		imap <A-l>  <Esc>gti
-		imap <A-h>   <Esc>gTi
+	" Alt-Left/Right - switch buffers to lefs/right
+	nmap <A-l>  :bn<CR>
+	nmap <A-h>   :bp<CR>
+	imap <A-l>  <Esc>:bn<CR>i
+	imap <A-h>   <Esc>:bp<CR>i
 
-		" Shift-Alt-Left/Right - switch buffers to lefs/right
-		nmap <S-A-l>  :bn<CR>
-		nmap <S-A-h>   :bp<CR>
-		imap <S-A-l>  <Esc>:bn<CR>i
-		imap <S-A-h>   <Esc>:bp<CR>i
+	" Shift-Alt-Left/Right - switch tab to left/right
+	nmap <S-A-l>  gt
+	nmap <S-A-h>   gT
+	imap <S-A-l>  <Esc>gti
+	imap <S-A-h>   <Esc>gTi
 
-		" Alt-Left/Right - switch tab to left/right
-		nmap <A-Right>  gt
-		nmap <A-Left>   gT
-		imap <A-Right>  <Esc>gti
-		imap <A-Left>   <Esc>gTi
+	" Alt-Left/Right - switch buffers to lefs/right
+	nmap <A-Right>  :bn<CR>
+	nmap <A-Left>   :bp<CR>
+	imap <A-Right>  <Esc>:bn<CR>i
+	imap <A-Left>   <Esc>:bp<CR>i
 
-		" Shift-Alt-Left/Right - switch buffers to lefs/right
-		nmap <S-A-Right>  :bn<CR>
-		nmap <S-A-Left>   :bp<CR>
-		imap <S-A-Right>  <Esc>:bn<CR>i
-		imap <S-A-Left>   <Esc>:bp<CR>i
-	else
-		" Alt-Left/Right - switch buffers to lefs/right
-		nmap <A-l>  :bn<CR>
-		nmap <A-h>   :bp<CR>
-		imap <A-l>  <Esc>:bn<CR>i
-		imap <A-h>   <Esc>:bp<CR>i
-
-		" Shift-Alt-Left/Right - switch tab to left/right
-		nmap <S-A-l>  gt
-		nmap <S-A-h>   gT
-		imap <S-A-l>  <Esc>gti
-		imap <S-A-h>   <Esc>gTi
-
-		" Alt-Left/Right - switch buffers to lefs/right
-		nmap <A-Right>  :bn<CR>
-		nmap <A-Left>   :bp<CR>
-		imap <A-Right>  <Esc>:bn<CR>i
-		imap <A-Left>   <Esc>:bp<CR>i
-
-		" Shift-Alt-Left/Right - switch tab to left/right
-		nmap <S-A-Right>  gt
-		nmap <S-A-Left>   gT
-		imap <S-A-Right>  <Esc>gti
-		imap <S-A-Left>   <Esc>gTi
-	endif
+	" Shift-Alt-Left/Right - switch tab to left/right
+	nmap <S-A-Right>  gt
+	nmap <S-A-Left>   gT
+	imap <S-A-Right>  <Esc>gti
+	imap <S-A-Left>   <Esc>gTi
 endif
 
 syntax enable

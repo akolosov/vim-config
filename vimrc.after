@@ -86,8 +86,11 @@ noremap <S-F7> <Esc>n
 
 imap <silent> <S-F8> <Esc>:sball<CR>
 nmap <silent> <S-F8> :sball<CR>
-imap <silent> <F8> <Esc>:bufdo tab split<CR>
-nmap <silent> <F8> :bufdo tab split<CR>
+
+if g:use_tabs == 1
+	map <silent> <F8> <Esc>:bufdo tab split<CR>
+	map <silent> <F8> :bufdo tab split<CR>
+endif
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
 map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
@@ -270,11 +273,20 @@ if has("gui_macvim")
 	nmap [B   guiw
 	imap [B   <Esc>guiw<Esc>i
 
-	" Alt-Left/Right - switch tab to left/right
-	nmap [C  gt
-	nmap [D  gT
-	imap [C  <Esc>gti
-	imap [D  <Esc>gTi
+	if g:use_tabs == 1
+		" Alt-Left/Right - switch tab to left/right
+		nmap [C  gt
+		nmap [D  gT
+		imap [C  <Esc>gti
+		imap [D  <Esc>gTi
+	else
+		" Alt-Left/Right - switch buffers to left/right
+		nmap [C  :bp<CR>
+		nmap [D  :bn<CR>
+		imap [C  <Esc>:bp<CR>i
+		imap [D  <Esc>:bn<CR>i
+	endif
+
 else
 	" Alt-Up - upcase, Alt-Down - downcase
 	nmap <A-Up>   gUiw

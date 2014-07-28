@@ -62,6 +62,10 @@ Shortcuts
 
 **SHIFT-F7** - Search next entry
 
+**F8** - Switch all buffers to tabs
+
+**SHIFT-F8** - Switch all buffers to windows
+
 **F9** - Show Unite menu
 
 **SHIFT-F9** - Show GIT menu
@@ -74,13 +78,13 @@ Shortcuts
 
 **//** - No highlights search
 
-**ALT-Right** - Switch next tab
+**ALT-l** - Switch next buffer or tab
 
-**ALT-Left** - Switch prev tab
+**ALT-h** - Switch prev buffer or tab
 
-**ALT-Up** - Upcase word under cursor
+**ALT-k** - Upcase word under cursor
 
-**ALT-Down** - Downcase word under cursor
+**ALT-j** - Downcase word under cursor
 
 **hh** - Split window horizontaly
 

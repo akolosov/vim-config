@@ -32,6 +32,11 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
+let g:neocomplete#enable_cursor_hold_i = 1
+let g:neocomplete#enable_insert_char_pre = 1
+
+inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags

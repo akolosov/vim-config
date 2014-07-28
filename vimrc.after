@@ -281,10 +281,10 @@ if has("gui_macvim")
 		imap [D  <Esc>gTi
 	else
 		" Alt-Left/Right - switch buffers to left/right
-		nmap [C  :bp<CR>
-		nmap [D  :bn<CR>
-		imap [C  <Esc>:bp<CR>i
-		imap [D  <Esc>:bn<CR>i
+		nmap [C  :bn<CR>
+		nmap [D  :bp<CR>
+		imap [C  <Esc>:bn<CR>i
+		imap [D  <Esc>:bp<CR>i
 	endif
 
 else
@@ -294,11 +294,19 @@ else
 	nmap <A-Down> guiw
 	imap <A-Down> <Esc>guiw<Esc>i
 
-	" Alt-Left/Right - switch tab to left/right
-	nmap <A-Right>  gt
-	nmap <A-Left>   gT
-	imap <A-Right>  <Esc>gti
-	imap <A-Left>   <Esc>gTi
+	if g:use_tabs == 1
+		" Alt-Left/Right - switch tab to left/right
+		nmap <A-Right>  gt
+		nmap <A-Left>   gT
+		imap <A-Right>  <Esc>gti
+		imap <A-Left>   <Esc>gTi
+	else
+		" Alt-Left/Right - switch buffers to lefs/right
+		nmap <A-Right>  :bn<CR>
+		nmap <A-Left>   :bp<CR>
+		imap <A-Right>  <Esc>:bn<CR>i
+		imap <A-Left>   <Esc>:bp<CR>i
+	endif
 endif
 
 syntax enable

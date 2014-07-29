@@ -86,9 +86,9 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**hh** - Split window horizontaly
+**,hh** - Split window horizontaly
 
-**vv** - Split window verticaly
+**,vv** - Split window verticaly
 
 **,#** - Surround a word with #{ruby interpolation}
 

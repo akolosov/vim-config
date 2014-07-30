@@ -251,26 +251,6 @@ nmap <C-j> ma
 " Ctrl-P - Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
-au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
-
-autocmd FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType coffee     setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
-
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Anonymous\ Pro\ for\ Powerline\ 11
-  elseif has("gui_macvim")
-    set guifont=Anonymous\ Pro\ for\ Powerline:h14
-  endif
-	let g:airline_powerline_fonts = 1
-endif
-
 " Alt-k - upcase, Alt-j - downcase (MacOS)
 nmap ˚ gUiw
 imap ˚ <Esc>gUiw<Esc>i
@@ -331,6 +311,26 @@ else
 	nmap <S-A-Left>   gT
 	imap <S-A-Right>  <Esc>gti
 	imap <S-A-Left>   <Esc>gTi
+endif
+
+au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
+
+autocmd FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType coffee     setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Anonymous\ Pro\ for\ Powerline\ 11
+  elseif has("gui_macvim")
+    set guifont=Anonymous\ Pro\ for\ Powerline:h14
+  endif
+	let g:airline_powerline_fonts = 1
 endif
 
 syntax enable

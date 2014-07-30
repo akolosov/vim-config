@@ -54,6 +54,8 @@ Shortcuts
 
 **F4** - Toggle readonly mode
 
+**F5** - Open the selected region in a new narrowed window
+
 **F6** - Search word under cursor or selected word entire files in current directory (recursively)
 
 **SHIFT-F6** - Search word under cursor and replace with user inputs

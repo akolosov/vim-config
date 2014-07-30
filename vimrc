@@ -32,7 +32,9 @@ syntax on
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
+let g:mapleader=","
 let maplocalleader = '_'
+let g:maplocalleader = '_'
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundle.vim
@@ -135,6 +137,7 @@ set ttimeoutlen=50
 set ssop-=options
 set colorcolumn=100
 set switchbuf=usetab,newtab
+set ttyfast																					" assume fast terminal connection
 
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus

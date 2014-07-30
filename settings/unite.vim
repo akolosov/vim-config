@@ -29,6 +29,8 @@ let g:unite_source_menu_menus.mainmenu.candidates = {
             \   'Show registers'         : 'Unite register',
             \   'Show clipboard history' : 'Unite history/yank',
 						\		'Show GIT menu'					 : 'Unite menu:git',
+						\		'Select VIM colorscheme' : 'Unite -winheight=15 -auto-preview -buffer-name=colorschemes colorscheme',
+						\		'Select AirLine scheme'  : 'Unite -winheight=15 -auto-preview -buffer-name=airline_themes airline_themes',
             \ }
 function g:unite_source_menu_menus.mainmenu.map(key, value)
     return {

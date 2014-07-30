@@ -1,6 +1,8 @@
 nnoremap ; :
 
-noremap <F1> <Esc>
+nmap <F1> <nop>
+vmap <F1> <nop>
+imap <F1> <nop>
 
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
@@ -71,6 +73,11 @@ map  <C-h>  <ESC>bdw
 imap <C-h>  <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
+
+" F5 - Open the selected region in a new narrowed window
+vnoremap <silent> <F5> :NR<CR>
+nnoremap <silent> <F5> :NR<CR>
+inoremap <silent> <F5> <Esc>:NR<CR>
 
 inoremap <silent> <F6> <Esc>:Ag <cword><CR>
 nnoremap <silent> <F6> :Ag <cword><CR>
@@ -330,4 +337,5 @@ syntax enable
 set background=dark
 colorscheme hybrid
 AirlineTheme badwolf
+
 

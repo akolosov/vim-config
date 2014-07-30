@@ -1,6 +1,8 @@
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
 
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/neosnippets,~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+
 " Plugin key-mappings.
 imap <C-@>     <Plug>(neosnippet_expand_or_jump)
 smap <C-@>     <Plug>(neosnippet_expand_or_jump)

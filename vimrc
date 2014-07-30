@@ -2,10 +2,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
+endif
+
+if filereadable(expand("~/.vimrc.before.local"))
+  source ~/.vimrc.before.local
 endif
 
 " ================ General Config ====================

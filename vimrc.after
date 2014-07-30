@@ -257,24 +257,18 @@ autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
 
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Anonymous\ Pro\ for\ Powerline\ 12
+    set guifont=Anonymous\ Pro\ for\ Powerline\ 11
   elseif has("gui_macvim")
     set guifont=Anonymous\ Pro\ for\ Powerline:h14
   endif
 	let g:airline_powerline_fonts = 1
 endif
 
-" Alt-k - upcase, Alt-j - downcase
+" Alt-k - upcase, Alt-j - downcase (MacOS)
 nmap ˚ gUiw
 imap ˚ <Esc>gUiw<Esc>i
 nmap ∆ guiw
 imap ∆ <Esc>guiw<Esc>i
-
-" Alt-k - upcase, Alt-j - downcase
-nmap <A-k>   gUiw
-imap <A-k>   <Esc>gUiw<Esc>i
-nmap <A-j> guiw
-imap <A-j> <Esc>guiw<Esc>i
 
 " Alt-Up - upcase, Alt-Down - downcase
 nmap <A-Up>   gUiw
@@ -283,29 +277,17 @@ nmap <A-Down> guiw
 imap <A-Down> <Esc>guiw<Esc>i
 
 if g:use_tabs == 1
-	" Alt-h/l - switch tab to left/right
+	" Alt-h/l - switch tab to left/right (MacOS)
 	nmap ¬ gt
 	nmap ˙ gT
 	imap ¬ <Esc>gti
 	imap ˙ <Esc>gTi
 
-	" Shift-Alt-h/l - switch buffers to left/right
+	" Shift-Alt-h/l - switch buffers to left/right (MacOS)
 	nmap Ò :bn<CR>
 	nmap Ó :bp<CR>
 	imap Ò <Esc>:bn<CR>i
 	imap Ó <Esc>:bp<CR>i
-
-	" Alt-Left/Right - switch tab to left/right
-	nmap <A-l>  gt
-	nmap <A-h>   gT
-	imap <A-l>  <Esc>gti
-	imap <A-h>   <Esc>gTi
-
-	" Shift-Alt-Left/Right - switch buffers to lefs/right
-	nmap <S-A-l>  :bn<CR>
-	nmap <S-A-h>   :bp<CR>
-	imap <S-A-l>  <Esc>:bn<CR>i
-	imap <S-A-h>   <Esc>:bp<CR>i
 
 	" Alt-Left/Right - switch tab to left/right
 	nmap <A-Right>  gt
@@ -319,29 +301,17 @@ if g:use_tabs == 1
 	imap <S-A-Right>  <Esc>:bn<CR>i
 	imap <S-A-Left>   <Esc>:bp<CR>i
 else
-	" Alt-h/l - switch buffers to left/right
+	" Alt-h/l - switch buffers to left/right (MacOS)
 	nmap ¬ :bn<CR>
 	nmap ˙ :bp<CR>
 	imap ¬ <Esc>:bn<CR>i
 	imap ˙ <Esc>:bp<CR>i
 
-	" Shift-Alt-h/l - switch tab to left/right
+	" Shift-Alt-h/l - switch tab to left/right (MacOS)
 	nmap Ò gt
 	nmap Ó gT
 	imap Ò <Esc>gti
 	imap Ó <Esc>gTi
-
-	" Alt-Left/Right - switch buffers to lefs/right
-	nmap <A-l>  :bn<CR>
-	nmap <A-h>   :bp<CR>
-	imap <A-l>  <Esc>:bn<CR>i
-	imap <A-h>   <Esc>:bp<CR>i
-
-	" Shift-Alt-Left/Right - switch tab to left/right
-	nmap <S-A-l>  gt
-	nmap <S-A-h>   gT
-	imap <S-A-l>  <Esc>gti
-	imap <S-A-h>   <Esc>gTi
 
 	" Alt-Left/Right - switch buffers to lefs/right
 	nmap <A-Right>  :bn<CR>

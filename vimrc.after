@@ -336,6 +336,6 @@ endif
 syntax enable
 set background=dark
 colorscheme hybrid
-AirlineTheme badwolf
+AirlineTheme bubblegum
 
 

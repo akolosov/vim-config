@@ -16,7 +16,7 @@ set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
+set novisualbell                "No sounds
 set autoread                    "Reload files changed outside vim
 
 " This makes vim act like all other editors, buffers can
@@ -120,6 +120,7 @@ set fileencodings=utf8,koi8r,cp1251,cp866           " список предпо�
 set viminfo+=n$HOME/.vim/tmp/viminfo
 set foldcolumn=3
 set t_Co=256
+set t_vb=
 set pastetoggle=<F3>
 set noautochdir
 set noshowmode

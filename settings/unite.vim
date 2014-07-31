@@ -11,7 +11,7 @@ let g:unite_split_rule = "botright"
 let g:unite_force_overwrite_statusline = 0
 
 " Размер окна Unite
-let g:unite_winheight = 10
+let g:unite_winheight = 15
 
 " Красивые стрелочки
 let g:unite_candidate_icon="»"
@@ -29,8 +29,8 @@ let g:unite_source_menu_menus.mainmenu.candidates = {
             \   'Show registers'         : 'Unite register',
             \   'Show clipboard history' : 'Unite history/yank',
 						\		'Show GIT menu'					 : 'Unite menu:git',
-						\		'Select VIM colorscheme' : 'Unite -winheight=15 -auto-preview -buffer-name=colorschemes colorscheme',
-						\		'Select AirLine scheme'  : 'Unite -winheight=15 -auto-preview -buffer-name=airline_themes airline_themes',
+						\		'Select VIM colorscheme' : 'Unite -auto-preview -buffer-name=colorschemes colorscheme',
+						\		'Select AirLine scheme'  : 'Unite -auto-preview -buffer-name=airline_themes airline_themes',
             \ }
 function g:unite_source_menu_menus.mainmenu.map(key, value)
     return {

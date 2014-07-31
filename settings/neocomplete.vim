@@ -29,7 +29,7 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_auto_select = 0
 let g:neocomplete#enable_cursor_hold_i = 1
 let g:neocomplete#enable_insert_char_pre = 1
 
@@ -43,3 +43,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+if !exists('~/.vim/tmp/neocomplete')
+	silent !mkdir ~/.vim/tmp/neocomplete > /dev/null 2>&1
+endif
+
+let g:neocomplete#data_directory='~/.vim/tmp/neocomplete'

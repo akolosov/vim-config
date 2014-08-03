@@ -9,16 +9,16 @@ endif
 
 let g:airline_mode_map = {
     \ '__' : '-',
-    \ 'n'  : '⌘',
-    \ 'i'  : 'I',
-    \ 'R'  : 'R',
-    \ 'c'  : 'C',
-    \ 'v'  : 'v',
-    \ 'V'  : 'V',
-    \ '' : '^V',
-    \ 's'  : 's',
-    \ 'S'  : 'S',
-    \ '' : '^S',
+    \ 'n'  : 'η',
+    \ 'i'  : 'λ',
+    \ 'R'  : 'γ',
+    \ 'c'  : 'π',
+    \ 'v'  : 'ψ',
+    \ 'V'  : 'Ψ',
+    \ '' : '^Ψ',
+    \ 's'  : 'ω',
+    \ 'S'  : 'Ω',
+    \ '' : '^Ω',
     \ }
 
 if !exists('g:airline_symbols')
@@ -48,3 +48,4 @@ let g:airline#extensions#tabline#show_buffers = 1
 
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#quickfix#location_text = 'Location'
+

@@ -1,0 +1,316 @@
+nnoremap ; :
+
+nmap <F1> <nop>
+vmap <F1> <nop>
+imap <F1> <nop>
+
+" <Leader># Surround a word with #{ruby interpolation}
+map <Leader># ysiw#
+vmap <Leader># c#{<C-R>"}<ESC>
+
+" <Leader>" Surround a word with "quotes"
+map <Leader>" ysiw"
+vmap <Leader>" c"<C-R>""<ESC>
+
+" <Leader>' Surround a word with 'single quotes'
+map <Leader>' ysiw'
+vmap <Leader>' c'<C-R>"'<ESC>
+
+" <Leader>) or <Leader>( Surround a word with (parens)
+" The difference is in whether a space is put in
+map <Leader>( ysiw(
+map <Leader>) ysiw)
+vmap <Leader>( c( <C-R>" )<ESC>
+vmap <Leader>) c(<C-R>")<ESC>
+
+" <Leader>[ Surround a word with [brackets]
+map <Leader>] ysiw]
+map <Leader>[ ysiw[
+vmap <Leader>[ c[ <C-R>" ]<ESC>
+vmap <Leader>] c[<C-R>"]<ESC>
+
+" <Leader>{ Surround a word with {braces}
+map <Leader>} ysiw}
+map <Leader>{ ysiw{
+vmap <Leader>} c{ <C-R>" }<ESC>
+vmap <Leader>{ c{<C-R>"}<ESC>
+
+map <Leader>` ysiw`
+
+"Go to last edit location with <Leader>.
+nnoremap <Leader>. '.
+
+" <Leader>qc to toggle quickfix window (where you have stuff like Ag)
+" <Leader>qo to open it back up (rare)
+nmap <silent> <Leader>qc :cclose<CR>
+nmap <silent> <Leader>qo :copen<CR>
+
+" Make gf (go to file)
+" Create the file if not existent
+nnoremap gf :e <cfile><CR>
+nnoremap gfw :sp +e <cfile><CR>
+nnoremap gft :tabe <cfile><CR>
+
+imap <F2>   <Esc>:w<CR>i
+map  <F2>   <Esc>:w<CR>
+
+imap <C-F2> <Esc>:wa<CR>i
+map  <C-F2> <Esc>:wa<CR>
+
+imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map  <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+
+imap <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map  <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+
+map  <C-y>  <ESC>dd
+imap <C-y>  <ESC>ddi
+
+map  <C-k>  <ESC>d$
+imap <C-k>  <ESC><Right>d$i
+
+map  <C-h>  <ESC>bdw
+imap <C-h>  <ESC>bdwi
+
+map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
+
+" F5 - Open the selected region in a new narrowed window
+vnoremap <silent> <F5> :NR<CR>
+nnoremap <silent> <F5> :NR<CR>
+inoremap <silent> <F5> <Esc>:NR<CR>
+
+inoremap <silent> <F6> <Esc>:Ag <cword><CR>
+nnoremap <silent> <F6> :Ag <cword><CR>
+vnoremap <silent> <F6> :<C-U>execute "Ag " . GetVisual()<CR>
+
+inoremap <S-F6> <Esc>:call Replace()<CR>
+nnoremap <S-F6> :call Replace()<CR>
+
+inoremap <F7> <Esc>:let @/ = SearchInFile()<CR>
+inoremap <S-F7> <Esc>ni
+noremap <F7> :let @/ = SearchInFile()<CR>
+noremap <S-F7> <Esc>n
+
+map <silent> <F8> <Esc>:bufdo tab split<CR>
+map <silent> <F8> :bufdo tab split<CR>
+
+imap <silent> <S-F8> <Esc>:sball<CR>
+nmap <silent> <S-F8> :sball<CR>
+
+imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+
+imap <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
+map  <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
+
+imap <F10> <ESC>:qa!<CR>
+nmap <F10> :qa!<CR>
+vmap <F10> <ESC>:qa!<CR>
+map  <F10> <ESC>:qa!<CR>
+
+if (&readonly || argc() || !isdirectory(argv(0))) && (g:nerdtree_tabs_open_on_console_startup != 1 || g:nerdtree_tabs_open_on_gui_startup != 1)
+	noremap <silent> <Esc><Esc> :qa<CR>
+	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+else
+	noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+	inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+endif
+
+imap <S-F10> <ESC>:wqa!<CR>
+nmap <S-F10> :wqa!<CR>
+vmap <S-F10> <ESC>:wqa!<CR>
+map  <S-F10> <ESC>:wqa!<CR>
+
+nmap <C-t>   :TagbarToggle<CR>
+
+imap <C-d>   <ESC>:NERDTreeToggle<CR>
+nmap <C-d>   <ESC>:NERDTreeToggle<CR>
+vmap <C-d>   <ESC>:NERDTreeToggle<CR>
+
+nnoremap <silent> // :nohlsearch<CR><Esc>
+
+nmap <C-_> :TComment<CR>
+vmap <C-_> :TComment<CR>
+imap <C-_> <ESC>:TComment<CR>i
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X>   "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C>      "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map  <C-V>      "+gP
+map  <S-Insert> "+gP
+
+cmap <C-V>      <C-R>+
+cmap <S-Insert> <C-R>+
+
+exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+imap <S-Insert> <C-V>
+vmap <S-Insert> <C-V>
+
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+vmap <Tab> >
+nnoremap <silent> <Tab> :wincmd w<CR>
+nnoremap <silent> <S-Tab> :wincmd W<CR>
+
+vmap <S-Tab> <
+imap <S-Tab> <Esc><<i
+
+" Allow using the repeat operator with a visual selection (!)
+vnoremap . :normal .<CR>
+
+" Text selection by SHIFT+Arrows
+imap <S-Up>    <Esc>v<Up>
+imap <S-Down>  <Esc>v<Down>
+imap <S-Left>  <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>
+nmap <S-Up>    v<Up>
+nmap <S-Down>  v<Down>
+nmap <S-Left>  v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up>    <Up>
+vmap <S-Down>  <Down>
+vmap <S-Left>  <Left>
+vmap <S-Right> <Right>
+imap <S-End>   <Esc>v<End>
+imap <S-Home>  <Esc>v<Home>
+nmap <S-End>   v<End>
+nmap <S-Home>  v<Home>
+vmap <S-End>   <End>
+vmap <S-Home>  <Home>
+
+nnoremap <silent> <Leader>vv <C-w>v
+nnoremap <silent> <Leader>hh <C-w>s
+
+map <C-z> <Esc>:UndotreeToggle<CR>
+
+map <C-\> <Esc>:YRShow<CR>
+
+map <C-e> <Esc>:tabnew<CR>
+
+map <C-l> <Esc>:VimShell<CR>
+
+nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
+
+" Swap words
+noremap <silent> <Leader>sw <Esc>bdwwP
+
+" Replace words
+noremap <silent> <Leader>rw "_diwhp
+
+" Strip trailing whitespace
+noremap <silent> <leader>ss :call StripWhitespace()<CR>
+
+" Code folding options
+nmap <silent> <leader>f0 :set foldlevel=0<CR>:set foldcolumn=0<CR>
+nmap <silent> <leader>f1 :set foldlevel=1<CR>:set foldcolumn=1<CR>
+nmap <silent> <leader>f2 :set foldlevel=2<CR>:set foldcolumn=2<CR>
+nmap <silent> <leader>f3 :set foldlevel=3<CR>:set foldcolumn=3<CR>
+nmap <silent> <leader>f4 :set foldlevel=4<CR>:set foldcolumn=4<CR>
+nmap <silent> <leader>f5 :set foldlevel=5<CR>:set foldcolumn=5<CR>
+nmap <silent> <leader>f6 :set foldlevel=6<CR>:set foldcolumn=6<CR>
+nmap <silent> <leader>f7 :set foldlevel=7<CR>:set foldcolumn=7<CR>
+nmap <silent> <leader>f8 :set foldlevel=8<CR>:set foldcolumn=8<CR>
+nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
+
+" Git
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>ga :Git add -p %<CR>
+
+" Space for open/close folds if exist
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+" ,<Space> - toggle goyo mode
+nnoremap <silent> <Leader><Space> :GoGoyo<CR>
+
+" Ctrl-A - select all
+map  <C-A>    ggVG
+nmap <C-A>    ggVG
+imap <C-A>    <Esc>ggVG
+vmap <C-A>    <Esc>ggVG
+
+" Ctrl-J - show bookmarks
+imap <C-j> <Esc>ma
+vmap <C-j> <Esc>ma
+nmap <C-j> ma
+
+" Ctrl-P - Inserts the path of the currently edited file into a command
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+" Alt-k - upcase, Alt-j - downcase (MacOS)
+nmap ˚ gUiw
+imap ˚ <Esc>gUiw<Esc>i
+nmap ∆ guiw
+imap ∆ <Esc>guiw<Esc>i
+
+" Alt-Up - upcase, Alt-Down - downcase
+nmap <A-Up>   gUiw
+imap <A-Up>   <Esc>gUiw<Esc>i
+nmap <A-Down> guiw
+imap <A-Down> <Esc>guiw<Esc>i
+
+if g:use_tabs == 1
+	" Alt-h/l - switch tab to left/right (MacOS)
+	nmap ¬ gt
+	nmap ˙ gT
+	imap ¬ <Esc>gti
+	imap ˙ <Esc>gTi
+
+	" Shift-Alt-h/l - switch buffers to left/right (MacOS)
+	nmap Ò :bn<CR>
+	nmap Ó :bp<CR>
+	imap Ò <Esc>:bn<CR>i
+	imap Ó <Esc>:bp<CR>i
+
+	" Alt-Left/Right - switch tab to left/right
+	nmap <A-Right>  gt
+	nmap <A-Left>   gT
+	imap <A-Right>  <Esc>gti
+	imap <A-Left>   <Esc>gTi
+
+	" Shift-Alt-Left/Right - switch buffers to lefs/right
+	nmap <S-A-Right>  :bn<CR>
+	nmap <S-A-Left>   :bp<CR>
+	imap <S-A-Right>  <Esc>:bn<CR>i
+	imap <S-A-Left>   <Esc>:bp<CR>i
+else
+	" Alt-h/l - switch buffers to left/right (MacOS)
+	nmap ¬ :bn<CR>
+	nmap ˙ :bp<CR>
+	imap ¬ <Esc>:bn<CR>i
+	imap ˙ <Esc>:bp<CR>i
+
+	" Shift-Alt-h/l - switch tab to left/right (MacOS)
+	nmap Ò gt
+	nmap Ó gT
+	imap Ò <Esc>gti
+	imap Ó <Esc>gTi
+
+	" Alt-Left/Right - switch buffers to lefs/right
+	nmap <A-Right>  :bn<CR>
+	nmap <A-Left>   :bp<CR>
+	imap <A-Right>  <Esc>:bn<CR>i
+	imap <A-Left>   <Esc>:bp<CR>i
+
+	" Shift-Alt-Left/Right - switch tab to left/right
+	nmap <S-A-Right>  gt
+	nmap <S-A-Left>   gT
+	imap <S-A-Right>  <Esc>gti
+	imap <S-A-Left>   <Esc>gTi
+endif
+
+

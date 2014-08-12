@@ -172,7 +172,7 @@ vnoremap . :normal .<CR>
 imap <S-Up>    <Esc>v<Up>
 imap <S-Down>  <Esc>v<Down>
 imap <S-Left>  <Esc>v<Left>
-imap <S-Right> <Esc>v<Right>
+imap <S-Right> <Esc><Right>v<Right>
 nmap <S-Up>    v<Up>
 nmap <S-Down>  v<Down>
 nmap <S-Left>  v<Left>

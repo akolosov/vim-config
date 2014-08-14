@@ -88,24 +88,24 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**,hh** - Split window horizontaly
+**<Space>hh** - Split window horizontaly
 
-**,vv** - Split window verticaly
+**<Space>vv** - Split window verticaly
 
-**,#** - Surround a word with #{ruby interpolation}
+**<Space>#** - Surround a word with #{ruby interpolation}
 
-**,"** - Surround a word with "quotes"
+**<Space>"** - Surround a word with "quotes"
 
-**,'** - Surround a word with 'single quotes'
+**<Space>'** - Surround a word with 'single quotes'
 
-**,)** or **,(** - Surround a word with (parens)
+**<Space>)** or <Space>*(** - Surround a word with (parens)
 
-**,[** or **,]** - Surround a word with [brackets]
+*<Space>[** or **<Space>]** - Surround a word with [brackets]
 
-**,{** or **,}** - Surround a word with {braces}
+**<Space>{** or <Space>*}** - Surround a word with {braces}
 
-**,rw** - Overwrite word, replace a word with what's in the yank buffer
+**<Space>rw** - Overwrite word, replace a word with what's in the yank buffer
 
-**,sw** - Swaps word under cursor and next word in line
+**<Space>sw** - Swaps word under cursor and next word in line
 
-**,ss** - Strip trailing whitespace
+**<Space>ss** - Strip trailing whitespace

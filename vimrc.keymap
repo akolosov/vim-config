@@ -61,12 +61,12 @@ imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 map  <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 
 imap <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-map  <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 
 map  <C-y>  <ESC>dd
 imap <C-y>  <ESC>ddi
 
-map  <C-k>  <ESC>d$
+map  <C-k>  <ESC>d$<Right>
 imap <C-k>  <ESC><Right>d$i
 
 map  <C-h>  <ESC>bdw

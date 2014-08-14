@@ -1,3 +1,13 @@
+" no one is really happy until you have this shortcuts
+cab W! w!
+cab Q! q!
+cab Wq wq
+cab Wa wa
+cab wQ wq
+cab WQ wq
+cab W w
+cab Q q
+
 nnoremap ; :
 
 nmap <F1> <nop>
@@ -39,6 +49,15 @@ map <Leader>` ysiw`
 
 "Go to last edit location with <Leader>.
 nnoremap <Leader>. '.
+
+" Set working directory
+nnoremap <silent> <leader>cd :lcd %:p:h<CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+noremap <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled
+noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " <Leader>qc to toggle quickfix window (where you have stuff like Ag)
 " <Leader>qo to open it back up (rare)

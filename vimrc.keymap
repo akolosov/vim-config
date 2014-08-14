@@ -66,8 +66,8 @@ map <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
 map  <C-y>  <ESC>dd
 imap <C-y>  <ESC>ddi
 
-map  <C-k>  <ESC>d$<Right>
-imap <C-k>  <ESC><Right>d$i
+map  <C-k>  <ESC>d$
+imap <C-k>  <ESC><Right>d$<Right>i
 
 map  <C-h>  <ESC>bdw
 imap <C-h>  <ESC>bdwi

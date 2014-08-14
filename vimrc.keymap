@@ -14,6 +14,18 @@ nmap <F1> <nop>
 vmap <F1> <nop>
 imap <F1> <nop>
 
+" Type 12<Enter> to go to line 12 (12G breaks my wrist)
+" Hit Enter to go to end of file
+nnoremap <CR> G
+
+" Hit Backspace to go to beginning of file
+nnoremap <BS> gg
+
+nnoremap <Leader>o :CtrlP<CR>
+
+" Type <Leader>w to save file (a lot faster than :w<Enter>):
+nnoremap <Leader>w :w<CR>
+
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
 vmap <Leader># c#{<C-R>"}<ESC>

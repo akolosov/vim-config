@@ -10,4 +10,4 @@
 "
 " This is relying on the textobj-rubyblock which gives us 'ar' around ruby
 " and matchit.vim which gives us jumping to the matching 
-nnoremap <silent> ,orb :normal varar%<esc><esc>
+nnoremap <silent> <Leader>orb :normal varar%<esc><esc>

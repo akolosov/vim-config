@@ -1,3 +1,13 @@
+" no one is really happy until you have this shortcuts
+cab W! w!
+cab Q! q!
+cab Wq wq
+cab Wa wa
+cab wQ wq
+cab WQ wq
+cab W w
+cab Q q
+
 "Abbreviations, trigger by typing the abbreviation and hitting space
 
 abbr rlb Rails.logger.banner

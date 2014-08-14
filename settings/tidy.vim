@@ -1,1 +1,1 @@
-:vmap ,gt :!tidy -q -i --show-errors 0<CR>
+:vmap <Leader>gt :!tidy -q -i --show-errors 0<CR>

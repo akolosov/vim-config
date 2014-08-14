@@ -34,7 +34,6 @@ let g:neocomplete#enable_cursor_hold_i = 1
 let g:neocomplete#enable_insert_char_pre = 1
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

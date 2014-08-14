@@ -2,7 +2,7 @@
 let g:multi_cursor_use_default_mapping=0
 
 " Switch to multicursor mode with ,mc
-let g:multi_cursor_start_key=',mc'
+let g:multi_cursor_start_key='<Leader>mc'
 
 " Ctrl-n, Ctrl-p, Ctrl-x, and <Esc> are mapped in the special multicursor
 " mode once you've added at least one virtual cursor to the buffer

@@ -13,5 +13,5 @@ call EasyMotion#InitOptions({
 \ , 'hl_group_shade'  : 'Comment'
 \ })
 
-nmap ,<ESC> ,,w
-nmap ,<S-ESC> ,,b
+nmap <Leader><ESC> ,,w
+nmap <Leader><S-ESC> ,,b

@@ -46,6 +46,8 @@ Shortcuts
 
 **CTRL-\** - Show/Hide YankRing
 
+**CTRL-Space** - Open CtrlSpace buffers
+
 **F2** - Save file
 
 **CTRL-F2** - Save all files
@@ -91,6 +93,8 @@ Shortcuts
 **ALT-j** - Downcase word under cursor
 
 **<Leader>o** - Open CtrlP
+
+**<Leader>b** - Open CtrlP buffers
 
 **<Leader>w** - Save current file
 
@@ -147,3 +151,13 @@ Shortcuts
 **<Leader>gp** - git push
 
 **<Leader>ga** - git add %currentfile%
+
+**<Leader>ag** - Search in files, using ag
+
+**<Leader>af** - Search file, using ag
+
+**<Leader>ocf** - Open changed files (by git status)
+
+**<Leader>orb** - Select Outer-Ruby-Block
+
+

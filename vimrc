@@ -38,10 +38,10 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	" That means all \x commands turn into ,x
 	" The mapleader has to be set before vundle starts loading all
 	" the plugins.
-	let mapleader="\<Space>"
-	let g:mapleader="\<Space>"
-	let maplocalleader = ','
-	let g:maplocalleader = ','
+	let mapleader=","
+	let g:mapleader=","
+	let maplocalleader = '_'
+	let g:maplocalleader = '_'
 
 	" ================ Turn Off Swap Files ==============
 

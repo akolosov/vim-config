@@ -251,6 +251,8 @@ nnoremap <silent> <leader>gl :Glog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>ga :Git add -p %<CR>
 
+map <Leader>st :call Stringify()<CR>
+
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf

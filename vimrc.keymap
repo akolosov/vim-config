@@ -68,9 +68,9 @@ nmap <silent> <Leader>qo :copen<CR>
 
 " Make gf (go to file)
 " Create the file if not existent
-nnoremap gf :e <cfile><CR>
-nnoremap gfw :sp +e <cfile><CR>
-nnoremap gft :tabe <cfile><CR>
+nnoremap <Leader>gf :e <cfile><CR>
+nnoremap <Leader>gfw :sp +e <cfile><CR>
+nnoremap <Leader>gft :tabe <cfile><CR>
 
 imap <F2>   <Esc>:w<CR>i
 map  <F2>   <Esc>:w<CR>

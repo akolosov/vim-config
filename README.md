@@ -34,6 +34,8 @@ Shortcuts
 
 **CTRL-K** - Delete to EOL
 
+**CTRL-L** - Run VimShell
+
 **CTRL-X** or **SHIFT-Del** - Cut
 
 **CTRL-C** or **CTRL-Ins** - Copy
@@ -88,24 +90,60 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**<Space>hh** - Split window horizontaly
+**<Leader>o** - Open CtrlP
 
-**<Space>vv** - Split window verticaly
+**<Leader>w** - Save current file
 
-**<Space>#** - Surround a word with #{ruby interpolation}
+**<Leader>.** - Go to last edit location
 
-**<Space>"** - Surround a word with "quotes"
+**<Leader>cd** - Set working directory to current opened file's directory
 
-**<Space>'** - Surround a word with 'single quotes'
+**<Leader>ee** - Opens an edit command with the path of the currently edited file filled in
 
-**<Space>)** or <Space>*(** - Surround a word with (parens)
+**<Leader>te** - Opens a tab edit command with the path of the currently edited file filled in
 
-*<Space>[** or **<Space>]** - Surround a word with [brackets]
+**<Leader>qc** - Toggle Quickfix window
 
-**<Space>{** or <Space>*}** - Surround a word with {braces}
+**<Leader>qo** - Open  Quickfix window back up
 
-**<Space>rw** - Overwrite word, replace a word with what's in the yank buffer
+**<Leader>gf** - Open file with filename under cursor, create new if not exists
 
-**<Space>sw** - Swaps word under cursor and next word in line
+**<Leader>gfw** - Open file in windows with filename under cursor, create new if not exists
 
-**<Space>ss** - Strip trailing whitespace
+**<Leader>gft** - Open file in tab with filename under cursor, create new if not exists
+
+**<Leader>hh** - Split window horizontaly
+
+**<Leader>vv** - Split window verticaly
+
+**<Leader>#** - Surround a word with #{ruby interpolation}
+
+**<Leader>"** - Surround a word with "quotes"
+
+**<Leader>'** - Surround a word with 'single quotes'
+
+**<Leader>)** or <Leader>*(** - Surround a word with (parens)
+
+*<Leader>[** or **<Leader>]** - Surround a word with [brackets]
+
+**<Leader>{** or <Leader>*}** - Surround a word with {braces}
+
+**<Leader>rw** - Overwrite word, replace a word with what's in the yank buffer
+
+**<Leader>sw** - Swaps word under cursor and next word in line
+
+**<Leader>ss** - Strip trailing whitespace
+
+**<Leader>st** - Make selected text Stringify()
+
+**<Leader>gs** - git status
+
+**<Leader>gd** - git diff
+
+**<Leader>gc** - git commit
+
+**<Leader>gl** - git log
+
+**<Leader>gp** - git push
+
+**<Leader>ga** - git add %currentfile%

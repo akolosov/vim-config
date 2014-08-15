@@ -150,15 +150,10 @@ vmap <C-d>   <ESC>:NERDTreeToggle<CR>
 
 nnoremap <silent> // :nohlsearch<CR><Esc>
 
-" Comment current line
+" Ctrl-/ - Comment current line. Ctrl-/p - Comment current block/paragraph
 nmap <C-_> gcc
 vmap <C-_> gcc
 imap <C-_> <ESC>gcci
-
-" Comment current block/paragraph
-nmap <Leader>cb <C-_>p
-vmap <Leader>cb <C-_>p
-imap <Leader>cb <Esc><C-_>pi
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X>   "+x

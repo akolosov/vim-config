@@ -49,3 +49,4 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
 let g:airline#extensions#quickfix#location_text = 'Location'
 
+let g:airline_exclude_preview = 1

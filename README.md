@@ -120,17 +120,21 @@ Shortcuts
 
 **<Leader>vv** - Split window verticaly
 
+**<Leader>f** - Find the definition of the current class
+
+**<Leader>F** - Find the definition of the current class in verticaly split
+
 **<Leader>#** - Surround a word with #{ruby interpolation}
 
 **<Leader>"** - Surround a word with "quotes"
 
 **<Leader>'** - Surround a word with 'single quotes'
 
-**<Leader>)** or <Leader>*(** - Surround a word with (parens)
+**<Leader>( or <Leader>)** - Surround a word with (parens)
 
-*<Leader>[** or **<Leader>]** - Surround a word with [brackets]
+**<Leader>[ or <Leader>]** - Surround a word with [brackets]
 
-**<Leader>{** or <Leader>*}** - Surround a word with {braces}
+**<Leader>{ or <Leader>}** - Surround a word with {braces}
 
 **<Leader>rw** - Overwrite word, replace a word with what's in the yank buffer
 

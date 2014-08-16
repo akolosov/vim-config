@@ -150,9 +150,6 @@ vmap <C-d>   <ESC>:NERDTreeToggle<CR>
 
 nnoremap <silent> // :nohlsearch<CR><Esc>
 
-nmap <script> <silent> <Leader>cis :ChangeInsideSurrounding<CR>
-nmap <script> <silent> <Leader>cas :ChangeAroundSurrounding<CR>
-
 " Ctrl-/ - Comment current line. Ctrl-/p - Comment current block/paragraph
 nmap <C-_> gcc
 vmap <C-_> gcc

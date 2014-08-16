@@ -1,5 +1,4 @@
 Bundle "chrisbra/color_highlight.git"
 Bundle "bling/vim-airline"
-Bundle "jby/tmux.vim.git"
 Bundle "akolosov/vim-colors"
 Bundle "w0ng/vim-hybrid"

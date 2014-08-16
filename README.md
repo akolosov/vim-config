@@ -140,6 +140,10 @@ Shortcuts
 
 **<Leader>st** - Make selected text Stringify()
 
+**<Leader>sp** - Split line by tags/keywords (using SplitJoin.vim)
+
+**<Leader>sj** - Join lines by tags/keywords (using SplitJoin.vim)
+
 **<Leader>gs** - git status
 
 **<Leader>gd** - git diff
@@ -159,5 +163,4 @@ Shortcuts
 **<Leader>ocf** - Open changed files (by git status)
 
 **<Leader>orb** - Select Outer-Ruby-Block
-
 

@@ -248,7 +248,7 @@ nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 " Git
 nnoremap <leader>gs  :Gstatus<CR>
 nnoremap <leader>gd  :Gvdiff<CR>
-nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR>
+nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
 nnoremap <leader>gl  :!git pull<CR>
 nnoremap <leader>gp  :Git push<CR>
 nnoremap <leader>gpa :!git push -all<CR>

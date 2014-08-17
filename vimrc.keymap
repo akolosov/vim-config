@@ -246,17 +246,17 @@ nmap <silent> <leader>f8 :set foldlevel=8<CR>:set foldcolumn=8<CR>
 nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 
 " Git
-nnoremap <silent> <leader>gs  :Gstatus<CR>
-nnoremap <silent> <leader>gd  :Gvdiff<CR>
-nnoremap <silent> <leader>gc  :!git commit -m '<C-R>="'"<CR>
-nnoremap <silent> <leader>gl  :!git pull<CR>
-nnoremap <silent> <leader>gp  :Git push<CR>
-nnoremap <silent> <leader>gpa :!git push -all<CR>
-nnoremap <silent> <leader>ga  :Git add %<CR>
-nnoremap <silent> <leader>gaf :Git add .<CR>
-nnoremap <silent> <leader>gad :Git add <C-R>=expand("%:p:h") . "/"<CR>
-nnoremap <silent> <Leader>gb  :Gblame<CR>
-nnoremap <silent> <Leader>gr  :Gremove<CR>
+nnoremap <leader>gs  :Gstatus<CR>
+nnoremap <leader>gd  :Gvdiff<CR>
+nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR>
+nnoremap <leader>gl  :!git pull<CR>
+nnoremap <leader>gp  :Git push<CR>
+nnoremap <leader>gpa :!git push -all<CR>
+nnoremap <leader>ga  :Git add %<CR>
+nnoremap <leader>gaa :Git add .<CR>
+nnoremap <leader>gad :Git add <C-R>=expand("%:p:h") . "/"<CR>
+nnoremap <Leader>gb  :Gblame<CR>
+nnoremap <Leader>gr  :Gremove<CR>
 
 map <silent> <Leader>st :call Stringify()<CR>
 

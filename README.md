@@ -158,7 +158,7 @@ Shortcuts
 
 **,ga** - git add %currentfile%
 
-**,gaf** - git add all untracked files
+**,gaa** - git add all untracked files
 
 **,gad** - git add user input files
 

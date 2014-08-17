@@ -182,7 +182,11 @@ Shortcuts
 
 **<[Leader]>tsp** - Align on whitespace
 
-**'** - Toggle quotes (' <-> ")
+**<[Leader]>z** - Fold/Unfold code
+
+**<[Leader]>V** - Toggle Goyo-mode
+
+**'** - Toggle single quotes to double quotes and backwards
 
 **mm** - Toggle bookmark
 

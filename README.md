@@ -158,7 +158,11 @@ Shortcuts
 
 **,gp** - git push
 
+**,gpa** - git push --all
+
 **,ga** - git add %currentfile%
+
+**,gaa** - git add all untracked files
 
 **,ag** - Search in files, using ag
 

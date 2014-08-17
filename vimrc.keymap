@@ -251,10 +251,11 @@ nnoremap <silent> <leader>gd  :Gdiff<CR>
 nnoremap <silent> <leader>gc  :Gcommit<CR>
 nnoremap <silent> <leader>gl  :Glog<CR>
 nnoremap <silent> <leader>gp  :Git push<CR>
-nnoremap <silent> <leader>ga  :Git add -p %<CR>
+nnoremap <silent> <leader>gpa :Git push -all<CR>
+nnoremap <silent> <leader>ga  :Git add %<CR>
 nnoremap <silent> <leader>gaa :Git add .<CR>
 
-map <Leader>st :call Stringify()<CR>
+map <silent> <Leader>st :call Stringify()<CR>
 
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>

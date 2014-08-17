@@ -120,10 +120,6 @@ Shortcuts
 
 **,vv** - Split window verticaly
 
-**,f** - Find the definition of the current class
-
-**,F** - Find the definition of the current class in verticaly split
-
 **,#** - Surround a word with #{ruby interpolation}
 
 **,"** - Surround a word with "quotes"

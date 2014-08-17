@@ -92,78 +92,78 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**Leader+o** - Open CtrlP
+**,o** - Open CtrlP
 
-**Leader+b** - Open CtrlP buffers
+**,b** - Open CtrlP buffers
 
-**Leader+w** - Save current file
+**,w** - Save current file
 
-**Leader+.** - Go to last edit location
+**,.** - Go to last edit location
 
-**Leader+cd** - Set working directory to current opened file's directory
+**,cd** - Set working directory to current opened file's directory
 
-**Leader+ee** - Opens an edit command with the path of the currently edited file filled in
+**,ee** - Opens an edit command with the path of the currently edited file filled in
 
-**Leader+te** - Opens a tab edit command with the path of the currently edited file filled in
+**,te** - Opens a tab edit command with the path of the currently edited file filled in
 
-**Leader+qc** - Toggle Quickfix window
+**,qc** - Toggle Quickfix window
 
-**Leader+qo** - Open  Quickfix window back up
+**,qo** - Open  Quickfix window back up
 
-**Leader+gf** - Open file with filename under cursor, create new if not exists
+**,gf** - Open file with filename under cursor, create new if not exists
 
-**Leader+gfw** - Open file in windows with filename under cursor, create new if not exists
+**,gfw** - Open file in windows with filename under cursor, create new if not exists
 
-**Leader+gft** - Open file in tab with filename under cursor, create new if not exists
+**,gft** - Open file in tab with filename under cursor, create new if not exists
 
-**Leader+hh** - Split window horizontaly
+**,hh** - Split window horizontaly
 
-**Leader+vv** - Split window verticaly
+**,vv** - Split window verticaly
 
-**Leader+f** - Find the definition of the current class
+**,f** - Find the definition of the current class
 
-**Leader+F** - Find the definition of the current class in verticaly split
+**,F** - Find the definition of the current class in verticaly split
 
-**Leader+#** - Surround a word with #{ruby interpolation}
+**,#** - Surround a word with #{ruby interpolation}
 
-**Leader+"** - Surround a word with "quotes"
+**,"** - Surround a word with "quotes"
 
-**Leader+'** - Surround a word with 'single quotes'
+**,'** - Surround a word with 'single quotes'
 
-**Leader+( or Leader+)** - Surround a word with (parens)
+**,( or ,)** - Surround a word with (parens)
 
-**Leader+[ or Leader+]** - Surround a word with [brackets]
+**,[ or ,]** - Surround a word with [brackets]
 
-**Leader+{ or Leader+}** - Surround a word with {braces}
+**,{ or ,}** - Surround a word with {braces}
 
-**Leader+rw** - Overwrite word, replace a word with what's in the yank buffer
+**,rw** - Overwrite word, replace a word with what's in the yank buffer
 
-**Leader+sw** - Swaps word under cursor and next word in line
+**,sw** - Swaps word under cursor and next word in line
 
-**Leader+ss** - Strip trailing whitespace
+**,ss** - Strip trailing whitespace
 
-**Leader+st** - Make selected text Stringify()
+**,st** - Make selected text Stringify()
 
-**Leader+sp** - Split line by tags/keywords (using SplitJoin.vim)
+**,sp** - Split line by tags/keywords (using SplitJoin.vim)
 
-**Leader+sj** - Join lines by tags/keywords (using SplitJoin.vim)
+**,sj** - Join lines by tags/keywords (using SplitJoin.vim)
 
-**Leader+gs** - git status
+**,gs** - git status
 
-**Leader+gd** - git diff
+**,gd** - git diff
 
-**Leader+gc** - git commit
+**,gc** - git commit
 
-**Leader+gl** - git log
+**,gl** - git log
 
-**Leader+gp** - git push
+**,gp** - git push
 
-**Leader+ga** - git add %currentfile%
+**,ga** - git add %currentfile%
 
-**Leader+ag** - Search in files, using ag
+**,ag** - Search in files, using ag
 
-**Leader+af** - Search file, using ag
+**,af** - Search file, using ag
 
-**Leader+ocf** - Open changed files (by git status)
+**,ocf** - Open changed files (by git status)
 
-**Leader+orb** - Select Outer-Ruby-Block
+**,orb** - Select Outer-Ruby-Block

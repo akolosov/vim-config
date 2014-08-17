@@ -168,6 +168,14 @@ Shortcuts
 
 **,orb** - Select Outer-Ruby-Block
 
+**,t=** - Align assignments (don't count logic, like == or !=)
+
+**,t,** - Align on commas
+
+**,t|** - Align on vertical bars (|)
+
+**,tsp** - Align on whitespace
+
 **'** - Toggle quotes (' <-> ")
 
 **mm** - Toggle bookmark

@@ -92,95 +92,95 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**,o** - Open CtrlP
+**<<Leader>>o** - Open CtrlP
 
-**,b** - Open CtrlP buffers
+**<<Leader>>b** - Open CtrlP buffers
 
-**,w** - Save current file
+**<<Leader>>w** - Save current file
 
-**,.** - Go to last edit location
+**<<Leader>>.** - Go to last edit location
 
-**,cd** - Set working directory to current opened file's directory
+**<<Leader>>cd** - Set working directory to current opened file's directory
 
-**,ee** - Opens an edit command with the path of the currently edited file filled in
+**<<Leader>>ee** - Opens an edit command with the path of the currently edited file filled in
 
-**,te** - Opens a tab edit command with the path of the currently edited file filled in
+**<<Leader>>te** - Opens a tab edit command with the path of the currently edited file filled in
 
-**,qc** - Toggle Quickfix window
+**<<Leader>>qc** - Toggle Quickfix window
 
-**,qo** - Open  Quickfix window back up
+**<<Leader>>qo** - Open  Quickfix window back up
 
-**,gf** - Open file with filename under cursor, create new if not exists
+**<<Leader>>gf** - Open file with filename under cursor, create new if not exists
 
-**,gfw** - Open file in windows with filename under cursor, create new if not exists
+**<<Leader>>gfw** - Open file in windows with filename under cursor, create new if not exists
 
-**,gft** - Open file in tab with filename under cursor, create new if not exists
+**<<Leader>>gft** - Open file in tab with filename under cursor, create new if not exists
 
-**,hh** - Split window horizontaly
+**<<Leader>>hh** - Split window horizontaly
 
-**,vv** - Split window verticaly
+**<<Leader>>vv** - Split window verticaly
 
-**,#** - Surround a word with #{ruby interpolation}
+**<<Leader>>#** - Surround a word with #{ruby interpolation}
 
-**,"** - Surround a word with "quotes"
+**<<Leader>>"** - Surround a word with "quotes"
 
-**,'** - Surround a word with 'single quotes'
+**<<Leader>>'** - Surround a word with 'single quotes'
 
-**,(** or **,)** - Surround a word with (parens)
+**<<Leader>>(** or **<<Leader>>)** - Surround a word with (parens)
 
-**,[** or **,]** - Surround a word with [brackets]
+**<<Leader>>[** or **<<Leader>>]** - Surround a word with [brackets]
 
-**,{** or **,}** - Surround a word with {braces}
+**<<Leader>>{** or **<<Leader>>}** - Surround a word with {braces}
 
-**,rw** - Overwrite word, replace a word with what's in the yank buffer
+**<<Leader>>rw** - Overwrite word, replace a word with what's in the yank buffer
 
-**,sw** - Swaps word under cursor and next word in line
+**<<Leader>>sw** - Swaps word under cursor and next word in line
 
-**,ss** - Strip trailing whitespace
+**<<Leader>>ss** - Strip trailing whitespace
 
-**,st** - Make selected text Stringify()
+**<<Leader>>st** - Make selected text Stringify()
 
-**,sp** - Split line by tags/keywords (using SplitJoin.vim)
+**<<Leader>>sp** - Split line by tags/keywords (using SplitJoin.vim)
 
-**,sj** - Join lines by tags/keywords (using SplitJoin.vim)
+**<<Leader>>sj** - Join lines by tags/keywords (using SplitJoin.vim)
 
-**,gs** - git status
+**<<Leader>>gs** - git status
 
-**,gd** - git diff
+**<<Leader>>gd** - git diff
 
-**,gc** - git commit
+**<<Leader>>gc** - git commit
 
-**,gl** - git pull
+**<<Leader>>gl** - git pull
 
-**,gp** - git push
+**<<Leader>>gp** - git push
 
-**,gpa** - git push --all
+**<<Leader>>gpa** - git push --all
 
-**,ga** - git add %currentfile%
+**<<Leader>>ga** - git add %currentfile%
 
-**,gaa** - git add all untracked files
+**<<Leader>>gaa** - git add all untracked files
 
-**,gad** - git add user input files
+**<<Leader>>gad** - git add user input files
 
-**,gb** - git blame
+**<<Leader>>gb** - git blame
 
-**,gr** - git remove %currentfile%
+**<<Leader>>gr** - git remove %currentfile%
 
-**,ag** - Search in files, using ag
+**<<Leader>>ag** - Search in files, using ag
 
-**,af** - Search file, using ag
+**<<Leader>>af** - Search file, using ag
 
-**,ocf** - Open changed files (by git status)
+**<<Leader>>ocf** - Open changed files (by git status)
 
-**,orb** - Select Outer-Ruby-Block
+**<<Leader>>orb** - Select Outer-Ruby-Block
 
-**,t=** - Align assignments (don't count logic, like == or !=)
+**<<Leader>>t=** - Align assignments (don't count logic, like == or !=)
 
-**,t,** - Align on commas
+**<<Leader>>t,** - Align on commas
 
-**,t|** - Align on vertical bars (|)
+**<<Leader>>t|** - Align on vertical bars (|)
 
-**,tsp** - Align on whitespace
+**<<Leader>>tsp** - Align on whitespace
 
 **'** - Toggle quotes (' <-> ")
 

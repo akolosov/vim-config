@@ -137,6 +137,9 @@ else
 	inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
 endif
 
+noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
+inoremap <silent> <Leader>c <Esc>:call CloseWindowOrKillBuffer()<CR>
+
 imap <S-F10> <ESC>:wqa!<CR>
 nmap <S-F10> :wqa!<CR>
 vmap <S-F10> <ESC>:wqa!<CR>

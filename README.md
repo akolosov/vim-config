@@ -130,11 +130,11 @@ Shortcuts
 
 **,'** - Surround a word with 'single quotes'
 
-**,( or ,)** - Surround a word with (parens)
+**,(** or **,)** - Surround a word with (parens)
 
-**,[ or ,]** - Surround a word with [brackets]
+**,[** or **,]** - Surround a word with [brackets]
 
-**,{ or ,}** - Surround a word with {braces}
+**,{** or **,}** - Surround a word with {braces}
 
 **,rw** - Overwrite word, replace a word with what's in the yank buffer
 

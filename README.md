@@ -92,95 +92,95 @@ Shortcuts
 
 **ALT-j** - Downcase word under cursor
 
-**<<Leader>>o** - Open CtrlP
+**<[Leader]>o** - Open CtrlP
 
-**<<Leader>>b** - Open CtrlP buffers
+**<[Leader]>b** - Open CtrlP buffers
 
-**<<Leader>>w** - Save current file
+**<[Leader]>w** - Save current file
 
-**<<Leader>>.** - Go to last edit location
+**<[Leader]>.** - Go to last edit location
 
-**<<Leader>>cd** - Set working directory to current opened file's directory
+**<[Leader]>cd** - Set working directory to current opened file's directory
 
-**<<Leader>>ee** - Opens an edit command with the path of the currently edited file filled in
+**<[Leader]>ee** - Opens an edit command with the path of the currently edited file filled in
 
-**<<Leader>>te** - Opens a tab edit command with the path of the currently edited file filled in
+**<[Leader]>te** - Opens a tab edit command with the path of the currently edited file filled in
 
-**<<Leader>>qc** - Toggle Quickfix window
+**<[Leader]>qc** - Toggle Quickfix window
 
-**<<Leader>>qo** - Open  Quickfix window back up
+**<[Leader]>qo** - Open  Quickfix window back up
 
-**<<Leader>>gf** - Open file with filename under cursor, create new if not exists
+**<[Leader]>gf** - Open file with filename under cursor, create new if not exists
 
-**<<Leader>>gfw** - Open file in windows with filename under cursor, create new if not exists
+**<[Leader]>gfw** - Open file in windows with filename under cursor, create new if not exists
 
-**<<Leader>>gft** - Open file in tab with filename under cursor, create new if not exists
+**<[Leader]>gft** - Open file in tab with filename under cursor, create new if not exists
 
-**<<Leader>>hh** - Split window horizontaly
+**<[Leader]>hh** - Split window horizontaly
 
-**<<Leader>>vv** - Split window verticaly
+**<[Leader]>vv** - Split window verticaly
 
-**<<Leader>>#** - Surround a word with #{ruby interpolation}
+**<[Leader]>#** - Surround a word with #{ruby interpolation}
 
-**<<Leader>>"** - Surround a word with "quotes"
+**<[Leader]>"** - Surround a word with "quotes"
 
-**<<Leader>>'** - Surround a word with 'single quotes'
+**<[Leader]>'** - Surround a word with 'single quotes'
 
-**<<Leader>>(** or **<<Leader>>)** - Surround a word with (parens)
+**<[Leader]>(** or **<[Leader]>)** - Surround a word with (parens)
 
-**<<Leader>>[** or **<<Leader>>]** - Surround a word with [brackets]
+**<[Leader]>[** or **<[Leader]>]** - Surround a word with [brackets]
 
-**<<Leader>>{** or **<<Leader>>}** - Surround a word with {braces}
+**<[Leader]>{** or **<[Leader]>}** - Surround a word with {braces}
 
-**<<Leader>>rw** - Overwrite word, replace a word with what's in the yank buffer
+**<[Leader]>rw** - Overwrite word, replace a word with what's in the yank buffer
 
-**<<Leader>>sw** - Swaps word under cursor and next word in line
+**<[Leader]>sw** - Swaps word under cursor and next word in line
 
-**<<Leader>>ss** - Strip trailing whitespace
+**<[Leader]>ss** - Strip trailing whitespace
 
-**<<Leader>>st** - Make selected text Stringify()
+**<[Leader]>st** - Make selected text Stringify()
 
-**<<Leader>>sp** - Split line by tags/keywords (using SplitJoin.vim)
+**<[Leader]>sp** - Split line by tags/keywords (using SplitJoin.vim)
 
-**<<Leader>>sj** - Join lines by tags/keywords (using SplitJoin.vim)
+**<[Leader]>sj** - Join lines by tags/keywords (using SplitJoin.vim)
 
-**<<Leader>>gs** - git status
+**<[Leader]>gs** - git status
 
-**<<Leader>>gd** - git diff
+**<[Leader]>gd** - git diff
 
-**<<Leader>>gc** - git commit
+**<[Leader]>gc** - git commit
 
-**<<Leader>>gl** - git pull
+**<[Leader]>gl** - git pull
 
-**<<Leader>>gp** - git push
+**<[Leader]>gp** - git push
 
-**<<Leader>>gpa** - git push --all
+**<[Leader]>gpa** - git push --all
 
-**<<Leader>>ga** - git add %currentfile%
+**<[Leader]>ga** - git add %currentfile%
 
-**<<Leader>>gaa** - git add all untracked files
+**<[Leader]>gaa** - git add all untracked files
 
-**<<Leader>>gad** - git add user input files
+**<[Leader]>gad** - git add user input files
 
-**<<Leader>>gb** - git blame
+**<[Leader]>gb** - git blame
 
-**<<Leader>>gr** - git remove %currentfile%
+**<[Leader]>gr** - git remove %currentfile%
 
-**<<Leader>>ag** - Search in files, using ag
+**<[Leader]>ag** - Search in files, using ag
 
-**<<Leader>>af** - Search file, using ag
+**<[Leader]>af** - Search file, using ag
 
-**<<Leader>>ocf** - Open changed files (by git status)
+**<[Leader]>ocf** - Open changed files (by git status)
 
-**<<Leader>>orb** - Select Outer-Ruby-Block
+**<[Leader]>orb** - Select Outer-Ruby-Block
 
-**<<Leader>>t=** - Align assignments (don't count logic, like == or !=)
+**<[Leader]>t=** - Align assignments (don't count logic, like == or !=)
 
-**<<Leader>>t,** - Align on commas
+**<[Leader]>t,** - Align on commas
 
-**<<Leader>>t|** - Align on vertical bars (|)
+**<[Leader]>t|** - Align on vertical bars (|)
 
-**<<Leader>>tsp** - Align on whitespace
+**<[Leader]>tsp** - Align on whitespace
 
 **'** - Toggle quotes (' <-> ")
 

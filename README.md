@@ -150,7 +150,7 @@ Shortcuts
 
 **,gc** - git commit
 
-**,gl** - git log
+**,gl** - git pull
 
 **,gp** - git push
 
@@ -158,7 +158,11 @@ Shortcuts
 
 **,ga** - git add %currentfile%
 
-**,gaa** - git add all untracked files
+**,gad** - git add all untracked files
+
+**,gb** - git blame
+
+**,gr** - git remove %currentfile%
 
 **,ag** - Search in files, using ag
 

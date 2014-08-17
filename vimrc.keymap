@@ -248,12 +248,13 @@ nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 " Git
 nnoremap <silent> <leader>gs  :Gstatus<CR>
 nnoremap <silent> <leader>gd  :Gvdiff<CR>
-nnoremap <silent> <leader>gc  :!git commit -m '<C-R>="'"<CR>
+nnoremap <silent> <leader>gc  :!git commit -m '<C-R>="'"
 nnoremap <silent> <leader>gl  :!git pull<CR>
 nnoremap <silent> <leader>gp  :Git push<CR>
 nnoremap <silent> <leader>gpa :!git push -all<CR>
 nnoremap <silent> <leader>ga  :Git add %<CR>
-nnoremap <silent> <leader>gad :!git add .<CR>
+nnoremap <silent> <leader>gaf :Git add .<CR>
+nnoremap <silent> <leader>gad :Git add <C-R>=expand("%:p:h") . "/"
 nnoremap <silent> <Leader>gb  :Gblame<CR>
 nnoremap <silent> <Leader>gr  :Gremove<CR>
 

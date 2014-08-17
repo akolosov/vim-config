@@ -182,11 +182,7 @@ Shortcuts
 
 **<[Leader]>tsp** - Align on whitespace
 
-**<[Leader]>Z** - Turn on folding code blocks
-
-**<[Leader]>z** - Fold/Unfold code block
-
-**<[Leader]>V** - Toggle Goyo-mode
+**<[Leader]>z** - Toggle Goyo-mode
 
 **'** - Toggle single quotes to double quotes and backwards
 

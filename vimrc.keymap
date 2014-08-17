@@ -261,14 +261,7 @@ nnoremap <Leader>gr  :Gremove<CR>
 
 map <silent> <Leader>st :call Stringify()<CR>
 
-nnoremap <silent> <Leader>Z zc
-
-" Space for open/close folds if exist
-nnoremap <silent> <Leader>z @=(foldlevel('.')?'za':"")<CR>
-vnoremap <Leader>z zf
-
-" ,<Space> - toggle goyo mode
-nnoremap <silent> <Leader>V :GoGoyo<CR>
+nnoremap <silent> <Leader>z :GoGoyo<CR>
 
 " use <Space>gf to go to file in a vertical split
 nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>

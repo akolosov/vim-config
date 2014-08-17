@@ -251,7 +251,6 @@ nnoremap <leader>gd  :Gvdiff<CR>
 nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
 nnoremap <leader>gl  :!git pull<CR>
 nnoremap <leader>gp  :Git push<CR>
-nnoremap <leader>gpa :!git push -all<CR>
 nnoremap <leader>ga  :Git add %<CR>
 nnoremap <leader>gaa :Git add .<CR>
 nnoremap <leader>gad :Git add <C-R>=expand("%:p:h") . "/"<CR>

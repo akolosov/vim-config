@@ -96,8 +96,7 @@ imap <C-h>  <ESC>bdwi
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
 " F5 - Open the selected region in a new narrowed window
-vnoremap <silent> <F5> :NR<CR>
-nnoremap <silent> <F5> :NR<CR>
+noremap <silent> <F5> :NR<CR>
 inoremap <silent> <F5> <Esc>:NR<CR>
 
 inoremap <silent> <F6> <Esc>:Ag <cword><CR>
@@ -112,22 +111,21 @@ inoremap <S-F7> <Esc>ni
 noremap <F7> :let @/ = SearchInFile()<CR>
 noremap <S-F7> <Esc>n
 
-map <silent> <F8> <Esc>:bufdo tab split<CR>
+imap <silent> <F8> <Esc>:bufdo tab split<CR>
 map <silent> <F8> :bufdo tab split<CR>
 
 imap <silent> <S-F8> <Esc>:sball<CR>
-nmap <silent> <S-F8> :sball<CR>
+map <silent> <S-F8> :sball<CR>
 
 imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
-map  <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
+map  <silent> <F9> :Unite -silent menu:mainmenu<CR>
 
 imap <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
-map  <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
+map  <silent> <S-F9> :Unite -silent menu:git<CR>
 
 imap <F10> <ESC>:qa!<CR>
 nmap <F10> :qa!<CR>
 vmap <F10> <ESC>:qa!<CR>
-map  <F10> <ESC>:qa!<CR>
 
 if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1))
 	noremap <silent> <Esc><Esc> :qa<CR>
@@ -140,13 +138,12 @@ endif
 imap <S-F10> <ESC>:wqa!<CR>
 nmap <S-F10> :wqa!<CR>
 vmap <S-F10> <ESC>:wqa!<CR>
-map  <S-F10> <ESC>:wqa!<CR>
 
 nmap <C-t>   :TagbarToggle<CR>
+imap <C-t>   <Esc>:TagbarToggle<CR>
 
 imap <C-d>   <ESC>:NERDTreeToggle<CR>
-nmap <C-d>   <ESC>:NERDTreeToggle<CR>
-vmap <C-d>   <ESC>:NERDTreeToggle<CR>
+nmap <C-d>   :NERDTreeToggle<CR>
 
 nnoremap <silent> // :nohlsearch<CR><Esc>
 
@@ -213,15 +210,19 @@ vmap <S-Home>  <Home>
 nnoremap <silent> <Leader>vv <C-w>v
 nnoremap <silent> <Leader>hh <C-w>s
 
-map <C-z> <Esc>:UndotreeToggle<CR>
+map <C-z> :UndotreeToggle<CR>
+imap <C-z> <Esc>:UndotreeToggle<CR>
 
-map <C-\> <Esc>:YRShow<CR>
+map <C-\> :YRShow<CR>
+imap <C-\> <Esc>:YRShow<CR>
 
-map <C-e> <Esc>:tabnew<CR>
+map <C-e> :tabnew<CR>
+imap <C-e> <Esc>:tabnew<CR>
 
-map <C-l> <Esc>:VimShell<CR>
+map <C-l> :VimShell<CR>
+imap <C-l> <Esc>:VimShell<CR>
 
-nnoremap <silent>' :<C-U>call ToggleQuote()<CR>
+noremap <silent> ' :<C-U>call ToggleQuote()<CR>
 
 " Swap words
 noremap <silent> <Leader>sw <Esc>bdwwP
@@ -245,12 +246,13 @@ nmap <silent> <leader>f8 :set foldlevel=8<CR>:set foldcolumn=8<CR>
 nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 
 " Git
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>ga :Git add -p %<CR>
+nnoremap <silent> <leader>gs  :Gstatus<CR>
+nnoremap <silent> <leader>gd  :Gdiff<CR>
+nnoremap <silent> <leader>gc  :Gcommit<CR>
+nnoremap <silent> <leader>gl  :Glog<CR>
+nnoremap <silent> <leader>gp  :Git push<CR>
+nnoremap <silent> <leader>ga  :Git add -p %<CR>
+nnoremap <silent> <leader>gaa :Git add .<CR>
 
 map <Leader>st :call Stringify()<CR>
 
@@ -266,76 +268,73 @@ nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>
 
 " Ctrl-A - select all
 map  <C-A>    ggVG
-nmap <C-A>    ggVG
 imap <C-A>    <Esc>ggVG
-vmap <C-A>    <Esc>ggVG
 
 " Ctrl-J - show bookmarks
+map <C-j> ma
 imap <C-j> <Esc>ma
-vmap <C-j> <Esc>ma
-nmap <C-j> ma
 
 " Ctrl-P - Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Alt-k - upcase, Alt-j - downcase (MacOS)
-nmap ˚ gUiw
+map ˚ gUiw
 imap ˚ <Esc>gUiw<Esc>i
-nmap ∆ guiw
+map ∆ guiw
 imap ∆ <Esc>guiw<Esc>i
 
 " Alt-Up - upcase, Alt-Down - downcase
-nmap <A-Up>   gUiw
+map <A-Up>   gUiw
 imap <A-Up>   <Esc>gUiw<Esc>i
-nmap <A-Down> guiw
+map <A-Down> guiw
 imap <A-Down> <Esc>guiw<Esc>i
 
 if g:use_tabs == 1
 	" Alt-h/l - switch tab to left/right (MacOS)
-	nmap ¬ gt
-	nmap ˙ gT
+	map ¬ gt
+	map ˙ gT
 	imap ¬ <Esc>gti
 	imap ˙ <Esc>gTi
 
 	" Shift-Alt-h/l - switch buffers to left/right (MacOS)
-	nmap Ò :bn<CR>
-	nmap Ó :bp<CR>
+	map Ò :bn<CR>
+	map Ó :bp<CR>
 	imap Ò <Esc>:bn<CR>i
 	imap Ó <Esc>:bp<CR>i
 
 	" Alt-Left/Right - switch tab to left/right
-	nmap <A-Right>  gt
-	nmap <A-Left>   gT
+	map <A-Right>  gt
+	map <A-Left>   gT
 	imap <A-Right>  <Esc>gti
 	imap <A-Left>   <Esc>gTi
 
 	" Shift-Alt-Left/Right - switch buffers to lefs/right
-	nmap <S-A-Right>  :bn<CR>
-	nmap <S-A-Left>   :bp<CR>
+	map <S-A-Right>  :bn<CR>
+	map <S-A-Left>   :bp<CR>
 	imap <S-A-Right>  <Esc>:bn<CR>i
 	imap <S-A-Left>   <Esc>:bp<CR>i
 else
 	" Alt-h/l - switch buffers to left/right (MacOS)
-	nmap ¬ :bn<CR>
-	nmap ˙ :bp<CR>
+	map ¬ :bn<CR>
+	map ˙ :bp<CR>
 	imap ¬ <Esc>:bn<CR>i
 	imap ˙ <Esc>:bp<CR>i
 
 	" Shift-Alt-h/l - switch tab to left/right (MacOS)
-	nmap Ò gt
-	nmap Ó gT
+	map Ò gt
+	map Ó gT
 	imap Ò <Esc>gti
 	imap Ó <Esc>gTi
 
 	" Alt-Left/Right - switch buffers to lefs/right
-	nmap <A-Right>  :bn<CR>
-	nmap <A-Left>   :bp<CR>
+	map <A-Right>  :bn<CR>
+	map <A-Left>   :bp<CR>
 	imap <A-Right>  <Esc>:bn<CR>i
 	imap <A-Left>   <Esc>:bp<CR>i
 
 	" Shift-Alt-Left/Right - switch tab to left/right
-	nmap <S-A-Right>  gt
-	nmap <S-A-Left>   gT
+	map <S-A-Right>  gt
+	map <S-A-Left>   gT
 	imap <S-A-Right>  <Esc>gti
 	imap <S-A-Left>   <Esc>gTi
 endif

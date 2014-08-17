@@ -167,3 +167,19 @@ Shortcuts
 **,ocf** - Open changed files (by git status)
 
 **,orb** - Select Outer-Ruby-Block
+
+**'** - Toggle quotes (' <-> ")
+
+**mm** - Toggle bookmark
+
+**mi** - Annotate bookmark
+
+**ma** - Show all bookmarks
+
+**mj** - Go to next bookmark
+
+**mk** - Go to prev bookmark
+
+**mc** - Clear bookmarks
+
+**mx** - Clear all bookmarks

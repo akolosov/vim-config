@@ -261,6 +261,8 @@ nnoremap <Leader>gr  :Gremove<CR>
 
 map <silent> <Leader>st :call Stringify()<CR>
 
+nnoremap <silent> <Leader>Z zc
+
 " Space for open/close folds if exist
 nnoremap <silent> <Leader>z @=(foldlevel('.')?'za':"")<CR>
 vnoremap <Leader>z zf

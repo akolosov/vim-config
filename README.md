@@ -182,7 +182,9 @@ Shortcuts
 
 **<[Leader]>tsp** - Align on whitespace
 
-**<[Leader]>z** - Fold/Unfold code
+**<[Leader]>Z** - Turn on folding code blocks
+
+**<[Leader]>z** - Fold/Unfold code block
 
 **<[Leader]>V** - Toggle Goyo-mode
 

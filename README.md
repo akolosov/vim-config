@@ -84,9 +84,13 @@ Shortcuts
 
 **//** - No highlights search
 
-**ALT-l** - Switch next buffer or tab
+**CTRL-]** - Switch next tab
 
-**ALT-h** - Switch prev buffer or tab
+**CTRL-]** - Switch prev tab
+
+**]** - Switch next buffer
+
+**]** - Switch prev buffer
 
 **ALT-k** - Upcase word under cursor
 

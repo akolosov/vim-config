@@ -296,54 +296,13 @@ imap <A-Up>   <Esc>gUiw<Esc>i
 map <A-Down> guiw
 imap <A-Down> <Esc>guiw<Esc>i
 
-if g:use_tabs == 1
-	" Alt-h/l - switch tab to left/right (MacOS)
-	map ¬ gt
-	map ˙ gT
-	imap ¬ <Esc>gti
-	imap ˙ <Esc>gTi
-
-	" Shift-Alt-h/l - switch buffers to left/right (MacOS)
-	map Ò :bn<CR>
-	map Ó :bp<CR>
-	imap Ò <Esc>:bn<CR>i
-	imap Ó <Esc>:bp<CR>i
-
-	" Alt-Left/Right - switch tab to left/right
-	map <A-Right>  gt
-	map <A-Left>   gT
-	imap <A-Right>  <Esc>gti
-	imap <A-Left>   <Esc>gTi
-
-	" Shift-Alt-Left/Right - switch buffers to lefs/right
-	map <S-A-Right>  :bn<CR>
-	map <S-A-Left>   :bp<CR>
-	imap <S-A-Right>  <Esc>:bn<CR>i
-	imap <S-A-Left>   <Esc>:bp<CR>i
-else
-	" Alt-h/l - switch buffers to left/right (MacOS)
-	map ¬ :bn<CR>
-	map ˙ :bp<CR>
-	imap ¬ <Esc>:bn<CR>i
-	imap ˙ <Esc>:bp<CR>i
-
-	" Shift-Alt-h/l - switch tab to left/right (MacOS)
-	map Ò gt
-	map Ó gT
-	imap Ò <Esc>gti
-	imap Ó <Esc>gTi
-
-	" Alt-Left/Right - switch buffers to lefs/right
-	map <A-Right>  :bn<CR>
-	map <A-Left>   :bp<CR>
-	imap <A-Right>  <Esc>:bn<CR>i
-	imap <A-Left>   <Esc>:bp<CR>i
-
-	" Shift-Alt-Left/Right - switch tab to left/right
-	map <S-A-Right>  gt
-	map <S-A-Left>   gT
-	imap <S-A-Right>  <Esc>gti
-	imap <S-A-Left>   <Esc>gTi
-endif
+nnoremap <silent> <C-]>  gt
+nnoremap <silent> <C-[>  gT
+vnoremap <silent> <C-]>  gt
+vnoremap <silent> <C-[>  gT
+nnoremap <silent> ] :bn<CR>
+nnoremap <silent> [ :bp<CR>
+vnoremap <silent> ] :bn<CR>
+vnoremap <silent> [ :bp<CR>
 
 

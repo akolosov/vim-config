@@ -264,6 +264,10 @@ nnoremap <Leader>gr  :Gremove<CR>
 
 map <silent> <Leader>st :call Stringify()<CR>
 
+" Space for open/close folds if exist
+nnoremap <silent> <C-Space> @=(foldlevel('.')?'za':"\<C-Space>")<CR>
+vnoremap <C-Space> zf
+
 nnoremap <silent> <Leader>z :GoGoyo<CR>
 
 " use <Space>gf to go to file in a vertical split

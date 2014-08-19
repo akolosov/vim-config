@@ -72,10 +72,6 @@ Shortcuts
 
 **SHIFT-F8** - Switch all buffers to windows
 
-**F9** - Show Unite menu
-
-**SHIFT-F9** - Show GIT menu
-
 **F10** - Quit without saving
 
 **SHIFT-F10** - Quit with saving all files

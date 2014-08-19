@@ -227,6 +227,9 @@ imap <C-e> <Esc>:tabnew<CR>
 map <C-l> :VimShell<CR>
 imap <C-l> <Esc>:VimShell<CR>
 
+vnoremap <silent> <C-Space> :CtrlSpace<CR>
+inoremap <silent> <C-Space> <Esc>:CtrlSpace<CR>
+
 noremap <silent> ' :<C-U>call ToggleQuote()<CR>
 
 " Swap words

@@ -28,6 +28,8 @@ function! Replace(what)
     :unlet! s:word
 endfunction
 
+command! Replace call Replace(<q-args>)
+
 " Toggle ' to " or " to '
 function! ToggleQuote()
     let q = searchpos("'", 'n', line('.'))

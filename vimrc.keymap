@@ -233,8 +233,8 @@ nnoremap <silent> <Leader>sf :Ag <cword><CR>
 vnoremap <silent> <Leader>sf :<C-U>execute "Ag ".GetVisual()<CR>
 
 " Search word under cursor and replace with user inputs in current file
-nnoremap <silent> <Leader>sr :QuickReplace <cword><CR>
-vnoremap <silent> <Leader>sr :<C-U>execute "QuickReplace ".GetVisual()<CR>
+nnoremap <Leader>sr :%s/<C-R>=expand("<cword>")<CR>//<Left>
+vnoremap <Leader>sr :<C-U>%s/<C-R>=GetVisual()<CR>//<Left>
 
 " Code folding options
 nmap <silent> <leader>f0 :set foldlevel=0<CR>:set foldcolumn=0<CR>

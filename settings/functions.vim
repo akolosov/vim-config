@@ -1,35 +1,3 @@
-" Search for files
-function! SearchForFiles()
-    let s:word = input("[IN FILENAMES] Search for: ")
-    :execute 'AgFile ' . s:word
-    :unlet! s:word
-endfunction
-
-
-" Search in files
-function! SearchInFiles()
-    let s:word = input("[IN FILES] Search for: ")
-    :execute 'Ag ' . s:word
-    :unlet! s:word
-endfunction
-
-" Search in current file
-function! SearchInFile()
-    let s:word = input("[IN CURRENT FILE] Search for: ")
-    :execute '/' . s:word . '/'
-    :unlet! s:word
-		return @/
-endfunction
-
-" Find && Replace in all opened buffers
-function! QuickReplace(what)
-    let s:word = input("Replace '" . a:what . "' with:")
-    :execute '%s/\<' . a:what . '\>/' . s:word . '/gce'
-    :unlet! s:word
-endfunction
-
-command! QuickReplace call QuickReplace(<q-args>)
-
 " Toggle ' to " or " to '
 function! ToggleQuote()
     let q = searchpos("'", 'n', line('.'))

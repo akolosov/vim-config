@@ -60,14 +60,6 @@ Shortcuts
 
 **F5** - Open the selected region in a new narrowed window
 
-**F6** - Search word under cursor or selected word entire files in current directory (recursively)
-
-**SHIFT-F6** - Search word under cursor and replace with user inputs
-
-**F7** - Search in current file
-
-**SHIFT-F7** - Search next entry
-
 **F8** - Switch all buffers to tabs
 
 **SHIFT-F8** - Switch all buffers to windows
@@ -143,6 +135,10 @@ Shortcuts
 **<[Leader]>sp** - Split line by tags/keywords (using SplitJoin.vim)
 
 **<[Leader]>sj** - Join lines by tags/keywords (using SplitJoin.vim)
+
+**<[Leader]>sf** - Search word under cursor or selected word entire files in current directory (recursively)
+
+**<[Leader]>sr** - Search word under cursor and replace with user inputs
 
 **<[Leader]>gs** - git status
 

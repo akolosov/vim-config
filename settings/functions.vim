@@ -22,9 +22,9 @@ function! SearchInFile()
 endfunction
 
 " Find && Replace in all opened buffers
-function! Replace()
-    let s:word = input("Replace " . expand('<cword>') . " with:")
-    :execute '%s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
+function! Replace(what)
+    let s:word = input("Replace '" . a:what . "' with:")
+    :execute '%s/\<' . a:what . '\>/' . s:word . '/gce'
     :unlet! s:word
 endfunction
 

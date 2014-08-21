@@ -22,13 +22,13 @@ function! SearchInFile()
 endfunction
 
 " Find && Replace in all opened buffers
-function! Replace(what)
+function! QReplace(what)
     let s:word = input("Replace '" . a:what . "' with:")
     :execute '%s/\<' . a:what . '\>/' . s:word . '/gce'
     :unlet! s:word
 endfunction
 
-command! Replace call Replace(<q-args>)
+command! QReplace call QReplace(<q-args>)
 
 " Toggle ' to " or " to '
 function! ToggleQuote()

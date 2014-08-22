@@ -1,5 +1,9 @@
+if exists('g:use_lightline')
+	Bundle "itchyny/lightline.vim"
+else
+	Bundle "bling/vim-airline"
+endif
+
 Bundle "chrisbra/color_highlight.git"
-" Bundle "bling/vim-airline"
-Bundle "itchyny/lightline.vim"
 Bundle "akolosov/vim-colors"
 Bundle "w0ng/vim-hybrid"

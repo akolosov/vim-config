@@ -34,9 +34,9 @@ function! MyFilename()
   let fname = expand('%:t')
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
-        \ fname == '__CS__' ? 'CtrlSpace' :
-        \ fname =~ 'undotree' ? 'Undo Tree' :
-        \ fname =~ 'diffpanel' ? 'Diff Panel' :
+        \ fname == '__CS__' ? '' :
+        \ fname =~ 'undotree' ? '' :
+        \ fname =~ 'diffpanel' ? '' :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
         \ &ft == 'unite' ? unite#get_status_string() :
@@ -76,6 +76,9 @@ function! MyMode()
         \ fname == 'ControlP' ? 'CtrlP' :
         \ fname == '__Gundo__' ? 'Gundo' :
         \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+        \ fname == '__CS__' ? 'CtrlSpace' :
+        \ fname =~ 'undotree' ? 'Undo Tree' :
+        \ fname =~ 'diffpanel' ? 'Diff Panel' :
         \ fname =~ 'NERD_tree' ? 'NERDTree' :
         \ &ft == 'unite' ? 'Unite' :
         \ &ft == 'vimfiler' ? 'VimFiler' :

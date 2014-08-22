@@ -12,6 +12,12 @@ To install just run in terminal:
 
 Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/dotfiles/) - thanks guys!
 
+Variables
+=========
+
+**g:use_lightline** - Use LightLine instead AirLine
+
+**g:airline_powerline_fonts** - Use PowerLine fonts [Link](https://github.com/Lokaltog/powerline-fonts)
 
 Shortcuts
 =========

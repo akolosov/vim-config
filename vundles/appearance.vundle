@@ -1,5 +1,6 @@
 if exists('g:use_lightline')
 	Bundle "itchyny/lightline.vim"
+	Bundle "itchyny/lightline-powerful"
 else
 	Bundle "bling/vim-airline"
 endif

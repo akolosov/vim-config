@@ -5,6 +5,11 @@ if !exists('airline_powerline_fonts') && !has("gui_running")
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
+else
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
 endif
 
 let g:airline_mode_map = {

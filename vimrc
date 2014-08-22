@@ -158,6 +158,9 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	" Disable the macvim toolbar
 	set guioptions-=T
 
+	" Disable menu bar
+	set guioptions-=m
+
   " ================ Custom Settings ========================
   so ~/.vim/settings.vim
 

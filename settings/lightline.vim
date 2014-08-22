@@ -35,7 +35,7 @@ function! MyFilename()
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
         \ fname == '__CS__' ? 'CtrlSpace' :
-        \ fname =~ 'undootree' ? 'Undo Tree' :
+        \ fname =~ 'undotree' ? 'Undo Tree' :
         \ fname =~ 'diffpanel' ? 'Diff Panel' :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
@@ -121,6 +121,7 @@ augroup AutoSyntastic
   autocmd!
   autocmd BufWritePost *.c,*.cpp call s:syntastic()
 augroup END
+
 function! s:syntastic()
   SyntasticCheck
   call lightline#update()

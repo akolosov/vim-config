@@ -144,6 +144,8 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set switchbuf=usetab,newtab
 	set ttyfast																					" assume fast terminal connection
 
+	let &showbreak='↪ '
+
 	if has('unnamedplus')
 		set clipboard=unnamed,unnamedplus
 	else

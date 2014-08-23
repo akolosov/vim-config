@@ -3,6 +3,7 @@ nnoremap ; :
 map <F1> <nop>
 imap <F1> <nop>
 
+" Do not switch to "Ex" mode
 nnoremap <S-Q> <Nop>
 
 " Easy up and down on wrapped long lines

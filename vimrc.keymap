@@ -79,24 +79,21 @@ nnoremap <Leader>gfw :sp +e <cfile><CR>
 nnoremap <Leader>gft :tabe <cfile><CR>
 
 imap <F2>   <Esc>:w<CR>i
-map  <F2>   <Esc>:w<CR>
+map  <F2>   :w<CR>
 
 imap <C-F2> <Esc>:wa<CR>i
-map  <C-F2> <Esc>:wa<CR>
+map  <C-F2> :wa<CR>
 
 imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-map  <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+map  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
 
-imap <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-map <C-s>  <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-
-map  <C-y>  <ESC>dd
+map  <C-y>  dd
 imap <C-y>  <ESC>ddi
 
-map  <C-k>  <ESC>d$
+map  <C-k>  d$
 imap <C-k>  <ESC><Right>d$i<Right>
 
-map  <C-h>  <ESC>bdw
+map  <C-h>  bdw
 imap <C-h>  <ESC>bdwi
 
 map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
@@ -111,15 +108,8 @@ map <silent> <F8> :bufdo tab split<CR>
 imap <silent> <S-F8> <Esc>:sball<CR>
 map <silent> <S-F8> :sball<CR>
 
-imap <silent> <F9> <Esc>:Unite -silent menu:mainmenu<CR>
-map  <silent> <F9> :Unite -silent menu:mainmenu<CR>
-
-imap <silent> <S-F9> <Esc>:Unite -silent menu:git<CR>
-map  <silent> <S-F9> :Unite -silent menu:git<CR>
-
 imap <F10> <ESC>:qa!<CR>
-nmap <F10> :qa!<CR>
-vmap <F10> <ESC>:qa!<CR>
+map <F10> :qa!<CR>
 
 if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1))
 	noremap <silent> <Esc><Esc> :qa<CR>
@@ -130,23 +120,20 @@ else
 endif
 
 noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
-inoremap <silent> <Leader>c <Esc>:call CloseWindowOrKillBuffer()<CR>
 
 imap <S-F10> <ESC>:wqa!<CR>
-nmap <S-F10> :wqa!<CR>
-vmap <S-F10> <ESC>:wqa!<CR>
+map <S-F10> :wqa!<CR>
 
-nmap <C-t>   :TagbarToggle<CR>
+map <C-t>   :TagbarToggle<CR>
 imap <C-t>   <Esc>:TagbarToggle<CR>
 
 imap <C-d>   <ESC>:NERDTreeToggle<CR>
-nmap <C-d>   :NERDTreeToggle<CR>
+map <C-d>   :NERDTreeToggle<CR>
 
-nnoremap <silent> // :nohlsearch<CR><Esc>
+noremap <silent> // :nohlsearch<CR><Esc>
 
 " Ctrl-/ - Comment current line.
-nmap <C-_> ,ci
-vmap <C-_> ,ci
+map <C-_> ,ci
 imap <C-_> <ESC>,cii
 
 " CTRL-X and SHIFT-Del are Cut

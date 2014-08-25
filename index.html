@@ -52,6 +52,13 @@
 <p>Inspired by <a href="http://vim.spf13.com/">spf13-vim</a> and <a href="http://skwp.github.io/dotfiles/">YADR</a> - thanks guys!</p>
 
 <h1>
+<a name="variables" class="anchor" href="#variables"><span class="octicon octicon-link"></span></a>Variables</h1>
+
+<p><strong>g:use_lightline</strong> - Use LightLine instead AirLine</p>
+
+<p><strong>g:airline_powerline_fonts</strong> - Use PowerLine fonts (<a href="https://github.com/Lokaltog/powerline-fonts">Link</a>)</p>
+
+<h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
 <p><strong>CTRL-A</strong> - Select all text</p>
@@ -98,21 +105,9 @@
 
 <p><strong>F5</strong> - Open the selected region in a new narrowed window</p>
 
-<p><strong>F6</strong> - Search word under cursor or selected word entire files in current directory (recursively)</p>
-
-<p><strong>SHIFT-F6</strong> - Search word under cursor and replace with user inputs</p>
-
-<p><strong>F7</strong> - Search in current file</p>
-
-<p><strong>SHIFT-F7</strong> - Search next entry</p>
-
 <p><strong>F8</strong> - Switch all buffers to tabs</p>
 
 <p><strong>SHIFT-F8</strong> - Switch all buffers to windows</p>
-
-<p><strong>F9</strong> - Show Unite menu</p>
-
-<p><strong>SHIFT-F9</strong> - Show GIT menu</p>
 
 <p><strong>F10</strong> - Quit without saving</p>
 
@@ -122,9 +117,13 @@
 
 <p><strong>//</strong> - No highlights search</p>
 
-<p><strong>ALT-l</strong> - Switch next buffer or tab</p>
+<p><strong>CTRL-]</strong> - Switch next tab</p>
 
-<p><strong>ALT-h</strong> - Switch prev buffer or tab</p>
+<p><strong>CTRL-]</strong> - Switch prev tab</p>
+
+<p><strong>]</strong> - Switch next buffer</p>
+
+<p><strong>]</strong> - Switch prev buffer</p>
 
 <p><strong>ALT-k</strong> - Upcase word under cursor</p>
 
@@ -182,6 +181,30 @@
 
 <p><strong>&lt;[Leader]&gt;sj</strong> - Join lines by tags/keywords (using SplitJoin.vim)</p>
 
+<p><strong>&lt;[Leader]&gt;sf</strong> - Search word under cursor or selected word entire files in current directory (recursively)</p>
+
+<p><strong>&lt;[Leader]&gt;sr</strong> - Search word under cursor and replace with user inputs</p>
+
+<p><strong>&lt;[Leader]&gt;s[</strong> - Select inside [] include brackets</p>
+
+<p><strong>&lt;[Leader]&gt;s]</strong> - Select inside []</p>
+
+<p><strong>&lt;[Leader]&gt;s{</strong> - Select inside {} include brackets</p>
+
+<p><strong>&lt;[Leader]&gt;s}</strong> - Select inside {}</p>
+
+<p><strong>&lt;[Leader]&gt;s(</strong> - Select inside () include brackets</p>
+
+<p><strong>&lt;[Leader]&gt;s)</strong> - Select inside ()</p>
+
+<p><strong>&lt;[Leader]&gt;s&lt;</strong> - Select inside &lt;&gt; include brackets</p>
+
+<p><strong>&lt;[Leader]&gt;s&gt;</strong> - Select inside &lt;&gt;</p>
+
+<p><strong>&lt;[Leader]&gt;s"</strong> - Select inside "</p>
+
+<p><strong>&lt;[Leader]&gt;s'</strong> - Select inside '</p>
+
 <p><strong>&lt;[Leader]&gt;gs</strong> - git status</p>
 
 <p><strong>&lt;[Leader]&gt;gd</strong> - git diff</p>
@@ -220,11 +243,7 @@
 
 <p><strong>&lt;[Leader]&gt;tsp</strong> - Align on whitespace</p>
 
-<p><strong>&lt;[Leader]&gt;Z</strong> - Turn on folding code blocks</p>
-
-<p><strong>&lt;[Leader]&gt;z</strong> - Fold/Unfold code block</p>
-
-<p><strong>&lt;[Leader]&gt;V</strong> - Toggle Goyo-mode</p>
+<p><strong>&lt;[Leader]&gt;z</strong> - Toggle Goyo-mode</p>
 
 <p><strong>'</strong> - Toggle single quotes to double quotes and backwards</p>
 

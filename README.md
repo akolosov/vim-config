@@ -146,25 +146,25 @@ Shortcuts
 
 `,sr` - Search word under cursor and replace with user inputs
 
-`,a[` or `,a]` - Select inside [] include brackets
+`,s[` - Select inside [] include brackets
 
-`,i[` or `,i]` - Select inside []
+`,s]` - Select inside []
 
-`,a{` or `,a}` - Select inside {} include brackets
+`,s{` - Select inside {} include brackets
 
-`,i{` or `,i}` - Select inside {}
+`,s}` - Select inside {}
 
-`,a(` or `,a)` - Select inside () include brackets
+`,s(` - Select inside () include brackets
 
-`,i(` or `,i)` - Select inside ()
+`,s)` - Select inside ()
 
-`,a<` or `,a>`- Select inside \<> include brackets
+`,s<` - Select inside \<> include brackets
 
-`,i<` or `,i>` - Select inside \<>
+`,s>` - Select inside \<>
 
-`,i"` - Select inside "
+`,s"` - Select inside "
 
-`,i'` - Select inside '
+`,s'` - Select inside '
 
 `,gs` - git status
 

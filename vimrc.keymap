@@ -57,7 +57,40 @@ map <Leader>{ ysiw{
 vmap <Leader>} c{ <C-R>" }<ESC>
 vmap <Leader>{ c{<C-R>"}<ESC>
 
+" <Leader>` Surround a word with `apostrophes`
 map <Leader>` ysiw`
+
+" Selection inside:
+" inside []
+map <Leader>s]  vi[
+vmap <Leader>s]  i[
+" with []
+map <Leader>s[  va[
+vmap <Leader>s[  a[
+" inside {}
+map <Leader>s{  va{
+vmap <Leader>s{  a{
+" with {}
+map <Leader>s}  vi{
+vmap <Leader>s}  i{
+" inside ()
+map <Leader>s(  va(
+vmap <Leader>s(  a(
+" with ()
+map <Leader>s)  vi(
+vmap <Leader>s)  i(
+" inside <>
+map <Leader>s<  va<
+vmap <Leader>s<  a<
+" with <>
+map <Leader>s>  vi<
+vmap <Leader>s>  i<
+" inside ""
+map <Leader>s"  vi"
+vmap <Leader>s"  i"
+" inside ''
+map <Leader>s'  vi'
+vmap <Leader>s'  i'
 
 "Go to last edit location with <Leader>.
 nnoremap <Leader>. '.

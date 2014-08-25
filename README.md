@@ -17,7 +17,7 @@ Variables
 
 **g:use_lightline** - Use LightLine instead AirLine
 
-**g:airline_powerline_fonts** - Use PowerLine fonts [Link](https://github.com/Lokaltog/powerline-fonts)
+**g:airline_powerline_fonts** - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
 
 Shortcuts
 =========
@@ -145,6 +145,26 @@ Shortcuts
 **<[Leader]>sf** - Search word under cursor or selected word entire files in current directory (recursively)
 
 **<[Leader]>sr** - Search word under cursor and replace with user inputs
+
+**<[Leader]>s[** - Select inside [] include brackets
+
+**<[Leader]>s]** - Select inside []
+
+**<[Leader]>s{** - Select inside {} include brackets
+
+**<[Leader]>s}** - Select inside {}
+
+**<[Leader]>s(** - Select inside () include brackets
+
+**<[Leader]>s)** - Select inside ()
+
+**<[Leader]>s<** - Select inside \<> include brackets
+
+**<[Leader]>s>** - Select inside \<>
+
+**<[Leader]>s"** - Select inside "
+
+**<[Leader]>s'** - Select inside '
 
 **<[Leader]>gs** - git status
 

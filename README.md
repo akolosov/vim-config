@@ -113,7 +113,7 @@ Shortcuts
 | `,orb` | Select Outer-Ruby-Block | **\[n]** |
 | `,t=` | Align assignments (don't count logic, like == or !=) | **\[n v]** |
 | `,t,` | Align on commas | **\[n v]** |
-| `,t\|` | Align on vertical bars (\|) | **\[n v]** |
+| `,t\|` | Align on vertical bars | **\[n v]** |
 | `,tsp` | Align on whitespace | **\[n v]** |
 | `,z` | Toggle Goyo-mode | **\[n]** |
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |

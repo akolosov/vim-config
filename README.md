@@ -22,202 +22,203 @@ Variables
 Shortcuts
 =========
 
-`CTRL-A` - Select all text
+`CTRL-A` **\[n i v]** - Select all text
 
-`CTRL-D` - Show/Hide NERDTree
+`CTRL-D` **\[n i v]** - Show/Hide NERDTree
 
-`CTRL-E` - Create new tab
+`CTRL-E` **\[n i v]** - Create new tab
 
-`CTRL-Z` - Show/Hide UndoTree
+`CTRL-Z` **\[n i v]** - Show/Hide UndoTree
 
-`CTRL-T` - Show/Hide TagBar
+`CTRL-T` **\[n i v]** - Show/Hide TagBar
 
-`CTRL-J` - Show bookmarks
+`CTRL-J` **\[n i v]** - Show bookmarks
 
-`CTRL-Y` - Delete line
+`CTRL-Y` **\[n i v]** - Delete line
 
-`CTRL-W` - Delete word
+`CTRL-W` **\[n i v]** - Delete word
 
-`CTRL-K` - Delete to EOL
+`CTRL-K` **\[n i v]** - Delete to EOL
 
-`CTRL-L` - Run VimShell
+`CTRL-L` **\[n i v]** - Run VimShell
 
-`CTRL-X` or `SHIFT-Del` - Cut
+`CTRL-X` or `SHIFT-Del` **\[n i v]** - Cut
 
-`CTRL-C` or `CTRL-Ins` - Copy
+`CTRL-C` or `CTRL-Ins` **\[n i v]** - Copy
 
-`CTRL-V` or `SHIFT-Ins` - Paste
+`CTRL-V` or `SHIFT-Ins` **\[n i v]** - Paste
 
-`CTRL-/` - Comment/Uncomment block
+`CTRL-/` **\[n i v]** - Comment/Uncomment block
 
-`CTRL-\` - Show/Hide YankRing
+`CTRL-\` **\[n i v]** - Show/Hide YankRing
 
-`CTRL-Space` - Open CtrlSpace buffers
+`CTRL-Space` **\[n]** - Open CtrlSpace buffers
 
-`F2` - Save file
+`F2` **\[n i v]** - Save file
 
-`CTRL-F2` - Save all files
+`CTRL-F2` **\[n i v]** - Save all files
 
-`SHIFT-F2` or `CTRL-S` - Save file as...
+`SHIFT-F2` **\[n i v]** - Save file as...
 
-`F3` - Toggle paste mode
+`F3` **\[n i v]** - Toggle paste mode
 
-`F4` - Toggle readonly mode
+`F4` **\[n v]** - Toggle readonly mode
 
-`F5` - Open the selected region in a new narrowed window
+`F5` **\[n i v]** - Open the selected region in a new narrowed window
 
-`F8` - Switch all buffers to tabs
+`F8` **\[n i v]** - Switch all buffers to tabs
 
-`SHIFT-F8` - Switch all buffers to windows
+`SHIFT-F8` **\[n i v]** - Switch all buffers to windows
 
-`F10` - Quit without saving
+`F10` **\[n i v]** - Quit without saving
 
-`SHIFT-F10` - Quit with saving all files
+`SHIFT-F10` **\[n i v]** - Quit with saving all files
 
-`ESC-ESC` - Quit and ask for save files or close current window/buffer
+`ESC-ESC` **\[n i v]** - Quit and ask for save files or close current window/buffer
 
-`//` - No highlights search
+`//` **\[n v]** - No highlights search
 
-`CTRL-]` - Switch next tab
+`CTRL-]` **\[n v]** - Switch next tab
 
-`CTRL-]` - Switch prev tab
+`CTRL-]` **\[n v]** - Switch prev tab
 
-`]` - Switch next buffer
+`]` **\[n v]** - Switch next buffer
 
-`]` - Switch prev buffer
+`]` **\[n v]** - Switch prev buffer
 
-`ALT-k` - Upcase word under cursor
+`ALT-k` **\[n v]** - Upcase word under cursor
 
-`ALT-j` - Downcase word under cursor
+`ALT-j` **\[n v]** - Downcase word under cursor
 
-`,o` - Open CtrlP
+`,o` **\[n]** - Open CtrlP
 
-`,b` - Open CtrlP buffers
+`,b` **\[n]** - Open CtrlP buffers
 
-`,w` - Save current file
+`,w` **\[n]** - Save current file
 
-`,.` - Go to last edit location
+`,.` **\[n]** - Go to last edit location
 
-`,cd` - Set working directory to current opened file's directory
+`,cd` **\[n]**  - Set working directory to current opened file's directory
 
-`,ee` - Opens an edit command with the path of the currently edited file filled in
+`,ee` **\[n]**  - Opens an edit command with the path of the currently edited file filled in
 
-`,te` - Opens a tab edit command with the path of the currently edited file filled in
+`,te` **\[n]**  - Opens a tab edit command with the path of the currently edited file filled in
 
-`,qc` - Toggle Quickfix window
+`,qc` **\[n]**  - Toggle Quickfix window
 
-`,qo` - Open  Quickfix window back up
+`,qo` **\[n]**  - Open Quickfix window back up
 
-`,gf` - Open file with filename under cursor, create new if not exists
+`,gf` **\[n]**  - Open file with filename under cursor, create new if not exists
 
-`,gfw` - Open file in windows with filename under cursor, create new if not exists
+`,gfw` **\[n]**  - Open file in windows with filename under cursor, create new if not exists
 
-`,gft` - Open file in tab with filename under cursor, create new if not exists
+`,gft` **\[n]**  - Open file in tab with filename under cursor, create new if not exists
 
-`,hh` - Split window horizontaly
+`,hh` **\[n]**  - Split window horizontaly
 
-`,vv` - Split window verticaly
+`,vv` **\[n]**  - Split window verticaly
 
-`,#` - Surround a word with #{ruby interpolation}
+`,#` **\[n v]**  - Surround a word with #{ruby interpolation}
 
-`,"` - Surround a word with "quotes"
+`,"` **\[n v]** - Surround a word with "quotes"
 
-`,'` - Surround a word with 'single quotes'
+`,'` **\[n v]** - Surround a word with 'single quotes'
 
-`,(` or `,)` - Surround a word with (parens)
+`,(` or `,)` **\[n v]** - Surround a word with (parens)
 
-`,[` or `,]` - Surround a word with [brackets]
+`,[` or `,]` **\[n v]** - Surround a word with [brackets]
 
-`,{` or `,}` - Surround a word with {braces}
+`,{` or `,}` **\[n v]** - Surround a word with {braces}
 
-`,rw` - Overwrite word, replace a word with what's in the yank buffer
+`,rw` **\[n v]** - Overwrite word, replace a word with what's in the yank buffer
 
-`,sw` - Swaps word under cursor and next word in line
+`,sw` **\[n v]** - Swaps word under cursor and next word in line
 
-`,ss` - Strip trailing whitespace
+`,ss` **\[n v]** - Strip trailing whitespace
 
-`,st` - Make selected text Stringify()
+`,st` **\[n v]** - Make selected text Stringify()
 
-`,sp` - Split line by tags/keywords (using SplitJoin.vim)
+`,sp` **\[n v]** - Split line by tags/keywords (using SplitJoin.vim)
 
-`,sj` - Join lines by tags/keywords (using SplitJoin.vim)
+`,sj` **\[n v]** - Join lines by tags/keywords (using SplitJoin.vim)
 
-`,sf` - Search word under cursor or selected word entire files in current directory (recursively)
+`,sf` **\[n v]** - Search word under cursor or selected word entire files in current directory (recursively)
 
-`,sr` - Search word under cursor and replace with user inputs
+`,sr` **\[n v]** - Search word under cursor and replace with user inputs
 
-`,s[` - Select inside [] include brackets
+`,s[` **\[n v]** - Select inside [] include brackets
 
-`,s]` - Select inside []
+`,s]` **\[n v]** - Select inside []
 
-`,s{` - Select inside {} include brackets
+`,s{` **\[n v]** - Select inside {} include brackets
 
-`,s}` - Select inside {}
+`,s}` **\[n v]** - Select inside {}
 
-`,s(` - Select inside () include brackets
+`,s(` **\[n v]** - Select inside () include brackets
 
-`,s)` - Select inside ()
+`,s)` **\[n v]** - Select inside ()
 
-`,s<` - Select inside \<> include brackets
+`,s<` **\[n v]** - Select inside \<> include brackets
 
-`,s>` - Select inside \<>
+`,s>` **\[n v]** - Select inside \<>
 
-`,s"` - Select inside "
+`,s"` **\[n v]** - Select inside "
 
-`,s'` - Select inside '
+`,s'` **\[n v]** - Select inside '
 
-`,gs` - git status
+`,gs` **\[n]** - git status
 
-`,gd` - git diff
+`,gd` **\[n]** - git diff
 
-`,gc` - git commit
+`,gc` **\[n]** - git commit
 
-`,gl` - git pull
+`,gl` **\[n]** - git pull
 
-`,gp` - git push
+`,gp` **\[n]** - git push
 
-`,gpa` - git push --all
+`,gpa` **\[n]** - git push --all
 
-`,ga` - git add %currentfile%
+`,ga` **\[n]** - git add %currentfile%
 
-`,gaa` - git add all untracked files
+`,gaa` **\[n]** - git add all untracked files
 
-`,gad` - git add user input files
+`,gad` **\[n]** - git add user input files
 
-`,gb` - git blame
+`,gb` **\[n]** - git blame
 
-`,gr` - git remove %currentfile%
+`,gr` **\[n]** - git remove %currentfile%
 
-`,ag` - Search in files, using ag
+`,ag` **\[n]** - Search in files, using ag
 
-`,af` - Search file, using ag
+`,af` **\[n]** - Search file, using ag
 
-`,ocf` - Open changed files (by git status)
+`,ocf` **\[n]** - Open changed files (by git status)
 
-`,orb` - Select Outer-Ruby-Block
+`,orb` **\[n]** - Select Outer-Ruby-Block
 
-`,t=` - Align assignments (don't count logic, like == or !=)
+`,t=` **\[n v]** - Align assignments (don't count logic, like == or !=)
 
-`,t,` - Align on commas
+`,t,` **\[n v]** - Align on commas
 
-`,t|` - Align on vertical bars (|)
+`,t|` **\[n v]** - Align on vertical bars (|)
 
-`,tsp` - Align on whitespace
+`,tsp` **\[n v]** - Align on whitespace
 
-`,z` - Toggle Goyo-mode
+`,z` **\[n]** - Toggle Goyo-mode
 
-`'` - Toggle single quotes to double quotes and backwards
+`'` **\[n]** - Toggle single quotes to double quotes and backwards
 
-`mm` - Toggle bookmark
+`mm` **\[n]** - Toggle bookmark
 
-`mi` - Annotate bookmark
+`mi` **\[n]** - Annotate bookmark
 
-`ma` - Show all bookmarks
+`ma` **\[n]** - Show all bookmarks
 
-`mj` - Go to next bookmark
+`mj` **\[n]** - Go to next bookmark
 
-`mk` - Go to prev bookmark
+`mk` **\[n]** - Go to prev bookmark
 
-`mc` - Clear bookmarks
+`mc` **\[n]** - Clear bookmarks
 
-`mx` - Clear all bookmarks
+`mx` **\[n]** - Clear all bookmarks
+

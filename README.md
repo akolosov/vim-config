@@ -22,203 +22,105 @@ Variables
 Shortcuts
 =========
 
-`CTRL-A` **\[n i v]** - Select all text
-
-`CTRL-D` **\[n i v]** - Show/Hide NERDTree
-
-`CTRL-E` **\[n i v]** - Create new tab
-
-`CTRL-Z` **\[n i v]** - Show/Hide UndoTree
-
-`CTRL-T` **\[n i v]** - Show/Hide TagBar
-
-`CTRL-J` **\[n i v]** - Show bookmarks
-
-`CTRL-Y` **\[n i v]** - Delete line
-
-`CTRL-W` **\[n i v]** - Delete word
-
-`CTRL-K` **\[n i v]** - Delete to EOL
-
-`CTRL-L` **\[n i v]** - Run VimShell
-
-`CTRL-X` or `SHIFT-Del` **\[n i v]** - Cut
-
-`CTRL-C` or `CTRL-Ins` **\[n i v]** - Copy
-
-`CTRL-V` or `SHIFT-Ins` **\[n i v]** - Paste
-
-`CTRL-/` **\[n i v]** - Comment/Uncomment block
-
-`CTRL-\` **\[n i v]** - Show/Hide YankRing
-
-`CTRL-Space` **\[n]** - Open CtrlSpace buffers
-
-`F2` **\[n i v]** - Save file
-
-`CTRL-F2` **\[n i v]** - Save all files
-
-`SHIFT-F2` **\[n i v]** - Save file as...
-
-`F3` **\[n i v]** - Toggle paste mode
-
-`F4` **\[n v]** - Toggle readonly mode
-
-`F5` **\[n i v]** - Open the selected region in a new narrowed window
-
-`F8` **\[n i v]** - Switch all buffers to tabs
-
-`SHIFT-F8` **\[n i v]** - Switch all buffers to windows
-
-`F10` **\[n i v]** - Quit without saving
-
-`SHIFT-F10` **\[n i v]** - Quit with saving all files
-
-`ESC-ESC` **\[n i v]** - Quit and ask for save files or close current window/buffer
-
-`//` **\[n v]** - No highlights search
-
-`CTRL-]` **\[n v]** - Switch next tab
-
-`CTRL-]` **\[n v]** - Switch prev tab
-
-`]` **\[n v]** - Switch next buffer
-
-`]` **\[n v]** - Switch prev buffer
-
-`ALT-k` **\[n v]** - Upcase word under cursor
-
-`ALT-j` **\[n v]** - Downcase word under cursor
-
-`,o` **\[n]** - Open CtrlP
-
-`,b` **\[n]** - Open CtrlP buffers
-
-`,w` **\[n]** - Save current file
-
-`,.` **\[n]** - Go to last edit location
-
-`,cd` **\[n]**  - Set working directory to current opened file's directory
-
-`,ee` **\[n]**  - Opens an edit command with the path of the currently edited file filled in
-
-`,te` **\[n]**  - Opens a tab edit command with the path of the currently edited file filled in
-
-`,qc` **\[n]**  - Toggle Quickfix window
-
-`,qo` **\[n]**  - Open Quickfix window back up
-
-`,gf` **\[n]**  - Open file with filename under cursor, create new if not exists
-
-`,gfw` **\[n]**  - Open file in windows with filename under cursor, create new if not exists
-
-`,gft` **\[n]**  - Open file in tab with filename under cursor, create new if not exists
-
-`,hh` **\[n]**  - Split window horizontaly
-
-`,vv` **\[n]**  - Split window verticaly
-
-`,#` **\[n v]**  - Surround a word with #{ruby interpolation}
-
-`,"` **\[n v]** - Surround a word with "quotes"
-
-`,'` **\[n v]** - Surround a word with 'single quotes'
-
-`,(` or `,)` **\[n v]** - Surround a word with (parens)
-
-`,[` or `,]` **\[n v]** - Surround a word with [brackets]
-
-`,{` or `,}` **\[n v]** - Surround a word with {braces}
-
-`,rw` **\[n v]** - Overwrite word, replace a word with what's in the yank buffer
-
-`,sw` **\[n v]** - Swaps word under cursor and next word in line
-
-`,ss` **\[n v]** - Strip trailing whitespace
-
-`,st` **\[n v]** - Make selected text Stringify()
-
-`,sp` **\[n v]** - Split line by tags/keywords (using SplitJoin.vim)
-
-`,sj` **\[n v]** - Join lines by tags/keywords (using SplitJoin.vim)
-
-`,sf` **\[n v]** - Search word under cursor or selected word entire files in current directory (recursively)
-
-`,sr` **\[n v]** - Search word under cursor and replace with user inputs
-
-`,s[` **\[n v]** - Select inside [] include brackets
-
-`,s]` **\[n v]** - Select inside []
-
-`,s{` **\[n v]** - Select inside {} include brackets
-
-`,s}` **\[n v]** - Select inside {}
-
-`,s(` **\[n v]** - Select inside () include brackets
-
-`,s)` **\[n v]** - Select inside ()
-
-`,s<` **\[n v]** - Select inside \<> include brackets
-
-`,s>` **\[n v]** - Select inside \<>
-
-`,s"` **\[n v]** - Select inside "
-
-`,s'` **\[n v]** - Select inside '
-
-`,gs` **\[n]** - git status
-
-`,gd` **\[n]** - git diff
-
-`,gc` **\[n]** - git commit
-
-`,gl` **\[n]** - git pull
-
-`,gp` **\[n]** - git push
-
-`,gpa` **\[n]** - git push --all
-
-`,ga` **\[n]** - git add %currentfile%
-
-`,gaa` **\[n]** - git add all untracked files
-
-`,gad` **\[n]** - git add user input files
-
-`,gb` **\[n]** - git blame
-
-`,gr` **\[n]** - git remove %currentfile%
-
-`,ag` **\[n]** - Search in files, using ag
-
-`,af` **\[n]** - Search file, using ag
-
-`,ocf` **\[n]** - Open changed files (by git status)
-
-`,orb` **\[n]** - Select Outer-Ruby-Block
-
-`,t=` **\[n v]** - Align assignments (don't count logic, like == or !=)
-
-`,t,` **\[n v]** - Align on commas
-
-`,t|` **\[n v]** - Align on vertical bars (|)
-
-`,tsp` **\[n v]** - Align on whitespace
-
-`,z` **\[n]** - Toggle Goyo-mode
-
-`'` **\[n]** - Toggle single quotes to double quotes and backwards
-
-`mm` **\[n]** - Toggle bookmark
-
-`mi` **\[n]** - Annotate bookmark
-
-`ma` **\[n]** - Show all bookmarks
-
-`mj` **\[n]** - Go to next bookmark
-
-`mk` **\[n]** - Go to prev bookmark
-
-`mc` **\[n]** - Clear bookmarks
-
-`mx` **\[n]** - Clear all bookmarks
-
+| **Shortcut** | **Description** | **Modes** |
+|:------------:|-----------------|:---------:|
+| `CTRL-A` | Select all text | **\[n i v]** |
+| `CTRL-D` | Show/Hide NERDTree | **\[n i v]** |
+| `CTRL-E` | Create new tab | **\[n i v]** |
+| `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
+| `CTRL-T` | Show/Hide TagBar | **\[n i v]** |
+| `CTRL-J` | Show bookmarks | **\[n i v]** |
+| `CTRL-Y` | Delete line |	**\[n i v]** |
+| `CTRL-W` | Delete word | **\[n i v]** |
+| `CTRL-K` | Delete to EOL | **\[n i v]** |
+| `CTRL-L` | Run VimShell | **\[n i v]** |
+| `CTRL-X` or `SHIFT-Del` | Cut | **\[n i v]** |
+| `CTRL-C` or `CTRL-Ins` | Copy | **\[n i v]** |
+| `CTRL-V` or `SHIFT-Ins` | Paste | **\[n i v]** |
+| `CTRL-/` | Comment/Uncomment block | **\[n i v]** |
+| `CTRL-\` | Show/Hide YankRing | **\[n i v]** |
+| `CTRL-Space` | Open CtrlSpace buffers | **\[n]** |
+| `F2` | Save file | **\[n i v]** |
+| `CTRL-F2` | Save all files | **\[n i v]** |
+| `SHIFT-F2` | Save file as... | **\[n i v]** |
+| `F3` | Toggle paste mode | **\[n i v]** |
+| `F4` | Toggle readonly mode | **\[n v]** |
+| `F5` | Open the selected region in a new narrowed window | **\[n i v]** |
+| `F8` | Switch all buffers to tabs | **\[n i v]** |
+| `SHIFT-F8` | Switch all buffers to windows | **\[n i v]** |
+| `F10` | Quit without saving | **\[n i v]** |
+| `SHIFT-F10` | Quit with saving all files | **\[n i v]** |
+| `ESC-ESC` | Quit and ask for save files or close current window/buffer | **\[n i v]** |
+| `//` | No highlights search | **\[n v]** |
+| `CTRL-]` | Switch next tab | **\[n v]** |
+| `CTRL-[` | Switch prev tab | **\[n v]** |
+| `]` | Switch next buffer | **\[n v]** |
+| `[` | Switch prev buffer | **\[n v]** |
+| `ALT-k` | Upcase word under cursor | **\[n v]** |
+| `ALT-j` | Downcase word under cursor | **\[n v]** |
+| `,o` | Open CtrlP | **\[n]** |
+| `,b` | Open CtrlP buffers | **\[n]** |
+| `,w` | Save current file | **\[n]** |
+| `,.` | Go to last edit location | **\[n]** |
+| `,cd` | Set working directory to current opened file's directory | **\[n]** |
+| `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |
+| `,te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
+| `,qc` | Toggle Quickfix window | **\[n]** |
+| `,qo` | Open Quickfix window back up | **\[n]** |
+| `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
+| `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
+| `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
+| `,hh` | Split window horizontaly | **\[n]** |
+| `,vv` | Split window verticaly | **\[n]** |
+| `,#` | Surround a word with #{ruby interpolation} | **\[n v]** |
+| `,"` | Surround a word with "quotes" | **\[n v]** |
+| `,'` | Surround a word with 'single quotes' | **\[n v]** |
+| `,(` or `,)` | Surround a word with (parens) | **\[n v]** |
+| `,[` or `,]` | Surround a word with [brackets] | **\[n v]** |
+| `,{` or `,}` | Surround a word with {braces} | **\[n v]** |
+| `,rw` | Overwrite word, replace a word with what's in the yank buffer | **\[n v]** |
+| `,sw` | Swaps word under cursor and next word in line | **\[n v]** |
+| `,ss` | Strip trailing whitespace | **\[n v]** |
+| `,st` | Make selected text Stringify() | **\[n v]** |
+| `,sp` | Split line by tags/keywords (using SplitJoin.vim) | **\[n v]** |
+| `,sj` | Join lines by tags/keywords (using SplitJoin.vim) | **\[n v]** |
+| `,sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
+| `,sr` | Search word under cursor and replace with user inputs | **\[n v]** |
+| `,s[` | Select inside [] include brackets  | **\[n v]** |
+| `,s]` | Select inside [] | **\[n v]** |
+| `,s{` | Select inside {} include brackets | **\[n v]** |
+| `,s}` | Select inside {} | **\[n v]** |
+| `,s(` | Select inside () include brackets | **\[n v]** |
+| `,s)` | Select inside () | **\[n v]** |
+| `,s<` | Select inside <> include brackets | **\[n v]** |
+| `,s>` | Select inside <> | **\[n v]** |
+| `,s"` | Select inside " | **\[n v]** |
+| `,s'` | Select inside ' | **\[n v]** |
+|`,gs` | git status | **\[n]** |
+| `,gd` | git diff | **\[n]** |
+| `,gc` | git commit | **\[n]** |
+| `,gl` | git pull | **\[n]** |
+| `,gp` | git push | **\[n]** |
+| `,gpa` | git push --all | **\[n]** |
+| `,ga` | git add %currentfile% | **\[n]** |
+| `,gaa` | git add all untracked files | **\[n]** |
+| `,gad` | git add user input files | **\[n]** |
+| `,gb` | git blame | **\[n]** |
+| `,gr` | git remove %currentfile% | **\[n]** |
+| `,ag` | Search in files, using ag | **\[n]** |
+| `,af` | Search file, using ag | **\[n]** |
+| `,ocf` | Open changed files (by git status) | **\[n]** |
+| `,orb` | Select Outer-Ruby-Block | **\[n]** |
+| `,t=` | Align assignments (don't count logic, like == or !=) | **\[n v]** |
+| `,t,` | Align on commas | **\[n v]** |
+| `,t\|` | Align on vertical bars (\|) | **\[n v]** |
+| `,tsp` | Align on whitespace | **\[n v]** |
+| `,z` | Toggle Goyo-mode | **\[n]** |
+| `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
+| `mm` | Toggle bookmark | **\[n]** |
+| `mi` | Annotate bookmark | **\[n]** |
+| `ma` | Show all bookmarks | **\[n]** |
+| `mj` | Go to next bookmark | **\[n]** |
+| `mk` | Go to prev bookmark | **\[n]** |
+| `mc` | Clear bookmarks | **\[n]** |
+| `mx` | Clear all bookmarks | **\[n]** |

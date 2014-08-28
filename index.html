@@ -61,205 +61,527 @@
 <h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
-<p><code>CTRL-A</code> - Select all text</p>
-
-<p><code>CTRL-D</code> - Show/Hide NERDTree</p>
-
-<p><code>CTRL-E</code> - Create new tab</p>
-
-<p><code>CTRL-Z</code> - Show/Hide UndoTree</p>
-
-<p><code>CTRL-T</code> - Show/Hide TagBar</p>
-
-<p><code>CTRL-J</code> - Show bookmarks</p>
-
-<p><code>CTRL-Y</code> - Delete line</p>
-
-<p><code>CTRL-W</code> - Delete word</p>
-
-<p><code>CTRL-K</code> - Delete to EOL</p>
-
-<p><code>CTRL-L</code> - Run VimShell</p>
-
-<p><code>CTRL-X</code> or <code>SHIFT-Del</code> - Cut</p>
-
-<p><code>CTRL-C</code> or <code>CTRL-Ins</code> - Copy</p>
-
-<p><code>CTRL-V</code> or <code>SHIFT-Ins</code> - Paste</p>
-
-<p><code>CTRL-/</code> - Comment/Uncomment block</p>
-
-<p><code>CTRL-\</code> - Show/Hide YankRing</p>
-
-<p><code>CTRL-Space</code> - Open CtrlSpace buffers</p>
-
-<p><code>F2</code> - Save file</p>
-
-<p><code>CTRL-F2</code> - Save all files</p>
-
-<p><code>SHIFT-F2</code> or <code>CTRL-S</code> - Save file as...</p>
-
-<p><code>F3</code> - Toggle paste mode</p>
-
-<p><code>F4</code> - Toggle readonly mode</p>
-
-<p><code>F5</code> - Open the selected region in a new narrowed window</p>
-
-<p><code>F8</code> - Switch all buffers to tabs</p>
-
-<p><code>SHIFT-F8</code> - Switch all buffers to windows</p>
-
-<p><code>F10</code> - Quit without saving</p>
-
-<p><code>SHIFT-F10</code> - Quit with saving all files</p>
-
-<p><code>ESC-ESC</code> - Quit and ask for save files or close current window/buffer</p>
-
-<p><code>//</code> - No highlights search</p>
-
-<p><code>CTRL-]</code> - Switch next tab</p>
-
-<p><code>CTRL-]</code> - Switch prev tab</p>
-
-<p><code>]</code> - Switch next buffer</p>
-
-<p><code>]</code> - Switch prev buffer</p>
-
-<p><code>ALT-k</code> - Upcase word under cursor</p>
-
-<p><code>ALT-j</code> - Downcase word under cursor</p>
-
-<p><code>,o</code> - Open CtrlP</p>
-
-<p><code>,b</code> - Open CtrlP buffers</p>
-
-<p><code>,w</code> - Save current file</p>
-
-<p><code>,.</code> - Go to last edit location</p>
-
-<p><code>,cd</code> - Set working directory to current opened file's directory</p>
-
-<p><code>,ee</code> - Opens an edit command with the path of the currently edited file filled in</p>
-
-<p><code>,te</code> - Opens a tab edit command with the path of the currently edited file filled in</p>
-
-<p><code>,qc</code> - Toggle Quickfix window</p>
-
-<p><code>,qo</code> - Open  Quickfix window back up</p>
-
-<p><code>,gf</code> - Open file with filename under cursor, create new if not exists</p>
-
-<p><code>,gfw</code> - Open file in windows with filename under cursor, create new if not exists</p>
-
-<p><code>,gft</code> - Open file in tab with filename under cursor, create new if not exists</p>
-
-<p><code>,hh</code> - Split window horizontaly</p>
-
-<p><code>,vv</code> - Split window verticaly</p>
-
-<p><code>,#</code> - Surround a word with #{ruby interpolation}</p>
-
-<p><code>,"</code> - Surround a word with "quotes"</p>
-
-<p><code>,'</code> - Surround a word with 'single quotes'</p>
-
-<p><code>,(</code> or <code>,)</code> - Surround a word with (parens)</p>
-
-<p><code>,[</code> or <code>,]</code> - Surround a word with [brackets]</p>
-
-<p><code>,{</code> or <code>,}</code> - Surround a word with {braces}</p>
-
-<p><code>,rw</code> - Overwrite word, replace a word with what's in the yank buffer</p>
-
-<p><code>,sw</code> - Swaps word under cursor and next word in line</p>
-
-<p><code>,ss</code> - Strip trailing whitespace</p>
-
-<p><code>,st</code> - Make selected text Stringify()</p>
-
-<p><code>,sp</code> - Split line by tags/keywords (using SplitJoin.vim)</p>
-
-<p><code>,sj</code> - Join lines by tags/keywords (using SplitJoin.vim)</p>
-
-<p><code>,sf</code> - Search word under cursor or selected word entire files in current directory (recursively)</p>
-
-<p><code>,sr</code> - Search word under cursor and replace with user inputs</p>
-
-<p><code>,s[</code> - Select inside [] include brackets</p>
-
-<p><code>,s]</code> - Select inside []</p>
-
-<p><code>,s{</code> - Select inside {} include brackets</p>
-
-<p><code>,s}</code> - Select inside {}</p>
-
-<p><code>,s(</code> - Select inside () include brackets</p>
-
-<p><code>,s)</code> - Select inside ()</p>
-
-<p><code>,s&lt;</code> - Select inside &lt;&gt; include brackets</p>
-
-<p><code>,s&gt;</code> - Select inside &lt;&gt;</p>
-
-<p><code>,s"</code> - Select inside "</p>
-
-<p><code>,s'</code> - Select inside '</p>
-
-<p><code>,gs</code> - git status</p>
-
-<p><code>,gd</code> - git diff</p>
-
-<p><code>,gc</code> - git commit</p>
-
-<p><code>,gl</code> - git pull</p>
-
-<p><code>,gp</code> - git push</p>
-
-<p><code>,gpa</code> - git push --all</p>
-
-<p><code>,ga</code> - git add %currentfile%</p>
-
-<p><code>,gaa</code> - git add all untracked files</p>
-
-<p><code>,gad</code> - git add user input files</p>
-
-<p><code>,gb</code> - git blame</p>
-
-<p><code>,gr</code> - git remove %currentfile%</p>
-
-<p><code>,ag</code> - Search in files, using ag</p>
-
-<p><code>,af</code> - Search file, using ag</p>
-
-<p><code>,ocf</code> - Open changed files (by git status)</p>
-
-<p><code>,orb</code> - Select Outer-Ruby-Block</p>
-
-<p><code>,t=</code> - Align assignments (don't count logic, like == or !=)</p>
-
-<p><code>,t,</code> - Align on commas</p>
-
-<p><code>,t|</code> - Align on vertical bars (|)</p>
-
-<p><code>,tsp</code> - Align on whitespace</p>
-
-<p><code>,z</code> - Toggle Goyo-mode</p>
-
-<p><code>'</code> - Toggle single quotes to double quotes and backwards</p>
-
-<p><code>mm</code> - Toggle bookmark</p>
-
-<p><code>mi</code> - Annotate bookmark</p>
-
-<p><code>ma</code> - Show all bookmarks</p>
-
-<p><code>mj</code> - Go to next bookmark</p>
-
-<p><code>mk</code> - Go to prev bookmark</p>
-
-<p><code>mc</code> - Clear bookmarks</p>
-
-<p><code>mx</code> - Clear all bookmarks</p>
+<table>
+<thead><tr>
+<th align="center"><strong>Shortcut</strong></th>
+<th><strong>Description</strong></th>
+<th align="center"><strong>Modes</strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="center"><code>CTRL-A</code></td>
+<td>Select all text</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-D</code></td>
+<td>Show/Hide NERDTree</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-E</code></td>
+<td>Create new tab</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-Z</code></td>
+<td>Show/Hide UndoTree</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-T</code></td>
+<td>Show/Hide TagBar</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-J</code></td>
+<td>Show bookmarks</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-Y</code></td>
+<td>Delete line</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-W</code></td>
+<td>Delete word</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-K</code></td>
+<td>Delete to EOL</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-L</code></td>
+<td>Run VimShell</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>CTRL-X</code> or <code>SHIFT-Del</code>
+</td>
+<td>Cut</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>CTRL-C</code> or <code>CTRL-Ins</code>
+</td>
+<td>Copy</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>CTRL-V</code> or <code>SHIFT-Ins</code>
+</td>
+<td>Paste</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-/</code></td>
+<td>Comment/Uncomment block</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-\</code></td>
+<td>Show/Hide YankRing</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-Space</code></td>
+<td>Open CtrlSpace buffers</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F2</code></td>
+<td>Save file</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-F2</code></td>
+<td>Save all files</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>SHIFT-F2</code></td>
+<td>Save file as...</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F3</code></td>
+<td>Toggle paste mode</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F4</code></td>
+<td>Toggle readonly mode</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F5</code></td>
+<td>Open the selected region in a new narrowed window</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F8</code></td>
+<td>Switch all buffers to tabs</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>SHIFT-F8</code></td>
+<td>Switch all buffers to windows</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>F10</code></td>
+<td>Quit without saving</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>SHIFT-F10</code></td>
+<td>Quit with saving all files</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>ESC-ESC</code></td>
+<td>Quit and ask for save files or close current window/buffer</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>//</code></td>
+<td>No highlights search</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-]</code></td>
+<td>Switch next tab</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>CTRL-[</code></td>
+<td>Switch prev tab</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>]</code></td>
+<td>Switch next buffer</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>[</code></td>
+<td>Switch prev buffer</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>ALT-k</code></td>
+<td>Upcase word under cursor</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>ALT-j</code></td>
+<td>Downcase word under cursor</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,o</code></td>
+<td>Open CtrlP</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,b</code></td>
+<td>Open CtrlP buffers</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,w</code></td>
+<td>Save current file</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,.</code></td>
+<td>Go to last edit location</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,cd</code></td>
+<td>Set working directory to current opened file's directory</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ee</code></td>
+<td>Opens an edit command with the path of the currently edited file filled in</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,te</code></td>
+<td>Opens a tab edit command with the path of the currently edited file filled in</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,qc</code></td>
+<td>Toggle Quickfix window</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,qo</code></td>
+<td>Open Quickfix window back up</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gf</code></td>
+<td>Open file with filename under cursor, create new if not exists</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gfw</code></td>
+<td>Open file in windows with filename under cursor, create new if not exists</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gft</code></td>
+<td>Open file in tab with filename under cursor, create new if not exists</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,hh</code></td>
+<td>Split window horizontaly</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,vv</code></td>
+<td>Split window verticaly</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,#</code></td>
+<td>Surround a word with #{ruby interpolation}</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,"</code></td>
+<td>Surround a word with "quotes"</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,'</code></td>
+<td>Surround a word with 'single quotes'</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>,(</code> or <code>,)</code>
+</td>
+<td>Surround a word with (parens)</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>,[</code> or <code>,]</code>
+</td>
+<td>Surround a word with [brackets]</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>,{</code> or <code>,}</code>
+</td>
+<td>Surround a word with {braces}</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,rw</code></td>
+<td>Overwrite word, replace a word with what's in the yank buffer</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,sw</code></td>
+<td>Swaps word under cursor and next word in line</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ss</code></td>
+<td>Strip trailing whitespace</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,st</code></td>
+<td>Make selected text Stringify()</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,sp</code></td>
+<td>Split line by tags/keywords (using SplitJoin.vim)</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,sj</code></td>
+<td>Join lines by tags/keywords (using SplitJoin.vim)</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,sf</code></td>
+<td>Search word under cursor or selected word entire files in current directory (recursively)</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,sr</code></td>
+<td>Search word under cursor and replace with user inputs</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s[</code></td>
+<td>Select inside [] include brackets</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s]</code></td>
+<td>Select inside []</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s{</code></td>
+<td>Select inside {} include brackets</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s}</code></td>
+<td>Select inside {}</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s(</code></td>
+<td>Select inside () include brackets</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s)</code></td>
+<td>Select inside ()</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s&lt;</code></td>
+<td>Select inside &lt;&gt; include brackets</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s&gt;</code></td>
+<td>Select inside &lt;&gt;</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s"</code></td>
+<td>Select inside "</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,s'</code></td>
+<td>Select inside '</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gs</code></td>
+<td>git status</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gd</code></td>
+<td>git diff</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gc</code></td>
+<td>git commit</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gl</code></td>
+<td>git pull</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gp</code></td>
+<td>git push</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gpa</code></td>
+<td>git push --all</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ga</code></td>
+<td>git add %currentfile%</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gaa</code></td>
+<td>git add all untracked files</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gad</code></td>
+<td>git add user input files</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gb</code></td>
+<td>git blame</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gr</code></td>
+<td>git remove %currentfile%</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ag</code></td>
+<td>Search in files, using ag</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,af</code></td>
+<td>Search file, using ag</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ocf</code></td>
+<td>Open changed files (by git status)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,orb</code></td>
+<td>Select Outer-Ruby-Block</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,t=</code></td>
+<td>Align assignments (don't count logic, like == or !=)</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,t,</code></td>
+<td>Align on commas</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center">`,t\</td>
+<td>`</td>
+<td align="center">Align on vertical bars</td>
+</tr>
+<tr>
+<td align="center"><code>,tsp</code></td>
+<td>Align on whitespace</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,z</code></td>
+<td>Toggle Goyo-mode</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>'</code></td>
+<td>Toggle single quotes to double quotes and backwards</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mm</code></td>
+<td>Toggle bookmark</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mi</code></td>
+<td>Annotate bookmark</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>ma</code></td>
+<td>Show all bookmarks</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mj</code></td>
+<td>Go to next bookmark</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mk</code></td>
+<td>Go to prev bookmark</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mc</code></td>
+<td>Clear bookmarks</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>mx</code></td>
+<td>Clear all bookmarks</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+</tbody>
+</table>
       </section>
 
     </div>

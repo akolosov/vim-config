@@ -92,8 +92,11 @@ vmap <Leader>s"  i"
 map <Leader>s'  vi'
 vmap <Leader>s'  i'
 
-"Go to last edit location with <Leader>.
+" Go to last edit location with <Leader>.
 nnoremap <Leader>. '.
+
+" Switch between the last two files
+nnoremap '' <c-^>
 
 " Set working directory
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>
@@ -247,6 +250,7 @@ imap <C-\> <Esc>:YRShow<CR>
 map <C-e> :tabnew<CR>
 imap <C-e> <Esc>:tabnew<CR>
 
+map `` :VimShell<CR>
 map <C-l> :VimShell<CR>
 imap <C-l> <Esc>:VimShell<CR>
 

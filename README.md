@@ -58,8 +58,9 @@ Shortcuts
 | `[` | Switch prev buffer | **\[n v]** |
 | `ALT-k` | Upcase word under cursor | **\[n v]** |
 | `ALT-j` | Downcase word under cursor | **\[n v]** |
-| `,o` | Open CtrlP | **\[n]** |
-| `,b` | Open CtrlP buffers | **\[n]** |
+| `,,` or `,o` | Open CtrlP | **\[n]** |
+| `..` or `b` | Open CtrlP buffers | **\[n]** |
+| `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,w` | Save current file | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |

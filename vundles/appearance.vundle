@@ -7,4 +7,3 @@ endif
 
 Bundle "chrisbra/color_highlight.git"
 Bundle "akolosov/vim-colors"
-Bundle "w0ng/vim-hybrid"

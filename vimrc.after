@@ -20,22 +20,16 @@ endif
 
 syntax enable
 
-if !exists('g:colors_name')
-	colorscheme hybrid
-endif
+if exists('g:use_lightline')
+	if !exists('g:lightline')
+		let g:lightline = {}
+	end
 
-if !exists('g:use_lightline')
-	if !exists('g:airline_theme')
-		AirlineTheme bubblegum
-	else
-		execute 'AirlineTheme '+g:airline_theme
+	if !exists('g:lightline_theme')
+		let g:lightline.colorscheme = 'hybrid'
 	endif
-else
-	if exists('g:lightline')
-		if exists('g:lightline_theme')
-			let g:lightline.colorscheme = g:lightline_theme
-		endif
-	endif
+
+	let g:lightline.colorscheme = g:lightline_theme
 
 	if exists('g:use_powerline_fonts')
 		let g:lightline.separator = { 'left': "\u2b80", 'right': "\u2b82" }
@@ -46,4 +40,18 @@ else
 	endif
 
 	call lightline#init()
+else
+	if !exists('g:airline_theme')
+		let g:airline_theme = 'bubblegum'	
+	endif
+
+	if exists('g:use_powerline_fonts')
+		let g:airline_powerline_fonts = 1
+	endif
+
+	execute 'AirlineTheme '+g:airline_theme
+endif
+
+if !exists('g:colors_name')
+	colorscheme hybrid
 endif

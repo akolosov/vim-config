@@ -22,6 +22,20 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
+
+let g:lightline.mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'η',
+    \ 'i'  : 'λ',
+    \ 'R'  : 'γ',
+    \ 'c'  : 'π',
+    \ 'v'  : 'ψ',
+    \ 'V'  : 'Ψ',
+    \ '' : '^Ψ',
+    \ 's'  : 'ω',
+    \ 'S'  : 'Ω',
+    \ '' : '^Ω' }
+
 function! MyModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
@@ -49,7 +63,7 @@ endfunction
 function! MyFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ''  " edit here for cool mark
+      let mark = '⎇ '  " edit here for cool mark
       let _ = fugitive#head()
       return strlen(_) ? mark._ : ''
     endif

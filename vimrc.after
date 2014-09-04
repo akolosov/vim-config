@@ -19,11 +19,24 @@ if has("gui_running")
 endif
 
 syntax enable
-set background=dark
-colorscheme hybrid
 
-if !exists('g:use_lightline')
-	AirlineTheme bubblegum
+if !exists('g:color_scheme')
+	colorscheme hybrid
+else
+	execute 'colorscheme '+g:color_scheme
 endif
 
+if !exists('g:use_lightline')
+	if !exists('g:airline_theme')
+		AirlineTheme hybrid
+	else
+		execute 'AirlineTheme '+g:airline_theme
+	endif
+else
+	if exists('g:lightline')
+		if exists('g:lightline_theme')
+			let g:lightline.colorscheme = g:lightline_theme
+		endif
+	endif
+endif
 

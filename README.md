@@ -15,9 +15,17 @@ Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/
 Variables
 =========
 
+All variables set in `~/.vimrc.before.local` file.
+
 `g:use_lightline` - Use LightLine instead AirLine
 
 `g:airline_powerline_fonts` - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
+
+`g:color_scheme` - Your favorite color scheme name (default: hybrid)
+
+`g:airline_theme` - Your favorite AirLine theme (default: hybrid)
+
+`g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
 
 Shortcuts
 =========

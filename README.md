@@ -21,9 +21,9 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:airline_powerline_fonts` - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
 
-`g:color_scheme` - Your favorite color scheme name (default: hybrid)
+`g:colors_name` - Your favorite color scheme name (default: hybrid)
 
-`g:airline_theme` - Your favorite AirLine theme (default: hybrid)
+`g:airline_theme` - Your favorite AirLine theme (default: bubblegum)
 
 `g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
 

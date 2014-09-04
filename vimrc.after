@@ -18,7 +18,6 @@ if has("gui_running")
 	let g:airline_powerline_fonts = 1
 endif
 
-syntax enable
 
 if exists('g:use_lightline')
 	if !exists('g:lightline')
@@ -52,6 +51,11 @@ else
 	execute 'AirlineTheme '+g:airline_theme
 endif
 
-if !exists('g:colors_name')
+if !exists('g:color_scheme')
 	colorscheme hybrid
+else
+	let g:colors_name = g:color_scheme
 endif
+
+syntax enable
+

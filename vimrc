@@ -174,5 +174,3 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	endif
 endif
 
-
-

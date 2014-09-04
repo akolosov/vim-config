@@ -340,4 +340,3 @@ nnoremap <silent> [ :bp<CR>
 vnoremap <silent> ] :bn<CR>
 vnoremap <silent> [ :bp<CR>
 
-

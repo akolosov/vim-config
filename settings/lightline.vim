@@ -41,7 +41,7 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? 'RO' : ''
+  return &ft !~? 'help' && &readonly ? '⭤' : ''
 endfunction
 
 function! MyFilename()

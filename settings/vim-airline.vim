@@ -1,6 +1,6 @@
 let g:airline#extensions#tabline#enabled = 1
 
-if !exists('g:airline_powerline_fonts') && !has("gui_running")
+if !exists('g:use_powerline_fonts') && !has("gui_running")
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''

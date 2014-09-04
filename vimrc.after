@@ -34,7 +34,7 @@ else
 	if exists('g:lightline')
 		if exists('g:lightline_theme')
 			let g:lightline.colorscheme = g:lightline_theme
+			call lightline#init()
 		endif
 	endif
 endif
-

@@ -118,6 +118,9 @@ nnoremap <Leader>gf :e <cfile><CR>
 nnoremap <Leader>gfw :sp +e <cfile><CR>
 nnoremap <Leader>gft :tabe <cfile><CR>
 
+" Delete blank lines
+nnoremap <Leader>db :%g/^$/d<CR>\h
+
 " Save file
 imap <F2>   <Esc>:w<CR>i
 map  <F2>   :w<CR>

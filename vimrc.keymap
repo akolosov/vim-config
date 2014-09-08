@@ -264,6 +264,7 @@ noremap <silent> <Leader>rw "_diwhp
 
 " Delete blank lines
 nnoremap <Leader>db :%g/^$/d<CR>\h
+vnoremap <Leader>db :g/^$/d<CR>\h
 
 " Surround every line in the file with quotes
 nnoremap <Leader>l' :%s/.*/'\0'<CR>:setlocal nohls<CR>

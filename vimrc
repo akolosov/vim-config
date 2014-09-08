@@ -152,6 +152,12 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 		set clipboard=unnamed
 	endif
 
+	" Use relative line numbers
+	if exists("g:use_relativenumber")
+		set relativenumber
+		au BufReadPost * set relativenumber
+	endif
+
 	" =================== GUI Settings ========================
 	" Disable the scrollbars (NERDTree)
 	set guioptions-=r

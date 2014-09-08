@@ -118,9 +118,6 @@ nnoremap <Leader>gf :e <cfile><CR>
 nnoremap <Leader>gfw :sp +e <cfile><CR>
 nnoremap <Leader>gft :tabe <cfile><CR>
 
-" Delete blank lines
-nnoremap <Leader>db :%g/^$/d<CR>\h
-
 " Save file
 imap <F2>   <Esc>:w<CR>i
 map  <F2>   :w<CR>
@@ -264,6 +261,15 @@ noremap <silent> <Leader>sw <Esc>bdwwP
 
 " Replace words
 noremap <silent> <Leader>rw "_diwhp
+
+" Delete blank lines
+nnoremap <Leader>db :%g/^$/d<CR>\h
+
+" Surround every line in the file with quotes
+nnoremap <Leader>l' :%s/.*/'\0'<CR>:setlocal nohls<CR>
+vnoremap <Leader>l' :s/.*/'\0'<CR>:setlocal nohls<CR>
+nnoremap <Leader>l" :%s/.*/"\0"<CR>:setlocal nohls<CR>
+vnoremap <Leader>l" :s/.*/"\0"<CR>:setlocal nohls<CR>
 
 " Strip trailing whitespace
 noremap <silent> <leader>ss :call StripWhitespace()<CR>

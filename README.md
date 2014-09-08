@@ -27,6 +27,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
 
+`g:use_relativenumber` - Use relative line numbers
+
 Shortcuts
 =========
 
@@ -89,6 +91,9 @@ Shortcuts
 | `,{` or `,}` | Surround a word with {braces} | **\[n v]** |
 | `,rw` | Overwrite word, replace a word with what's in the yank buffer | **\[n v]** |
 | `,sw` | Swaps word under cursor and next word in line | **\[n v]** |
+| `,db  | Delete blank lines | **\[n]** |
+| `,l'` | Surround every line in the file or selection with \' | **\[n v]** |
+| `,l"` | Surround every line in the file or selection with \" | **\[n v]** |
 | `,ss` | Strip trailing whitespace | **\[n v]** |
 | `,st` | Make selected text Stringify() | **\[n v]** |
 | `,sp` | Split line by tags/keywords (using SplitJoin.vim) | **\[n v]** |

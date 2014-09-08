@@ -6,5 +6,9 @@ else
 	Bundle "bling/vim-airline"
 endif
 
+if exists("g:use_relativenumber")
+	Bundle "myusuf3/numbers.vim"
+endif
+
 Bundle "chrisbra/color_highlight.git"
 Bundle "akolosov/vim-colors"

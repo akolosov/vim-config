@@ -266,11 +266,25 @@ noremap <silent> <Leader>rw "_diwhp
 nnoremap <Leader>db :%g/^$/d<CR>\h
 vnoremap <Leader>db :g/^$/d<CR>:setlocal nohls<CR>
 
-" Surround every line in the file with quotes
+" Surround every line in the file with '
 nnoremap <Leader>l' :%s/.*/'\0'<CR>:setlocal nohls<CR>
 vnoremap <Leader>l' :s/.*/'\0'<CR>:setlocal nohls<CR>
+
+" Surround every line in the file with "
 nnoremap <Leader>l" :%s/.*/"\0"<CR>:setlocal nohls<CR>
 vnoremap <Leader>l" :s/.*/"\0"<CR>:setlocal nohls<CR>
+
+" Surround every line in the file with ()
+nnoremap <Leader>l( :%s/.*/(\0)<CR>:setlocal nohls<CR>
+vnoremap <Leader>l( :s/.*/(\0)<CR>:setlocal nohls<CR>
+
+" Surround every line in the file with []
+nnoremap <Leader>l[ :%s/.*/[\0]<CR>:setlocal nohls<CR>
+vnoremap <Leader>l[ :s/.*/[\0]<CR>:setlocal nohls<CR>
+
+" Surround every line in the file with {}
+nnoremap <Leader>l{ :%s/.*/{\0}<CR>:setlocal nohls<CR>
+vnoremap <Leader>l{ :s/.*/{\0}<CR>:setlocal nohls<CR>
 
 " Strip trailing whitespace
 noremap <silent> <leader>ss :call StripWhitespace()<CR>

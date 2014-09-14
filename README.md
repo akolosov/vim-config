@@ -29,13 +29,17 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_relativenumber` - Use relative line numbers
 
+`g:use_ctrlSpace` - use CtrlSpace plugin instead CtrlP
+
+`g:dont_use_NERDTree` - do not use NERDTree plugin
+
 Shortcuts
 =========
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
 | `CTRL-A` | Select all text | **\[n i v]** |
-| `CTRL-D` | Show/Hide NERDTree | **\[n i v]** |
+| `CTRL-D` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `CTRL-E` | Create new tab | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
 | `CTRL-T` | Show/Hide TagBar | **\[n i v]** |
@@ -49,7 +53,7 @@ Shortcuts
 | `CTRL-V` or `SHIFT-Ins` | Paste | **\[n i v]** |
 | `CTRL-/` | Comment/Uncomment block | **\[n i v]** |
 | `CTRL-\` | Show/Hide YankRing | **\[n i v]** |
-| `CTRL-Space` | Open CtrlSpace buffers | **\[n]** |
+| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace`) | **\[n]** |
 | `F2` | Save file | **\[n i v]** |
 | `CTRL-F2` | Save all files | **\[n i v]** |
 | `SHIFT-F2` | Save file as... | **\[n i v]** |
@@ -68,8 +72,8 @@ Shortcuts
 | `[` | Switch prev buffer | **\[n v]** |
 | `ALT-k` | Upcase word under cursor | **\[n v]** |
 | `ALT-j` | Downcase word under cursor | **\[n v]** |
-| `,,` or `,o` | Open CtrlP | **\[n]** |
-| `..` or `b` | Open CtrlP buffers | **\[n]** |
+| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
+| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,w` | Save current file | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |

@@ -11,4 +11,6 @@ endif
 if !exists("g:dont_use_NERDTree")
 	Bundle "scrooloose/nerdtree.git"
 	Bundle "jistr/vim-nerdtree-tabs.git"
+else
+	Bundle "mhinz/vim-startify"
 endif

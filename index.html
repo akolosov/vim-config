@@ -68,6 +68,10 @@
 
 <p><code>g:use_relativenumber</code> - Use relative line numbers</p>
 
+<p><code>g:use_ctrlSpace</code> - use CtrlSpace plugin instead CtrlP</p>
+
+<p><code>g:dont_use_NERDTree</code> - do not use NERDTree plugin</p>
+
 <h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
@@ -85,7 +89,7 @@
 </tr>
 <tr>
 <td align="center"><code>CTRL-D</code></td>
-<td>Show/Hide NERDTree</td>
+<td>Show/Hide NERDTree (if not set <code>g:dont_use_NERDTree</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -161,7 +165,7 @@
 </tr>
 <tr>
 <td align="center"><code>CTRL-Space</code></td>
-<td>Open CtrlSpace buffers</td>
+<td>Open CtrlSpace buffers (if set <code>g:use_ctrlSpace</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -258,14 +262,14 @@
 <td align="center">
 <code>,,</code> or <code>,o</code>
 </td>
-<td>Open CtrlP</td>
+<td>Open CtrlP (if not set <code>g:use_ctrlSpace</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center">
-<code>..</code> or <code>b</code>
+<code>..</code> or <code>,b</code>
 </td>
-<td>Open CtrlP buffers</td>
+<td>Open CtrlP buffers (if not set <code>g:use_ctrlSpace</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>

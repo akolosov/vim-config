@@ -120,18 +120,18 @@ nnoremap <Leader>gft :tabe <cfile><CR>
 
 " Save file
 imap <F2>   <Esc>:w<CR>i
-vmap <F2>   <Esc>:w<CR>i
-map  <F2>   :w<CR>
+vmap <F2>   :<C-U>w<CR>v
+nmap  <F2>   :w<CR>
 
 " Save all files
 imap <C-F2> <Esc>:wa<CR>i
-vmap <C-F2> <Esc>:wa<CR>i
-map  <C-F2> :wa<CR>
+vmap <C-F2> :<C-U>wa<CR>v
+nmap  <C-F2> :wa<CR>
 
 " Save file as...
-imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-vmap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-map  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
+imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>i
+vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>v
+nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
 
 " Delete line
 map  <C-y>  dd

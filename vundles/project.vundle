@@ -1,7 +1,10 @@
 Bundle "xolox/vim-misc"
 Bundle "xolox/vim-session"
 Bundle "majutsushi/tagbar.git"
-Bundle "mhinz/vim-startify"
+
+if exists("g:dont_show_NERDTree")
+	Bundle "mhinz/vim-startify"
+end
 
 if exists("g:use_ctrlSpace")
 	Bundle "szw/vim-ctrlspace"

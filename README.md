@@ -117,7 +117,10 @@ Shortcuts
 | `,s>` | Select inside <> | **\[n v]** |
 | `,s"` | Select inside " | **\[n v]** |
 | `,s'` | Select inside ' | **\[n v]** |
-|`,gs` | git status | **\[n]** |
+| `,ls` | Send current line to console (tmux by default) | **\[n]** |
+| `,ms` | Send current motion to console (tmux by default) | **\[n]** |
+| `,rs` | Send current selection to console (tmux by default) | **\[v]** |
+| `,gs` | git status | **\[n]** |
 | `,gd` | git diff | **\[n]** |
 | `,gc` | git commit | **\[n]** |
 | `,gl` | git pull | **\[n]** |

@@ -33,6 +33,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:dont_use_NERDTree` - do not use NERDTree plugin
 
+`g:dont_show_NERDTree` - do not show NERDTree on startup
+
 Shortcuts
 =========
 

@@ -31,6 +31,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_ctrlSpace` - use CtrlSpace plugin instead CtrlP
 
+`g:use_VimShell` - use VimShell plugin
+
 `g:dont_use_NERDTree` - do not use NERDTree plugin
 
 `g:dont_show_NERDTree` - do not show NERDTree on startup
@@ -49,7 +51,7 @@ Shortcuts
 | `CTRL-Y` | Delete line |	**\[n i v]** |
 | `CTRL-W` | Delete word | **\[n i v]** |
 | `CTRL-K` | Delete to EOL | **\[n i v]** |
-| `CTRL-L` | Run VimShell | **\[n i v]** |
+| `CTRL-L` | Run VimShell (if set `g:use_VimShell`) | **\[n i v]** |
 | `CTRL-X` or `SHIFT-Del` | Cut | **\[n i v]** |
 | `CTRL-C` or `CTRL-Ins` | Copy | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste | **\[n i v]** |

@@ -6,8 +6,6 @@ Bundle "honza/vim-snippets"
 Bundle "Shougo/neosnippet-snippets"
 Bundle "Shougo/neosnippet.vim"
 Bundle "Shougo/neocomplete.git"
-Bundle "Shougo/vimproc.vim"
-Bundle "Shougo/vimshell.git"
 Bundle "MattesGroeger/vim-bookmarks"
 Bundle "vim-scripts/Align"
 Bundle "vim-scripts/matchit.zip.git"
@@ -27,3 +25,8 @@ Bundle "vim-scripts/sudo.vim"
 Bundle "nvie/vim-togglemouse"
 Bundle "scrooloose/nerdcommenter"
 Bundle "29decibel/vim-stringify"
+
+if exists("g:use_VimShell")
+	Bundle "Shougo/vimproc.vim"
+	Bundle "Shougo/vimshell.git"
+endif

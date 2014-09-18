@@ -129,7 +129,13 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set t_Co=256
 	set t_vb=
 	set pastetoggle=<F3>
-	set noautochdir
+
+	if exists('g:use_VimShell')
+		set noautochdir
+	else
+		set autochdir
+	endif
+
 	set noshowmode
 	set confirm
 	set gdefault                                        " Add the g flag to search/replace by default

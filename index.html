@@ -70,7 +70,11 @@
 
 <p><code>g:use_ctrlSpace</code> - use CtrlSpace plugin instead CtrlP</p>
 
+<p><code>g:use_VimShell</code> - use VimShell plugin</p>
+
 <p><code>g:dont_use_NERDTree</code> - do not use NERDTree plugin</p>
+
+<p><code>g:dont_show_NERDTree</code> - do not show NERDTree on startup</p>
 
 <h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
@@ -129,7 +133,7 @@
 </tr>
 <tr>
 <td align="center"><code>CTRL-L</code></td>
-<td>Run VimShell</td>
+<td>Run VimShell (if set <code>g:use_VimShell</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -494,6 +498,21 @@
 <td align="center"><code>,s'</code></td>
 <td>Select inside '</td>
 <td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ls</code></td>
+<td>Send current line to console (tmux by default)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,ms</code></td>
+<td>Send current motion to console (tmux by default)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,rs</code></td>
+<td>Send current selection to console (tmux by default)</td>
+<td align="center"><strong>[v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,gs</code></td>

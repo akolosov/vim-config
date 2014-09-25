@@ -45,9 +45,9 @@ Shortcuts
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
 | `CTRL-D` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
-| `CTRL-E` | Create new tab | **\[n i v]** |
+| `CTRL-T` | Create new tab | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
-| `CTRL-T` | Show/Hide TagBar | **\[n i v]** |
+| `CTRL-G` | Show/Hide TagBar | **\[n i v]** |
 | `CTRL-J` | Show bookmarks | **\[n i v]** |
 | `CTRL-Y` | Delete line |	**\[n i v]** |
 | `CTRL-W` | Delete word | **\[n i v]** |
@@ -75,8 +75,8 @@ Shortcuts
 | `CTRL-[` | Switch prev tab | **\[n v]** |
 | `]` | Switch next buffer | **\[n v]** |
 | `[` | Switch prev buffer | **\[n v]** |
-| `ALT-k` | Upcase word under cursor | **\[n v]** |
-| `ALT-j` | Downcase word under cursor | **\[n v]** |
+| `ALT-Up` | Upcase word under cursor | **\[n v]** |
+| `ALT-Down` | Downcase word under cursor | **\[n v]** |
 | `hh` | Split window horizontaly | **\[n]** |
 | `vv` | Split window verticaly | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |

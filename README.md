@@ -82,6 +82,7 @@ Shortcuts
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
+| `,?` | Show most plugin keybindings | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
 | `,w` | Save current file | **\[n]** |

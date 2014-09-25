@@ -38,12 +38,11 @@ nnoremap - <C-x>
 noremap H ^
 noremap L $
 
-" Type 12<Enter> to go to line 12 (12G breaks my wrist)
-" Hit Enter to go to end of file
-nnoremap <CR> G
+" Hit Enter to go to command mode
+nnoremap <CR> :
 
-" Hit Backspace to go to beginning of file
-nnoremap <BS> gg
+" Show most plugin keybindings
+nnoremap <silent><Leader>? :map <Leader><CR>
 
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>

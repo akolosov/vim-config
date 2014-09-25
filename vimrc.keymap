@@ -7,6 +7,9 @@ imap <F1> <Esc>
 " Repeat the last recorded macro
 map Q @@
 
+" remap U to <C-r> for easier redo
+nnoremap U <C-r>
+
 " Easy up and down on wrapped long lines
 nnoremap j gj
 nnoremap k gk

@@ -16,7 +16,6 @@ if exists('g:dont_use_ArrowKeys')
 	nnoremap <down> <nop>
 	nnoremap <left> <nop>
 	nnoremap <right> <nop>
-	inoremap <up> <nop>
 else
 	nnoremap <Down> gj
 	nnoremap <Up> gk

@@ -9,6 +9,9 @@ autocmd FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
 
+" Avoiding tabs
+autocmd BufWritePre {*.rb,*.js,*.coffee,*.scss,*.less,*.haml,*.erb,*.vim} :%s/\t/  /e
+
 " Disable paste mode when leaving Insert Mode
 au InsertLeave * set nopaste
 

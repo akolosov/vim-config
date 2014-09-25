@@ -47,6 +47,13 @@ nnoremap <Leader><BS> O<ESC>j
 " Insert new line after current line
 nnoremap <Leader><CR> o<ESC>k
 
+" Insert semeoclon to EOL
+" then press space to add new line below
+inoremap ;; <Esc>m`A;<Esc>``a
+inoremap ;;<Space> <Esc>A;<Esc>o
+nnoremap ;; m"A;<Esc>`"
+nnoremap ;;<Space> A;<Esc>
+
 " Show most plugin keybindings
 nnoremap <silent><Leader>? :map <Leader><CR>
 

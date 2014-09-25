@@ -56,8 +56,8 @@ Shortcuts
 | `CTRL-X` or `SHIFT-Del` | Cut | **\[n i v]** |
 | `CTRL-C` or `CTRL-Ins` | Copy | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste | **\[n i v]** |
-| `CTRL-/` | Comment/Uncomment block | **\[n i v]** |
-| `CTRL-\` | Show/Hide YankRing | **\[n i v]** |
+| `CTRL-/` or `CTRL-7` | Comment/Uncomment block | **\[n i v]** |
+| `CTRL-\` or `CTRL-4` | Show/Hide YankRing | **\[n i v]** |
 | `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace`) | **\[n]** |
 | `F2` | Save file | **\[n i v]** |
 | `CTRL-F2` | Save all files | **\[n i v]** |
@@ -83,6 +83,8 @@ Shortcuts
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
+| `,<CR>` | Insert new line after current line | **\[n]** |
+| `,<BS>` | Insert new line before current line | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
 | `,w` | Save current file | **\[n]** |

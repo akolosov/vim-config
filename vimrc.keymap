@@ -15,13 +15,13 @@ nnoremap j gj
 nnoremap k gk
 
 if exists('g:dont_use_ArrowKeys')
-	nnoremap <up> <nop>
-	nnoremap <down> <nop>
-	nnoremap <left> <nop>
-	nnoremap <right> <nop>
+  nnoremap <up> <nop>
+  nnoremap <down> <nop>
+  nnoremap <left> <nop>
+  nnoremap <right> <nop>
 else
-	nnoremap <Down> gj
-	nnoremap <Up> gk
+  nnoremap <Down> gj
+  nnoremap <Up> gk
 endif
 
 " A more handy Esc
@@ -40,6 +40,12 @@ noremap L $
 
 " Hit Enter to go to command mode
 nnoremap <CR> :
+
+" Insert new line before current line
+nnoremap <Leader><BS> O<ESC>j
+
+" Insert new line after current line
+nnoremap <Leader><CR> o<ESC>k
 
 " Show most plugin keybindings
 nnoremap <silent><Leader>? :map <Leader><CR>
@@ -186,11 +192,11 @@ imap <F10> <ESC>:qa!<CR>
 map <F10> :qa!<CR>
 
 if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
-	noremap <silent> <Esc><Esc> :qa<CR>
-	inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+  noremap <silent> <Esc><Esc> :qa<CR>
+  inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 else
-	noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
-	inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+  noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+  inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
 endif
 
 noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
@@ -275,9 +281,9 @@ map <C-e> :tabnew<CR>
 imap <C-e> <Esc>:tabnew<CR>
 
 if exists('g:use_VimShell')
-	map `` :VimShell<CR>
-	map <C-l> :VimShell<CR>
-	imap <C-l> <Esc>:VimShell<CR>
+  map `` :VimShell<CR>
+  map <C-l> :VimShell<CR>
+  imap <C-l> <Esc>:VimShell<CR>
 endif
 
 noremap <silent> ' :<C-U>call ToggleQuote()<CR>
@@ -351,11 +357,11 @@ nnoremap <Leader>gr  :Gremove<CR>
 map <silent> <Leader>st :call Stringify()<CR>
 
 if !exists('g:dont_use_NERDTree')
-	imap <C-d>   <ESC>:NERDTreeToggle<CR>
-	map <C-d>   :NERDTreeToggle<CR>
+  imap <C-d>   <ESC>:NERDTreeToggle<CR>
+  map <C-d>   :NERDTreeToggle<CR>
 
-	" Show current file in NERDTree
-	map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+  " Show current file in NERDTree
+  map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 endif
 
 " Space for open/close folds if exist

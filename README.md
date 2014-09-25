@@ -77,6 +77,8 @@ Shortcuts
 | `[` | Switch prev buffer | **\[n v]** |
 | `ALT-k` | Upcase word under cursor | **\[n v]** |
 | `ALT-j` | Downcase word under cursor | **\[n v]** |
+| `hh` | Split window horizontaly | **\[n]** |
+| `vv` | Split window verticaly | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
@@ -92,8 +94,6 @@ Shortcuts
 | `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
-| `,hh` | Split window horizontaly | **\[n]** |
-| `,vv` | Split window verticaly | **\[n]** |
 | `,#` | Surround a word with #{ruby interpolation} | **\[n v]** |
 | `,"` | Surround a word with "quotes" | **\[n v]** |
 | `,'` | Surround a word with 'single quotes' | **\[n v]** |

@@ -261,8 +261,8 @@ nmap <S-Home>  v<Home>
 vmap <S-End>   <End>
 vmap <S-Home>  <Home>
 
-nnoremap <silent> <Leader>vv <C-w>v
-nnoremap <silent> <Leader>hh <C-w>s
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> hh <C-w>s
 
 map <C-z> :UndotreeToggle<CR>
 imap <C-z> <Esc>:UndotreeToggle<CR>

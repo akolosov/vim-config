@@ -65,7 +65,6 @@ Shortcuts
 | `F3` | Toggle paste mode | **\[n i v]** |
 | `F4` | Toggle readonly mode | **\[n v]** |
 | `F5` | Open the selected region in a new narrowed window | **\[n i v]** |
-| `F8` | Switch all buffers to tabs | **\[n i v]** |
 | `SHIFT-F8` | Switch all buffers to windows | **\[n i v]** |
 | `F10` | Quit without saving | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files | **\[n i v]** |
@@ -83,6 +82,7 @@ Shortcuts
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
+| `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,<CR>` | Insert new line after current line | **\[n]** |
 | `,<BS>` | Insert new line before current line | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |

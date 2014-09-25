@@ -182,8 +182,7 @@ map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 noremap <silent> <F5> :NR<CR>
 inoremap <silent> <F5> <Esc>:NR<CR>
 
-imap <silent> <F8> <Esc>:bufdo tab split<CR>
-map <silent> <F8> :bufdo tab split<CR>
+map <silent> <leader>tb :tab :ball<cr>
 
 imap <silent> <S-F8> <Esc>:sball<CR>
 map <silent> <S-F8> :sball<CR>

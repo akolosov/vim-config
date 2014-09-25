@@ -37,12 +37,13 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:dont_show_NERDTree` - do not show NERDTree on startup
 
+`g:dont_use_ArrowKeys` - do not use arrow keys. Only hjkl! Only hardcore!
+
 Shortcuts
 =========
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
-| `CTRL-A` | Select all text | **\[n i v]** |
 | `CTRL-D` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `CTRL-E` | Create new tab | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
@@ -79,6 +80,8 @@ Shortcuts
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
+| `,a` | Select all text in current buffer | **\[n]** |
+| `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
 | `,w` | Save current file | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |

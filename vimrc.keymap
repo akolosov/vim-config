@@ -2,16 +2,39 @@ nnoremap ; :
 
 " No HELP
 map <F1> <nop>
-imap <F1> <nop>
+imap <F1> <Esc>
 
-" Do not switch to "Ex" mode
-nnoremap <S-Q> <Nop>
+" Repeat the last recorded macro
+map Q @@
 
 " Easy up and down on wrapped long lines
 nnoremap j gj
 nnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
+
+if exists('g:dont_use_ArrowKeys')
+	nnoremap <up> <nop>
+	nnoremap <down> <nop>
+	nnoremap <left> <nop>
+	nnoremap <right> <nop>
+	inoremap <up> <nop>
+else
+	nnoremap <Down> gj
+	nnoremap <Up> gk
+endif
+
+" A more handy Esc
+inoremap jj <Esc>
+inoremap kk <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Easier increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" Jump to start and end of line using the home row keys
+noremap H ^
+noremap L $
 
 " Type 12<Enter> to go to line 12 (12G breaks my wrist)
 " Hit Enter to go to end of file
@@ -177,9 +200,6 @@ map <S-F10> :wqa!<CR>
 map <C-t>   :TagbarToggle<CR>
 imap <C-t>   <Esc>:TagbarToggle<CR>
 
-imap <C-d>   <ESC>:NERDTreeToggle<CR>
-map <C-d>   :NERDTreeToggle<CR>
-
 noremap <silent> // :nohlsearch<CR><Esc>
 
 " Ctrl-/ - Comment current line.
@@ -326,7 +346,16 @@ nnoremap <leader>gad :Git add <C-R>=expand("%:p:h") . "/"<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 nnoremap <Leader>gr  :Gremove<CR>
 
+" Current line or selection to strings
 map <silent> <Leader>st :call Stringify()<CR>
+
+if !exists('g:dont_use_NERDTree')
+	imap <C-d>   <ESC>:NERDTreeToggle<CR>
+	map <C-d>   :NERDTreeToggle<CR>
+
+	" Show current file in NERDTree
+	map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+endif
 
 " Space for open/close folds if exist
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
@@ -337,9 +366,8 @@ nnoremap <silent> <Leader>z :GoGoyo<CR>
 " use <Space>gf to go to file in a vertical split
 nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>
 
-" Ctrl-A - select all
-map  <C-A>    ggVG
-imap <C-A>    <Esc>ggVG
+" ,a - select all text in buffer
+noremap  <Leader>a    ggVG
 
 " Ctrl-J - show bookmarks
 map <C-j> ma

@@ -1,16 +1,19 @@
 au BufReadPost * if &readonly | setlocal nomodifiable | else | setlocal modifiable | endif
 
-autocmd FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType coffee     setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType ruby       setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType coffee     setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Avoiding tabs
 autocmd BufWritePre {*.rb,*.js,*.coffee,*.scss,*.less,*.haml,*.erb,*.vim} :%s/\t/  /e
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
 
 " Disable paste mode when leaving Insert Mode
 au InsertLeave * set nopaste
@@ -23,7 +26,6 @@ if has("gui_running")
   endif
 	let g:airline_powerline_fonts = 1
 endif
-
 
 if exists('g:use_lightline')
 	if !exists('g:lightline')

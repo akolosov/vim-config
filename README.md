@@ -149,7 +149,6 @@ Shortcuts
 | `,t,` | Align on commas | **\[n v]** |
 | `,t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
 | `,tsp` | Align on whitespace | **\[n v]** |
-| `,z` | Toggle Goyo-mode | **\[n]** |
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `mm` | Toggle bookmark | **\[n]** |
 | `mi` | Annotate bookmark | **\[n]** |

@@ -367,8 +367,6 @@ endif
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
-nnoremap <silent> <Leader>z :GoGoyo<CR>
-
 " use <Space>gf to go to file in a vertical split
 nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>
 

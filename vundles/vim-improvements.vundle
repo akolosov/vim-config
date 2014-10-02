@@ -1,5 +1,3 @@
-Bundle "junegunn/goyo.vim"
-Bundle "amix/vim-zenroom2"
 Bundle "AndrewRadev/splitjoin.vim"
 Bundle "Raimondi/delimitMate"
 Bundle "honza/vim-snippets"

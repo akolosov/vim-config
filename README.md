@@ -157,3 +157,12 @@ Shortcuts
 | `mk` | Go to prev bookmark | **\[n]** |
 | `mc` | Clear bookmarks | **\[n]** |
 | `mx` | Clear all bookmarks | **\[n]** |
+
+
+## Screenshots
+
+![Screenshot 1](https://yadi.sk/i/avRcwhTQbpu6C)
+
+![Screenshot 2](https://yadi.sk/i/o38qTxiUbpu9w)
+
+![Screenshot 3](https://yadi.sk/i/hO9MgELRbpuCJ)

@@ -15,12 +15,11 @@ Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/
 
 Screenshots
 ===========
+![1](https://cloud.githubusercontent.com/assets/158733/4518806/230a1596-4c9f-11e4-9069-5aabb536aff2.png)
 
-![Screenshot 1](http://i.imgur.com/YgAWG33)
+![2](https://cloud.githubusercontent.com/assets/158733/4518807/23103d36-4c9f-11e4-8f88-751d95bb1673.png)
 
-![Screenshot 2](http://i.imgur.com/iB5owCX)
-
-![Screenshot 3](http://i.imgur.com/2ztKm4J)
+![3](https://cloud.githubusercontent.com/assets/158733/4518805/23085a1c-4c9f-11e4-9e98-95d6cc84bed6.png)
 
 
 Variables

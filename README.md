@@ -12,6 +12,17 @@ To install just run in terminal:
 
 Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/dotfiles/) - thanks guys!
 
+
+Screenshots
+===========
+
+![Screenshot 1](https://yadi.sk/i/T4HA6TLrbpubx)
+
+![Screenshot 2](https://yadi.sk/i/B6zjK4nHbpuc5)
+
+![Screenshot 3](https://yadi.sk/i/pI6q1oRObpucL)
+
+
 Variables
 =========
 
@@ -38,6 +49,7 @@ All variables set in `~/.vimrc.before.local` file.
 `g:dont_show_NERDTree` - do not show NERDTree on startup
 
 `g:dont_use_ArrowKeys` - do not use arrow keys. Only hjkl! Only hardcore!
+
 
 Shortcuts
 =========

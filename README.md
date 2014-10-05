@@ -16,11 +16,11 @@ Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/
 Screenshots
 ===========
 
-![Screenshot 1](https://yadi.sk/i/T4HA6TLrbpubx)
+![Screenshot 1](http://yadi.sk/i/T4HA6TLrbpubx)
 
-![Screenshot 2](https://yadi.sk/i/B6zjK4nHbpuc5)
+![Screenshot 2](http://yadi.sk/i/B6zjK4nHbpuc5)
 
-![Screenshot 3](https://yadi.sk/i/pI6q1oRObpucL)
+![Screenshot 3](http://yadi.sk/i/pI6q1oRObpucL)
 
 
 Variables

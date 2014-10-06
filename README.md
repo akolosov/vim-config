@@ -10,6 +10,8 @@ To install just run in terminal:
 
 ... wait until successfully installed and have fun with VIM!
 
+Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/dotfiles/) - thanks guys!
+
 
 Screenshots
 ===========

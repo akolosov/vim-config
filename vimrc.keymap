@@ -38,9 +38,6 @@ nnoremap - <C-x>
 noremap H ^
 noremap L $
 
-" Hit Enter to go to command mode
-nmap <buffer> <CR> :
-
 " Insert new line before current line
 nnoremap <Leader><BS> O<ESC>j
 

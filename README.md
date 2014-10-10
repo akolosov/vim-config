@@ -4,8 +4,7 @@ vim-config
 To install just run in terminal:
 
 ```bash
-
-    curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - | sh
+curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - | sh
 ```
 
 ... wait until successfully installed and have fun with VIM!
@@ -16,9 +15,7 @@ Inspired by [spf13-vim](http://vim.spf13.com/) and [YADR](http://skwp.github.io/
 Screenshots
 ===========
 ![1](https://cloud.githubusercontent.com/assets/158733/4518806/230a1596-4c9f-11e4-9069-5aabb536aff2.png)
-
 ![2](https://cloud.githubusercontent.com/assets/158733/4518807/23103d36-4c9f-11e4-8f88-751d95bb1673.png)
-
 ![3](https://cloud.githubusercontent.com/assets/158733/4518805/23085a1c-4c9f-11e4-9e98-95d6cc84bed6.png)
 
 

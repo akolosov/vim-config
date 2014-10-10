@@ -43,7 +43,8 @@
 
 <p>To install just run in terminal:</p>
 
-<div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - <span class="p">|</span> sh
+<div class="highlight highlight-bash"><pre>
+    curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - <span class="p">|</span> sh
 </pre></div>
 
 <p>... wait until successfully installed and have fun with VIM!</p>
@@ -86,6 +87,8 @@
 
 <p><code>g:dont_use_ArrowKeys</code> - do not use arrow keys. Only hjkl! Only hardcore!</p>
 
+<p><code>g:dont_use_CopyCutPasteKeys</code> - do not use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
+
 <h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
@@ -124,11 +127,6 @@
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>CTRL-W</code></td>
-<td>Delete word</td>
-<td align="center"><strong>[n i v]</strong></td>
-</tr>
-<tr>
 <td align="center"><code>CTRL-K</code></td>
 <td>Delete to EOL</td>
 <td align="center"><strong>[n i v]</strong></td>
@@ -142,21 +140,21 @@
 <td align="center">
 <code>CTRL-X</code> or <code>SHIFT-Del</code>
 </td>
-<td>Cut</td>
+<td>Cut (if not set <code>g:dont_use_CopyCutPasteKeys</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-C</code> or <code>CTRL-Ins</code>
 </td>
-<td>Copy</td>
+<td>Copy (if not set <code>g:dont_use_CopyCutPasteKeys</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-V</code> or <code>SHIFT-Ins</code>
 </td>
-<td>Paste</td>
+<td>Paste (if not set <code>g:dont_use_CopyCutPasteKeys</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>

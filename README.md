@@ -44,9 +44,9 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:dont_show_NERDTree` - do not show NERDTree on startup
 
-`g:use_ArrowKeys` - do not use arrow keys. Only hjkl! Only hardcore!
+`g:use_ArrowKeys` - use arrow keys. Only hjkl! Only hardcore!
 
-`g:use_CopyCutPasteKeys` - do not use Ctrl-C/V/X keys for Copy/Paste/Cut
+`g:use_CopyCutPasteKeys` - use Ctrl-C/V/X keys for Copy/Paste/Cut
 
 
 Shortcuts

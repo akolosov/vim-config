@@ -55,7 +55,6 @@ Shortcuts
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
-| `CTRL-D` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `CTRL-T` | Create new tab | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
 | `CTRL-G` | Show/Hide TagBar | **\[n i v]** |
@@ -97,6 +96,7 @@ Shortcuts
 | `,<CR>` | Insert new line after current line | **\[n]** |
 | `,<BS>` | Insert new line before current line | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
+| `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
 | `,w` | Save current file | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |

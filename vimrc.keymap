@@ -360,8 +360,7 @@ nnoremap <Leader>gr  :Gremove<CR>
 map <silent> <Leader>st :call Stringify()<CR>
 
 if !exists('g:dont_use_NERDTree')
-  imap <C-d>   <ESC>:NERDTreeToggle<CR>
-  map <C-d>   :NERDTreeToggle<CR>
+  map <silent> <Leader>nd :NERDTreeToggle<CR>
 
   " Show current file in NERDTree
   map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>

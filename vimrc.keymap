@@ -14,7 +14,7 @@ nnoremap U <C-r>
 nnoremap j gj
 nnoremap k gk
 
-if exists('g:dont_use_ArrowKeys')
+if !exists('g:use_ArrowKeys')
   nnoremap <up> <nop>
   nnoremap <down> <nop>
   nnoremap <left> <nop>
@@ -216,7 +216,7 @@ noremap <silent> // :nohlsearch<CR><Esc>
 map <C-_> ,ci
 imap <C-_> <ESC>,cii
 
-if !exists("g:dont_use_CopyCutPasteKeys")
+if exists("g:use_CopyCutPasteKeys")
 	" CTRL-X and SHIFT-Del are Cut
 	vnoremap <C-X>   "+x
 	vnoremap <S-Del> "+x
@@ -253,7 +253,7 @@ imap <S-Tab> <Esc><<i
 " Allow using the repeat operator with a visual selection (!)
 vnoremap . :normal .<CR>
 
-if !exists('g:dont_use_ArrowKeys')
+if exists('g:use_ArrowKeys')
 	" Text selection by SHIFT+Arrows
 	imap <S-Up>    <Esc>v<Up>
 	imap <S-Down>  <Esc>v<Down>

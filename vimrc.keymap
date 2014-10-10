@@ -253,25 +253,27 @@ imap <S-Tab> <Esc><<i
 " Allow using the repeat operator with a visual selection (!)
 vnoremap . :normal .<CR>
 
-" Text selection by SHIFT+Arrows
-imap <S-Up>    <Esc>v<Up>
-imap <S-Down>  <Esc>v<Down>
-imap <S-Left>  <Esc>v<Left>
-imap <S-Right> <Esc><Right>v<Right>
-nmap <S-Up>    v<Up>
-nmap <S-Down>  v<Down>
-nmap <S-Left>  v<Left>
-nmap <S-Right> v<Right>
-vmap <S-Up>    <Up>
-vmap <S-Down>  <Down>
-vmap <S-Left>  <Left>
-vmap <S-Right> <Right>
-imap <S-End>   <Esc>v<End>
-imap <S-Home>  <Esc>v<Home>
-nmap <S-End>   v<End>
-nmap <S-Home>  v<Home>
-vmap <S-End>   <End>
-vmap <S-Home>  <Home>
+if !exists('g:dont_use_ArrowKeys')
+	" Text selection by SHIFT+Arrows
+	imap <S-Up>    <Esc>v<Up>
+	imap <S-Down>  <Esc>v<Down>
+	imap <S-Left>  <Esc>v<Left>
+	imap <S-Right> <Esc><Right>v<Right>
+	nmap <S-Up>    v<Up>
+	nmap <S-Down>  v<Down>
+	nmap <S-Left>  v<Left>
+	nmap <S-Right> v<Right>
+	vmap <S-Up>    <Up>
+	vmap <S-Down>  <Down>
+	vmap <S-Left>  <Left>
+	vmap <S-Right> <Right>
+	imap <S-End>   <Esc>v<End>
+	imap <S-Home>  <Esc>v<Home>
+	nmap <S-End>   v<End>
+	nmap <S-Home>  v<Home>
+	vmap <S-End>   <End>
+	vmap <S-Home>  <Home>
+endif
 
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> hh <C-w>s

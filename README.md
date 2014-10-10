@@ -49,6 +49,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:dont_use_ArrowKeys` - do not use arrow keys. Only hjkl! Only hardcore!
 
+`g:dont_use_CopyCutPasteKeys` - do not use Ctrl-C/V/X keys for Copy/Paste/Cut
+
 
 Shortcuts
 =========
@@ -60,12 +62,11 @@ Shortcuts
 | `CTRL-G` | Show/Hide TagBar | **\[n i v]** |
 | `CTRL-J` | Show bookmarks | **\[n i v]** |
 | `CTRL-Y` | Delete line |	**\[n i v]** |
-| `CTRL-W` | Delete word | **\[n i v]** |
 | `CTRL-K` | Delete to EOL | **\[n i v]** |
 | `CTRL-L` | Run VimShell (if set `g:use_VimShell`) | **\[n i v]** |
-| `CTRL-X` or `SHIFT-Del` | Cut | **\[n i v]** |
-| `CTRL-C` or `CTRL-Ins` | Copy | **\[n i v]** |
-| `CTRL-V` or `SHIFT-Ins` | Paste | **\[n i v]** |
+| `CTRL-X` or `SHIFT-Del` | Cut (if not set `g:dont_use_CopyCutPasteKeys`) | **\[n i v]** |
+| `CTRL-C` or `CTRL-Ins` | Copy (if not set `g:dont_use_CopyCutPasteKeys`) | **\[n i v]** |
+| `CTRL-V` or `SHIFT-Ins` | Paste (if not set `g:dont_use_CopyCutPasteKeys`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block | **\[n i v]** |
 | `CTRL-\` or `CTRL-4` | Show/Hide YankRing | **\[n i v]** |
 | `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace`) | **\[n]** |

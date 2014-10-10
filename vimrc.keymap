@@ -216,26 +216,28 @@ noremap <silent> // :nohlsearch<CR><Esc>
 map <C-_> ,ci
 imap <C-_> <ESC>,cii
 
-" CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X>   "+x
-vnoremap <S-Del> "+x
+if !exists("g:dont_use_CopyCutPasteKeys")
+	" CTRL-X and SHIFT-Del are Cut
+	vnoremap <C-X>   "+x
+	vnoremap <S-Del> "+x
 
-" CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C>      "+y
-vnoremap <C-Insert> "+y
+	" CTRL-C and CTRL-Insert are Copy
+	vnoremap <C-C>      "+y
+	vnoremap <C-Insert> "+y
 
-" CTRL-V and SHIFT-Insert are Paste
-map  <C-V>      "+gP
-map  <S-Insert> "+gP
+	" CTRL-V and SHIFT-Insert are Paste
+	map  <C-V>      "+gP
+	map  <S-Insert> "+gP
 
-cmap <C-V>      <C-R>+
-cmap <S-Insert> <C-R>+
+	cmap <C-V>      <C-R>+
+	cmap <S-Insert> <C-R>+
 
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+	exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+	exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 
-imap <S-Insert> <C-V>
-vmap <S-Insert> <C-V>
+	imap <S-Insert> <C-V>
+	vmap <S-Insert> <C-V>
+endif
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv

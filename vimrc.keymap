@@ -294,7 +294,7 @@ map <C-t> :tabnew<CR>
 imap <C-t> <Esc>:tabnew<CR>
 
 if exists('g:use_VimShell')
-  map `` :VimShell<CR>
+  map ~~ :VimShell<CR>
 endif
 
 noremap <silent> ' :<C-U>call ToggleQuote()<CR>

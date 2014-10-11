@@ -83,7 +83,7 @@ Shortcuts
 | `[` | Switch prev buffer | **\[n v]** |
 | `ALT-Up` | Upcase word under cursor | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor | **\[n v]** |
-| ` `` ` | Run VimShell (if set `g:use_VimShell`) | **\[n i v]** |
+| `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell`) | **\[n v]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |

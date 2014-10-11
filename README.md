@@ -57,19 +57,18 @@ Shortcuts
 | `CTRL-T` | Create new tab | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
 | `CTRL-G` | Show/Hide TagBar | **\[n i v]** |
-| `CTRL-J` | Show bookmarks | **\[n i v]** |
 | `CTRL-Y` | Delete line |	**\[n i v]** |
-| `CTRL-K` | Delete to EOL | **\[n i v]** |
-| `CTRL-L` | Run VimShell (if set `g:use_VimShell`) | **\[n i v]** |
+| `CTRL-L` | Delete to EOL | **\[n i v]** |
+| `CTRL-H` | Delete to BOL | **\[n i v]** |
 | `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block | **\[n i v]** |
 | `CTRL-\` or `CTRL-4` | Show/Hide YankRing | **\[n i v]** |
 | `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace`) | **\[n]** |
-| `F2` | Save file | **\[n i v]** |
-| `CTRL-F2` | Save all files | **\[n i v]** |
-| `SHIFT-F2` | Save file as... | **\[n i v]** |
+| `F2` or `,w` | Save file | **\[n i v]** |
+| `CTRL-F2` or `,wa` | Save all files | **\[n i v]** |
+| `SHIFT-F2` or `,w?` | Save file as... | **\[n i v]** |
 | `F3` | Toggle paste mode | **\[n i v]** |
 | `F4` | Toggle readonly mode | **\[n v]** |
 | `F5` | Open the selected region in a new narrowed window | **\[n i v]** |
@@ -84,12 +83,13 @@ Shortcuts
 | `[` | Switch prev buffer | **\[n v]** |
 | `ALT-Up` | Upcase word under cursor | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor | **\[n v]** |
-| `hh` | Split window horizontaly | **\[n]** |
-| `vv` | Split window verticaly | **\[n]** |
+| ` `` ` | Run VimShell (if set `g:use_VimShell`) | **\[n i v]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
+| `,hh` | Split window horizontaly | **\[n]** |
+| `,vv` | Split window verticaly | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,<CR>` | Insert new line after current line | **\[n]** |
 | `,<BS>` | Insert new line before current line | **\[n]** |

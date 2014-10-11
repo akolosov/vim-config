@@ -60,6 +60,12 @@ nnoremap <Leader>o :CtrlP<CR>
 " Type <Leader>w to save file (a lot faster than :w<Enter>):
 nnoremap <Leader>w :w<CR>
 
+" Type <Leader>wa to save all files (a lot faster than :wa<Enter>):
+nnoremap <Leader>wa :wa<CR>
+
+" Type <Leader>w? to save file as ...
+nnoremap <Leader>w? :w<SPACE><C-R>=expand("%:p")<CR>
+
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
 vmap <Leader># c#{<C-R>"}<ESC>
@@ -172,8 +178,8 @@ map  <C-y>  dd
 imap <C-y>  <ESC>ddi
 
 " Delete line to EOL
-map  <C-k>  d$
-imap <C-k>  <ESC><Right>d$i<Right>
+map  <C-l>  d$
+imap <C-l>  <ESC><Right>d$i<Right>
 
 " Delete line to BOL
 map  <C-h>  d^
@@ -275,8 +281,8 @@ if exists('g:use_ArrowKeys')
 	vmap <S-Home>  <Home>
 endif
 
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> hh <C-w>s
+nnoremap <silent> <Leader>vv <C-w>v
+nnoremap <silent> <Leader>hh <C-w>s
 
 map <C-z> :UndotreeToggle<CR>
 imap <C-z> <Esc>:UndotreeToggle<CR>
@@ -289,8 +295,6 @@ imap <C-t> <Esc>:tabnew<CR>
 
 if exists('g:use_VimShell')
   map `` :VimShell<CR>
-  map <C-l> :VimShell<CR>
-  imap <C-l> <Esc>:VimShell<CR>
 endif
 
 noremap <silent> ' :<C-U>call ToggleQuote()<CR>
@@ -379,10 +383,6 @@ nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>
 
 " ,a - select all text in buffer
 noremap  <Leader>a    ggVG
-
-" Ctrl-J - show bookmarks
-map <C-j> ma
-imap <C-j> <Esc>ma
 
 " Ctrl-P - Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>

@@ -72,7 +72,6 @@ Shortcuts
 | `F3` | Toggle paste mode | **\[n i v]** |
 | `F4` | Toggle readonly mode | **\[n v]** |
 | `F5` | Open the selected region in a new narrowed window | **\[n i v]** |
-| `SHIFT-F8` | Switch all buffers to windows | **\[n i v]** |
 | `F10` | Quit without saving | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files | **\[n i v]** |
 | `ESC-ESC` | Quit and ask for save files or close current window/buffer | **\[n i v]** |
@@ -91,6 +90,7 @@ Shortcuts
 | `,hh` | Split window horizontaly | **\[n]** |
 | `,vv` | Split window verticaly | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
+| `,sb` | Switch all buffers to windows | **\[n v]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
@@ -146,8 +146,8 @@ Shortcuts
 | `,gp` | git push | **\[n]** |
 | `,gpa` | git push --all | **\[n]** |
 | `,ga` | git add %currentfile% | **\[n]** |
-| `,gaa` | git add all untracked files | **\[n]** |
-| `,gad` | git add user input files | **\[n]** |
+| `,gu` | git add all untracked files | **\[n]** |
+| `,g?` | git add user input files | **\[n]** |
 | `,gb` | git blame | **\[n]** |
 | `,gr` | git remove %currentfile% | **\[n]** |
 | `,ag` | Search in files, using ag | **\[n]** |

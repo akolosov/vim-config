@@ -190,12 +190,10 @@ map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
 " F5 - Open the selected region in a new narrowed window
 noremap <silent> <F5> :NR<CR>
-inoremap <silent> <F5> <Esc>:NR<CR>
 
 map <silent> <leader>tb :tab :ball<cr>
 
-imap <silent> <S-F8> <Esc>:sball<CR>
-map <silent> <S-F8> :sball<CR>
+map <silent> <Leader>sb :sball<CR>
 
 imap <F10> <ESC>:qa!<CR>
 map <F10> :qa!<CR>
@@ -359,8 +357,8 @@ nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
 nnoremap <leader>gl  :!git pull<CR>
 nnoremap <leader>gp  :Git push<CR>
 nnoremap <leader>ga  :Git add %<CR>
-nnoremap <leader>gaa :Git add .<CR>
-nnoremap <leader>gad :Git add <C-R>=expand("%:p:h") . "/"<CR>
+nnoremap <leader>gu  :Git add .<CR>
+nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
 nnoremap <Leader>gb  :Gblame<CR>
 nnoremap <Leader>gr  :Gremove<CR>
 

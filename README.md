@@ -93,6 +93,7 @@ Shortcuts
 | `,sb` | Switch all buffers to windows | **\[n v]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
+| `,<CR>` |  Toggle show Space/Tab/EOL | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |

@@ -243,6 +243,9 @@ if exists("g:use_CopyCutPasteKeys")
 	vmap <S-Insert> <C-V>
 endif
 
+" Toggle show Space/Tab/EOL
+nmap <silent> <leader><CR> :set list!<CR>
+
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv

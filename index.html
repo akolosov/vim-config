@@ -1,34 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title>vim-config by akolosov</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>vim-config</h1>
-        <h2>My VIM configuration</h2>
-        <a href="https://github.com/akolosov/vim-config" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/akolosov/vim-config">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/akolosov/vim-config/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/akolosov/vim-config/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>vim-config</h1>
+          <p>My VIM configuration</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/akolosov">akolosov</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
 <a name="vim-config" class="anchor" href="#vim-config"><span class="octicon octicon-link"></span></a>vim-config</h1>
 
 <p>To install just run in terminal:</p>
@@ -104,23 +114,18 @@
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>CTRL-J</code></td>
-<td>Show bookmarks</td>
-<td align="center"><strong>[n i v]</strong></td>
-</tr>
-<tr>
 <td align="center"><code>CTRL-Y</code></td>
 <td>Delete line</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>CTRL-K</code></td>
+<td align="center"><code>CTRL-L</code></td>
 <td>Delete to EOL</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>CTRL-L</code></td>
-<td>Run VimShell (if set <code>g:use_VimShell</code>)</td>
+<td align="center"><code>CTRL-H</code></td>
+<td>Delete to BOL</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -164,17 +169,23 @@
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>F2</code></td>
+<td align="center">
+<code>F2</code> or <code>,w</code>
+</td>
 <td>Save file</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>CTRL-F2</code></td>
+<td align="center">
+<code>CTRL-F2</code> or <code>,wa</code>
+</td>
 <td>Save all files</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>SHIFT-F2</code></td>
+<td align="center">
+<code>SHIFT-F2</code> or <code>,w?</code>
+</td>
 <td>Save file as...</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
@@ -249,14 +260,9 @@
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>hh</code></td>
-<td>Split window horizontaly</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>vv</code></td>
-<td>Split window verticaly</td>
-<td align="center"><strong>[n]</strong></td>
+<td align="center"><code>&lt;tilde&gt;&lt;tilde&gt;</code></td>
+<td>Run VimShell (if set <code>g:use_VimShell</code>)</td>
+<td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center">
@@ -282,6 +288,16 @@
 <tr>
 <td align="center"><code>,?</code></td>
 <td>Show most plugin keybindings</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,hh</code></td>
+<td>Split window horizontaly</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,vv</code></td>
+<td>Split window verticaly</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -672,25 +688,10 @@
 </tr>
 </tbody>
 </table>
-        </section>
+      </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/akolosov/vim-config/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/akolosov/vim-config/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/akolosov/vim-config"></a> is maintained by <a href="https://github.com/akolosov">akolosov</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>

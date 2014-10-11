@@ -91,8 +91,8 @@ Shortcuts
 | `,hh` | Split window horizontaly | **\[n]** |
 | `,vv` | Split window verticaly | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
-| `,<CR>` | Insert new line after current line | **\[n]** |
-| `,<BS>` | Insert new line before current line | **\[n]** |
+| `,<Down>` | Insert new line after current line | **\[n]** |
+| `,<Up>` | Insert new line before current line | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |

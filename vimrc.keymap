@@ -39,10 +39,10 @@ noremap H ^
 noremap L $
 
 " Insert new line before current line
-nnoremap <Leader><BS> O<ESC>j
+nnoremap <Leader><Up> O<ESC>j
 
 " Insert new line after current line
-nnoremap <Leader><CR> o<ESC>k
+nnoremap <Leader><Down> o<ESC>k
 
 " Insert semeoclon to EOL
 " then press space to add new line below

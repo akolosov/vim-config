@@ -282,6 +282,9 @@ if exists('g:use_ArrowKeys')
 	vmap <S-Home>  <Home>
 endif
 
+nnoremap <Leader>yw byw
+nnoremap <Leader>yl ^y$
+
 nnoremap <silent> <Leader>vv <C-w>v
 nnoremap <silent> <Leader>hh <C-w>s
 

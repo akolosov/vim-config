@@ -137,6 +137,8 @@ Shortcuts
 | `,s>` | Select inside <> | **\[n v]** |
 | `,s"` | Select inside " | **\[n v]** |
 | `,s'` | Select inside ' | **\[n v]** |
+| `,yw` | Yank word under cursor | **\[n]** |
+| `,yl` | Yank current line | **\[n]** |
 | `,ls` | Send current line to console (tmux by default) | **\[n]** |
 | `,ms` | Send current motion to console (tmux by default) | **\[n]** |
 | `,rs` | Send current selection to console (tmux by default) | **\[v]** |

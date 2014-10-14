@@ -95,12 +95,12 @@ Shortcuts
 | `,<Down>` | Insert new line after current line (if not set `g:hardcore_mode`) | **\[n]** |
 | `,<Up>` | Insert new line before current line (if not set `g:hardcore_mode`) | **\[n]** |
 | `,<CR>` |  Toggle show Space/Tab/EOL (if not set `g:hardcore_mode`) | **\[n]** |
+| `,a` | Select all text in current buffer (if not set `g:hardcore_mode`) | **\[n]** |
 | `,w` | Save current file | **\[n v]** |
 | `,wa` | Save all files  | **\[n v]** |
 | `,w?` | Save file as... | **\[n v]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,a` | Select all text in current buffer (if not set `g:hardcore_mode`) | **\[n]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |

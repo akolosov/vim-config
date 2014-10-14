@@ -1,12 +1,12 @@
 " Use Vim settings, rather then Vi settings (much better!).
 set nocompatible
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
-
 if filereadable(expand("~/.vimrc.before.local"))
   source ~/.vimrc.before.local
+endif
+
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
 endif
 
 " =============== Vundle Initialization ===============

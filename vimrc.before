@@ -1,2 +1,7 @@
 " Before initialization
 
+if exists('g:hardcore_mode')
+	unlet g:use_ArrowKeys
+	unlet g:use_CopyCutPasteKeys
+	unlet g:use_VimShell
+endif

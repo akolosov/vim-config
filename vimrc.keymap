@@ -1,3 +1,166 @@
+if !exists('g:hardcore_mode')
+	" Save file
+	imap <F2>   <Esc>:w<CR>i
+	vmap <F2>   :<C-U>w<CR>v
+	nmap  <F2>   :w<CR>
+
+	" Save all files
+	imap <C-F2> <Esc>:wa<CR>i
+	vmap <C-F2> :<C-U>wa<CR>v
+	nmap  <C-F2> :wa<CR>
+
+	" Save file as...
+	imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+	vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
+	nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
+
+	" Delete line
+	map  <C-y>  dd
+	imap <C-y>  <ESC>ddi
+
+	" Delete line to EOL
+	map  <C-l>  d$
+	imap <C-l>  <ESC><Right>d$i<Right>
+
+	" Delete line to BOL
+	map  <C-h>  d^
+	imap <C-h>  <ESC>d^i
+
+	" Toggle readonly mode
+	map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
+
+	" F5 - Open the selected region in a new narrowed window
+	noremap <silent> <F5> :NR<CR>
+
+	imap <F10> <ESC>:qa!<CR>
+	map <F10> :qa!<CR>
+
+	if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
+		noremap <silent> <Esc><Esc> :qa<CR>
+		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+	else
+		noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+		inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+	endif
+
+	noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
+
+	imap <S-F10> <ESC>:wqa!<CR>
+	map <S-F10> :wqa!<CR>
+
+	map <C-g>   :TagbarToggle<CR>
+	imap <C-g>   <Esc>:TagbarToggle<CR>
+
+	noremap <silent> // :nohlsearch<CR><Esc>
+
+	" Ctrl-/ - Comment current line.
+	map <C-_> ,ci
+	imap <C-_> <ESC>,cii
+
+	if exists("g:use_CopyCutPasteKeys")
+		" CTRL-X and SHIFT-Del are Cut
+		vnoremap <C-X>   "+x
+		vnoremap <S-Del> "+x
+
+		" CTRL-C and CTRL-Insert are Copy
+		vnoremap <C-C>      "+y
+		vnoremap <C-Insert> "+y
+
+		" CTRL-V and SHIFT-Insert are Paste
+		map  <C-V>      "+gP
+		map  <S-Insert> "+gP
+
+		cmap <C-V>      <C-R>+
+		cmap <S-Insert> <C-R>+
+
+		exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+		exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+		imap <S-Insert> <C-V>
+		vmap <S-Insert> <C-V>
+	endif
+
+	if exists('g:use_ArrowKeys')
+		" Text selection by SHIFT+Arrows
+		imap <S-Up>    <Esc>v<Up>
+		imap <S-Down>  <Esc>v<Down>
+		imap <S-Left>  <Esc>v<Left>
+		imap <S-Right> <Esc><Right>v<Right>
+		nmap <S-Up>    v<Up>
+		nmap <S-Down>  v<Down>
+		nmap <S-Left>  v<Left>
+		nmap <S-Right> v<Right>
+		vmap <S-Up>    <Up>
+		vmap <S-Down>  <Down>
+		vmap <S-Left>  <Left>
+		vmap <S-Right> <Right>
+		imap <S-End>   <Esc>v<End>
+		imap <S-Home>  <Esc>v<Home>
+		nmap <S-End>   v<End>
+		nmap <S-Home>  v<Home>
+		vmap <S-End>   <End>
+		vmap <S-Home>  <Home>
+	endif
+
+	nnoremap <silent> <Leader>vv <C-w>v
+	nnoremap <silent> <Leader>hh <C-w>s
+
+	map <C-z> :UndotreeToggle<CR>
+	imap <C-z> <Esc>:UndotreeToggle<CR>
+
+	map <C-\> :YRShow<CR>
+	imap <C-\> <Esc>:YRShow<CR>
+
+	map <C-t> :tabnew<CR>
+	imap <C-t> <Esc>:tabnew<CR>
+
+	if exists('g:use_VimShell')
+		map ~~ :VimShell<CR>
+	endif
+
+	noremap <silent> ' :<C-U>call ToggleQuote()<CR>
+
+	" Space for open/close folds if exist
+	nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+	vnoremap <Space> zf
+
+	" Make gf (go to file)
+	" Create the file if not existent
+	nnoremap <Leader>gf :e <cfile><CR>
+	nnoremap <Leader>gfw :sp +e <cfile><CR>
+	nnoremap <Leader>gft :tabe <cfile><CR>
+
+	" ,a - select all text in buffer
+	noremap  <Leader>a    ggVG
+
+	" Ctrl-P - Inserts the path of the currently edited file into a command
+	cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+	" Alt-Up - upcase, Alt-Down - downcase
+	map <A-Up>   gUiw
+	imap <A-Up>   <Esc>gUiw<Esc>i
+	map <A-Down> guiw
+	imap <A-Down> <Esc>guiw<Esc>i
+
+	nnoremap <silent> <C-]>  gt
+	nnoremap <silent> <C-[>  gT
+	vnoremap <silent> <C-]>  gt
+	vnoremap <silent> <C-[>  gT
+	nnoremap <silent> ] :bn<CR>
+	nnoremap <silent> [ :bp<CR>
+	vnoremap <silent> ] :bn<CR>
+	vnoremap <silent> [ :bp<CR>
+
+	" Insert new line before current line
+	nnoremap <Leader><Up> O<ESC>j
+
+	" Insert new line after current line
+	nnoremap <Leader><Down> o<ESC>k
+
+	" Toggle show Space/Tab/EOL
+	nmap <silent> <leader><CR> :set list!<CR>
+endif
+
 nnoremap ; :
 
 " No HELP
@@ -37,12 +200,6 @@ nnoremap - <C-x>
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
-
-" Insert new line before current line
-nnoremap <Leader><Up> O<ESC>j
-
-" Insert new line after current line
-nnoremap <Leader><Down> o<ESC>k
 
 " Insert semeoclon to EOL
 " then press space to add new line below
@@ -152,99 +309,12 @@ noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 nmap <silent> <Leader>qc :cclose<CR>
 nmap <silent> <Leader>qo :copen<CR>
 
-" Make gf (go to file)
-" Create the file if not existent
-nnoremap <Leader>gf :e <cfile><CR>
-nnoremap <Leader>gfw :sp +e <cfile><CR>
-nnoremap <Leader>gft :tabe <cfile><CR>
-
-" Save file
-imap <F2>   <Esc>:w<CR>i
-vmap <F2>   :<C-U>w<CR>v
-nmap  <F2>   :w<CR>
-
-" Save all files
-imap <C-F2> <Esc>:wa<CR>i
-vmap <C-F2> :<C-U>wa<CR>v
-nmap  <C-F2> :wa<CR>
-
-" Save file as...
-imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
-vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
-nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
-
-" Delete line
-map  <C-y>  dd
-imap <C-y>  <ESC>ddi
-
-" Delete line to EOL
-map  <C-l>  d$
-imap <C-l>  <ESC><Right>d$i<Right>
-
-" Delete line to BOL
-map  <C-h>  d^
-imap <C-h>  <ESC>d^i
-
-" Toggle readonly mode
-map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
-
-" F5 - Open the selected region in a new narrowed window
-noremap <silent> <F5> :NR<CR>
-
+" Switch all buffers to tabs 
 map <silent> <leader>tb :tab :ball<cr>
 
+" Switch all buffers to windows   
 map <silent> <Leader>sb :sball<CR>
 
-imap <F10> <ESC>:qa!<CR>
-map <F10> :qa!<CR>
-
-if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
-  noremap <silent> <Esc><Esc> :qa<CR>
-  inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
-else
-  noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
-  inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
-endif
-
-noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
-
-imap <S-F10> <ESC>:wqa!<CR>
-map <S-F10> :wqa!<CR>
-
-map <C-g>   :TagbarToggle<CR>
-imap <C-g>   <Esc>:TagbarToggle<CR>
-
-noremap <silent> // :nohlsearch<CR><Esc>
-
-" Ctrl-/ - Comment current line.
-map <C-_> ,ci
-imap <C-_> <ESC>,cii
-
-if exists("g:use_CopyCutPasteKeys")
-	" CTRL-X and SHIFT-Del are Cut
-	vnoremap <C-X>   "+x
-	vnoremap <S-Del> "+x
-
-	" CTRL-C and CTRL-Insert are Copy
-	vnoremap <C-C>      "+y
-	vnoremap <C-Insert> "+y
-
-	" CTRL-V and SHIFT-Insert are Paste
-	map  <C-V>      "+gP
-	map  <S-Insert> "+gP
-
-	cmap <C-V>      <C-R>+
-	cmap <S-Insert> <C-R>+
-
-	exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-	exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-
-	imap <S-Insert> <C-V>
-	vmap <S-Insert> <C-V>
-endif
-
-" Toggle show Space/Tab/EOL
-nmap <silent> <leader><CR> :set list!<CR>
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
@@ -260,48 +330,8 @@ imap <S-Tab> <Esc><<i
 " Allow using the repeat operator with a visual selection (!)
 vnoremap . :normal .<CR>
 
-if exists('g:use_ArrowKeys')
-	" Text selection by SHIFT+Arrows
-	imap <S-Up>    <Esc>v<Up>
-	imap <S-Down>  <Esc>v<Down>
-	imap <S-Left>  <Esc>v<Left>
-	imap <S-Right> <Esc><Right>v<Right>
-	nmap <S-Up>    v<Up>
-	nmap <S-Down>  v<Down>
-	nmap <S-Left>  v<Left>
-	nmap <S-Right> v<Right>
-	vmap <S-Up>    <Up>
-	vmap <S-Down>  <Down>
-	vmap <S-Left>  <Left>
-	vmap <S-Right> <Right>
-	imap <S-End>   <Esc>v<End>
-	imap <S-Home>  <Esc>v<Home>
-	nmap <S-End>   v<End>
-	nmap <S-Home>  v<Home>
-	vmap <S-End>   <End>
-	vmap <S-Home>  <Home>
-endif
-
 nnoremap <Leader>yw byw
 nnoremap <Leader>yl ^y$
-
-nnoremap <silent> <Leader>vv <C-w>v
-nnoremap <silent> <Leader>hh <C-w>s
-
-map <C-z> :UndotreeToggle<CR>
-imap <C-z> <Esc>:UndotreeToggle<CR>
-
-map <C-\> :YRShow<CR>
-imap <C-\> <Esc>:YRShow<CR>
-
-map <C-t> :tabnew<CR>
-imap <C-t> <Esc>:tabnew<CR>
-
-if exists('g:use_VimShell')
-  map ~~ :VimShell<CR>
-endif
-
-noremap <silent> ' :<C-U>call ToggleQuote()<CR>
 
 " Swap words
 noremap <silent> <Leader>sw <Esc>bdwwP
@@ -372,37 +402,10 @@ nnoremap <Leader>gr  :Gremove<CR>
 map <silent> <Leader>st :call Stringify()<CR>
 
 if !exists('g:dont_use_NERDTree')
-  map <silent> <Leader>nd :NERDTreeToggle<CR>
+	map <silent> <Leader>nd :NERDTreeToggle<CR>
 
-  " Show current file in NERDTree
-  map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+	" Show current file in NERDTree
+	map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 endif
 
-" Space for open/close folds if exist
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <Space> zf
-
-" use <Space>gf to go to file in a vertical split
-nnoremap <silent> <Leader>gf   :vertical botright wincmd F<CR>
-
-" ,a - select all text in buffer
-noremap  <Leader>a    ggVG
-
-" Ctrl-P - Inserts the path of the currently edited file into a command
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Alt-Up - upcase, Alt-Down - downcase
-map <A-Up>   gUiw
-imap <A-Up>   <Esc>gUiw<Esc>i
-map <A-Down> guiw
-imap <A-Down> <Esc>guiw<Esc>i
-
-nnoremap <silent> <C-]>  gt
-nnoremap <silent> <C-[>  gT
-vnoremap <silent> <C-]>  gt
-vnoremap <silent> <C-[>  gT
-nnoremap <silent> ] :bn<CR>
-nnoremap <silent> [ :bp<CR>
-vnoremap <silent> ] :bn<CR>
-vnoremap <silent> [ :bp<CR>
 

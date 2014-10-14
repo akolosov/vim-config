@@ -24,6 +24,8 @@ Variables
 
 All variables set in `~/.vimrc.before.local` file.
 
+`g:hardcore_mode` - use VIM Hardcore mode (unset `g:use_ArrowKeys`, `g:use_CopyCutPasteKeys`, `g:use_ctrlSpace`, `g:use_VimShell` and many keymaps)
+
 `g:use_lightline` - Use LightLine instead AirLine
 
 `g:use_powerline_fonts` - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
@@ -54,59 +56,62 @@ Shortcuts
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
-| `CTRL-T` | Create new tab | **\[n i v]** |
-| `CTRL-Z` | Show/Hide UndoTree | **\[n i v]** |
-| `CTRL-G` | Show/Hide TagBar | **\[n i v]** |
-| `CTRL-Y` | Delete line |	**\[n i v]** |
-| `CTRL-L` | Delete to EOL | **\[n i v]** |
-| `CTRL-H` | Delete to BOL | **\[n i v]** |
-| `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
-| `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
-| `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_CopyCutPasteKeys`) | **\[n i v]** |
-| `CTRL-/` or `CTRL-7` | Comment/Uncomment block | **\[n i v]** |
-| `CTRL-\` or `CTRL-4` | Show/Hide YankRing | **\[n i v]** |
-| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace`) | **\[n]** |
-| `F2` or `,w` | Save file | **\[n i v]** |
-| `CTRL-F2` or `,wa` | Save all files | **\[n i v]** |
-| `SHIFT-F2` or `,w?` | Save file as... | **\[n i v]** |
-| `F3` | Toggle paste mode | **\[n i v]** |
-| `F4` | Toggle readonly mode | **\[n v]** |
-| `F5` | Open the selected region in a new narrowed window | **\[n i v]** |
-| `F10` | Quit without saving | **\[n i v]** |
-| `SHIFT-F10` | Quit with saving all files | **\[n i v]** |
-| `ESC-ESC` | Quit and ask for save files or close current window/buffer | **\[n i v]** |
+| `CTRL-T` | Create new tab (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-Z` | Show/Hide UndoTree (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-G` | Show/Hide TagBar (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-Y` | Delete line (if not set `g:hardcore_mode`) |	**\[n i v]** |
+| `CTRL-L` | Delete to EOL (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-H` | Delete to BOL (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-\` or `CTRL-4` | Show/Hide YankRing (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace` and not set `g:hardcore_mode`) | **\[n]** |
+| `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `SHIFT-F2` | Save file as... (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F3` | Toggle paste mode (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F4` | Toggle readonly mode (if not set `g:hardcore_mode`) | **\[n v]** |
+| `F5` | Open the selected region in a new narrowed window (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F10` | Quit without saving (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `SHIFT-F10` | Quit with saving all files (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `ESC-ESC` | Quit and ask for save files or close current window/buffer (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `//` | No highlights search | **\[n v]** |
-| `CTRL-]` | Switch next tab | **\[n v]** |
-| `CTRL-[` | Switch prev tab | **\[n v]** |
-| `]` | Switch next buffer | **\[n v]** |
-| `[` | Switch prev buffer | **\[n v]** |
-| `ALT-Up` | Upcase word under cursor | **\[n v]** |
-| `ALT-Down` | Downcase word under cursor | **\[n v]** |
-| `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell`) | **\[n v]** |
+| `CTRL-]` | Switch next tab (if not set `g:hardcore_mode`) | **\[n v]** |
+| `CTRL-[` | Switch prev tab (if not set `g:hardcore_mode`) | **\[n v]** |
+| `]` | Switch next buffer (if not set `g:hardcore_mode`) | **\[n v]** |
+| `[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
+| `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
+| `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
+| `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell` and not set `g:hardcore_mode`) | **\[n v]** |
+| `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
-| `,hh` | Split window horizontaly | **\[n]** |
-| `,vv` | Split window verticaly | **\[n]** |
+| `,hh` | Split window horizontaly (if not set `g:hardcore_mode`) | **\[n]** |
+| `,vv` | Split window verticaly (if not set `g:hardcore_mode`) | **\[n]** |
+| `,<Down>` | Insert new line after current line (if not set `g:hardcore_mode`) | **\[n]** |
+| `,<Up>` | Insert new line before current line (if not set `g:hardcore_mode`) | **\[n]** |
+| `,<CR>` |  Toggle show Space/Tab/EOL (if not set `g:hardcore_mode`) | **\[n]** |
+| `,w` | Save current file | **\[n v]** |
+| `,wa` | Save all files  | **\[n v]** |
+| `,w?` | Save file as... | **\[n v]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,<Down>` | Insert new line after current line | **\[n]** |
-| `,<Up>` | Insert new line before current line | **\[n]** |
-| `,<CR>` |  Toggle show Space/Tab/EOL | **\[n]** |
-| `,a` | Select all text in current buffer | **\[n]** |
+| `,a` | Select all text in current buffer (if not set `g:hardcore_mode`) | **\[n]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
 | `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
-| `,w` | Save current file | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |
 | `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |
 | `,te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
 | `,qc` | Toggle Quickfix window | **\[n]** |
 | `,qo` | Open Quickfix window back up | **\[n]** |
-| `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
-| `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
-| `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
+| `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,#` | Surround a word with #{ruby interpolation} | **\[n v]** |
 | `,"` | Surround a word with "quotes" | **\[n v]** |
 | `,'` | Surround a word with 'single quotes' | **\[n v]** |
@@ -161,7 +166,6 @@ Shortcuts
 | `,t,` | Align on commas | **\[n v]** |
 | `,t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
 | `,tsp` | Align on whitespace | **\[n v]** |
-| `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `mm` | Toggle bookmark | **\[n]** |
 | `mi` | Annotate bookmark | **\[n]** |
 | `ma` | Show all bookmarks | **\[n]** |

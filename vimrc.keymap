@@ -163,7 +163,7 @@ if !exists('g:hardcore_mode')
 	" Show most plugin keybindings
 	nnoremap <silent><Leader>? :map <Leader><CR>
 else
-	if (&readonly || argc() || !isdirectory(argv(0)))
+	if (&readonly || argc())
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	end	

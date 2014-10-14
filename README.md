@@ -85,11 +85,11 @@ Shortcuts
 | `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell` and not set `g:hardcore_mode`) | **\[n v]** |
-| `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
+| `'` | Toggle single quotes to double quotes and backwards (if not set `g:hardcore_mode`) | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
-| `,?` | Show most plugin keybindings | **\[n]** |
+| `,?` | Show most plugin keybindings (if not set `g:hardcore_mode`) | **\[n]** |
 | `,hh` | Split window horizontaly (if not set `g:hardcore_mode`) | **\[n]** |
 | `,vv` | Split window verticaly (if not set `g:hardcore_mode`) | **\[n]** |
 | `,<Down>` | Insert new line after current line (if not set `g:hardcore_mode`) | **\[n]** |

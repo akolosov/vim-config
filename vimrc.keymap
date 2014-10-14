@@ -159,6 +159,9 @@ if !exists('g:hardcore_mode')
 
 	" Toggle show Space/Tab/EOL
 	nmap <silent> <leader><CR> :set list!<CR>
+
+	" Show most plugin keybindings
+	nnoremap <silent><Leader>? :map <Leader><CR>
 endif
 
 nnoremap ; :
@@ -207,9 +210,6 @@ inoremap ;; <Esc>m`A;<Esc>``a
 inoremap ;;<Space> <Esc>A;<Esc>o
 nnoremap ;; m"A;<Esc>`"
 nnoremap ;;<Space> A;<Esc>
-
-" Show most plugin keybindings
-nnoremap <silent><Leader>? :map <Leader><CR>
 
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>

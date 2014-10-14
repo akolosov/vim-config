@@ -326,16 +326,20 @@ vnoremap < <gv
 vnoremap > >gv
 
 vmap <Tab> >
-nnoremap <silent> <Tab> :wincmd w<CR>
-nnoremap <silent> <S-Tab> :wincmd W<CR>
-
 vmap <S-Tab> <
 imap <S-Tab> <Esc><<i
+
+" Switch between windows
+nnoremap <silent> <Tab> :wincmd w<CR>
+nnoremap <silent> <S-Tab> :wincmd W<CR>
 
 " Allow using the repeat operator with a visual selection (!)
 vnoremap . :normal .<CR>
 
+" Yank word under cursor
 nnoremap <Leader>yw byw
+
+" Yank current line
 nnoremap <Leader>yl ^y$
 
 " Swap words

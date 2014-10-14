@@ -52,6 +52,8 @@
 
 <p>All variables set in <code>~/.vimrc.before.local</code> file.</p>
 
+<p><code>g:hardcore_mode</code> - use VIM Hardcore mode (unset <code>g:use_ArrowKeys</code>, <code>g:use_CopyCutPasteKeys</code>, <code>g:use_ctrlSpace</code>, <code>g:use_VimShell</code> and many keymaps)</p>
+
 <p><code>g:use_lightline</code> - Use LightLine instead AirLine</p>
 
 <p><code>g:use_powerline_fonts</code> - Use PowerLine fonts (<a href="https://github.com/Lokaltog/powerline-fonts">Link</a>)</p>
@@ -90,123 +92,117 @@
 <tbody>
 <tr>
 <td align="center"><code>CTRL-T</code></td>
-<td>Create new tab</td>
+<td>Create new tab (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-Z</code></td>
-<td>Show/Hide UndoTree</td>
+<td>Show/Hide UndoTree (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-G</code></td>
-<td>Show/Hide TagBar</td>
+<td>Show/Hide TagBar (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-Y</code></td>
-<td>Delete line</td>
+<td>Delete line (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-L</code></td>
-<td>Delete to EOL</td>
+<td>Delete to EOL (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-H</code></td>
-<td>Delete to BOL</td>
+<td>Delete to BOL (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-X</code> or <code>SHIFT-Del</code>
 </td>
-<td>Cut (if set <code>g:use_CopyCutPasteKeys</code>)</td>
+<td>Cut (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-C</code> or <code>CTRL-Ins</code>
 </td>
-<td>Copy (if set <code>g:use_CopyCutPasteKeys</code>)</td>
+<td>Copy (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-V</code> or <code>SHIFT-Ins</code>
 </td>
-<td>Paste (if set <code>g:use_CopyCutPasteKeys</code>)</td>
+<td>Paste (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-/</code> or <code>CTRL-7</code>
 </td>
-<td>Comment/Uncomment block</td>
+<td>Comment/Uncomment block (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-\</code> or <code>CTRL-4</code>
 </td>
-<td>Show/Hide YankRing</td>
+<td>Show/Hide YankRing (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-Space</code></td>
-<td>Open CtrlSpace buffers (if set <code>g:use_ctrlSpace</code>)</td>
+<td>Open CtrlSpace buffers (if set <code>g:use_ctrlSpace</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
-<td align="center">
-<code>F2</code> or <code>,w</code>
-</td>
-<td>Save file</td>
+<td align="center"><code>F2</code></td>
+<td>Save file (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center">
-<code>CTRL-F2</code> or <code>,wa</code>
-</td>
-<td>Save all files</td>
+<td align="center"><code>CTRL-F2</code></td>
+<td>Save all files (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
-<td align="center">
-<code>SHIFT-F2</code> or <code>,w?</code>
-</td>
-<td>Save file as...</td>
+<td align="center"><code>SHIFT-F2</code></td>
+<td>Save file as... (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>F3</code></td>
-<td>Toggle paste mode</td>
+<td>Toggle paste mode (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>F4</code></td>
-<td>Toggle readonly mode</td>
+<td>Toggle readonly mode (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>F5</code></td>
-<td>Open the selected region in a new narrowed window</td>
+<td>Open the selected region in a new narrowed window (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>F10</code></td>
-<td>Quit without saving</td>
+<td>Quit without saving (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>SHIFT-F10</code></td>
-<td>Quit with saving all files</td>
+<td>Quit with saving all files (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>ESC-ESC</code></td>
-<td>Quit and ask for save files or close current window/buffer</td>
+<td>Quit and ask for save files or close current window/buffer (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -216,38 +212,43 @@
 </tr>
 <tr>
 <td align="center"><code>CTRL-]</code></td>
-<td>Switch next tab</td>
+<td>Switch next tab (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>CTRL-[</code></td>
-<td>Switch prev tab</td>
+<td>Switch prev tab (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>]</code></td>
-<td>Switch next buffer</td>
+<td>Switch next buffer (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>[</code></td>
-<td>Switch prev buffer</td>
+<td>Switch prev buffer (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>ALT-Up</code></td>
-<td>Upcase word under cursor</td>
+<td>Upcase word under cursor (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>ALT-Down</code></td>
-<td>Downcase word under cursor</td>
+<td>Downcase word under cursor (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>&lt;tilde&gt;&lt;tilde&gt;</code></td>
-<td>Run VimShell (if set <code>g:use_VimShell</code>)</td>
+<td>Run VimShell (if set <code>g:use_VimShell</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>'</code></td>
+<td>Toggle single quotes to double quotes and backwards (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center">
@@ -272,18 +273,53 @@
 </tr>
 <tr>
 <td align="center"><code>,?</code></td>
-<td>Show most plugin keybindings</td>
+<td>Show most plugin keybindings (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,hh</code></td>
-<td>Split window horizontaly</td>
+<td>Split window horizontaly (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,vv</code></td>
-<td>Split window verticaly</td>
+<td>Split window verticaly (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,&lt;Down&gt;</code></td>
+<td>Insert new line after current line (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,&lt;Up&gt;</code></td>
+<td>Insert new line before current line (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,&lt;CR&gt;</code></td>
+<td>Toggle show Space/Tab/EOL (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,a</code></td>
+<td>Select all text in current buffer (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,w</code></td>
+<td>Save current file</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,wa</code></td>
+<td>Save all files</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,w?</code></td>
+<td>Save file as...</td>
+<td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,tb</code></td>
@@ -296,21 +332,6 @@
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
-<td align="center"><code>,&lt;Down&gt;</code></td>
-<td>Insert new line after current line</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,&lt;Up&gt;</code></td>
-<td>Insert new line before current line</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,a</code></td>
-<td>Select all text in current buffer</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
 <td align="center"><code>,nd</code></td>
 <td>Show/Hide NERDTree (if not set <code>g:dont_use_NERDTree</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
@@ -318,11 +339,6 @@
 <tr>
 <td align="center"><code>,nf</code></td>
 <td>Show current file in NERDTree (if not set <code>g:dont_use_NERDTree</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,w</code></td>
-<td>Save current file</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -357,17 +373,17 @@
 </tr>
 <tr>
 <td align="center"><code>,gf</code></td>
-<td>Open file with filename under cursor, create new if not exists</td>
+<td>Open file with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,gfw</code></td>
-<td>Open file in windows with filename under cursor, create new if not exists</td>
+<td>Open file in windows with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,gft</code></td>
-<td>Open file in tab with filename under cursor, create new if not exists</td>
+<td>Open file in tab with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -527,6 +543,16 @@
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
+<td align="center"><code>,yw</code></td>
+<td>Yank word under cursor</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,yl</code></td>
+<td>Yank current line</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
 <td align="center"><code>,ls</code></td>
 <td>Send current line to console (tmux by default)</td>
 <td align="center"><strong>[n]</strong></td>
@@ -635,11 +661,6 @@
 <td align="center"><code>,tsp</code></td>
 <td>Align on whitespace</td>
 <td align="center"><strong>[n v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>'</code></td>
-<td>Toggle single quotes to double quotes and backwards</td>
-<td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>mm</code></td>

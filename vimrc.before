@@ -1,7 +1,19 @@
 " Before initialization
 
 if exists('g:hardcore_mode')
-	unlet g:use_ArrowKeys
-	unlet g:use_CopyCutPasteKeys
-	unlet g:use_VimShell
+	if exists('g:use_ArrowKeys')
+		unlet g:use_ArrowKeys
+	endif
+
+	if exists('g:use_CopyCutPasteKeys')
+		unlet g:use_CopyCutPasteKeys
+	endif
+
+	if exists('g:use_VimShell')
+		unlet g:use_VimShell
+	endif
+
+	if exists('g:use_ctrlSpace')
+		unlet g:use_ctrlSpace
+	endif
 endif

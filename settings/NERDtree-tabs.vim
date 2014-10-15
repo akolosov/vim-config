@@ -11,5 +11,5 @@ if !exists("g:dont_use_NERDTree")
   " Focus in the main content window
   let g:nerdtree_tabs_focus_on_files = 1
 
-  autocmd BufEnter NERD_tree_\d\+ setlocal nolist
+  autocmd BufWinEnter,WinEnter,BufEnter NERD_tree_\d\+ setlocal nolist
 endif

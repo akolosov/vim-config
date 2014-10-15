@@ -68,7 +68,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 
 	" Display tabs and trailing spaces visually
 	set list
-	set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+	set listchars=trail:·,precedes:«,extends:»,eol:¶,tab:▸\ 
 
 	set nowrap       "Don't wrap lines
 	set linebreak    "Wrap lines at convenient points

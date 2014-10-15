@@ -26,6 +26,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:hardcore_mode` - use VIM Hardcore mode (unset `g:use_ArrowKeys`, `g:use_CopyCutPasteKeys`, `g:use_ctrlSpace`, `g:use_VimShell` and many keymaps)
 
+`g:hardcore_WithArrows` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
+
 `g:use_lightline` - Use LightLine instead AirLine
 
 `g:use_powerline_fonts` - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
@@ -102,6 +104,7 @@ Shortcuts
 | `,w` | Save current file | **\[n v]** |
 | `,wa` | Save all files  | **\[n v]** |
 | `,w?` | Save file as... | **\[n v]** |
+| `,wq` | Save current file and close it | **\[n v]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |

@@ -220,6 +220,9 @@ nnoremap <Leader>wa :wa<CR>
 " Type <Leader>w? to save file as ...
 nnoremap <Leader>w? :w<SPACE><C-R>=expand("%:p")<CR>
 
+" Type <Leader>wq to save file and close it (a lot faster than :wq<Enter>):
+nnoremap <Leader>wq :wq<CR>
+
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
 vmap <Leader># c#{<C-R>"}<ESC>

@@ -133,8 +133,6 @@ if !exists('g:hardcore_mode')
 	" ,a - select all text in buffer
 	noremap  <Leader>a    ggVG
 
-	" Ctrl-P - Inserts the path of the currently edited file into a command
-	cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 	" Alt-Up - upcase, Alt-Down - downcase
 	map <A-Up>   gUiw
@@ -208,6 +206,9 @@ nnoremap - <C-x>
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
+
+" Ctrl-P - Inserts the path of the currently edited file into a command
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Insert semeoclon to EOL
 " then press space to add new line below

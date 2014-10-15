@@ -183,7 +183,7 @@ nnoremap U <C-r>
 nnoremap j gj
 nnoremap k gk
 
-if !exists('g:use_ArrowKeys')
+if !exists('g:use_ArrowKeys') && !exists('g:hardcore_WithArrows')
   nnoremap <up> <nop>
   nnoremap <down> <nop>
   nnoremap <left> <nop>

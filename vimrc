@@ -67,7 +67,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	filetype indent on
 
 	" Display tabs and trailing spaces visually
-	set list
+	set nolist
 	set listchars=trail:·,precedes:«,extends:»,eol:¶,tab:▸\ 
 
 	set nowrap       "Don't wrap lines
@@ -131,7 +131,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set t_vb=
 	set pastetoggle=<F3>
 
-	if exists('g:use_VimShell')
+	if exists('g:use_vim_shell')
 		set noautochdir
 	else
 		set autochdir

@@ -1,8 +1,8 @@
 nnoremap ; :
 
 " No HELP
-map <F1> <nop>
-imap <F1> <Esc>
+noremap <F1> <Esc>
+inoremap <F1> <Esc>
 
 if !exists('g:hardcore_mode')
 	" Save file
@@ -180,13 +180,17 @@ nnoremap j gj
 nnoremap k gk
 
 if !exists('g:use_arrow_keys') && !exists('g:hardcore_mode_with_arrow_keys')
-  nnoremap <up> <nop>
-  nnoremap <down> <nop>
-  nnoremap <left> <nop>
-  nnoremap <right> <nop>
+	nnoremap <up> <nop>
+	nnoremap <down> <nop>
+	nnoremap <left> <nop>
+	nnoremap <right> <nop>
+	inoremap <up> <nop>
+	inoremap <down> <nop>
+	inoremap <left> <nop>
+	inoremap <right> <nop>
 else
-  nnoremap <Down> gj
-  nnoremap <Up> gk
+	nnoremap <Down> gj
+	nnoremap <Up> gk
 endif
 
 " A more handy Esc

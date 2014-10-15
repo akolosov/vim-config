@@ -101,6 +101,8 @@ Shortcuts
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
 | `,<CR>` |  Toggle show Space/Tab/EOL | **\[n]** |
+| `,;` |  Append semicolon at EOL | **\[n]** |
+| `,;<Space>` |  Append ssemicolon at EOL and add new line below | **\[n]** |
 | `,w` | Save current file | **\[n v]** |
 | `,wa` | Save all files  | **\[n v]** |
 | `,w?` | Save file as... | **\[n v]** |

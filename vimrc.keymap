@@ -1,6 +1,10 @@
-if !exists('g:hardcore_mode')
-	nnoremap ; :
+nnoremap ; :
 
+" No HELP
+map <F1> <nop>
+imap <F1> <Esc>
+
+if !exists('g:hardcore_mode')
 	" Save file
 	imap <F2>   <Esc>:w<CR>i
 	vmap <F2>   :<C-U>w<CR>v
@@ -158,11 +162,12 @@ else
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	end
+	" Easy window navigation
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
 endif
-
-" No HELP
-map <F1> <nop>
-imap <F1> <Esc>
 
 " Repeat the last recorded macro
 map Q @@
@@ -203,10 +208,8 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Insert semeoclon to EOL
 " then press space to add new line below
-inoremap ;; <Esc>m`A;<Esc>``a
-inoremap ;;<Space> <Esc>A;<Esc>o
-nnoremap ;; m"A;<Esc>`"
-nnoremap ;;<Space> A;<Esc>
+nnoremap <Leader>; m"A;<Esc>`"
+nnoremap <Leader>;<Space> A;<Esc>
 
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>

@@ -24,9 +24,9 @@ Variables
 
 All variables set in `~/.vimrc.before.local` file.
 
-`g:hardcore_mode` - use VIM Hardcore mode (unset `g:use_ArrowKeys`, `g:use_CopyCutPasteKeys`, `g:use_ctrlSpace`, `g:use_VimShell` and many keymaps)
+`g:hardcore_mode` - use VIM Hardcore mode (unset `g:use_arrow_keys`, `g:use_copy_cut_paste_keys`, `g:use_ctrl_space`, `g:use_vim_shell` and many keymaps)
 
-`g:hardcore_WithArrows` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
+`g:hardcore_mode_with_arrow_keys` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
 
 `g:use_lightline` - Use LightLine instead AirLine
 
@@ -40,17 +40,17 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_relativenumber` - Use relative line numbers
 
-`g:use_ctrlSpace` - use CtrlSpace plugin instead CtrlP
+`g:use_ctrl_space` - use CtrlSpace plugin instead CtrlP
 
-`g:use_VimShell` - use VimShell plugin
+`g:use_vim_shell` - use VimShell plugin
 
-`g:dont_use_NERDTree` - do not use NERDTree plugin
+`g:dont_use_nerd_tree` - do not use NERDTree plugin
 
-`g:dont_show_NERDTree` - do not show NERDTree on startup
+`g:dont_show_nerd_tree` - do not show NERDTree on startup
 
-`g:use_ArrowKeys` - use arrow keys. Only hjkl! Only hardcore!
+`g:use_arrow_keys` - use arrow keys. Only hjkl! Only hardcore!
 
-`g:use_CopyCutPasteKeys` - use Ctrl-C/V/X keys for Copy/Paste/Cut
+`g:use_copy_cut_paste_keys` - use Ctrl-C/V/X keys for Copy/Paste/Cut
 
 
 Shortcuts
@@ -64,9 +64,9 @@ Shortcuts
 | `CTRL-Y` | Delete line (if not set `g:hardcore_mode`) |	**\[n i v]** |
 | `CTRL-L` | Delete to EOL (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-H` | Delete to BOL (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_CopyCutPasteKeys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-\` or `CTRL-4` | Show/Hide YankRing (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace` and not set `g:hardcore_mode`) | **\[n]** |
@@ -95,8 +95,8 @@ Shortcuts
 | `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
-| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
-| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
+| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrl_space`) | **\[n]** |
+| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrl_space`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
@@ -107,8 +107,8 @@ Shortcuts
 | `,wq` | Save current file and close it | **\[n v]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,nd` | Show/Hide NERDTree (if not set `g:dont_use_NERDTree`)  | **\[n i v]** |
-| `,nf` | Show current file in NERDTree (if not set `g:dont_use_NERDTree`) | **\[n]** |
+| `,nd` | Show/Hide NERDTree (if not set `g:dont_use_nerd_tree`)  | **\[n i v]** |
+| `,nf` | Show current file in NERDTree (if not set `g:dont_use_nerd_tree`) | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |
 | `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |

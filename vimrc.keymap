@@ -37,7 +37,7 @@ if !exists('g:hardcore_mode')
 	imap <F10> <ESC>:qa!<CR>
 	map <F10> :qa!<CR>
 
-	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
+	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_nerd_tree"))
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	else
@@ -59,7 +59,7 @@ if !exists('g:hardcore_mode')
 	map <C-_> ,ci
 	imap <C-_> <ESC>,cii
 
-	if exists("g:use_CopyCutPasteKeys")
+	if exists("g:use_copy_cut_paste_keys")
 		" CTRL-X and SHIFT-Del are Cut
 		vnoremap <C-X>   "+x
 		vnoremap <S-Del> "+x
@@ -82,7 +82,7 @@ if !exists('g:hardcore_mode')
 		vmap <S-Insert> <C-V>
 	endif
 
-	if exists('g:use_ArrowKeys')
+	if exists('g:use_arrow_keys')
 		" Text selection by SHIFT+Arrows
 		imap <S-Up>    <Esc>v<Up>
 		imap <S-Down>  <Esc>v<Down>
@@ -157,7 +157,7 @@ else
 	if (&readonly || argc())
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
-	end	
+	end
 endif
 
 " No HELP
@@ -174,7 +174,7 @@ nnoremap U <C-r>
 nnoremap j gj
 nnoremap k gk
 
-if !exists('g:use_ArrowKeys') && !exists('g:hardcore_WithArrows')
+if !exists('g:use_arrow_keys') && !exists('g:hardcore_mode_with_arrow_keys')
   nnoremap <up> <nop>
   nnoremap <down> <nop>
   nnoremap <left> <nop>
@@ -309,10 +309,10 @@ noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 nmap <silent> <Leader>qc :cclose<CR>
 nmap <silent> <Leader>qo :copen<CR>
 
-" Switch all buffers to tabs 
+" Switch all buffers to tabs
 map <silent> <leader>tb :tab :ball<cr>
 
-" Switch all buffers to windows   
+" Switch all buffers to windows
 map <silent> <Leader>sb :sball<CR>
 
 
@@ -405,7 +405,7 @@ nnoremap <Leader>gr  :Gremove<CR>
 " Current line or selection to strings
 map <silent> <Leader>st :call Stringify()<CR>
 
-if !exists('g:dont_use_NERDTree')
+if !exists('g:dont_use_nerd_tree')
 	map <silent> <Leader>nd :NERDTreeToggle<CR>
 
 	" Show current file in NERDTree

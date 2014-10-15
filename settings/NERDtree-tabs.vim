@@ -1,6 +1,6 @@
-if !exists("g:dont_use_NERDTree")
+if !exists("g:dont_use_nerd_tree")
   " Auto open nerd tree on startup
-  if (!argc() || isdirectory(argv(0))) && !exists("s:std_in") && (!exists("g:dont_show_NERDTree"))
+  if (!argc() || isdirectory(argv(0))) && !exists("s:std_in") && (!exists("g:dont_show_nerd_tree"))
     let g:nerdtree_tabs_open_on_gui_startup = 1
     let g:nerdtree_tabs_open_on_console_startup = 1
   else

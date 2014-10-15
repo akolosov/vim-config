@@ -100,9 +100,11 @@ Shortcuts
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
-| `,<CR>` |  Toggle show Space/Tab/EOL | **\[n]** |
-| `,;` |  Append semicolon at EOL | **\[n]** |
-| `,;<Space>` |  Append ssemicolon at EOL and add new line below | **\[n]** |
+| `,<CR>` | Toggle show Space/Tab/EOL | **\[n]** |
+| `,;` | Append semicolon at EOL | **\[n]** |
+| `,;<Space>` | Append ssemicolon at EOL and add new line below | **\[n]** |
+| `,=` | Insert new line with '=' after current line with the same length | **\[n]** |
+| `,-` | Insert new line with '-' after current line with the same length | **\[n]** |
 | `,w` | Save current file | **\[n v]** |
 | `,wa` | Save all files  | **\[n v]** |
 | `,w?` | Save file as... | **\[n v]** |

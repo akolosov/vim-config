@@ -424,4 +424,8 @@ nnoremap <Leader><Down> o<ESC>k
 " Toggle show Space/Tab/EOL
 nmap <silent> <leader><CR> :set list!<CR>
 
+" Insert new line with '=' after current line with the same length
+nnoremap <leader>= yypVr=
 
+" Insert new line with '=' after current line with the same length
+nnoremap <leader>- yypVr-

@@ -69,7 +69,7 @@ Shortcuts
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-\` or `CTRL-4` | Show/Hide YankRing (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrlSpace` and not set `g:hardcore_mode`) | **\[n]** |
+| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrl_space` and not set `g:hardcore_mode`) | **\[n]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F2` | Save file as... (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -86,7 +86,7 @@ Shortcuts
 | `[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
-| `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell` and not set `g:hardcore_mode`) | **\[n v]** |
+| `<tilde><tilde>` | Run VimShell (if set `g:use_vim_shell` and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards (if not set `g:hardcore_mode`) | **\[n]** |
 | `,?` | Show most plugin keybindings (if not set `g:hardcore_mode`) | **\[n]** |
 | `,hh` | Split window horizontaly (if not set `g:hardcore_mode`) | **\[n]** |

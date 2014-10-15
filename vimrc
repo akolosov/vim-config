@@ -67,7 +67,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	filetype indent on
 
 	" Display tabs and trailing spaces visually
-	set nolist
+	set list
 	set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
 
 	set nowrap       "Don't wrap lines

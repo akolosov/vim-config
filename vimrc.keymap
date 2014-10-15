@@ -149,15 +149,6 @@ if !exists('g:hardcore_mode')
 	vnoremap <silent> ] :bn<CR>
 	vnoremap <silent> [ :bp<CR>
 
-	" Insert new line before current line
-	nnoremap <Leader><Up> O<ESC>j
-
-	" Insert new line after current line
-	nnoremap <Leader><Down> o<ESC>k
-
-	" Toggle show Space/Tab/EOL
-	nmap <silent> <leader><CR> :set list!<CR>
-
 	" Show most plugin keybindings
 	nnoremap <silent><Leader>? :map <Leader><CR>
 else
@@ -417,5 +408,14 @@ if !exists('g:dont_use_NERDTree')
 	" Show current file in NERDTree
 	map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 endif
+
+" Insert new line before current line
+nnoremap <Leader><Up> O<ESC>j
+
+" Insert new line after current line
+nnoremap <Leader><Down> o<ESC>k
+
+" Toggle show Space/Tab/EOL
+nmap <silent> <leader><CR> :set list!<CR>
 
 

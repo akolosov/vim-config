@@ -40,16 +40,16 @@ if exists('g:use_lightline')
 
 	if exists('g:use_powerline_fonts')
 		let g:lightline.separator = { 'left': "\u2b80", 'right': "\u2b82" }
-	  let g:lightline.subseparator = { 'left': "\u2b81", 'right': "\u2b83" }
+		let g:lightline.subseparator = { 'left': "\u2b81", 'right': "\u2b83" }
 	else
 		let g:lightline.separator = { 'left': "", 'right': "" }
-	  let g:lightline.subseparator = { 'left': "", 'right': "" }
+		let g:lightline.subseparator = { 'left': "", 'right': "" }
 	endif
 
 	call lightline#init()
 else
 	if !exists('g:airline_theme')
-		let g:airline_theme = 'bubblegum'	
+		let g:airline_theme = 'bubblegum'
 	endif
 
 	if exists('g:use_powerline_fonts')

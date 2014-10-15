@@ -1,4 +1,6 @@
 if !exists('g:hardcore_mode')
+	nnoremap ; :
+
 	" Save file
 	imap <F2>   <Esc>:w<CR>i
 	vmap <F2>   :<C-U>w<CR>v
@@ -157,8 +159,6 @@ else
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	end	
 endif
-
-nnoremap ; :
 
 " No HELP
 map <F1> <nop>

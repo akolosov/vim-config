@@ -52,7 +52,9 @@
 
 <p>All variables set in <code>~/.vimrc.before.local</code> file.</p>
 
-<p><code>g:hardcore_mode</code> - use VIM Hardcore mode (unset <code>g:use_ArrowKeys</code>, <code>g:use_CopyCutPasteKeys</code>, <code>g:use_ctrlSpace</code>, <code>g:use_VimShell</code> and many keymaps)</p>
+<p><code>g:hardcore_mode</code> - use VIM Hardcore mode (unset <code>g:use_arrow_keys</code>, <code>g:use_copy_cut_paste_keys</code>, <code>g:use_ctrl_space</code>, <code>g:use_vim_shell</code> and many keymaps)</p>
+
+<p><code>g:hardcore_mode_with_arrow_keys</code> - the same as <code>g:hardcore_mode</code>, but arrow keys for navigation is enabled</p>
 
 <p><code>g:use_lightline</code> - Use LightLine instead AirLine</p>
 
@@ -66,17 +68,17 @@
 
 <p><code>g:use_relativenumber</code> - Use relative line numbers</p>
 
-<p><code>g:use_ctrlSpace</code> - use CtrlSpace plugin instead CtrlP</p>
+<p><code>g:use_ctrl_space</code> - use CtrlSpace plugin instead CtrlP</p>
 
-<p><code>g:use_VimShell</code> - use VimShell plugin</p>
+<p><code>g:use_vim_shell</code> - use VimShell plugin</p>
 
-<p><code>g:dont_use_NERDTree</code> - do not use NERDTree plugin</p>
+<p><code>g:dont_use_nerd_tree</code> - do not use NERDTree plugin</p>
 
-<p><code>g:dont_show_NERDTree</code> - do not show NERDTree on startup</p>
+<p><code>g:dont_show_nerd_tree</code> - do not show NERDTree on startup</p>
 
-<p><code>g:use_ArrowKeys</code> - use arrow keys. Only hjkl! Only hardcore!</p>
+<p><code>g:use_arrow_keys</code> - use arrow keys. Only hjkl! Only hardcore!</p>
 
-<p><code>g:use_CopyCutPasteKeys</code> - use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
+<p><code>g:use_copy_cut_paste_keys</code> - use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
 
 <h1>
 <a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
@@ -124,21 +126,21 @@
 <td align="center">
 <code>CTRL-X</code> or <code>SHIFT-Del</code>
 </td>
-<td>Cut (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Cut (if set <code>g:use_copy_cut_paste_keys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-C</code> or <code>CTRL-Ins</code>
 </td>
-<td>Copy (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Copy (if set <code>g:use_copy_cut_paste_keys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>CTRL-V</code> or <code>SHIFT-Ins</code>
 </td>
-<td>Paste (if set <code>g:use_CopyCutPasteKeys</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Paste (if set <code>g:use_copy_cut_paste_keys</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -157,7 +159,7 @@
 </tr>
 <tr>
 <td align="center"><code>CTRL-Space</code></td>
-<td>Open CtrlSpace buffers (if set <code>g:use_ctrlSpace</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Open CtrlSpace buffers (if set <code>g:use_ctrl_space</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -242,33 +244,12 @@
 </tr>
 <tr>
 <td align="center"><code>&lt;tilde&gt;&lt;tilde&gt;</code></td>
-<td>Run VimShell (if set <code>g:use_VimShell</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Run VimShell (if set <code>g:use_vim_shell</code> and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>'</code></td>
 <td>Toggle single quotes to double quotes and backwards (if not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center">
-<code>,,</code> or <code>,o</code>
-</td>
-<td>Open CtrlP (if not set <code>g:use_ctrlSpace</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center">
-<code>..</code> or <code>,b</code>
-</td>
-<td>Open CtrlP buffers (if not set <code>g:use_ctrlSpace</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center">
-<code>''</code> or <code>CTRL-6</code>
-</td>
-<td>" Switch between the last two files</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -287,23 +268,59 @@
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
+<td align="center"><code>,a</code></td>
+<td>Select all text in current buffer (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gf</code></td>
+<td>Open file with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gfw</code></td>
+<td>Open file in windows with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center"><code>,gft</code></td>
+<td>Open file in tab with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>,,</code> or <code>,o</code>
+</td>
+<td>Open CtrlP (if not set <code>g:use_ctrl_space</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>..</code> or <code>,b</code>
+</td>
+<td>Open CtrlP buffers (if not set <code>g:use_ctrl_space</code>)</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
+<td align="center">
+<code>''</code> or <code>CTRL-6</code>
+</td>
+<td>" Switch between the last two files</td>
+<td align="center"><strong>[n]</strong></td>
+</tr>
+<tr>
 <td align="center"><code>,&lt;Down&gt;</code></td>
-<td>Insert new line after current line (if not set <code>g:hardcore_mode</code>)</td>
+<td>Insert new line after current line</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,&lt;Up&gt;</code></td>
-<td>Insert new line before current line (if not set <code>g:hardcore_mode</code>)</td>
+<td>Insert new line before current line</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,&lt;CR&gt;</code></td>
-<td>Toggle show Space/Tab/EOL (if not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,a</code></td>
-<td>Select all text in current buffer (if not set <code>g:hardcore_mode</code>)</td>
+<td>Toggle show Space/Tab/EOL</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -322,6 +339,11 @@
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
+<td align="center"><code>,wq</code></td>
+<td>Save current file and close it</td>
+<td align="center"><strong>[n v]</strong></td>
+</tr>
+<tr>
 <td align="center"><code>,tb</code></td>
 <td>Switch all buffers to tabs</td>
 <td align="center"><strong>[n]</strong></td>
@@ -333,12 +355,12 @@
 </tr>
 <tr>
 <td align="center"><code>,nd</code></td>
-<td>Show/Hide NERDTree (if not set <code>g:dont_use_NERDTree</code>)</td>
+<td>Show/Hide NERDTree (if not set <code>g:dont_use_nerd_tree</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,nf</code></td>
-<td>Show current file in NERDTree (if not set <code>g:dont_use_NERDTree</code>)</td>
+<td>Show current file in NERDTree (if not set <code>g:dont_use_nerd_tree</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -369,21 +391,6 @@
 <tr>
 <td align="center"><code>,qo</code></td>
 <td>Open Quickfix window back up</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,gf</code></td>
-<td>Open file with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,gfw</code></td>
-<td>Open file in windows with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,gft</code></td>
-<td>Open file in tab with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>

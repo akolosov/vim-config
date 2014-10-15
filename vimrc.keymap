@@ -37,7 +37,7 @@ if !exists('g:hardcore_mode')
 	imap <F10> <ESC>:qa!<CR>
 	map <F10> :qa!<CR>
 
-	if (&readonly || argc() || !isdirectory(argv(0))) && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
+	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_NERDTree"))
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	else

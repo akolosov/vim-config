@@ -4,6 +4,10 @@ nnoremap ; :
 noremap <F1> <Esc>
 inoremap <F1> <Esc>
 
+" Get rid of most annoying typo: typing q: when I meant :q.
+" You can still get to cmdline-window easily by typing <Ctrl-F> in command mode, so loosing q: is no loss.
+map q: :q
+
 if !exists('g:hardcore_mode')
 	" Save file
 	imap <F2>   <Esc>:w<CR>i

@@ -86,16 +86,19 @@ Shortcuts
 | `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `<tilde><tilde>` | Run VimShell (if set `g:use_VimShell` and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards (if not set `g:hardcore_mode`) | **\[n]** |
-| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
-| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
-| `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `,?` | Show most plugin keybindings (if not set `g:hardcore_mode`) | **\[n]** |
 | `,hh` | Split window horizontaly (if not set `g:hardcore_mode`) | **\[n]** |
 | `,vv` | Split window verticaly (if not set `g:hardcore_mode`) | **\[n]** |
-| `,<Down>` | Insert new line after current line (if not set `g:hardcore_mode`) | **\[n]** |
-| `,<Up>` | Insert new line before current line (if not set `g:hardcore_mode`) | **\[n]** |
-| `,<CR>` |  Toggle show Space/Tab/EOL (if not set `g:hardcore_mode`) | **\[n]** |
 | `,a` | Select all text in current buffer (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrlSpace`) | **\[n]** |
+| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrlSpace`) | **\[n]** |
+| `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
+| `,<Down>` | Insert new line after current line | **\[n]** |
+| `,<Up>` | Insert new line before current line | **\[n]** |
+| `,<CR>` |  Toggle show Space/Tab/EOL | **\[n]** |
 | `,w` | Save current file | **\[n v]** |
 | `,wa` | Save all files  | **\[n v]** |
 | `,w?` | Save file as... | **\[n v]** |
@@ -109,9 +112,6 @@ Shortcuts
 | `,te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
 | `,qc` | Toggle Quickfix window | **\[n]** |
 | `,qo` | Open Quickfix window back up | **\[n]** |
-| `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
-| `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
-| `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,#` | Surround a word with #{ruby interpolation} | **\[n v]** |
 | `,"` | Surround a word with "quotes" | **\[n v]** |
 | `,'` | Surround a word with 'single quotes' | **\[n v]** |

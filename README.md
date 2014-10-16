@@ -105,10 +105,14 @@ Shortcuts
 | `,;<Space>` | Append ssemicolon at EOL and add new line below | **\[n]** |
 | `,=` | Insert new line with '=' after current line with the same length | **\[n]** |
 | `,-` | Insert new line with '-' after current line with the same length | **\[n]** |
-| `,w` | Save current file | **\[n v]** |
-| `,wa` | Save all files  | **\[n v]** |
-| `,w?` | Save file as... | **\[n v]** |
-| `,wq` | Save current file and close it | **\[n v]** |
+| `,w` | Save current file | **\[n]** |
+| `,wa` | Save all files  | **\[n]** |
+| `,w?` | Save file as... | **\[n]** |
+| `,wq` | Save current file and close it | **\[n]** |
+| `,x` | Save current file and close it | **\[n]** |
+| `,X` | Close current file and without saving | **\[n]** |
+| `,x!` | Save all files and close VIM | **\[n]** |
+| `,X!` | Close VIM without saving files | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
 | `,nd` | Show/Hide NERDTree (if not set `g:dont_use_nerd_tree`)  | **\[n i v]** |

@@ -230,6 +230,18 @@ nnoremap <Leader>w? :w<SPACE><C-R>=expand("%:p")<CR>
 " Type <Leader>wq to save file and close it (a lot faster than :wq<Enter>):
 nnoremap <Leader>wq :wq<CR>
 
+" Type <Leader>x to save file and close it (a lot faster than :x<Enter>):
+nnoremap <Leader>x :wq<CR>
+
+" Type <Leader>x! to save all files and close VIM (a lot faster than :waq!<Enter>):
+nnoremap <Leader>x! :waq!<CR>
+
+" Type <Leader>X to close current file without saving (a lot faster than :q!<Enter>):
+nnoremap <Leader>X :q!<CR>
+
+" Type <Leader>X! to close VIM without saving (a lot faster than :qa!<Enter>):
+nnoremap <Leader>X! :qa!<CR>
+
 " <Leader># Surround a word with #{ruby interpolation}
 map <Leader># ysiw#
 vmap <Leader># c#{<C-R>"}<ESC>

@@ -79,7 +79,6 @@ Shortcuts
 | `F10` | Quit without saving (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `ESC-ESC` | Quit and ask for save files or close current window/buffer (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `//` | No highlights search | **\[n v]** |
 | `CTRL-]` | Switch next tab (if not set `g:hardcore_mode`) | **\[n v]** |
 | `CTRL-[` | Switch prev tab (if not set `g:hardcore_mode`) | **\[n v]** |
 | `]` | Switch next buffer (if not set `g:hardcore_mode`) | **\[n v]** |
@@ -89,15 +88,17 @@ Shortcuts
 | `<tilde><tilde>` | Run VimShell (if set `g:use_vim_shell` and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards (if not set `g:hardcore_mode`) | **\[n]** |
 | `,?` | Show most plugin keybindings (if not set `g:hardcore_mode`) | **\[n]** |
-| `,hh` | Split window horizontaly (if not set `g:hardcore_mode`) | **\[n]** |
-| `,vv` | Split window verticaly (if not set `g:hardcore_mode`) | **\[n]** |
-| `,a` | Select all text in current buffer (if not set `g:hardcore_mode`) | **\[n]** |
+| `//` | No highlights search | **\[n v]** |
+| `\\` | Comment/Uncomment current line or selection | **\[n v]** |
 | `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrl_space`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrl_space`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
+| `,hh` | Split window horizontaly | **\[n]** |
+| `,vv` | Split window verticaly | **\[n]** |
+| `,a` | Select all text in current buffer | **\[n]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
 | `,<CR>` | Toggle show Space/Tab/EOL | **\[n]** |

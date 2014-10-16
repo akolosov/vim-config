@@ -110,9 +110,6 @@ if !exists('g:hardcore_mode')
 		vmap <S-Home>  <Home>
 	endif
 
-	nnoremap <silent> <Leader>vv <C-w>v
-	nnoremap <silent> <Leader>hh <C-w>s
-
 	map <C-z> :UndotreeToggle<CR>
 	imap <C-z> <Esc>:UndotreeToggle<CR>
 
@@ -137,9 +134,6 @@ if !exists('g:hardcore_mode')
 	nnoremap <Leader>gf :e <cfile><CR>
 	nnoremap <Leader>gfw :sp +e <cfile><CR>
 	nnoremap <Leader>gft :tabe <cfile><CR>
-
-	" ,a - select all text in buffer
-	noremap  <Leader>a    ggVG
 
 	" Alt-Up - upcase, Alt-Down - downcase
 	map <A-Up>   gUiw
@@ -205,7 +199,20 @@ nnoremap - <C-x>
 noremap H ^
 noremap L $
 
+" Switch off search highlights
 noremap <silent> // :nohlsearch<CR><Esc>
+
+" Comment/Uncomment current line or selection
+noremap <silent> \\ ,c<Space>
+
+" ,a - select all text in buffer
+noremap  <Leader>a    ggVG
+
+" Split window verticaly
+nnoremap <silent> <Leader>vv <C-w>v
+
+" Split window horizontaly
+nnoremap <silent> <Leader>hh <C-w>s
 
 " Ctrl-P - Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>

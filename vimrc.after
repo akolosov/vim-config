@@ -20,6 +20,9 @@ au InsertLeave * set nopaste
 
 if exists('g:use_autosave')
 	au FocusLost * silent! wa
+	set autowriteall
+else
+	set noautowriteall
 endif
 
 if has("gui_running")

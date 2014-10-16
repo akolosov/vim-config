@@ -61,8 +61,6 @@ if !exists('g:hardcore_mode')
 	map <C-g>   :TagbarToggle<CR>
 	imap <C-g>   <Esc>:TagbarToggle<CR>
 
-	noremap <silent> // :nohlsearch<CR><Esc>
-
 	" Ctrl-/ - Comment current line.
 	map <C-_> ,ci
 	imap <C-_> <ESC>,cii
@@ -143,7 +141,6 @@ if !exists('g:hardcore_mode')
 	" ,a - select all text in buffer
 	noremap  <Leader>a    ggVG
 
-
 	" Alt-Up - upcase, Alt-Down - downcase
 	map <A-Up>   gUiw
 	imap <A-Up>   <Esc>gUiw<Esc>i
@@ -176,9 +173,6 @@ endif
 " Repeat the last recorded macro
 map Q @@
 
-" remap U to <C-r> for easier redo
-nnoremap U <C-r>
-
 " Easy up and down on wrapped long lines
 nnoremap j gj
 nnoremap k gk
@@ -210,6 +204,8 @@ nnoremap - <C-x>
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
+
+noremap <silent> // :nohlsearch<CR><Esc>
 
 " Ctrl-P - Inserts the path of the currently edited file into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>

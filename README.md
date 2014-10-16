@@ -52,6 +52,8 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_copy_cut_paste_keys` - use Ctrl-C/V/X keys for Copy/Paste/Cut
 
+`g:use_autosave` - autosave all changed files when VIM lost focus, like Textmate
+
 
 Shortcuts
 =========

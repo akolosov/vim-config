@@ -18,6 +18,10 @@ au VimResized * exe "normal! \<c-w>="
 " Disable paste mode when leaving Insert Mode
 au InsertLeave * set nopaste
 
+if exists('g:use_autosave')
+	au FocusLost * silent! wa
+endif
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Anonymous\ Pro\ for\ Powerline\ 12

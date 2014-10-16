@@ -218,9 +218,11 @@ nnoremap <silent> <Leader>hh <C-w>s
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Insert semeoclon to EOL
-" then press space to add new line below
-nnoremap <Leader>; m"A;<Esc>`"
-nnoremap <Leader>;<Space> A;<Esc>
+" then press <Enter> to add new line below
+inoremap ;; <Esc>m`A;<Esc>``a
+inoremap ;;<CR> <Esc>A;<Esc>o
+nnoremap ;; m"A;<Esc>`"
+nnoremap ;;<CR> A;<Esc>o
 
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>

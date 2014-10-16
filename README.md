@@ -96,14 +96,14 @@ Shortcuts
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrl_space`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrl_space`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
+| `;;` | Append semicolon at EOL | **\[n]** |
+| `;;<CR>` | Append semicolon at EOL and add new line below | **\[n]** |
 | `,hh` | Split window horizontaly | **\[n]** |
 | `,vv` | Split window verticaly | **\[n]** |
 | `,a` | Select all text in current buffer | **\[n]** |
 | `,<Down>` | Insert new line after current line | **\[n]** |
 | `,<Up>` | Insert new line before current line | **\[n]** |
 | `,<CR>` | Toggle show Space/Tab/EOL | **\[n]** |
-| `,;` | Append semicolon at EOL | **\[n]** |
-| `,;<Space>` | Append ssemicolon at EOL and add new line below | **\[n]** |
 | `,=` | Insert new line with '=' after current line with the same length | **\[n]** |
 | `,-` | Insert new line with '-' after current line with the same length | **\[n]** |
 | `,w` | Save current file | **\[n]** |

@@ -200,10 +200,11 @@ noremap H ^
 noremap L $
 
 " Switch off search highlights
-noremap <silent> // :nohlsearch<CR><Esc>
+nmap <silent> // :nohlsearch<CR><Esc>
 
 " Comment/Uncomment current line or selection
-noremap <silent> \\ ,c<Space>
+map <silent> \\ ,c<Space>
+imap <silent> \\ <Esc>,c<Space>i
 
 " ,a - select all text in buffer
 noremap  <Leader>a    ggVG

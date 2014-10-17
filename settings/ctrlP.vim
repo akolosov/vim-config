@@ -22,23 +22,9 @@ let g:ctrlp_switch_buffer = 1
 nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
 nnoremap <silent> .. :CtrlPBuffer<cr>
 
-" Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
-" Open CtrlP starting from a particular path, making it much
-" more likely to find the correct thing first. mnemonic 'jump to [something]'
-map <Leader>ja :CtrlP app/assets<CR>
-map <Leader>jm :CtrlP app/models<CR>
-map <Leader>jc :CtrlP app/controllers<CR>
-map <Leader>jv :CtrlP app/views<CR>
-map <Leader>jh :CtrlP app/helpers<CR>
-map <Leader>jl :CtrlP lib<CR>
-map <Leader>jp :CtrlP public<CR>
-map <Leader>js :CtrlP spec<CR>
-map <Leader>jf :CtrlP fast_spec<CR>
-map <Leader>jd :CtrlP db<CR>
-map <Leader>jC :CtrlP config<CR>
-map <Leader>jV :CtrlP vendor<CR>
-map <Leader>jF :CtrlP factories<CR>
-map <Leader>jT :CtrlP test<CR>
+" Additional mapping for tags search
+nnoremap <silent> <Leader>g :CtrlPTag<cr>
+nnoremap <silent> `` :CtrlPTag<cr>
 
 let g:ctrlp_dont_split = 'NERD'
 

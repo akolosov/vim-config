@@ -23,8 +23,8 @@ nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
 nnoremap <silent> .. :CtrlPBuffer<cr>
 
 " Additional mapping for tags search
-nnoremap <silent> <Leader>g :CtrlPTag<cr>
-nnoremap <silent> `` :CtrlPTag<cr>
+nnoremap <silent> <Leader>* :CtrlPTag<cr>
+nnoremap <silent> ** :CtrlPTag<cr>
 
 let g:ctrlp_dont_split = 'NERD'
 

@@ -25,35 +25,35 @@ endfunction
 
 " Strip trailing whitespace
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 
 function! CloseWindowOrKillBuffer()
-	if &modified
-		echohl ErrorMsg
-		echomsg "Save before close!"
-		echohl NONE
-	else
-		if matchstr(expand("%"), 'NERD') != 'NERD'
-			let s:number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
-			let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+  if &modified
+    echohl ErrorMsg
+    echomsg "Save before close!"
+    echohl NONE
+  else
+    if matchstr(expand("%"), 'NERD') != 'NERD'
+      let s:number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+      let s:total_nr_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
 
-			if s:number_of_windows_to_this_buffer > 1
-				wincmd c
-			else
-				if s:total_nr_buffers == 1
-					bdelete
-				else
-					bprevious
-					bdelete #
-				endif
-			endif
-		endif
-	endif
+      if s:number_of_windows_to_this_buffer > 1
+        wincmd c
+      else
+        if s:total_nr_buffers == 1
+          bdelete
+        else
+          bprevious
+          bdelete #
+        endif
+      endif
+    endif
+  endif
 endfunction
 
 function! GetVisual()
@@ -69,9 +69,9 @@ function! GetVisual()
 endfunction
 
 function! EnsureExists(path)
-	if !isdirectory(expand(a:path))
-		call mkdir(expand(a:path))
-	endif
+  if !isdirectory(expand(a:path))
+    call mkdir(expand(a:path))
+  endif
 endfunction
 
 function! GetRunningOS()
@@ -81,7 +81,7 @@ function! GetRunningOS()
   if has("unix")
     if system('uname')=~'Darwin'
       return "mac"
-		else
+    else
       return "linux"
     endif
   endif

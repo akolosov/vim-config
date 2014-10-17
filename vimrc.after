@@ -18,6 +18,11 @@ au VimResized * exe "normal! \<c-w>="
 " Disable paste mode when leaving Insert Mode
 au InsertLeave * set nopaste
 
+au BufWritePost,FileWritePost *
+      \ if filereadable('tags') |
+      \   call system('ctags -R -a '.expand('%')) |
+			\ endif
+
 if exists('g:use_autosave')
 	au FocusLost * silent! wa
 	set autowriteall

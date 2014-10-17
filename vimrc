@@ -90,6 +90,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set wildignore+=vendor/rails/**
 	set wildignore+=vendor/cache/**
 	set wildignore+=*.gem
+	set wildignore+=tags
 	set wildignore+=log/**
 	set wildignore+=tmp/**
 	set wildignore+=*.png,*.jpg,*.gif

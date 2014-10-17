@@ -99,7 +99,6 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set wildignore+=*.jar
 	set wildignore+=*.pyc
 	set wildignore+=*.stats
-	"
 
 	" ================ Scrolling ========================
 
@@ -133,8 +132,10 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 
 	if exists('g:use_vim_shell')
 		set noautochdir
+		set tags=./tags;
 	else
 		set autochdir
+		set tags=tags;
 	endif
 
 	set noshowmode

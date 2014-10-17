@@ -43,3 +43,5 @@ map <Leader>jT :CtrlP test<CR>
 let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'
+
+let g:ctrlp_extensions = ['tags', 'changes', 'undo']

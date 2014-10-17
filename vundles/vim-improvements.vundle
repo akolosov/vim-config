@@ -25,7 +25,6 @@ Bundle "nvie/vim-togglemouse"
 Bundle "scrooloose/nerdcommenter"
 Bundle "29decibel/vim-stringify"
 Bundle "jpalardy/vim-slime"
-Bundle "xolox/vim-shell"
 
 if exists("g:use_vim_shell")
 	Bundle "Shougo/vimproc.vim"

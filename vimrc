@@ -135,7 +135,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 		set tags=./tags;
 	else
 		set autochdir
-		set tags=tags;
+		set tags=.git/tags;
 	endif
 
 	set noshowmode

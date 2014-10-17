@@ -8,3 +8,4 @@ let g:easytags_syntax_keyword = 'auto'
 let g:easytags_dynamic_files = 2
 let g:easytags_autorecurse = 1
 let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:easytags_python_enabled = 0

@@ -10,9 +10,6 @@ if exists("g:use_ctrl_space")
 	Bundle "szw/vim-ctrlspace"
 else
 	Bundle "kien/ctrlp.vim"
-	Bundle "tacahiroy/ctrlp-funky"
-	Bundle "iurifq/ctrlp-rails.vim"
-	Bundle "pielgrzym/ctrlp-sessions"
 endif
 
 if !exists("g:dont_use_nerd_tree")

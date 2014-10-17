@@ -43,11 +43,3 @@ map <Leader>jT :CtrlP test<CR>
 let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'
-
-let g:ctrlp_extensions = ['funky', 'rails', 'sessions']
-
-if !exists('~/.vim/tmp/sessions')
-  silent !mkdir ~/.vim/tmp/sessions > /dev/null 2>&1
-endif
-
-let g:ctrlp_session_dir='~/.vim/tmp/sessions'

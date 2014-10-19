@@ -135,7 +135,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 		set noautochdir
 		set tags=./tags;
 	else
-		set autochdir
+		set noautochdir
 		set tags=tags;
 	endif
 

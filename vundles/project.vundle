@@ -2,7 +2,7 @@ Bundle "xolox/vim-misc"
 Bundle "xolox/vim-session"
 Bundle "majutsushi/tagbar.git"
 
-if exists("g:dont_show_nerd_tree")
+if exists("g:dont_use_nerd_tree") || exists("g:dont_show_nerd_tree")
 	Bundle "mhinz/vim-startify"
 end
 

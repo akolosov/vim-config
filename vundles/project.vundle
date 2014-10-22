@@ -15,6 +15,7 @@ else
 	Bundle "fisadev/vim-ctrlp-cmdpalette"
 	Bundle "ivalkeen/vim-ctrlp-tjump"
 	Bundle "mattn/ctrlp-mark"
+	Bundle "ompugao/ctrlp-history"
 endif
 
 if exists("g:use_nerd_tree")

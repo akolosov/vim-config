@@ -22,16 +22,24 @@ let g:ctrlp_switch_buffer = 1
 nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
 nnoremap <silent> .. :CtrlPBuffer<cr>
 
-" Additional mapping for tags search
-nnoremap <silent> <Leader>* :CtrlPTag<cr>
-nnoremap <silent> ** :CtrlPTag<cr>
-
 nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
 vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
 
 nnoremap <silent> <C-p> :CtrlPMenu<CR>
 vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
 inoremap <silent> <C-p> <Esc>:CtrlPMenu<CR>
+
+nnoremap <silent> <C-p><C-t> :CtrlPTag<CR>
+vnoremap <silent> <C-p><C-t> <C-U>:CtrlPTag<CR>
+inoremap <silent> <C-p><C-t> <Esc>:CtrlPTag<CR>
+
+nnoremap <silent> <C-p><C-y> :CtrlPYankring<CR>
+vnoremap <silent> <C-p><C-y> <C-U>:CtrlPYankring<CR>
+inoremap <silent> <C-p><C-y> <Esc>:CtrlPYankring<CR>
+
+nnoremap <silent> <C-p><C-z> :CtrlPUndo<CR>
+vnoremap <silent> <C-p><C-z> <C-U>:CtrlPUndo<CR>
+inoremap <silent> <C-p><C-z> <Esc>:CtrlPUndo<CR>
 
 let g:ctrlp_dont_split = 'NERD'
 

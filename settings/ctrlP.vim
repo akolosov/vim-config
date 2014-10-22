@@ -26,8 +26,13 @@ nnoremap <silent> .. :CtrlPBuffer<cr>
 nnoremap <silent> <Leader>* :CtrlPTag<cr>
 nnoremap <silent> ** :CtrlPTag<cr>
 
+nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
+vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
+
+noremap <silent> <C-p> :CtrlPMenu<CR>
+
 let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'
 
-let g:ctrlp_extensions = ['tags', 'changes', 'undo']
+let g:ctrlp_extensions = ['tags', 'changes', 'undo', 'tjump', 'modified', 'cmdpalette', 'yankring', 'quickfix', 'menu', 'funky']

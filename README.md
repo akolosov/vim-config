@@ -180,10 +180,3 @@ Shortcuts
 | `,t,` | Align on commas | **\[n v]** |
 | `,t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
 | `,tsp` | Align on whitespace | **\[n v]** |
-| `mm` | Toggle bookmark | **\[n]** |
-| `mi` | Annotate bookmark | **\[n]** |
-| `ma` | Show all bookmarks | **\[n]** |
-| `mj` | Go to next bookmark | **\[n]** |
-| `mk` | Go to prev bookmark | **\[n]** |
-| `mc` | Clear bookmarks | **\[n]** |
-| `mx` | Clear all bookmarks | **\[n]** |

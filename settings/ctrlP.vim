@@ -29,7 +29,9 @@ nnoremap <silent> ** :CtrlPTag<cr>
 nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
 vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
 
-noremap <silent> <C-p> :CtrlPMenu<CR>
+nnoremap <silent> <C-p> :CtrlPMenu<CR>
+vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+inoremap <silent> <C-p> <Esc>:CtrlPMenu<CR>
 
 let g:ctrlp_dont_split = 'NERD'
 

@@ -49,6 +49,10 @@ nnoremap <silent><C-p><C-s> :CtrlPSearchHistory<CR>
 vnoremap <silent><C-p><C-s> <C-U>:CtrlPSearchHistory<CR>
 inoremap <silent><C-p><C-s> <Esc>:CtrlPSearchHistory<CR>
 
+nnoremap <silent><C-p><C-m> :CtrlPMark<CR>
+vnoremap <silent><C-p><C-m> <C-U>:CtrlPMark<CR>
+inoremap <silent><C-p><C-m> <Esc>:CtrlPMark<CR>
+
 let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'

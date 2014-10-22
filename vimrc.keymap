@@ -45,7 +45,7 @@ if !exists('g:hardcore_mode')
 	imap <F10> <ESC>:qa!<CR>
 	map <F10> :qa!<CR>
 
-	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (exists("g:dont_use_nerd_tree"))
+	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:use_nerd_tree"))
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	else
@@ -112,9 +112,6 @@ if !exists('g:hardcore_mode')
 
 	map <C-z> :UndotreeToggle<CR>
 	imap <C-z> <Esc>:UndotreeToggle<CR>
-
-	map <C-\> :YRShow<CR>
-	imap <C-\> <Esc>:YRShow<CR>
 
 	map <C-t> :tabnew<CR>
 	imap <C-t> <Esc>:tabnew<CR>
@@ -434,7 +431,7 @@ nnoremap <Leader>gr  :Gremove<CR>
 " Current line or selection to strings
 map <silent> <Leader>st :call Stringify()<CR>
 
-if !exists('g:dont_use_nerd_tree')
+if exists('g:use_nerd_tree')
 	map <silent> <Leader>nd :NERDTreeToggle<CR>
 
 	" Show current file in NERDTree

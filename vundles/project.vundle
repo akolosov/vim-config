@@ -10,14 +10,13 @@ if exists("g:use_ctrl_space")
 	Bundle "szw/vim-ctrlspace"
 else
 	Bundle "kien/ctrlp.vim"
-	Bundle "tacahiroy/ctrlp-funky"
 	Bundle "sgur/ctrlp-extensions.vim"
 	Bundle "jasoncodes/ctrlp-modified.vim"
 	Bundle "fisadev/vim-ctrlp-cmdpalette"
 	Bundle "ivalkeen/vim-ctrlp-tjump"
 endif
 
-if !exists("g:dont_use_nerd_tree")
+if exists("g:use_nerd_tree")
 	Bundle "scrooloose/nerdtree.git"
 	Bundle "jistr/vim-nerdtree-tabs.git"
 endif

@@ -24,13 +24,13 @@ Variables
 
 All variables set in `~/.vimrc.before.local` file.
 
-`g:hardcore_mode` - use VIM Hardcore mode (unset `g:use_arrow_keys`, `g:use_copy_cut_paste_keys`, `g:use_ctrl_space`, `g:use_vim_shell` and many keymaps)
+`g:hardcore_mode` - allow to use VIM Hardcore mode (unset `g:use_arrow_keys`, `g:use_copy_cut_paste_keys`, `g:use_ctrl_space`, `g:use_vim_shell` and many keymaps)
 
 `g:hardcore_mode_with_arrow_keys` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
 
-`g:use_lightline` - Use LightLine instead AirLine
+`g:use_lightline` - allow to use LightLine instead AirLine
 
-`g:use_powerline_fonts` - Use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
+`g:use_powerline_fonts` - allow to use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
 
 `g:color_scheme` - Your favorite color scheme name (default: hybrid)
 
@@ -38,21 +38,21 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
 
-`g:use_relativenumber` - Use relative line numbers
+`g:use_relativenumber` - allow to use relative line numbers
 
-`g:use_ctrl_space` - use CtrlSpace plugin instead CtrlP
+`g:use_ctrl_space` - allow to use CtrlSpace plugin instead CtrlP
 
-`g:use_vim_shell` - use VimShell plugin
+`g:use_vim_shell` - allow to use VimShell plugin
 
-`g:dont_use_nerd_tree` - do not use NERDTree plugin
+`g:use_nerd_tree` - allow to use NERDTree plugin
 
 `g:dont_show_nerd_tree` - do not show NERDTree on startup
 
-`g:use_arrow_keys` - use arrow keys. Only hjkl! Only hardcore!
+`g:use_arrow_keys` - allow to use arrow keys. Only hjkl! Only hardcore!
 
-`g:use_copy_cut_paste_keys` - use Ctrl-C/V/X keys for Copy/Paste/Cut
+`g:use_copy_cut_paste_keys` - allow to use Ctrl-C/V/X keys for Copy/Paste/Cut
 
-`g:use_autosave` - autosave all changes, like Textmate
+`g:use_autosave` - allow to autosave all changes, like Textmate
 
 
 Shortcuts
@@ -60,6 +60,7 @@ Shortcuts
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
+| `CTRL-P` | Open CtrlP menu (if not set `g:use_ctrl_space`) | **\[n i v]** |
 | `CTRL-T` | Create new tab (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-G` | Show/Hide TagBar (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -70,7 +71,6 @@ Shortcuts
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-\` or `CTRL-4` | Show/Hide YankRing (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrl_space` and not set `g:hardcore_mode`) | **\[n]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -118,8 +118,8 @@ Shortcuts
 | `,X!` | Close VIM without saving files | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,nd` | Show/Hide NERDTree (if not set `g:dont_use_nerd_tree`)  | **\[n i v]** |
-| `,nf` | Show current file in NERDTree (if not set `g:dont_use_nerd_tree`) | **\[n]** |
+| `,nd` | Show/Hide NERDTree (if set `g:use_nerd_tree`)  | **\[n i v]** |
+| `,nf` | Show current file in NERDTree (if not set `g:use_nerd_tree`) | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |
 | `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |

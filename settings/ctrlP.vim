@@ -37,4 +37,4 @@ let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'
 
-let g:ctrlp_extensions = ['tags', 'changes', 'undo', 'tjump', 'modified', 'cmdpalette', 'yankring', 'quickfix', 'menu', 'funky']
+let g:ctrlp_extensions = ['tags', 'changes', 'undo', 'tjump', 'modified', 'cmdpalette', 'yankring', 'quickfix', 'menu']

@@ -149,6 +149,13 @@ if !exists('g:hardcore_mode')
 
 	" Show most plugin keybindings
 	nnoremap <silent><Leader>? :map <Leader><CR>
+
+	if !exists('g:use_ctrl_space')
+		nnoremap <silent> <C-p> :CtrlPMenu<CR>
+		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+		inoremap <silent> <C-p> <Esc>:CtrlPMenu<CR>
+	endif
+
 else
 	if (&readonly || argc())
 		noremap <silent> <Esc><Esc> :qa<CR>
@@ -159,6 +166,19 @@ else
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
+endif
+
+if !exists('g:use_ctrl_space')
+	nnoremap <silent> .. :CtrlPBuffer<cr>
+	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
+	inoremap <silent> .. <Esc>:CtrlPBuffer<cr>
+
+	nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
+	vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
+
+	nnoremap <silent> `` :CtrlPMenu<CR>
+	vnoremap <silent> `` <C-U>:CtrlPMenu<CR>
+	inoremap <silent> `` <Esc>:CtrlPMenu<CR>
 endif
 
 " Repeat the last recorded macro

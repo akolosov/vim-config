@@ -18,43 +18,8 @@ let g:ctrlp_by_filename = 1
 " several Tab workspaces and want to open two windows into the same file.
 let g:ctrlp_switch_buffer = 1
 
-" Additional mapping for buffer search
-nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
-nnoremap <silent> .. :CtrlPBuffer<cr>
-
-nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
-vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
-
-nnoremap <silent> <C-p> :CtrlPMenu<CR>
-vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-inoremap <silent> <C-p> <Esc>:CtrlPMenu<CR>
-
-nnoremap <silent> <C-p><C-t> :CtrlPTag<CR>
-vnoremap <silent> <C-p><C-t> <C-U>:CtrlPTag<CR>
-inoremap <silent> <C-p><C-t> <Esc>:CtrlPTag<CR>
-
-nnoremap <silent> <C-p><C-y> :CtrlPYankring<CR>
-vnoremap <silent> <C-p><C-y> <C-U>:CtrlPYankring<CR>
-inoremap <silent> <C-p><C-y> <Esc>:CtrlPYankring<CR>
-
-nnoremap <silent> <C-p><C-z> :CtrlPUndo<CR>
-vnoremap <silent> <C-p><C-z> <C-U>:CtrlPUndo<CR>
-inoremap <silent> <C-p><C-z> <Esc>:CtrlPUndo<CR>
-
-nnoremap <silent><C-p><C-h> :CtrlPCmdHistory<CR>
-vnoremap <silent><C-p><C-h> <C-U>:CtrlPCmdHistory<CR>
-inoremap <silent><C-p><C-h> <Esc>:CtrlPCmdHistory<CR>
-
-nnoremap <silent><C-p><C-s> :CtrlPSearchHistory<CR>
-vnoremap <silent><C-p><C-s> <C-U>:CtrlPSearchHistory<CR>
-inoremap <silent><C-p><C-s> <Esc>:CtrlPSearchHistory<CR>
-
-nnoremap <silent><C-p><C-m> :CtrlPMark<CR>
-vnoremap <silent><C-p><C-m> <C-U>:CtrlPMark<CR>
-inoremap <silent><C-p><C-m> <Esc>:CtrlPMark<CR>
-
 let g:ctrlp_dont_split = 'NERD'
 
 let g:ctrlp_map = '<Leader>,'
 
-let g:ctrlp_extensions = ['tags', 'changes', 'mark', 'undo', 'tjump', 'modified', 'cmdpalette', 'yankring', 'quickfix', 'menu']
+let g:ctrlp_extensions = ['tags', 'changes', 'mark', 'undo', 'tjump', 'modified', 'yankring', 'quickfix', 'menu']

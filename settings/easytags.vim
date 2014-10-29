@@ -1,6 +1,9 @@
-if (!argc() || isdirectory(argv(0))) 
+if !argc()
   let g:easytags_events = ['BufWritePost']
   let g:easytags_async = 1
+else
+  let g:easytags_events = []
+  let g:easytags_async = 0
 endif
 
 let g:easytags_file = '~/.vim/tmp/tags'

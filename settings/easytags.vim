@@ -1,6 +1,9 @@
-let g:easytags_async = 1
+if (!argc() || isdirectory(argv(0))) 
+  let g:easytags_events = ['BufWritePost']
+  let g:easytags_async = 1
+endif
+
 let g:easytags_file = '~/.vim/tmp/tags'
-let g:easytags_events = ['BufWritePost']
 let g:easytags_auto_highlight = 0
 let g:easytags_always_enabled = 0
 let g:easytags_on_cursorhold = 0

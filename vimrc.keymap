@@ -161,6 +161,7 @@ else
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	end
+
 	" Easy window navigation
 	map <C-h> <C-w>h
 	map <C-j> <C-w>j
@@ -197,6 +198,12 @@ if !exists('g:use_arrow_keys') && !exists('g:hardcore_mode_with_arrow_keys')
 	inoremap <down> <nop>
 	inoremap <left> <nop>
 	inoremap <right> <nop>
+
+	" When in insert mode, you can move the cursor by using CTRL+h, CRTL+j, CTRL+k or CTRL+l
+	inoremap <C-h> <C-o>h
+	inoremap <C-j> <C-o>j
+	inoremap <C-k> <C-o>k
+	inoremap <C-l> <C-o>l
 else
 	nnoremap <Down> gj
 	nnoremap <Up> gk
@@ -216,6 +223,9 @@ nnoremap - <C-x>
 noremap H ^
 noremap L $
 
+" Place your cursor on the word you want to search for, start search by typing / and hit Ctrl+Space to insert the word.
+cmap <Nul> <C-R><C-W>
+ 
 " Switch off search highlights
 nmap <silent> // :nohlsearch<CR><Esc>
 
@@ -350,6 +360,9 @@ noremap <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
 " Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+" Go to last edited file
+noremap <Leader>le <C-^>
+
 " <Leader>qc to toggle quickfix window (where you have stuff like Ag)
 " <Leader>qo to open it back up (rare)
 nmap <silent> <Leader>qc :cclose<CR>
@@ -369,6 +382,11 @@ vnoremap > >gv
 vmap <Tab> >
 vmap <S-Tab> <
 imap <S-Tab> <Esc><<i
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 
 " Switch between windows
 nnoremap <silent> <Tab> :wincmd w<CR>

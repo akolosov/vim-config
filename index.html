@@ -29,36 +29,35 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a name="vim-config" class="anchor" href="#vim-config"><span class="octicon octicon-link"></span></a>vim-config</h1>
+<a id="vim-config" class="anchor" href="#vim-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>vim-config</h1>
 
 <p>To install just run in terminal:</p>
 
-<div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - <span class="p">|</span> sh
-</pre></div>
+<div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - <span class="pl-k">|</span> sh</pre></div>
 
 <p>... wait until successfully installed and have fun with VIM!</p>
 
 <p>Inspired by <a href="http://vim.spf13.com/">spf13-vim</a> and <a href="http://skwp.github.io/dotfiles/">YADR</a> - thanks guys!</p>
 
 <h1>
-<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h1>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h1>
 
 <p><img src="https://cloud.githubusercontent.com/assets/158733/4518806/230a1596-4c9f-11e4-9069-5aabb536aff2.png" alt="1">
 <img src="https://cloud.githubusercontent.com/assets/158733/4518807/23103d36-4c9f-11e4-8f88-751d95bb1673.png" alt="2">
 <img src="https://cloud.githubusercontent.com/assets/158733/4518805/23085a1c-4c9f-11e4-9e98-95d6cc84bed6.png" alt="3"></p>
 
 <h1>
-<a name="variables" class="anchor" href="#variables"><span class="octicon octicon-link"></span></a>Variables</h1>
+<a id="variables" class="anchor" href="#variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables</h1>
 
 <p>All variables set in <code>~/.vimrc.before.local</code> file.</p>
 
-<p><code>g:hardcore_mode</code> - use VIM Hardcore mode (unset <code>g:use_arrow_keys</code>, <code>g:use_copy_cut_paste_keys</code>, <code>g:use_ctrl_space</code>, <code>g:use_vim_shell</code> and many keymaps)</p>
+<p><code>g:hardcore_mode</code> - allow to use VIM Hardcore mode (unset <code>g:use_arrow_keys</code>, <code>g:use_copy_cut_paste_keys</code>, <code>g:use_ctrl_space</code>, <code>g:use_vim_shell</code> and many keymaps)</p>
 
 <p><code>g:hardcore_mode_with_arrow_keys</code> - the same as <code>g:hardcore_mode</code>, but arrow keys for navigation is enabled</p>
 
-<p><code>g:use_lightline</code> - Use LightLine instead AirLine</p>
+<p><code>g:use_lightline</code> - allow to use LightLine instead AirLine</p>
 
-<p><code>g:use_powerline_fonts</code> - Use PowerLine fonts (<a href="https://github.com/Lokaltog/powerline-fonts">Link</a>)</p>
+<p><code>g:use_powerline_fonts</code> - allow to use PowerLine fonts (<a href="https://github.com/Lokaltog/powerline-fonts">Link</a>)</p>
 
 <p><code>g:color_scheme</code> - Your favorite color scheme name (default: hybrid)</p>
 
@@ -66,22 +65,24 @@
 
 <p><code>g:lightline_theme</code> - Your favorite LightLine theme (default: hybrid)</p>
 
-<p><code>g:use_relativenumber</code> - Use relative line numbers</p>
+<p><code>g:use_relativenumber</code> - allow to use relative line numbers</p>
 
-<p><code>g:use_ctrl_space</code> - use CtrlSpace plugin instead CtrlP</p>
+<p><code>g:use_ctrl_space</code> - allow to use CtrlSpace plugin instead CtrlP</p>
 
-<p><code>g:use_vim_shell</code> - use VimShell plugin</p>
+<p><code>g:use_vim_shell</code> - allow to use VimShell plugin</p>
 
-<p><code>g:dont_use_nerd_tree</code> - do not use NERDTree plugin</p>
+<p><code>g:use_nerd_tree</code> - allow to use NERDTree plugin</p>
 
 <p><code>g:dont_show_nerd_tree</code> - do not show NERDTree on startup</p>
 
-<p><code>g:use_arrow_keys</code> - use arrow keys. Only hjkl! Only hardcore!</p>
+<p><code>g:use_arrow_keys</code> - allow to use arrow keys. Only hjkl! Only hardcore!</p>
 
-<p><code>g:use_copy_cut_paste_keys</code> - use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
+<p><code>g:use_copy_cut_paste_keys</code> - allow to use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
+
+<p><code>g:use_autosave</code> - allow to autosave all changes, like Textmate</p>
 
 <h1>
-<a name="shortcuts" class="anchor" href="#shortcuts"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
+<a id="shortcuts" class="anchor" href="#shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
 
 <table>
 <thead>
@@ -92,6 +93,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="center"><code>CTRL-P</code></td>
+<td>Open CtrlP menu (if not set <code>g:use_ctrl_space</code>)</td>
+<td align="center"><strong>[n i v]</strong></td>
+</tr>
 <tr>
 <td align="center"><code>CTRL-T</code></td>
 <td>Create new tab (if not set <code>g:hardcore_mode</code>)</td>
@@ -148,13 +154,6 @@
 <code>CTRL-/</code> or <code>CTRL-7</code>
 </td>
 <td>Comment/Uncomment block (if not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n i v]</strong></td>
-</tr>
-<tr>
-<td align="center">
-<code>CTRL-\</code> or <code>CTRL-4</code>
-</td>
-<td>Show/Hide YankRing (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -244,12 +243,12 @@
 </tr>
 <tr>
 <td align="center"><code>'</code></td>
-<td>Toggle single quotes to double quotes and backwards (if not set <code>g:hardcore_mode</code>)</td>
+<td>Toggle single quotes to double quotes and backwards</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,?</code></td>
-<td>Show most plugin keybindings (if not set <code>g:hardcore_mode</code>)</td>
+<td>Show most plugin keybindings</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -264,17 +263,17 @@
 </tr>
 <tr>
 <td align="center"><code>,gf</code></td>
-<td>Open file with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td>Open file with filename under cursor, create new if not exists</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,gfw</code></td>
-<td>Open file in windows with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td>Open file in windows with filename under cursor, create new if not exists</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,gft</code></td>
-<td>Open file in tab with filename under cursor, create new if not exists (if not set <code>g:hardcore_mode</code>)</td>
+<td>Open file in tab with filename under cursor, create new if not exists</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -400,12 +399,12 @@
 </tr>
 <tr>
 <td align="center"><code>,nd</code></td>
-<td>Show/Hide NERDTree (if not set <code>g:dont_use_nerd_tree</code>)</td>
+<td>Show/Hide NERDTree (if set <code>g:use_nerd_tree</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,nf</code></td>
-<td>Show current file in NERDTree (if not set <code>g:dont_use_nerd_tree</code>)</td>
+<td>Show current file in NERDTree (if not set <code>g:use_nerd_tree</code>)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -713,41 +712,6 @@
 <td align="center"><code>,tsp</code></td>
 <td>Align on whitespace</td>
 <td align="center"><strong>[n v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mm</code></td>
-<td>Toggle bookmark</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mi</code></td>
-<td>Annotate bookmark</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>ma</code></td>
-<td>Show all bookmarks</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mj</code></td>
-<td>Go to next bookmark</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mk</code></td>
-<td>Go to prev bookmark</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mc</code></td>
-<td>Clear bookmarks</td>
-<td align="center"><strong>[n]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>mx</code></td>
-<td>Clear all bookmarks</td>
-<td align="center"><strong>[n]</strong></td>
 </tr>
 </tbody>
 </table>

@@ -120,17 +120,9 @@ if !exists('g:hardcore_mode')
 		map ~~ :VimShell<CR>
 	endif
 
-	noremap <silent> ' :<C-U>call ToggleQuote()<CR>
-
 	" Space for open/close folds if exist
 	nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 	vnoremap <Space> zf
-
-	" Make gf (go to file)
-	" Create the file if not existent
-	nnoremap <Leader>gf :e <cfile><CR>
-	nnoremap <Leader>gfw :sp +e <cfile><CR>
-	nnoremap <Leader>gft :tabe <cfile><CR>
 
 	" Alt-Up - upcase, Alt-Down - downcase
 	map <A-Up>   gUiw
@@ -146,9 +138,6 @@ if !exists('g:hardcore_mode')
 	nnoremap <silent> [ :bp<CR>
 	vnoremap <silent> ] :bn<CR>
 	vnoremap <silent> [ :bp<CR>
-
-	" Show most plugin keybindings
-	nnoremap <silent><Leader>? :map <Leader><CR>
 
 	if !exists('g:use_ctrl_space')
 		nnoremap <silent> <C-p> :CtrlPMenu<CR>
@@ -251,6 +240,17 @@ inoremap ;; <Esc>m`A;<Esc>``a
 inoremap ;;<CR> <Esc>A;<Esc>o
 nnoremap ;; m"A;<Esc>`"
 nnoremap ;;<CR> A;<Esc>o
+
+" Show most plugin keybindings
+nnoremap <silent><Leader>? :map <Leader><CR>
+
+noremap <silent> ' :<C-U>call ToggleQuote()<CR>
+
+" Make gf (go to file)
+" Create the file if not existent
+nnoremap <Leader>gf :e <cfile><CR>
+nnoremap <Leader>gfw :sp +e <cfile><CR>
+nnoremap <Leader>gft :tabe <cfile><CR>
 
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>

@@ -88,13 +88,13 @@ Shortcuts
 | `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `<tilde><tilde>` | Run VimShell (if set `g:use_vim_shell` and not set `g:hardcore_mode`) | **\[n v]** |
-| `'` | Toggle single quotes to double quotes and backwards (if not set `g:hardcore_mode`) | **\[n]** |
-| `,?` | Show most plugin keybindings (if not set `g:hardcore_mode`) | **\[n]** |
+| `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
+| `,?` | Show most plugin keybindings | **\[n]** |
 | `//` | No highlights search | **\[n v]** |
 | `\\` | Comment/Uncomment current line or selection | **\[n v]** |
-| `,gf` | Open file with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
-| `,gfw` | Open file in windows with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
-| `,gft` | Open file in tab with filename under cursor, create new if not exists (if not set `g:hardcore_mode`) | **\[n]** |
+| `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
+| `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
+| `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
 | `,,` or `,o` | Open CtrlP (if not set `g:use_ctrl_space`) | **\[n]** |
 | `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrl_space`) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |

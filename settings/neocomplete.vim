@@ -34,6 +34,9 @@ let g:neocomplete#enable_cursor_hold_i = 1
 let g:neocomplete#enable_insert_char_pre = 1
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+noremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-Up>  neocomplete#close_popup()
+inoremap <expr><C-Left>  neocomplete#cancel_popup()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -44,7 +47,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 if !exists('~/.vim/tmp/neocomplete')
-	silent !mkdir ~/.vim/tmp/neocomplete > /dev/null 2>&1
+  silent !mkdir ~/.vim/tmp/neocomplete > /dev/null 2>&1
 endif
 
 let g:neocomplete#data_directory='~/.vim/tmp/neocomplete'

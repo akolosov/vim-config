@@ -2,6 +2,7 @@ tags
 *~
 *.swp
 .VimballRecord
+.netrwhist
 view
 tmp/*
 bundle/*

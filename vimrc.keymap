@@ -210,6 +210,9 @@ nnoremap - <C-x>
 noremap H ^
 noremap L $
 
+" Replace current line with yanked line
+nmap rr ^Pjdd
+
 " Place your cursor on the word you want to search for, start search by typing / and hit Ctrl+Space to insert the word.
 cmap <Nul> <C-R><C-W>
  

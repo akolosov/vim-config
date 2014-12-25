@@ -46,7 +46,7 @@ autocmd FileType coffeescript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType go setlocal omnifunc=gocomplete#Complete
+autocmd FileType go setlocal omnifunc=go#complete#Complete
 
 if !exists('~/.vim/tmp/neocomplete')
   silent !mkdir ~/.vim/tmp/neocomplete > /dev/null 2>&1

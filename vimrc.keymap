@@ -10,31 +10,31 @@ map q: :q
 
 if !exists('g:hardcore_mode')
 	" Save file
-	imap <F2>   <Esc>:w<CR>i
+	imap <F2>   <C-o>:w<CR>
 	vmap <F2>   :<C-U>w<CR>v
 	nmap  <F2>   :w<CR>
 
 	" Save all files
-	imap <C-F2> <Esc>:wa<CR>i
+	imap <C-F2> <C-o>:wa<CR>
 	vmap <C-F2> :<C-U>wa<CR>v
 	nmap  <C-F2> :wa<CR>
 
 	" Save file as...
-	imap <S-F2> <Esc>:w<SPACE><C-R>=expand("%:p")<CR>
+	imap <S-F2> <C-o>:w<SPACE><C-R>=expand("%:p")<CR>
 	vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
 	nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
 
 	" Delete line
 	map  <C-y>  dd
-	imap <C-y>  <ESC>ddi
+	imap <C-y>  <C-o>dd
 
 	" Delete line to EOL
 	map  <C-l>  d$
-	imap <C-l>  <ESC><Right>d$i<Right>
+	imap <C-l>  <C-o><Right>d$<Right>
 
 	" Delete line to BOL
 	map  <C-h>  d^
-	imap <C-h>  <ESC>d^i
+	imap <C-h>  <C-o>d^
 
 	" Toggle readonly mode
 	map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
@@ -55,15 +55,15 @@ if !exists('g:hardcore_mode')
 
 	noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
 
-	imap <S-F10> <ESC>:wqa!<CR>
+	imap <S-F10> <C-o>:wqa!<CR>
 	map <S-F10> :wqa!<CR>
 
 	map <C-g>   :TagbarToggle<CR>
-	imap <C-g>   <Esc>:TagbarToggle<CR>
+	imap <C-g>   <C-o>:TagbarToggle<CR>
 
 	" Ctrl-/ - Comment current line.
 	map <C-_> ,ci
-	imap <C-_> <ESC>,cii
+	imap <C-_> <C-o>,cii
 
 	if exists("g:use_copy_cut_paste_keys")
 		" CTRL-X and SHIFT-Del are Cut
@@ -109,10 +109,10 @@ if !exists('g:hardcore_mode')
 	endif
 
 	map <C-z> :UndotreeToggle<CR>
-	imap <C-z> <Esc>:UndotreeToggle<CR>
+	imap <C-z> <C-o>:UndotreeToggle<CR>
 
 	map <C-t> :tabnew<CR>
-	imap <C-t> <Esc>:tabnew<CR>
+	imap <C-t> <C-o>:tabnew<CR>
 
 	if exists('g:use_VimShell')
 		map ~~ :VimShell<CR>
@@ -124,9 +124,9 @@ if !exists('g:hardcore_mode')
 
 	" Alt-Up - upcase, Alt-Down - downcase
 	map <A-Up>   gUiw
-	imap <A-Up>   <Esc>gUiw<Esc>i
+	imap <A-Up>   <C-o>gUiw
 	map <A-Down> guiw
-	imap <A-Down> <Esc>guiw<Esc>i
+	imap <A-Down> <C-o>guiw
 
 	nnoremap <silent> <C-]>  gt
 	nnoremap <silent> <C-[>  gT
@@ -140,7 +140,7 @@ if !exists('g:hardcore_mode')
 	if !exists('g:use_ctrl_space')
 		nnoremap <silent> <C-p> :CtrlPMenu<CR>
 		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-		inoremap <silent> <C-p> <Esc>:CtrlPMenu<CR>
+		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
 	endif
 
 else
@@ -159,14 +159,14 @@ endif
 if !exists('g:use_ctrl_space')
 	nnoremap <silent> .. :CtrlPBuffer<cr>
 	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
-	inoremap <silent> .. <Esc>:CtrlPBuffer<cr>
+	inoremap <silent> .. <C-o>:CtrlPBuffer<cr>
 
 	nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
 	vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
 
 	nnoremap <silent> `` :CtrlPMenu<CR>
 	vnoremap <silent> `` <C-U>:CtrlPMenu<CR>
-	inoremap <silent> `` <Esc>:CtrlPMenu<CR>
+	inoremap <silent> `` <C-o>:CtrlPMenu<CR>
 endif
 
 " Repeat the last recorded macro
@@ -221,7 +221,7 @@ nmap <silent> // :nohlsearch<CR><Esc>
 
 " Comment/Uncomment current line or selection
 map <silent> \\ ,c<Space>
-imap <silent> \\ <Esc>,c<Space>i
+imap <silent> \\ <C-o>,c<Space>
 
 " ,a - select all text in buffer
 noremap  <Leader>a    ggVG
@@ -237,8 +237,8 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Insert semeoclon to EOL
 " then press <Enter> to add new line below
-inoremap ;; <Esc>m`A;<Esc>``a
-inoremap ;;<CR> <Esc>A;<Esc>o
+inoremap ;; <C-o>m`A;<C-o>``a
+inoremap ;;<CR> <C-o>A;<C-o>o
 nnoremap ;; m"A;<Esc>`"
 nnoremap ;;<CR> A;<Esc>o
 
@@ -378,7 +378,7 @@ vnoremap > >gv
 
 vmap <Tab> >
 vmap <S-Tab> <
-imap <S-Tab> <Esc><<i
+imap <S-Tab> <C-o><<
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv

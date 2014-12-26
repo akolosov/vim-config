@@ -30,7 +30,7 @@ if !exists('g:hardcore_mode')
 
 	" Delete line to EOL
 	map  <C-l>  d$
-	imap <C-l>  <C-o><Right>d$<Right>
+	imap <C-l>  <C-o>d$
 
 	" Delete line to BOL
 	map  <C-h>  d^

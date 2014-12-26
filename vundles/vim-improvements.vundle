@@ -25,6 +25,7 @@ Bundle "29decibel/vim-stringify"
 Bundle "jpalardy/vim-slime"
 Bundle "mtth/scratch.vim"
 Bundle "tpope/vim-speeddating"
+Bundle "Z1MM32M4N/vim-superman"
 
 if exists("g:use_vim_shell")
 	Bundle "Shougo/vimproc.vim"

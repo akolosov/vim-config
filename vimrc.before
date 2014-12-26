@@ -2,18 +2,18 @@
 
 if exists('g:hardcore_mode')
 	if exists('g:use_arrow_keys')
-		unlet g:use_ArrowKeys
+		unlet g:use_arrow_keys
 	endif
 
 	if exists('g:use_copy_cut_paste_keys')
-		unlet g:use_CopyCutPasteKeys
+		unlet g:use_copy_cut_paste_keys
 	endif
 
 	if exists('g:use_vim_shell')
-		unlet g:use_VimShell
+		unlet g:use_vim_shell
 	endif
 
 	if exists('g:use_ctrl_space')
-		unlet g:use_ctrlSpace
+		unlet g:use_ctrl_space
 	endif
 endif

@@ -1,9 +1,16 @@
 Bundle "AndrewRadev/splitjoin.vim"
 Bundle "Raimondi/delimitMate"
 Bundle "honza/vim-snippets"
-Bundle "Shougo/neosnippet-snippets"
-Bundle "Shougo/neosnippet.vim"
-Bundle "Shougo/neocomplete.git"
+
+if exists("g:use_neocomplete")
+	Bundle "Shougo/neosnippet-snippets"
+	Bundle "Shougo/neosnippet.vim"
+	Bundle "Shougo/neocomplete.git"
+elseif exists("g:use_youcompleteme")
+  Bundle "Valloric/YouCompleteMe"
+	Bundle "SirVer/ultisnips"
+endif
+
 Bundle "rstacruz/sparkup"
 Bundle "vim-scripts/Align"
 Bundle "vim-scripts/matchit.zip.git"

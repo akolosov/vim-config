@@ -1,7 +1,13 @@
 let g:go_disable_autoinstall = 1
 let g:go_bin_path = expand("~/.go/bin")
 let g:go_fmt_autosave = 0
-let g:go_snippet_engine = "neosnippet"
+
+if exists("g:use_neocomplete")
+  let g:go_snippet_engine = "neosnippet"
+elseif exists("g:use_youcompleteme")
+  let g:go_snippet_engine = "ultisnips"
+endif
+
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1

@@ -16,4 +16,21 @@ if exists('g:hardcore_mode')
 	if exists('g:use_ctrl_space')
 		unlet g:use_ctrl_space
 	endif
+
+	if exists('g:use_neocomplete')
+		unlet g:use_neocomplete
+	endif
+
+	if exists('g:use_youcompleteme')
+		unlet g:use_youcompleteme
+	endif
+else
+	if exists('g:use_neocomplete')
+		unlet g:use_youcompleteme
+	endif
+
+	if exists('g:use_youcompleteme')
+		unlet g:use_neocomplete
+	endif
 endif
+

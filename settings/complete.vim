@@ -127,6 +127,6 @@ if exists("g:use_neocomplete") || exists("g:use_youcompleteme")
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType go setlocal omnifunc=go#complete#Complete
+  "autocmd FileType go setlocal omnifunc=go#complete#Complete
 endif
 

@@ -87,7 +87,6 @@ elseif exists("g:use_youcompleteme")
   let g:ycm_server_log_level = 'info'
   let g:ycm_auto_start_csharp_server = 1
   let g:ycm_auto_stop_csharp_server = 1
-  let g:ycm_add_preview_to_completeopt = 0
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
   let g:ycm_max_diagnostics_to_display = 30

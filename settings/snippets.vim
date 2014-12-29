@@ -22,10 +22,10 @@ if exists("g:use_neocomplete")
     set conceallevel=2 concealcursor=i
   endif
 elseif exists("g:use_youcompleteme")
-  " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-  let g:UltiSnipsExpandTrigger="<c-space>"
-  let g:UltiSnipsJumpForwardTrigger="<c-n>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+  " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<c-right>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-left>"
   let g:UltiSnipsListSnippets="<c-l>"
 
   " If you want :UltiSnipsEdit to split your window.

@@ -25,11 +25,11 @@ if exists('g:hardcore_mode')
 		unlet g:use_youcompleteme
 	endif
 else
-	if exists('g:use_neocomplete')
+	if (exists('g:use_neocomplete') && exists('g:use_youcompleteme'))
 		unlet g:use_youcompleteme
 	endif
 
-	if exists('g:use_youcompleteme')
+	if (exists('g:use_youcompleteme') && exists('g:use_neocomplete'))
 		unlet g:use_neocomplete
 	endif
 endif

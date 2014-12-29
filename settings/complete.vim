@@ -39,16 +39,6 @@ if exists("g:use_neocomplete")
   inoremap <expr><C-Up>  neocomplete#close_popup()
   inoremap <expr><C-Left>  neocomplete#cancel_popup()
 
-  " Enable omni completion.
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType coffeescript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType go setlocal omnifunc=go#complete#Complete
-
   if !exists('~/.vim/tmp/neocomplete')
     silent !mkdir ~/.vim/tmp/neocomplete > /dev/null 2>&1
   endif
@@ -127,3 +117,16 @@ elseif exists("g:use_youcompleteme")
   let g:ycm_goto_buffer_command = 'same-buffer'
   let g:ycm_disable_for_files_larger_than_kb = 1000
 endif
+
+if exists("g:use_neocomplete") || exists("g:use_youcompleteme")
+  " Enable omni completion.
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType coffeescript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType go setlocal omnifunc=go#complete#Complete
+endif
+

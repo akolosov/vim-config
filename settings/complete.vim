@@ -91,8 +91,8 @@ elseif exists("g:use_youcompleteme")
   let g:ycm_autoclose_preview_window_after_completion = 0
   let g:ycm_autoclose_preview_window_after_insertion = 0
   let g:ycm_max_diagnostics_to_display = 30
-  let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
+  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
   let g:ycm_key_invoke_completion = '<C-Space>'
   let g:ycm_key_detailed_diagnostics = '<leader>yd'
   let g:ycm_filepath_completion_use_working_dir = 0

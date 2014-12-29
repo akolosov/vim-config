@@ -26,8 +26,4 @@ elseif exists("g:use_youcompleteme")
   let g:UltiSnipsExpandTrigger="<tab>"
   let g:UltiSnipsJumpForwardTrigger="<c-right>"
   let g:UltiSnipsJumpBackwardTrigger="<c-left>"
-  let g:UltiSnipsListSnippets="<c-l>"
-
-  " If you want :UltiSnipsEdit to split your window.
-  let g:UltiSnipsEditSplit="vertical"
 endif

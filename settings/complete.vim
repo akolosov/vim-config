@@ -68,14 +68,14 @@ elseif exists("g:use_youcompleteme")
       \ 'gitcommit': 1
       \}
 
-  let g:ycm_show_diagnostics_ui = 1
+  let g:ycm_show_diagnostics_ui = 0
 
   let g:ycm_error_symbol = '>>'
   let g:ycm_enable_diagnostic_signs = 1
   let g:ycm_enable_diagnostic_highlighting = 1
-  let g:ycm_echo_current_diagnostic = 1
+  let g:ycm_echo_current_diagnostic = 0
   let g:ycm_always_populate_location_list = 0
-  let g:ycm_open_loclist_on_ycm_diags = 1
+  let g:ycm_open_loclist_on_ycm_diags = 0
   let g:ycm_allow_changing_updatetime = 1
   let g:ycm_complete_in_comments = 0
   let g:ycm_collect_identifiers_from_comments_and_strings = 0
@@ -85,11 +85,11 @@ elseif exists("g:use_youcompleteme")
   let g:ycm_server_use_vim_stdout = 0
   let g:ycm_path_to_python_interpreter = ''
   let g:ycm_server_log_level = 'info'
-  let g:ycm_auto_start_csharp_server = 0
-  let g:ycm_auto_stop_csharp_server = 0
-  let g:ycm_add_preview_to_completeopt = 0
-  let g:ycm_autoclose_preview_window_after_completion = 0
-  let g:ycm_autoclose_preview_window_after_insertion = 0
+  let g:ycm_auto_start_csharp_server = 1
+  let g:ycm_auto_stop_csharp_server = 1
+  let g:ycm_add_preview_to_completeopt = 1
+  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_autoclose_preview_window_after_insertion = 1
   let g:ycm_max_diagnostics_to_display = 30
   let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -99,7 +99,6 @@ elseif exists("g:use_youcompleteme")
 
   let g:ycm_semantic_triggers =  {
     \   'c' : ['->', '.'],
-    \   'go' : ['.'],
     \   'objc' : ['->', '.'],
     \   'ocaml' : ['.', '#'],
     \   'cpp,objcpp' : ['->', '.', '::'],

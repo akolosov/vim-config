@@ -23,7 +23,7 @@ if exists("g:use_neocomplete")
   endif
 elseif exists("g:use_youcompleteme")
   " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsExpandTrigger="<c-space>"
   let g:UltiSnipsJumpForwardTrigger="<c-n>"
   let g:UltiSnipsJumpBackwardTrigger="<c-p>"
   let g:UltiSnipsListSnippets="<c-l>"

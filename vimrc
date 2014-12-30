@@ -135,7 +135,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 		set noautochdir
 		set tags=./tags;
 	else
-		set noautochdir
+		set autochdir
 		set tags=tags;
 	endif
 
@@ -152,6 +152,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set colorcolumn=100
 	set switchbuf=usetab,newtab
 	set ttyfast																					" assume fast terminal connection
+	set completeopt-=preview
 
 	let &showbreak='↪ '
 

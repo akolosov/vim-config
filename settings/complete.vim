@@ -128,4 +128,3 @@ if exists("g:use_neocomplete") || exists("g:use_youcompleteme")
   autocmd FileType go setlocal omnifunc=go#complete#Complete
 endif
 
-set completeopt-=preview

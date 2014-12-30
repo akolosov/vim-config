@@ -54,6 +54,10 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_autosave` - allow to autosave all changes, like Textmate
 
+`g:use_neocomplete` - allow to use autocomplete with neocomplete+neosnippets plugins instead YouCompleteMe+UltiSnips.
+
+`g:use_youcompleteme` - allow to use autocomplete with YouCompleteMe+UltiSnips plugins instead neocomplete+neosnippets.
+
 
 Shortcuts
 =========

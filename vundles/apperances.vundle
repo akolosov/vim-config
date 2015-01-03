@@ -10,6 +10,7 @@ endif
 
 if index(g:use_bundles["apperances"], "numbers") >= 0
 	Bundle "myusuf3/numbers.vim"
+	let g:use_relativenumber = 1
 endif
 
 if index(g:use_bundles["apperances"], "common") >= 0

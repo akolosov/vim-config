@@ -16,7 +16,7 @@ if exists('g:hardcore_mode')
 		unlet g:use_copy_cut_paste_keys
 	endif
 
-	unlet g:use_bundles["autocomplete"]
-	unlet g:use_bundles["tools"]
+	let g:use_bundles.autocomplete = []
+	let g:use_bundles.tools = []
 endif
 

@@ -34,7 +34,7 @@ if has("gui_running")
 	let g:airline_powerline_fonts = 1
 endif
 
-if exists('g:use_lightline')
+if exists('g:apperances_lightline')
 	if !exists('g:lightline')
 		let g:lightline = {}
 	end
@@ -54,7 +54,9 @@ if exists('g:use_lightline')
 	endif
 
 	call lightline#init()
-else
+endif
+
+if exists("g:apperances_airline") 
 	if !exists('g:airline_theme')
 		let g:airline_theme = 'bubblegum'
 	endif

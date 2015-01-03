@@ -1,4 +1,4 @@
-if exists("g:use_neocomplete")
+if exists("g:autocomplete_neocomplete")
   " neocomplete
   " Next generation completion framework.
 
@@ -44,7 +44,7 @@ if exists("g:use_neocomplete")
   endif
 
   let g:neocomplete#data_directory='~/.vim/tmp/neocomplete'
-elseif exists("g:use_youcompleteme")
+elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_min_num_of_chars_for_completion = 3
   let g:ycm_min_num_identifier_candidate_chars = 0
   let g:ycm_auto_trigger = 1
@@ -116,7 +116,7 @@ elseif exists("g:use_youcompleteme")
   let g:ycm_disable_for_files_larger_than_kb = 1000
 endif
 
-if exists("g:use_neocomplete") || exists("g:use_youcompleteme")
+if exists("g:autocomplete_neocomplete") || exists("g:autocomplete_youcompleteme")
   " Enable omni completion.
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -128,3 +128,32 @@ if exists("g:use_neocomplete") || exists("g:use_youcompleteme")
   autocmd FileType go setlocal omnifunc=go#complete#Complete
 endif
 
+if exists("g:autocomplete_neocomplete") 
+  " Enable snipMate compatibility feature.
+  let g:neosnippet#enable_snipmate_compatibility = 1
+
+  let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+
+  " Plugin key-mappings.
+  imap <C-@>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-@>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-@>     <Plug>(neosnippet_expand_target)
+
+  " SuperTab like snippets behavior.
+  imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: pumvisible() ? "\<C-n>" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: "\<TAB>"
+
+  " For snippet_complete marker.
+  if has('conceal')
+    set conceallevel=2 concealcursor=i
+  endif
+elseif exists("g:autocomplete_youcompleteme")
+  " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
+  let g:UltiSnipsExpandTrigger="<c-right>"
+  let g:UltiSnipsJumpForwardTrigger="<c-n>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+endif

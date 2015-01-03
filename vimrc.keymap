@@ -45,7 +45,7 @@ if !exists('g:hardcore_mode')
 	imap <F10> <ESC>:qa!<CR>
 	map <F10> :qa!<CR>
 
-	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:use_nerd_tree"))
+	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
 		noremap <silent> <Esc><Esc> :qa<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 	else
@@ -112,7 +112,7 @@ if !exists('g:hardcore_mode')
 	map <C-t> :tabnew<CR>
 	imap <C-t> <C-o>:tabnew<CR>
 
-	if exists('g:use_vim_shell')
+	if exists('g:tools_vimshell')
 		map ~~ :VimShell<CR>
 	endif
 
@@ -135,7 +135,7 @@ if !exists('g:hardcore_mode')
 	vnoremap <silent> ] :bn<CR>
 	vnoremap <silent> [ :bp<CR>
 
-	if exists('g:use_ctrl_p')
+	if exists('g:tools_ctrlp')
 		nnoremap <silent> <C-p> :CtrlPMenu<CR>
 		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
 		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
@@ -154,7 +154,7 @@ else
 	map <C-l> <C-w>l
 endif
 
-if exists('g:use_ctrl_p')
+if exists('g:tools_ctrlp')
 	nnoremap <silent> .. :CtrlPBuffer<cr>
 	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
 	inoremap <silent> .. <C-o>:CtrlPBuffer<cr>
@@ -382,7 +382,6 @@ imap <S-Tab> <C-o><<
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-
 " Switch between windows
 nnoremap <silent> <Tab> :wincmd w<CR>
 nnoremap <silent> <S-Tab> :wincmd W<CR>
@@ -450,21 +449,21 @@ nmap <silent> <leader>f8 :set foldlevel=8<CR>:set foldcolumn=8<CR>
 nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 
 " Git
-nnoremap <leader>gs  :Gstatus<CR>
-nnoremap <leader>gd  :Gvdiff<CR>
-nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
-nnoremap <leader>gl  :!git pull<CR>
-nnoremap <leader>gp  :Git push<CR>
-nnoremap <leader>ga  :Git add %<CR>
-nnoremap <leader>gu  :Git add .<CR>
-nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
-nnoremap <Leader>gb  :Gblame<CR>
-nnoremap <Leader>gr  :Gremove<CR>
+if exists("g:tools_git")
+	nnoremap <leader>gs  :Gstatus<CR>
+	nnoremap <leader>gd  :Gvdiff<CR>
+	nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
+	nnoremap <leader>gl  :!git pull<CR>
+	nnoremap <leader>gp  :Git push<CR>
+	nnoremap <leader>ga  :Git add %<CR>
+	nnoremap <leader>gu  :Git add .<CR>
+	nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
+	nnoremap <Leader>gb  :Gblame<CR>
+	nnoremap <Leader>gr  :Gremove<CR>
+endif
 
-" Current line or selection to strings
-map <silent> <Leader>st :call Stringify()<CR>
 
-if exists('g:use_nerd_tree')
+if exists('g:tools_nerdtree')
 	map <silent> <Leader>nd :NERDTreeToggle<CR>
 
 	" Show current file in NERDTree

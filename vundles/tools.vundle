@@ -2,6 +2,8 @@ if index(g:use_bundles["tools"], "common") >= 0
 	Bundle "tomtom/tlib_vim.git"
 	Bundle "vim-scripts/Align"
 	Bundle "xolox/vim-misc"
+
+	let g:tools_common = 1
 endif
 
 if index(g:use_bundles["tools"], "git") >= 0
@@ -10,20 +12,28 @@ if index(g:use_bundles["tools"], "git") >= 0
 	Bundle "tpope/vim-fugitive"
 	Bundle "tpope/vim-git"
 	Bundle "airblade/vim-gitgutter"
+
+	let g:tools_git = 1
 endif
 
 if index(g:use_bundles["tools"], "search") >= 0
 	Bundle "rking/ag.vim"
 	Bundle "nelstrom/vim-visual-star-search"
 	Bundle "skwp/greplace.vim"
+
+	let g:tools_search = 1
 endif
 
 if index(g:use_bundles["tools"], "session") >= 0
 	Bundle "xolox/vim-session"
+
+	let g:tools_session = 1
 endif
 
 if index(g:use_bundles["tools"], "tagbar") >= 0
 	Bundle "majutsushi/tagbar.git"
+
+  let g:tools_tagbar = 1
 endif
 
 if index(g:use_bundles["tools"], "ctrlp") >= 0
@@ -33,21 +43,27 @@ if index(g:use_bundles["tools"], "ctrlp") >= 0
 	Bundle "ivalkeen/vim-ctrlp-tjump"
 	Bundle "mattn/ctrlp-mark"
 	Bundle "ompugao/ctrlp-history"
-	let g:use_ctrl_p = 1
+
+	let g:tools_ctrlp = 1
 endif
 
 if index(g:use_bundles["tools"], "nerdtree") >= 0
 	Bundle "scrooloose/nerdtree.git"
 	Bundle "jistr/vim-nerdtree-tabs.git"
-	let g:use_nerd_tree = 1
+
+	let g:tools_nerdtree = 1
 endif
 
 if index(g:use_bundles["tools"], "multicursors") >= 0
 	Bundle "kristijanhusak/vim-multiple-cursors"
+
+	let g:tools_multicursors = 1
 endif
 
 if index(g:use_bundles["tools"], "undotree") >= 0
 	Bundle "mbbill/undotree"
+
+	let g:tools_undotree = 1
 endif
 
 if index(g:use_bundles["tools"], "tpope") >= 0
@@ -58,27 +74,38 @@ if index(g:use_bundles["tools"], "tpope") >= 0
 	Bundle "tpope/vim-surround.git"
 	Bundle "tpope/vim-unimpaired"
 	Bundle "tpope/vim-speeddating"
+
+	let g:tools_tpope = 1
 endif
 
 if index(g:use_bundles["tools"], "commenter") >= 0
 	Bundle "scrooloose/nerdcommenter"
+
+	let g:tools_commenter = 1
 endif
 
 if index(g:use_bundles["tools"], "scratch") >= 0
 	Bundle "mtth/scratch.vim"
+
+	let g:tools_scratch = 1
 endif
 
 if index(g:use_bundles["tools"], "superman") >= 0
 	Bundle "Z1MM32M4N/vim-superman"
+
+	let g:tools_superman = 1
 endif
 
 if index(g:use_bundles["tools"], "easytags") >= 0
 	Bundle "xolox/vim-easytags"
+
+	let g:tools_easytags = 1
 endif
 
 if index(g:use_bundles["tools"], "vimshell") >= 0
 	Bundle "Shougo/vimproc.vim"
 	Bundle "Shougo/vimshell.git"
-	let g:use_vim_shell = 1
+
+	let g:tools_vimshell = 1
 endif
 

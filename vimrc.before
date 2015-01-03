@@ -1,9 +1,9 @@
 " Before initialization
 
 let g:use_bundles = {
-	\ 'languages': ["common", "ruby", "go", "javascript", "textobjects"],
+	\ 'languages': ["common", "ruby", "go", "javascript", "textobjects", "other"],
 	\ 'autocomplete': ["common", "youcompleteme"],
-	\ 'apperances': ["common", "airline", "numbers"],
+	\ 'apperances': ["common", "airline", "numbers", "indentline"],
 	\ 'tools': ["common", "tagbar", "ctrlp", "commenter", "git", "superman", "tpope", "scratch", "undotree", "search"]
 	\ }
 

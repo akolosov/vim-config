@@ -1,0 +1,18 @@
+if index(g:use_bundles["apperances"], "lightline") > 0
+	Bundle "itchyny/lightline.vim"
+	Bundle "itchyny/lightline-powerful"
+	Bundle "cocopon/lightline-hybrid.vim"
+endif
+
+if index(g:use_bundles["apperances"], "airline") > 0
+	Bundle "bling/vim-airline"
+endif
+
+if index(g:use_bundles["apperances"], "numbers") > 0
+	Bundle "myusuf3/numbers.vim"
+endif
+
+if index(g:use_bundles["apperances"], "common") > 0
+	Bundle "chrisbra/color_highlight.git"
+	Bundle "akolosov/vim-colors"
+endif

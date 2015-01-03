@@ -53,8 +53,6 @@ if !exists('g:hardcore_mode')
 		inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
 	endif
 
-	noremap <silent> <Leader>c :call CloseWindowOrKillBuffer()<CR>
-
 	imap <S-F10> <C-o>:wqa!<CR>
 	map <S-F10> :wqa!<CR>
 

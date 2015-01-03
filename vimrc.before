@@ -1,10 +1,10 @@
 " Before initialization
 
 let g:use_bundles = {
-	\ 'languages': ["common", "ruby", "go", "javascript", "textobjects", "other"],
+	\ 'languages': ["common", "ruby", "go", "javascript", "textobjects", "html/css", "other"],
 	\ 'autocomplete': ["common", "youcompleteme"],
 	\ 'apperances': ["common", "airline", "numbers", "indentline"],
-	\ 'tools': ["common", "tagbar", "ctrlp", "commenter", "git", "superman", "tpope", "scratch", "undotree", "search"]
+	\ 'tools': ["common", "tagbar", "ctrlp", "commenter", "git", "superman", "tpope", "scratch", "undotree", "search", "nerdtree", "vimshell"]
 	\ }
 
 if exists('g:hardcore_mode')

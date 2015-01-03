@@ -4,9 +4,7 @@ if index(g:use_bundles["apperances"], "lightline") >= 0
 	Bundle "cocopon/lightline-hybrid.vim"
 
 	let g:apperances_lightkine = 1
-endif
-
-if index(g:use_bundles["apperances"], "airline") >= 0
+elseif index(g:use_bundles["apperances"], "airline") >= 0
 	Bundle "bling/vim-airline"
 
 	let g:apperances_airline = 1

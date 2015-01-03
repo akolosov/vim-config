@@ -24,7 +24,7 @@ Variables
 
 All variables set in `~/.vimrc.before.local` file.
 
-`g:hardcore_mode` - allow to use VIM Hardcore mode (unset `g:use_arrow_keys`, `g:use_copy_cut_paste_keys`, `g:use_ctrl_space`, `g:use_vim_shell` and many keymaps)
+`g:hardcore_mode` - allow to use VIM Hardcore mode (unset `g:use_arrow_keys`, `g:use_copy_cut_paste_keys` and many keymaps)
 
 `g:hardcore_mode_with_arrow_keys` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
 

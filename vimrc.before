@@ -4,7 +4,7 @@ let g:use_bundles = {
 	\ 'languages': ["common", "ruby", "go", "javascript", "textobjects"],
 	\ 'autocomplete': ["common", "youcompleteme"],
 	\ 'apperances': ["common", "airline", "numbers"],
-	\ 'tools': ["common", "tagbar", "ctrlp", "nerdcommenter", "git", "superman", "tpope", "undotree", "scratch", "undotree", "search"]
+	\ 'tools': ["common", "tagbar", "ctrlp", "commenter", "git", "superman", "tpope", "scratch", "undotree", "search"]
 	\ }
 
 if exists('g:hardcore_mode')
@@ -17,6 +17,6 @@ if exists('g:hardcore_mode')
 	endif
 
 	let g:use_bundles.autocomplete = []
-	let g:use_bundles.tools = []
+	let g:use_bundles.tools = ["common", "ctrlp", "search", "tpope"]
 endif
 

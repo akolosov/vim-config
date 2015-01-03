@@ -76,7 +76,7 @@ Shortcuts
 | `[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
-| `<tilde><tilde>` | Run VimShell (if set `g:use_vim_shell` and not set `g:hardcore_mode`) | **\[n v]** |
+| `<tilde><tilde>` | Run VimShell (if plugin loaded and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
 | `//` | No highlights search | **\[n v]** |
@@ -84,8 +84,8 @@ Shortcuts
 | `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
-| `,,` or `,o` | Open CtrlP (if loaded) | **\[n]** |
-| `..` or `,b` | Open CtrlP buffers (if loaded) | **\[n]** |
+| `,,` or `,o` | Open CtrlP (if plugin loaded) | **\[n]** |
+| `..` or `,b` | Open CtrlP buffers (if plugin loaded) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `;;` | Append semicolon at EOL | **\[n]** |
 | `;;<CR>` | Append semicolon at EOL and add new line below | **\[n]** |
@@ -107,8 +107,8 @@ Shortcuts
 | `,X!` | Close VIM without saving files | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,nd` | Show/Hide NERDTree (if loaded) | **\[n i v]** |
-| `,nf` | Show current file in NERDTree (if loaded) | **\[n]** |
+| `,nd` | Show/Hide NERDTree (if plugin loaded) | **\[n i v]** |
+| `,nf` | Show current file in NERDTree (if plugin loaded) | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |
 | `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |
@@ -130,9 +130,6 @@ Shortcuts
 | `,l[` | Surround every line in the file or selected lines with \[] | **\[n v]** |
 | `,l{` | Surround every line in the file or selected lines with {} | **\[n v]** |
 | `,ss` | Strip trailing whitespace | **\[n v]** |
-| `,st` | Make selected text Stringify() | **\[n v]** |
-| `,sp` | Split line by tags/keywords (using SplitJoin.vim) | **\[n v]** |
-| `,sj` | Join lines by tags/keywords (using SplitJoin.vim) | **\[n v]** |
 | `,sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
 | `,sr` | Search word under cursor and replace with user inputs | **\[n v]** |
 | `,s[` | Select inside [] include brackets  | **\[n v]** |

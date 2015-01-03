@@ -135,7 +135,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	set t_vb=
 	set pastetoggle=<F3>
 
-	if exists('g:use_vim_shell')
+	if exists('g:tools_vimshell')
 		set noautochdir
 		set tags=./tags;
 	else
@@ -167,7 +167,7 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	endif
 
 	" Use relative line numbers
-	if exists("g:use_relativenumber")
+	if exists("g:apperances_numbers")
 		set relativenumber
 		au BufReadPost * set relativenumber
 	endif

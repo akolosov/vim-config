@@ -1,5 +1,13 @@
 " Before initialization
 
+let g:bundles = {
+	\ 'languages': ["common", "ruby", "go", "javascript", "markdown", "textobjects", "other"],
+	\ 'autocomplete': ["common", "youcompleteme"],
+	\ 'apperances': ["common", "airline", "numbers"],
+	\ 'tools': ["common", "tagbar", "ctrlp", "nerdcommenter", "nerdtree", "git", "superman", "tpope", "undotree", "scratch", "vimshell",
+						\ "easytags", "undotree", "search"]
+}
+
 if exists('g:hardcore_mode')
 	if exists('g:use_arrow_keys')
 		unlet g:use_arrow_keys
@@ -9,28 +17,7 @@ if exists('g:hardcore_mode')
 		unlet g:use_copy_cut_paste_keys
 	endif
 
-	if exists('g:use_vim_shell')
-		unlet g:use_vim_shell
-	endif
-
-	if exists('g:use_ctrl_space')
-		unlet g:use_ctrl_space
-	endif
-
-	if exists('g:use_neocomplete')
-		unlet g:use_neocomplete
-	endif
-
-	if exists('g:use_youcompleteme')
-		unlet g:use_youcompleteme
-	endif
-else
-	if (exists('g:use_neocomplete') && exists('g:use_youcompleteme'))
-		unlet g:use_youcompleteme
-	endif
-
-	if (exists('g:use_youcompleteme') && exists('g:use_neocomplete'))
-		unlet g:use_neocomplete
-	endif
+	unlet g:bundles["autocomplete"]
+	unlet g:bundles["tools"]
 endif
 

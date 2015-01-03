@@ -1,0 +1,16 @@
+if index(g:bundles["autocomplete"], "common") > 0
+	Bundle "Raimondi/delimitMate"
+	Bundle "honza/vim-snippets"
+endif
+
+if index(g:bundles["autocomplete"], "neocomplete") > 0
+	Bundle "Shougo/neosnippet-snippets"
+	Bundle "Shougo/neosnippet.vim"
+	Bundle "Shougo/neocomplete.git"
+endif
+	
+if index(g:bundles["autocomplete"], "youcompleteme") > 0
+  Bundle "Valloric/YouCompleteMe"
+	Bundle "SirVer/ultisnips"
+endif
+

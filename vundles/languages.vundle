@@ -1,8 +1,8 @@
-if index(g:bundles["languages"], "common") > 0
+if index(g:use_bundles["languages"], "common") > 0
 	Bundle "scrooloose/syntastic.git"
 endif
 
-if index(g:bundles["languages"], "javascript") > 0
+if index(g:use_bundles["languages"], "javascript") > 0
 	Bundle "briancollins/vim-jst"
 	Bundle "pangloss/vim-javascript"
 	Bundle "othree/javascript-libraries-syntax.vim"
@@ -12,24 +12,24 @@ if index(g:bundles["languages"], "javascript") > 0
 	Bundle "kchmck/vim-coffee-script"
 endif
 
-if index(g:bundles["languages"], "markdown") > 0
+if index(g:use_bundles["languages"], "markdown") > 0
 	Bundle "jtratner/vim-flavored-markdown.git"
 	Bundle "nelstrom/vim-markdown-preview"
 	Bundle "tpope/vim-markdown"
 endif
 
-if index(g:bundles["languages"], "html/css") > 0
+if index(g:use_bundles["languages"], "html/css") > 0
 	Bundle "groenewege/vim-less.git"
 	Bundle "skwp/vim-html-escape"
 	Bundle "rstacruz/sparkup"
 endif
 
-if index(g:bundles["languages"], "go") > 0
+if index(g:use_bundles["languages"], "go") > 0
 	Bundle "fatih/vim-go"
 	Bundle "rhysd/vim-go-impl"
 endif
 
-if index(g:bundles["languages"], "ruby") > 0
+if index(g:use_bundles["languages"], "ruby") > 0
 	Bundle "tpope/vim-haml"
 	Bundle "ecomba/vim-ruby-refactoring"
 	Bundle "tpope/vim-rails.git"
@@ -43,7 +43,7 @@ if index(g:bundles["languages"], "ruby") > 0
 	Bundle "tpope/vim-bundler"
 endif
 
-if index(g:bundles["languages"], "textobjects") > 0
+if index(g:use_bundles["languages"], "textobjects") > 0
 	Bundle "austintaylor/vim-indentobject"
 	Bundle "bootleq/vim-textobj-rubysymbol"
 	Bundle "coderifous/textobj-word-column.vim"
@@ -59,7 +59,7 @@ if index(g:bundles["languages"], "textobjects") > 0
 	Bundle "wellle/targets.vim"
 endif
 
-if index(g:bundles["languages"], "other") > 0
+if index(g:use_bundles["languages"], "other") > 0
 	Bundle "PotatoesMaster/i3-vim-syntax"
 	Bundle "arnaud-lb/vim-php-namespace"
 	Bundle "sheerun/vim-polyglot"

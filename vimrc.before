@@ -1,6 +1,6 @@
 " Before initialization
 
-let g:bundles = {
+let g:use_bundles = {
 	\ 'languages': ["common", "ruby", "go", "javascript", "markdown", "textobjects", "other"],
 	\ 'autocomplete': ["common", "youcompleteme"],
 	\ 'apperances': ["common", "airline", "numbers"],
@@ -17,7 +17,7 @@ if exists('g:hardcore_mode')
 		unlet g:use_copy_cut_paste_keys
 	endif
 
-	unlet g:bundles["autocomplete"]
-	unlet g:bundles["tools"]
+	unlet g:use_bundles["autocomplete"]
+	unlet g:use_bundles["tools"]
 endif
 

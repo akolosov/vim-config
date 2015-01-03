@@ -4,9 +4,8 @@ let g:use_bundles = {
 	\ 'languages': ["common", "ruby", "go", "javascript", "markdown", "textobjects", "other"],
 	\ 'autocomplete': ["common", "youcompleteme"],
 	\ 'apperances': ["common", "airline", "numbers"],
-	\ 'tools': ["common", "tagbar", "ctrlp", "nerdcommenter", "nerdtree", "git", "superman", "tpope", "undotree", "scratch", "vimshell",
-						\ "easytags", "undotree", "search"]
-}
+	\ 'tools': ["common", "tagbar", "ctrlp", "nerdcommenter", "nerdtree", "git", "superman", "tpope", "undotree", "scratch", "vimshell", "easytags", "undotree", "search"]
+	\ }
 
 if exists('g:hardcore_mode')
 	if exists('g:use_arrow_keys')

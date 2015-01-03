@@ -27,6 +27,7 @@ endif
 if index(g:use_bundles["apperances"], "common") >= 0
 	Bundle "chrisbra/color_highlight.git"
 	Bundle "akolosov/vim-colors"
+  Bundle "vim-scripts/lastpos.vim"
 
 	let g:apperances_common = 1
 endif

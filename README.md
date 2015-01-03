@@ -28,8 +28,6 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:hardcore_mode_with_arrow_keys` - the same as `g:hardcore_mode`, but arrow keys for navigation is enabled
 
-`g:use_lightline` - allow to use LightLine instead AirLine
-
 `g:use_powerline_fonts` - allow to use PowerLine fonts ([Link](https://github.com/Lokaltog/powerline-fonts))
 
 `g:color_scheme` - Your favorite color scheme name (default: hybrid)
@@ -37,14 +35,6 @@ All variables set in `~/.vimrc.before.local` file.
 `g:airline_theme` - Your favorite AirLine theme (default: bubblegum)
 
 `g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
-
-`g:use_relativenumber` - allow to use relative line numbers
-
-`g:use_ctrl_space` - allow to use CtrlSpace plugin instead CtrlP
-
-`g:use_vim_shell` - allow to use VimShell plugin
-
-`g:use_nerd_tree` - allow to use NERDTree plugin
 
 `g:dont_show_nerd_tree` - do not show NERDTree on startup
 
@@ -54,17 +44,13 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:use_autosave` - allow to autosave all changes, like Textmate
 
-`g:use_neocomplete` - allow to use autocomplete with neocomplete+neosnippets plugins instead YouCompleteMe+UltiSnips.
-
-`g:use_youcompleteme` - allow to use autocomplete with YouCompleteMe+UltiSnips plugins instead neocomplete+neosnippets.
-
 
 Shortcuts
 =========
 
 | **Shortcut** | **Description** | **Modes** |
 |:------------:|-----------------|:---------:|
-| `CTRL-P` | Open CtrlP menu (if not set `g:use_ctrl_space`) | **\[n i v]** |
+| `CTRL-P` | Open CtrlP menu | **\[n i v]** |
 | `CTRL-T` | Create new tab (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-G` | Show/Hide TagBar (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -75,7 +61,6 @@ Shortcuts
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-Space` | Open CtrlSpace buffers (if set `g:use_ctrl_space` and not set `g:hardcore_mode`) | **\[n]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F2` | Save file as... (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -99,8 +84,8 @@ Shortcuts
 | `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
-| `,,` or `,o` | Open CtrlP (if not set `g:use_ctrl_space`) | **\[n]** |
-| `..` or `,b` | Open CtrlP buffers (if not set `g:use_ctrl_space`) | **\[n]** |
+| `,,` or `,o` | Open CtrlP (if loaded) | **\[n]** |
+| `..` or `,b` | Open CtrlP buffers (if loaded) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `;;` | Append semicolon at EOL | **\[n]** |
 | `;;<CR>` | Append semicolon at EOL and add new line below | **\[n]** |
@@ -122,8 +107,8 @@ Shortcuts
 | `,X!` | Close VIM without saving files | **\[n]** |
 | `,tb` | Switch all buffers to tabs | **\[n]** |
 | `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,nd` | Show/Hide NERDTree (if set `g:use_nerd_tree`)  | **\[n i v]** |
-| `,nf` | Show current file in NERDTree (if not set `g:use_nerd_tree`) | **\[n]** |
+| `,nd` | Show/Hide NERDTree (if loaded) | **\[n i v]** |
+| `,nf` | Show current file in NERDTree (if loaded) | **\[n]** |
 | `,.` | Go to last edit location | **\[n]** |
 | `,cd` | Set working directory to current opened file's directory | **\[n]** |
 | `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |

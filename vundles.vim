@@ -21,9 +21,10 @@ Bundle "gmarik/vundle"
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
 
-for key in keys(g:use_bundles)
-  runtime key.".vundle"
-endfor
+runtime apperances.vundle
+runtime languages.vundle
+runtime autocomplete.vundle
+runtime tools.vundle
 
 " The plugins listed in ~/.vim/vundles/local.vundle will be added here to
 " allow the user to add vim plugins to yadr without the need for a fork.

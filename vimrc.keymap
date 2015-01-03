@@ -114,7 +114,7 @@ if !exists('g:hardcore_mode')
 	map <C-t> :tabnew<CR>
 	imap <C-t> <C-o>:tabnew<CR>
 
-	if exists('g:use_VimShell')
+	if exists('g:use_vim_shell')
 		map ~~ :VimShell<CR>
 	endif
 
@@ -137,7 +137,7 @@ if !exists('g:hardcore_mode')
 	vnoremap <silent> ] :bn<CR>
 	vnoremap <silent> [ :bp<CR>
 
-	if !exists('g:use_ctrl_space')
+	if exists('g:use_ctrl_p')
 		nnoremap <silent> <C-p> :CtrlPMenu<CR>
 		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
 		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
@@ -156,7 +156,7 @@ else
 	map <C-l> <C-w>l
 endif
 
-if !exists('g:use_ctrl_space')
+if exists('g:use_ctrl_p')
 	nnoremap <silent> .. :CtrlPBuffer<cr>
 	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
 	inoremap <silent> .. <C-o>:CtrlPBuffer<cr>

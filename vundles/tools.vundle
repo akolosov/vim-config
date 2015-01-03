@@ -60,7 +60,7 @@ if index(g:use_bundles["tools"], "tpope") >= 0
 	Bundle "tpope/vim-speeddating"
 endif
 
-if index(g:use_bundles["tools"], "commeter") >= 0
+if index(g:use_bundles["tools"], "commenter") >= 0
 	Bundle "scrooloose/nerdcommenter"
 endif
 

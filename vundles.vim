@@ -21,7 +21,7 @@ Bundle "gmarik/vundle"
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
 
-for key in keys(g:bundles)
+for key in keys(g:use_bundles)
   runtime key.".vundle"
 endfor
 

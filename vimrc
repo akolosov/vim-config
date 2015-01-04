@@ -141,6 +141,8 @@ if filereadable(expand("~/.vim/bundle/.installed"))
 	else
 		set autochdir
 		set tags=tags;
+
+		au BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
 	endif
 
 	set noshowmode

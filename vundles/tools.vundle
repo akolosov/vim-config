@@ -2,6 +2,15 @@ if BundleExists("tools", "common")
   Bundle "tomtom/tlib_vim.git"
   Bundle "vim-scripts/Align"
   Bundle "xolox/vim-misc"
+  Bundle "mattn/webapi-vim"
+  Bundle "tpope/vim-abolish"
+  Bundle "tpope/vim-endwise.git"
+  Bundle "tpope/vim-ragtag"
+  Bundle "tpope/vim-repeat.git"
+  Bundle "tpope/vim-surround.git"
+  Bundle "tpope/vim-unimpaired"
+  Bundle "tpope/vim-speeddating"
+  Bundle "Z1MM32M4N/vim-superman"
 
   let g:tools_common = 1
 endif
@@ -26,6 +35,7 @@ endif
 
 if BundleExists("tools", "session")
   Bundle "xolox/vim-session"
+  Bundle "vim-scripts/sessionman.vim"
 
   let g:tools_session = 1
 endif
@@ -66,20 +76,9 @@ if BundleExists("tools", "undotree")
   let g:tools_undotree = 1
 endif
 
-if BundleExists("tools", "tpope")
-  Bundle "tpope/vim-abolish"
-  Bundle "tpope/vim-endwise.git"
-  Bundle "tpope/vim-ragtag"
-  Bundle "tpope/vim-repeat.git"
-  Bundle "tpope/vim-surround.git"
-  Bundle "tpope/vim-unimpaired"
-  Bundle "tpope/vim-speeddating"
-
-  let g:tools_tpope = 1
-endif
-
 if BundleExists("tools", "commenter")
   Bundle "scrooloose/nerdcommenter"
+  Bundle "tpope/vim-commentary"
 
   let g:tools_commenter = 1
 endif
@@ -88,12 +87,6 @@ if BundleExists("tools", "scratch")
   Bundle "mtth/scratch.vim"
 
   let g:tools_scratch = 1
-endif
-
-if BundleExists("tools", "superman")
-  Bundle "Z1MM32M4N/vim-superman"
-
-  let g:tools_superman = 1
 endif
 
 if BundleExists("tools", "easytags")

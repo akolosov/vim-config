@@ -45,6 +45,8 @@ if exists("g:autocomplete_neocomplete")
 
   let g:neocomplete#data_directory='~/.vim/tmp/neocomplete'
 elseif exists("g:autocomplete_youcompleteme")
+  " enable completion from tags
+  let g:ycm_collect_identifiers_from_tags_files = 1
   let g:ycm_min_num_of_chars_for_completion = 3
   let g:ycm_min_num_identifier_candidate_chars = 0
   let g:ycm_auto_trigger = 1
@@ -90,9 +92,9 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
   let g:ycm_max_diagnostics_to_display = 30
-  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-  let g:ycm_key_invoke_completion = '<C-]>'
+  let g:ycm_key_list_select_completion = ['<C-l>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<C-h>', '<Up>']
+  let g:ycm_key_invoke_completion = '<C-j>'
   let g:ycm_key_detailed_diagnostics = '<leader>yd'
   let g:ycm_filepath_completion_use_working_dir = 0
 
@@ -154,6 +156,6 @@ if exists("g:autocomplete_neocomplete")
 elseif exists("g:autocomplete_youcompleteme")
   " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
   let g:UltiSnipsExpandTrigger="<c-@>"
-  let g:UltiSnipsJumpForwardTrigger="<c-n>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+  let g:UltiSnipsJumpForwardTrigger="<c-l>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 endif

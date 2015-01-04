@@ -106,6 +106,15 @@ create_symlinks() {
     success "$1"
 }
 
+copy_examples() {
+    cp -f "$app_dir/examples/vimrc.after.local" "$HOME/.vimrc.after.local"
+    cp -f "$app_dir/examples/vimrc.before.local" "$HOME/.vimrc.before.local"
+    cp -f "$app_dir/examples/vimrc.before.vundles" "$HOME/.vimrc.before.vundles"
+
+    ret="$?"
+    success "$1"
+}
+
 setup_vundle() {
     system_shell="$SHELL"
     export SHELL='/bin/sh'
@@ -131,5 +140,7 @@ clone_vundle "Successfully cloned vundle"
 setup_vundle "Now updating/installing plugins using Vundle"
 
 create_symlinks "Setting up vim symlinks"
+
+copy_examples "Setting up example vim local configs"
 
 success "$app_name installed. For more information - http://akolosov.github.io/"

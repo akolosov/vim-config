@@ -9,8 +9,8 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
-if filereadable(expand("~/.vimrc.bundles.local"))
-  source ~/.vimrc.bundles.local
+if filereadable(expand("~/.vimrc.before.vundles"))
+  source ~/.vimrc.before.vundles
 endif
 
 " =============== Vundle Initialization ===============

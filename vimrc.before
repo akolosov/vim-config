@@ -18,12 +18,12 @@ endfunction
 
 let g:use_bundles = {
 	\ "apperances": ["common", "airline", "numbers", "indentline"],
-	\ "languages": ["common", "ruby", "go", "javascript", "textobjects", "html/css", "other"]
+	\ "languages": ["common", "ruby", "go", "javascript", "textobjects", "html/css"]
 	\}
 
-if !exists('g:hardcore_mode')
+if !exists('g:hardcore_mode') && !exists("g:hardcore_mode_with_arrow_keys")
 	let g:use_bundles.autocomplete = ["common", "youcompleteme"]
-	let g:use_bundles.tools = ["common", "tagbar", "ctrlp", "commenter", "git", "scratch", "undotree", "search", "nerdtree", "vimshell"]
+	let g:use_bundles.tools = ["common", "tagbar", "ctrlp", "commenter", "git", "scratch", "undotree", "search"]
 else
 	if exists('g:use_arrow_keys')
 		unlet g:use_arrow_keys

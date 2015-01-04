@@ -12,6 +12,8 @@ if exists("g:languages_common")
   let g:syntastic_style_error_symbol = '✠'
   let g:syntastic_warning_symbol = '≈'
   let g:syntastic_style_warning_symbol = '≈'
+
+  au BufRead,BufNewFile *.vundle setlocal ft=vim syntax=vim
 endif
 
 if exists("g:languages_textobjects")

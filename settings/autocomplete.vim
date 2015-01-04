@@ -156,6 +156,6 @@ if exists("g:autocomplete_neocomplete")
 elseif exists("g:autocomplete_youcompleteme")
   " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
   let g:UltiSnipsExpandTrigger="<c-@>"
-  let g:UltiSnipsJumpForwardTrigger="<c-l>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+  let g:UltiSnipsJumpForwardTrigger="<c-n>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 endif

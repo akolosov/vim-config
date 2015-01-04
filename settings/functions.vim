@@ -87,6 +87,18 @@ function! GetRunningOS()
   endif
 endfunction
 
+function! BundleExists(section, bundle)
+  return (index(g:use_bundles[section], bundle) >= 0)
+endfunction
+
+function! AddBundle(section, bundle)
+  call add(g:use_bundles[section], bundle)
+endfunction
+
+function! RemovBundle(section, bundle)
+  call remove(g:use_bundles[section], index(g:use_bundles[section], bundle))
+endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OpenChangedFiles COMMAND
 " Open a split for each dirty file in git
@@ -106,4 +118,3 @@ function! OpenChangedFiles()
 endfunction
 command! OpenChangedFiles :call OpenChangedFiles()
 
-nnoremap <Leader>ocf :OpenChangedFiles<CR>

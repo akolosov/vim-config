@@ -1,22 +1,22 @@
-if index(g:use_bundles["autocomplete"], "common") >= 0
-	Bundle "Raimondi/delimitMate"
-	Bundle "honza/vim-snippets"
+if BundleExists("autocomplete", "common")
+  Bundle "Raimondi/delimitMate"
+  Bundle "honza/vim-snippets"
 
-	let g:autocomplete_common = 1
+  let g:autocomplete_common = 1
 endif
 
-if index(g:use_bundles["autocomplete"], "neocomplete") >= 0
-	Bundle "Shougo/neosnippet-snippets"
-	Bundle "Shougo/neosnippet.vim"
-	Bundle "Shougo/neocomplete.git"
+if BundleExists("autocomplete", "neocomplete")
+  Bundle "Shougo/neosnippet-snippets"
+  Bundle "Shougo/neosnippet.vim"
+  Bundle "Shougo/neocomplete.git"
 
-	let g:autocomplete_neocomplete = 1
+  let g:autocomplete_neocomplete = 1
 endif
-	
-if index(g:use_bundles["autocomplete"], "youcompleteme") >= 0
+  
+if BundleExists("autocomplete", "youcompleteme")
   Bundle "Valloric/YouCompleteMe"
-	Bundle "SirVer/ultisnips"
+  Bundle "SirVer/ultisnips"
 
-	let g:autocomplete_youcompleteme = 1
+  let g:autocomplete_youcompleteme = 1
 endif
 

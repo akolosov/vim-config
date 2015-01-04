@@ -251,6 +251,8 @@ nnoremap <Leader>gf :e <cfile><CR>
 nnoremap <Leader>gfw :sp +e <cfile><CR>
 nnoremap <Leader>gft :tabe <cfile><CR>
 
+" Open changed files in current repository
+nnoremap <Leader>ocf :OpenChangedFiles<CR>
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>
 

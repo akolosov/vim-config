@@ -1,82 +1,82 @@
-if index(g:use_bundles["languages"], "common") >= 0
-	Bundle "scrooloose/syntastic.git"
+if BundleExists("languages", "common")
+  Bundle "scrooloose/syntastic.git"
 
-	let g:languages_common = 1
+  let g:languages_common = 1
 endif
 
-if index(g:use_bundles["languages"], "javascript") >= 0
-	Bundle "briancollins/vim-jst"
-	Bundle "pangloss/vim-javascript"
-	Bundle "othree/javascript-libraries-syntax.vim"
-	Bundle "claco/jasmine.vim"
-	Bundle "digitaltoad/vim-jade.git"
-	Bundle "itspriddle/vim-jquery.git"
-	Bundle "kchmck/vim-coffee-script"
+if BundleExists("languages", "javascript")
+  Bundle "briancollins/vim-jst"
+  Bundle "pangloss/vim-javascript"
+  Bundle "othree/javascript-libraries-syntax.vim"
+  Bundle "claco/jasmine.vim"
+  Bundle "digitaltoad/vim-jade.git"
+  Bundle "itspriddle/vim-jquery.git"
+  Bundle "kchmck/vim-coffee-script"
 
-	let g:languages_javascript = 1
+  let g:languages_javascript = 1
 endif
 
-if index(g:use_bundles["languages"], "markdown") >= 0
-	Bundle "jtratner/vim-flavored-markdown.git"
-	Bundle "nelstrom/vim-markdown-preview"
-	Bundle "tpope/vim-markdown"
+if BundleExists("languages", "markdown")
+  Bundle "jtratner/vim-flavored-markdown.git"
+  Bundle "nelstrom/vim-markdown-preview"
+  Bundle "tpope/vim-markdown"
 
-	let g:languages_markdown = 1
+  let g:languages_markdown = 1
 endif
 
-if index(g:use_bundles["languages"], "html/css") >= 0
-	Bundle "groenewege/vim-less.git"
-	Bundle "skwp/vim-html-escape"
-	Bundle "rstacruz/sparkup"
+if BundleExists("languages", "html/css")
+  Bundle "groenewege/vim-less.git"
+  Bundle "skwp/vim-html-escape"
+  Bundle "rstacruz/sparkup"
 
-	let g:languages_html_css = 1
+  let g:languages_html_css = 1
 endif
 
-if index(g:use_bundles["languages"], "go") >= 0
-	Bundle "fatih/vim-go"
-	Bundle "rhysd/vim-go-impl"
+if BundleExists("languages", "go")
+  Bundle "fatih/vim-go"
+  Bundle "rhysd/vim-go-impl"
 
-	let g:languages_go = 1
+  let g:languages_go = 1
 endif
 
-if index(g:use_bundles["languages"], "ruby") >= 0
-	Bundle "tpope/vim-haml"
-	Bundle "ecomba/vim-ruby-refactoring"
-	Bundle "tpope/vim-rails.git"
-	Bundle "tpope/vim-rake.git"
-	Bundle "tpope/vim-rvm.git"
-	Bundle "vim-ruby/vim-ruby.git"
-	Bundle "Keithbsmiley/rspec.vim"
-	Bundle "skwp/vim-iterm-rspec"
-	Bundle "skwp/vim-spec-finder"
-	Bundle "ck3g/vim-change-hash-syntax"
-	Bundle "tpope/vim-bundler"
+if BundleExists("languages", "ruby")
+  Bundle "tpope/vim-haml"
+  Bundle "ecomba/vim-ruby-refactoring"
+  Bundle "tpope/vim-rails.git"
+  Bundle "tpope/vim-rake.git"
+  Bundle "tpope/vim-rvm.git"
+  Bundle "vim-ruby/vim-ruby.git"
+  Bundle "Keithbsmiley/rspec.vim"
+  Bundle "skwp/vim-iterm-rspec"
+  Bundle "skwp/vim-spec-finder"
+  Bundle "ck3g/vim-change-hash-syntax"
+  Bundle "tpope/vim-bundler"
 
-	let g:languages_ruby = 1
+  let g:languages_ruby = 1
 endif
 
-if index(g:use_bundles["languages"], "textobjects") >= 0
-	Bundle "austintaylor/vim-indentobject"
-	Bundle "bootleq/vim-textobj-rubysymbol"
-	Bundle "coderifous/textobj-word-column.vim"
-	Bundle "kana/vim-textobj-datetime"
-	Bundle "kana/vim-textobj-entire"
-	Bundle "kana/vim-textobj-function"
-	Bundle "kana/vim-textobj-user"
-	Bundle "lucapette/vim-textobj-underscore"
-	Bundle "nelstrom/vim-textobj-rubyblock"
-	Bundle "thinca/vim-textobj-function-javascript"
-	Bundle "vim-scripts/argtextobj.vim"
-	Bundle "wellle/targets.vim"
+if BundleExists("languages", "textobjects")
+  Bundle "austintaylor/vim-indentobject"
+  Bundle "bootleq/vim-textobj-rubysymbol"
+  Bundle "coderifous/textobj-word-column.vim"
+  Bundle "kana/vim-textobj-datetime"
+  Bundle "kana/vim-textobj-entire"
+  Bundle "kana/vim-textobj-function"
+  Bundle "kana/vim-textobj-user"
+  Bundle "lucapette/vim-textobj-underscore"
+  Bundle "nelstrom/vim-textobj-rubyblock"
+  Bundle "thinca/vim-textobj-function-javascript"
+  Bundle "vim-scripts/argtextobj.vim"
+  Bundle "wellle/targets.vim"
 
-	let g:languages_textobjects = 1
+  let g:languages_textobjects = 1
 endif
 
-if index(g:use_bundles["languages"], "other") >= 0
-	Bundle "PotatoesMaster/i3-vim-syntax"
-	Bundle "arnaud-lb/vim-php-namespace"
-	Bundle "sheerun/vim-polyglot"
+if BundleExists("languages", "other")
+  Bundle "PotatoesMaster/i3-vim-syntax"
+  Bundle "arnaud-lb/vim-php-namespace"
+  Bundle "sheerun/vim-polyglot"
 
-	let g:languages_other = 1
+  let g:languages_other = 1
 endif
 

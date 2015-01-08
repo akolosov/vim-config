@@ -167,6 +167,10 @@ if exists('g:tools_ctrlp')
 	inoremap <silent> `` <C-o>:CtrlPMenu<CR>
 endif
 
+" If you visually select something and hit paste
+" that thing gets yanked into your buffer.
+vnoremap p "_dP
+
 " Repeat the last recorded macro
 map Q @@
 

@@ -49,9 +49,7 @@ if exists("g:languages_ruby")
   " Better key maps for switching between controller and view
   nnoremap <Leader>gvv :Rview<cr>
   nnoremap <Leader>gcc :Rcontroller<cr>
-endif
 
-if exists("g:languages_ruby")
   " Does not work on pending 'blocks', only single lines
   "
   " Given:
@@ -123,7 +121,8 @@ if exists("g:languages_go")
   au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
   " Rename the identifier under the cursor to a new name
-  au FileType go nmap <Leader>e <Plug>(go-renameau FileType go nmap <Leader>s <Plug>(go-implements)
+  au FileType go nmap <Leader>e <Plug>(go-rename)
+  au FileType go nmap <Leader>s <Plug>(go-implements)
 
   au BufRead,BufNewFile Gomfile setlocal ft=gomfile syntax=ruby
 endif

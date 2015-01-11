@@ -109,7 +109,7 @@ if exists("g:tools_undotree")
   let g:undotree_DiffpanelHeight = 20
 endif
 
-if exists("g:tools_tpope")
+if exists("g:tools_common")
   " Unimpaired configuration
   " Bubble single lines
   nmap <C-Up> [e

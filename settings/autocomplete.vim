@@ -92,10 +92,9 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
   let g:ycm_max_diagnostics_to_display = 30
-  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+  let g:ycm_key_list_select_completion = ['<C-k>', '<Down>']
+  let g:ycm_key_list_previous_completion = ['<C-j>', '<Up>']
   let g:ycm_key_invoke_completion = '<C-]>'
-  let g:ycm_key_detailed_diagnostics = '<leader>yd'
   let g:ycm_filepath_completion_use_working_dir = 0
 
   let g:ycm_semantic_triggers =  {
@@ -156,6 +155,6 @@ if exists("g:autocomplete_neocomplete")
 elseif exists("g:autocomplete_youcompleteme")
   " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe
   let g:UltiSnipsExpandTrigger="<c-@>"
-  let g:UltiSnipsJumpForwardTrigger="<c-n>"
-  let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+  let g:UltiSnipsJumpForwardTrigger="<c-k>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 endif

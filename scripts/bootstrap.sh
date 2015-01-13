@@ -137,9 +137,9 @@ create_dirs "Setting up vim dirs"
 
 clone_vundle "Successfully cloned vundle"
 
-setup_vundle "Now updating/installing plugins using Vundle"
-
 create_symlinks "Setting up vim symlinks"
+
+setup_vundle "Now updating/installing plugins using Vundle"
 
 copy_examples "Setting up example vim local configs"
 

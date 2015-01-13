@@ -100,8 +100,6 @@ create_symlinks() {
     ln -sf "$app_dir/vimrc.after" "$HOME/.vimrc.after"
     ln -sf "$app_dir/vimrc.before" "$HOME/.vimrc.before"
 
-    touch "$HOME/.vim/bundle/.installed"
-
     ret="$?"
     success "$1"
 }
@@ -121,6 +119,8 @@ setup_vundle() {
 
     vim --noplugin +BundleInstall! +BundleClean +qall
 
+    touch "$HOME/.vim/bundle/.installed"
+
     export SHELL="$system_shell"
 
     success "$1"
@@ -135,9 +135,9 @@ clone_repo "Successfully cloned $app_name"
 
 create_dirs "Setting up vim dirs"
 
-clone_vundle "Successfully cloned vundle"
-
 create_symlinks "Setting up vim symlinks"
+
+clone_vundle "Successfully cloned vundle"
 
 setup_vundle "Now updating/installing plugins using Vundle"
 

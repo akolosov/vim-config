@@ -90,6 +90,8 @@ create_dirs() {
         mkdir -p "$app_dir/bundle"
     fi
 
+		mkdir -p "$app_dir/tmp"
+
     ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
 
     ret="$?"

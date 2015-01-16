@@ -35,14 +35,14 @@ if BundleExists('languages', 'haskell')
 endif
 
 if BundleExists('languages', 'javascript')
-  Plug 'briancollins/vim-jst', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'claco/jasmine.vim', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'digitaltoad/vim-jade', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'itspriddle/vim-jquery', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'kchmck/vim-coffee-script', { 'for': ['javascript', 'coffeescript'] }
-  Plug 'elzr/vim-json', { 'for': ['javascript', 'coffeescript'] }
+  Plug 'briancollins/vim-jst', { 'for': ['javascript', 'coffee'] }
+  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'coffee'] }
+  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
+  Plug 'claco/jasmine.vim', { 'for': ['javascript', 'coffee'] }
+  Plug 'digitaltoad/vim-jade', { 'for': ['javascript', 'coffee'] }
+  Plug 'itspriddle/vim-jquery', { 'for': ['javascript', 'coffee'] }
+  Plug 'kchmck/vim-coffee-script', { 'for': ['javascript', 'coffee'] }
+  Plug 'elzr/vim-json', { 'for': ['javascript', 'coffee'] }
 
   let g:languages_javascript = 1
 endif
@@ -75,7 +75,7 @@ if BundleExists('languages', 'go')
 endif
 
 if BundleExists('languages', 'ruby')
-  Plug 'tpope/vim-haml', { 'for': 'ruby' }
+  Plug 'tpope/vim-haml', { 'for': 'haml' }
   Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
   Plug 'tpope/vim-rails', { 'for': 'ruby' }
   Plug 'tpope/vim-rake', { 'for': 'ruby' }
@@ -128,10 +128,10 @@ if BundleExists('languages', 'php')
 endif
 
 if BundleExists('languages', 'other')
-  Plug 'PotatoesMaster/i3-vim-syntax'
-  " Plug 'sheerun/vim-polyglot'
-  Plug 'wting/rust.vim'
-  Plug 'cespare/vim-toml'
+  Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
+  Plug 'wting/rust.vim', { 'for': 'rust' }
+  Plug 'cespare/vim-toml', { 'for': 'toml' }
+	Plug 'saaguero/vim-scriptease', { 'for': 'vim' }
 
   let g:languages_other = 1
 endif

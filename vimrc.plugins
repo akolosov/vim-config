@@ -1,3 +1,5 @@
+filetype off
+
 if !filereadable(expand("~/.vim/autoload/plug.vim"))
   echo "Installing vim-plug and plugins. Restart vim after finishing the process."
   silent call mkdir(expand("~/.vim/autoload", 1), 'p')
@@ -19,3 +21,5 @@ if filereadable(expand("~/.vim/plugins/local.plugins"))
 endif
 
 call plug#end()
+
+filetype plugin indent on

@@ -5,7 +5,7 @@ tags
 .netrwhist
 view
 tmp/*
-bundle/*
+plugged/*
 backups/*
 sessions/*
-vundles/local.vundle
+autoload/*

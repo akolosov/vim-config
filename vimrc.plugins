@@ -1,0 +1,21 @@
+if !filereadable(expand("~/.vim/autoload/plug.vim"))
+  echo "Installing vim-plug and plugins. Restart vim after finishing the process."
+  silent call mkdir(expand("~/.vim/autoload", 1), 'p')
+  execute "!curl -fLo ".expand("~/.vim/autoload/plug.vim", 1)." https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin('~/.vim/plugged')
+let g:plug_url_format  = 'https://github.com/%s.git'
+let g:plug_timeout = 300
+
+source ~/.vim/settings/plugins/apperances.plugins
+source ~/.vim/settings/plugins/languages.plugins
+source ~/.vim/settings/plugins/autocomplete.plugins
+source ~/.vim/settings/plugins/tools.plugins
+
+if filereadable(expand("~/.vim/plugins/local.plugins"))
+  source ~/.vim/settings/plugins/local.plugins
+endif
+
+call plug#end()

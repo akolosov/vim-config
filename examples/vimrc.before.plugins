@@ -1,0 +1,11 @@
+if exists("g:hardcore_mode")
+	call AddBundle("tools", "git")
+	call AddBundle("tools", "search")
+	call AddBundle("tools", "ctrlp")
+	call AddBundle("tools", "commenter")
+else
+	call RemoveBundle("tools", "nerdtree")
+	call RemoveBundle("tools", "vimshell")
+	call RemoveBundle("tools", "session")
+	call RemoveBundle("tools", "easytags")
+endif

@@ -1,0 +1,31 @@
+if BundleExists('apperances', 'lightline')
+  Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/lightline-powerful'
+  Plug 'cocopon/lightline-hybrid.vim'
+
+  let g:apperances_lightkine = 1
+elseif BundleExists('apperances', 'airline')
+  Plug 'bling/vim-airline'
+
+  let g:apperances_airline = 1
+endif
+
+if BundleExists('apperances', 'numbers')
+  Plug 'myusuf3/numbers.vim'
+
+  let g:apperances_numbers = 1
+endif
+
+if BundleExists('apperances', 'indentline')
+  Plug 'Yggdroot/indentLine'
+
+  let g:apperances_indentline = 1
+endif
+
+if BundleExists('apperances', 'common')
+  Plug 'chrisbra/color_highlight'
+  Plug 'akolosov/vim-colors'
+  Plug 'vim-scripts/lastpos.vim'
+
+  let g:apperances_common = 1
+endif

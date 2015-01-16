@@ -9,16 +9,16 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
-if filereadable(expand("~/.vimrc.before.vundles"))
-  source ~/.vimrc.before.vundles
+if filereadable(expand("~/.vimrc.before.plugins"))
+  source ~/.vimrc.before.plugins
 endif
 
 " =============== Vundle Initialization ===============
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+if filereadable(expand("~/.vim/vimrc.plugins"))
+  source ~/.vim/vimrc.plugins
 endif
 
-if filereadable(expand("~/.vim/bundle/.installed"))
+if filereadable(expand("~/.vim/plugged/.installed"))
 	" ================ General Config ====================
 
 	set number                      "Line numbers are good

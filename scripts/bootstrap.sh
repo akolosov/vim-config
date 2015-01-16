@@ -4,7 +4,6 @@ app_name='VIM-config'
 app_dir="$HOME/.vim"
 
 [ -z "$git_uri" ] && git_uri='https://github.com/akolosov/vim-config.git'
-[ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
 
 ############################  BASIC SETUP TOOLS
 msg() {
@@ -54,11 +53,6 @@ upgrade_repo() {
           git pull origin
       fi
 
-      if [ "$1" = "vundle" ]; then
-          cd "$HOME/.vim/bundle/vundle" &&
-          git pull origin master
-      fi
-
       ret="$?"
       success "$2"
 }
@@ -71,26 +65,24 @@ clone_repo() {
         ret="$?"
         success "$1"
     else
-        upgrade_repo "$app_name"    "Successfully updated $app_name"
+        upgrade_repo "$app_name" "Successfully updated $app_name"
     fi
 }
 
-clone_vundle() {
-    if [ ! -e "$HOME/.vim/bundle/vundle" ]; then
-        git clone $VUNDLE_URI "$HOME/.vim/bundle/vundle"
-    else
-        upgrade_repo "vundle" "Successfully updated vundle"
-    fi
+clone_vim_plug() {
+    program_exists "curl" "Sorry, we cannot continue without CURL, please install it first."
+
+    mkdir -p ~/.vim/autoload
+    curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
     ret="$?"
     success "$1"
 }
 
 create_dirs() {
-    if [ ! -d "$app_dir/bundle" ]; then
-        mkdir -p "$app_dir/bundle"
-    fi
+    mkdir -p "$app_dir/plugged"
 
-		mkdir -p "$app_dir/tmp"
+    mkdir -p "$app_dir/tmp"
 
     ln -sf "$app_dir/vimrc" "$HOME/.vimrc"
 
@@ -109,19 +101,19 @@ create_symlinks() {
 copy_examples() {
     cp -f "$app_dir/examples/vimrc.after.local" "$HOME/.vimrc.after.local"
     cp -f "$app_dir/examples/vimrc.before.local" "$HOME/.vimrc.before.local"
-    cp -f "$app_dir/examples/vimrc.before.vundles" "$HOME/.vimrc.before.vundles"
+    cp -f "$app_dir/examples/vimrc.before.plugins" "$HOME/.vimrc.before.plugins"
 
     ret="$?"
     success "$1"
 }
 
-setup_vundle() {
+setup_vim_plug() {
     system_shell="$SHELL"
     export SHELL='/bin/sh'
 
-    vim --noplugin +BundleInstall! +BundleClean +qall
+    vim --noplugin +PlugInstall +PlugClean! +qa
 
-    touch "$HOME/.vim/bundle/.installed"
+    touch "$HOME/.vim/plugged/.installed"
 
     export SHELL="$system_shell"
 
@@ -137,11 +129,11 @@ clone_repo "Successfully cloned $app_name"
 
 create_dirs "Setting up vim dirs"
 
+clone_vim_plug "VIM-Plug successfully cloned"
+
 create_symlinks "Setting up vim symlinks"
 
-clone_vundle "Successfully cloned vundle"
-
-setup_vundle "Now updating/installing plugins using Vundle"
+setup_vim_plug "Now updating/installing plugins using VIM-Plug"
 
 copy_examples "Setting up example vim local configs"
 

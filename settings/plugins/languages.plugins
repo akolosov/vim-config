@@ -57,12 +57,12 @@ if BundleExists('languages', 'markdown')
 endif
 
 if BundleExists('languages', 'html/css')
-  Plug 'groenewege/vim-less', { 'for': ['html', 'css'] }
-  Plug 'skwp/vim-html-escape', { 'for': ['html', 'css'] }
-  Plug 'rstacruz/sparkup', { 'for': ['html', 'css'] }
-  Plug 'amirh/HTML-AutoCloseTag', { 'for': ['html', 'css'] }
-  Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css'] }
-  Plug 'gorodinskiy/vim-coloresque', { 'for': ['html', 'css'] }
+  Plug 'groenewege/vim-less', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
+  Plug 'skwp/vim-html-escape', { 'for': 'html' }
+  Plug 'rstacruz/sparkup', { 'for': 'html' }
+  Plug 'amirh/HTML-AutoCloseTag', { 'for': 'html' }
+  Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
+  Plug 'gorodinskiy/vim-coloresque', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
 
   let g:languages_html_css = 1
 endif
@@ -81,7 +81,7 @@ if BundleExists('languages', 'ruby')
   Plug 'tpope/vim-rake', { 'for': 'ruby' }
   Plug 'tpope/vim-rvm', { 'for': 'ruby' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-  Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
+  Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby', 'rspec'] }
   Plug 'skwp/vim-iterm-rspec', { 'for': 'ruby' }
   Plug 'skwp/vim-spec-finder', { 'for': 'ruby' }
   Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
@@ -93,15 +93,15 @@ endif
 
 if BundleExists('languages', 'textobjects')
   Plug 'austintaylor/vim-indentobject'
-  Plug 'bootleq/vim-textobj-rubysymbol'
+  Plug 'bootleq/vim-textobj-rubysymbol', { 'for': 'ruby' }
   Plug 'coderifous/textobj-word-column.vim'
   Plug 'kana/vim-textobj-datetime'
   Plug 'kana/vim-textobj-entire'
   Plug 'kana/vim-textobj-function'
   Plug 'kana/vim-textobj-user'
   Plug 'lucapette/vim-textobj-underscore'
-  Plug 'nelstrom/vim-textobj-rubyblock'
-  Plug 'thinca/vim-textobj-function-javascript'
+  Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+  Plug 'thinca/vim-textobj-function-javascript', { 'for': ['javascript', 'coffee'] }
   Plug 'vim-scripts/argtextobj.vim'
   Plug 'wellle/targets.vim'
   Plug 'reedes/vim-litecorrect'
@@ -132,7 +132,8 @@ if BundleExists('languages', 'other')
   Plug 'wting/rust.vim', { 'for': 'rust' }
   Plug 'cespare/vim-toml', { 'for': 'toml' }
 	Plug 'saaguero/vim-scriptease', { 'for': 'vim' }
+	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-  let g:languages_other = 1
+	let g:languages_other = 1
 endif
 

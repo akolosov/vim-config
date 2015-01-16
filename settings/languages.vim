@@ -140,3 +140,6 @@ if exists("g:languages_javascript")
   autocmd BufRead,BufNewFile *.js set ft=javascript syntax=jquery
 endif
 
+if exists("g:languages_common")
+  au BufNewFile,BufRead *.plugins setlocal filetype=vim
+endif

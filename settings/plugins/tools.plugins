@@ -59,7 +59,7 @@ endif
 
 if BundleExists('tools', 'nerdtree')
   Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeShow'] }
-  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeShow'] }
 
   let g:tools_nerdtree = 1
 endif

@@ -168,7 +168,7 @@ if exists("g:tools_search")
 endif
 
 if exists("g:tools_bookmarks")
-  let g:bookmark_auto_save_file = '~/.vim/tmp/bookmarks'
+  let g:bookmark_auto_save_file = expand("~/.vim/tmp/bookmarks")
   let g:bookmark_auto_close = 1
 endif
 

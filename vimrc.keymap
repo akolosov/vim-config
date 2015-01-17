@@ -55,92 +55,6 @@ if !exists('g:hardcore_mode')
 
 	imap <S-F10> <C-o>:wqa!<CR>
 	map <S-F10> :wqa!<CR>
-
-	map <C-g>   :TagbarToggle<CR>
-	imap <C-g>   <C-o>:TagbarToggle<CR>
-
-	" Ctrl-/ - Comment current line.
-	map <C-_> ,ci
-	imap <C-_> <C-o>,cii
-
-	if exists("g:use_copy_cut_paste_keys")
-		" CTRL-X and SHIFT-Del are Cut
-		vnoremap <C-X>   "+x
-		vnoremap <S-Del> "+x
-
-		" CTRL-C and CTRL-Insert are Copy
-		vnoremap <C-C>      "+y
-		vnoremap <C-Insert> "+y
-
-		" CTRL-V and SHIFT-Insert are Paste
-		map  <C-V>      "+gP
-		map  <S-Insert> "+gP
-
-		cmap <C-V>      <C-R>+
-		cmap <S-Insert> <C-R>+
-
-		exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-		exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-
-		imap <S-Insert> <C-V>
-		vmap <S-Insert> <C-V>
-		
-		" Text selection by SHIFT+Arrows
-		imap <S-Up>    <Esc>v<Up>
-		imap <S-Down>  <Esc>v<Down>
-		imap <S-Left>  <Esc>v<Left>
-		imap <S-Right> <Esc><Right>v<Right>
-		nmap <S-Up>    v<Up>
-		nmap <S-Down>  v<Down>
-		nmap <S-Left>  v<Left>
-		nmap <S-Right> v<Right>
-		vmap <S-Up>    <Up>
-		vmap <S-Down>  <Down>
-		vmap <S-Left>  <Left>
-		vmap <S-Right> <Right>
-		imap <S-End>   <Esc>v<End>
-		imap <S-Home>  <Esc>v<Home>
-		nmap <S-End>   v<End>
-		nmap <S-Home>  v<Home>
-		vmap <S-End>   <End>
-		vmap <S-Home>  <Home>
-	endif
-
-	map <C-z> :UndotreeToggle<CR>
-	imap <C-z> <C-o>:UndotreeToggle<CR>
-
-	map <C-t> :tabnew<CR>
-	imap <C-t> <C-o>:tabnew<CR>
-
-	if exists('g:tools_vimshell')
-		map ~~ :VimShell<CR>
-	endif
-
-	" Space for open/close folds if exist
-	nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-	vnoremap <Space> zf
-
-	" Alt-Up - upcase, Alt-Down - downcase
-	map <A-Up>   gUiw
-	imap <A-Up>   <C-o>gUiw
-	map <A-Down> guiw
-	imap <A-Down> <C-o>guiw
-
-	nnoremap <silent> <C-]>  gt
-	nnoremap <silent> <C-[>  gT
-	vnoremap <silent> <C-]>  gt
-	vnoremap <silent> <C-[>  gT
-	nnoremap <silent> ] :bn<CR>
-	nnoremap <silent> [ :bp<CR>
-	vnoremap <silent> ] :bn<CR>
-	vnoremap <silent> [ :bp<CR>
-
-	if exists('g:tools_ctrlp')
-		nnoremap <silent> <C-p> :CtrlPMenu<CR>
-		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
-	endif
-
 else
 	if (&readonly || argc())
 		noremap <silent> <Esc><Esc> :qa<CR>
@@ -152,6 +66,95 @@ else
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
+endif
+
+if exists('g:tools_tagbar')
+	map <C-g>   :TagbarToggle<CR>
+	imap <C-g>   <C-o>:TagbarToggle<CR>
+endif
+
+" Ctrl-/ - Comment current line.
+map <C-_> ,ci
+imap <C-_> <C-o>,cii
+
+if exists("g:use_copy_cut_paste_keys")
+	" CTRL-X and SHIFT-Del are Cut
+	vnoremap <C-X>   "+x
+	vnoremap <S-Del> "+x
+
+	" CTRL-C and CTRL-Insert are Copy
+	vnoremap <C-C>      "+y
+	vnoremap <C-Insert> "+y
+
+	" CTRL-V and SHIFT-Insert are Paste
+	map  <C-V>      "+gP
+	map  <S-Insert> "+gP
+
+	cmap <C-V>      <C-R>+
+	cmap <S-Insert> <C-R>+
+
+	exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+	exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+
+	imap <S-Insert> <C-V>
+	vmap <S-Insert> <C-V>
+	
+	" Text selection by SHIFT+Arrows
+	imap <S-Up>    <Esc>v<Up>
+	imap <S-Down>  <Esc>v<Down>
+	imap <S-Left>  <Esc>v<Left>
+	imap <S-Right> <Esc><Right>v<Right>
+	nmap <S-Up>    v<Up>
+	nmap <S-Down>  v<Down>
+	nmap <S-Left>  v<Left>
+	nmap <S-Right> v<Right>
+	vmap <S-Up>    <Up>
+	vmap <S-Down>  <Down>
+	vmap <S-Left>  <Left>
+	vmap <S-Right> <Right>
+	imap <S-End>   <Esc>v<End>
+	imap <S-Home>  <Esc>v<Home>
+	nmap <S-End>   v<End>
+	nmap <S-Home>  v<Home>
+	vmap <S-End>   <End>
+	vmap <S-Home>  <Home>
+endif
+
+if exists('g:tools_undotree')
+	map <C-z> :UndotreeToggle<CR>
+	imap <C-z> <C-o>:UndotreeToggle<CR>
+endif
+
+map <C-t> :tabnew<CR>
+imap <C-t> <C-o>:tabnew<CR>
+
+if exists('g:tools_vimshell')
+	map ~~ :VimShell<CR>
+endif
+
+" Space for open/close folds if exist
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+" Alt-Up - upcase, Alt-Down - downcase
+map <A-Up>   gUiw
+imap <A-Up>   <C-o>gUiw
+map <A-Down> guiw
+imap <A-Down> <C-o>guiw
+
+nnoremap <silent> <C-]>  gt
+nnoremap <silent> <C-[>  gT
+vnoremap <silent> <C-]>  gt
+vnoremap <silent> <C-[>  gT
+nnoremap <silent> ] :bn<CR>
+nnoremap <silent> [ :bp<CR>
+vnoremap <silent> ] :bn<CR>
+vnoremap <silent> [ :bp<CR>
+
+if exists('g:tools_ctrlp')
+	nnoremap <silent> <C-p> :CtrlPMenu<CR>
+	vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+	inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
 endif
 
 if exists('g:tools_ctrlp')

@@ -29,15 +29,20 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a id="vim-config" class="anchor" href="#vim-config" aria-hidden="true"><span class="octicon octicon-link"></span></a>vim-config</h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
 
 <p>To install just run in terminal:</p>
 
 <div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - <span class="pl-k">|</span> sh</pre></div>
 
-<p>... wait until successfully installed and have fun with VIM!</p>
+<p>... and wait until successfully installed and have fun with VIM!</p>
 
-<p>Inspired by <a href="http://vim.spf13.com/">spf13-vim</a> and <a href="http://skwp.github.io/dotfiles/">YADR</a> - thanks guys!</p>
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<pre><code>- vim, macvim, neovim with +ruby, +python, +lua supports
+- installed curl, git
+</code></pre>
 
 <h1>
 <a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h1>
@@ -51,11 +56,9 @@
 
 <p>All variables set in <code>~/.vimrc.before.local</code> file.</p>
 
-<p><code>g:hardcore_mode</code> - allow to use VIM Hardcore mode (unset <code>g:use_arrow_keys</code>, <code>g:use_copy_cut_paste_keys</code>, <code>g:use_ctrl_space</code>, <code>g:use_vim_shell</code> and many keymaps)</p>
+<p><code>g:hardcore_mode</code> - allow to use VIM Hardcore mode (unset <code>g:use_arrow_keys</code>, <code>g:use_copy_cut_paste_keys</code> and many keymaps)</p>
 
 <p><code>g:hardcore_mode_with_arrow_keys</code> - the same as <code>g:hardcore_mode</code>, but arrow keys for navigation is enabled</p>
-
-<p><code>g:use_lightline</code> - allow to use LightLine instead AirLine</p>
 
 <p><code>g:use_powerline_fonts</code> - allow to use PowerLine fonts (<a href="https://github.com/Lokaltog/powerline-fonts">Link</a>)</p>
 
@@ -65,25 +68,13 @@
 
 <p><code>g:lightline_theme</code> - Your favorite LightLine theme (default: hybrid)</p>
 
-<p><code>g:use_relativenumber</code> - allow to use relative line numbers</p>
-
-<p><code>g:use_ctrl_space</code> - allow to use CtrlSpace plugin instead CtrlP</p>
-
-<p><code>g:use_vim_shell</code> - allow to use VimShell plugin</p>
-
-<p><code>g:use_nerd_tree</code> - allow to use NERDTree plugin</p>
-
-<p><code>g:dont_show_nerd_tree</code> - do not show NERDTree on startup</p>
+<p><code>g:dont_show_nerd_tree</code> - do not show NERDTree on startup (if plugin is enabled)</p>
 
 <p><code>g:use_arrow_keys</code> - allow to use arrow keys. Only hjkl! Only hardcore!</p>
 
 <p><code>g:use_copy_cut_paste_keys</code> - allow to use Ctrl-C/V/X keys for Copy/Paste/Cut</p>
 
 <p><code>g:use_autosave</code> - allow to autosave all changes, like Textmate</p>
-
-<p><code>g:use_neocomplete</code> - allow to use autocomplete with neocomplete+neosnippets plugins instead YouCompleteMe+UltiSnips.</p>
-
-<p><code>g:use_youcompleteme</code> - allow to use autocomplete with YouCompleteMe+UltiSnips plugins instead neocomplete+neosnippets.</p>
 
 <h1>
 <a id="shortcuts" class="anchor" href="#shortcuts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortcuts</h1>
@@ -99,7 +90,7 @@
 <tbody>
 <tr>
 <td align="center"><code>CTRL-P</code></td>
-<td>Open CtrlP menu (if not set <code>g:use_ctrl_space</code>)</td>
+<td>Open CtrlP menu</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
@@ -159,11 +150,6 @@
 </td>
 <td>Comment/Uncomment block (if not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n i v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>CTRL-Space</code></td>
-<td>Open CtrlSpace buffers (if set <code>g:use_ctrl_space</code> and not set <code>g:hardcore_mode</code>)</td>
-<td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>F2</code></td>
@@ -242,7 +228,7 @@
 </tr>
 <tr>
 <td align="center"><code>&lt;tilde&gt;&lt;tilde&gt;</code></td>
-<td>Run VimShell (if set <code>g:use_vim_shell</code> and not set <code>g:hardcore_mode</code>)</td>
+<td>Run VimShell (if plugin loaded and not set <code>g:hardcore_mode</code>)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>
@@ -284,14 +270,14 @@
 <td align="center">
 <code>,,</code> or <code>,o</code>
 </td>
-<td>Open CtrlP (if not set <code>g:use_ctrl_space</code>)</td>
+<td>Open CtrlP (if plugin loaded)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
 <td align="center">
 <code>..</code> or <code>,b</code>
 </td>
-<td>Open CtrlP buffers (if not set <code>g:use_ctrl_space</code>)</td>
+<td>Open CtrlP buffers (if plugin loaded)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -403,12 +389,12 @@
 </tr>
 <tr>
 <td align="center"><code>,nd</code></td>
-<td>Show/Hide NERDTree (if set <code>g:use_nerd_tree</code>)</td>
+<td>Show/Hide NERDTree (if plugin loaded)</td>
 <td align="center"><strong>[n i v]</strong></td>
 </tr>
 <tr>
 <td align="center"><code>,nf</code></td>
-<td>Show current file in NERDTree (if not set <code>g:use_nerd_tree</code>)</td>
+<td>Show current file in NERDTree (if plugin loaded)</td>
 <td align="center"><strong>[n]</strong></td>
 </tr>
 <tr>
@@ -520,21 +506,6 @@
 <tr>
 <td align="center"><code>,ss</code></td>
 <td>Strip trailing whitespace</td>
-<td align="center"><strong>[n v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,st</code></td>
-<td>Make selected text Stringify()</td>
-<td align="center"><strong>[n v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,sp</code></td>
-<td>Split line by tags/keywords (using SplitJoin.vim)</td>
-<td align="center"><strong>[n v]</strong></td>
-</tr>
-<tr>
-<td align="center"><code>,sj</code></td>
-<td>Join lines by tags/keywords (using SplitJoin.vim)</td>
 <td align="center"><strong>[n v]</strong></td>
 </tr>
 <tr>

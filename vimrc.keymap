@@ -225,8 +225,10 @@ cmap <Nul> <C-R><C-W>
 nmap <silent> // :nohlsearch<CR><Esc>
 
 " Comment/Uncomment current line or selection
-map <silent> \\ ,c<Space>
-imap <silent> \\ <C-o>,c<Space>
+if exists('g:tools_commenter')
+	map <silent> \\ ,c<Space>
+	imap <silent> \\ <C-o>,c<Space>
+endif
 
 " ,a - select all text in buffer
 noremap  <Leader>a    ggVG
@@ -320,38 +322,6 @@ vmap <Leader>{ c{<C-R>"}<ESC>
 
 " <Leader>` Surround a word with `apostrophes`
 map <Leader>` ysiw`
-
-" Selection inside:
-" inside []
-map <Leader>s]  vi[
-vmap <Leader>s]  i[
-" with []
-map <Leader>s[  va[
-vmap <Leader>s[  a[
-" inside {}
-map <Leader>s}  vi{
-vmap <Leader>s}  i{
-" with {}
-map <Leader>s{  va{
-vmap <Leader>s{  a{
-" inside ()
-map <Leader>s)  vi(
-vmap <Leader>s)  i(
-" with ()
-map <Leader>s(  va(
-vmap <Leader>s(  a(
-" inside <>
-map <Leader>s>  vi<
-vmap <Leader>s>  i<
-" with <>
-map <Leader>s<  va<
-vmap <Leader>s<  a<
-" inside ""
-map <Leader>s"  vi"
-vmap <Leader>s"  i"
-" inside ''
-map <Leader>s'  vi'
-vmap <Leader>s'  i'
 
 " Go to last edit location with <Leader>.
 nnoremap <Leader>. '.

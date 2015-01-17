@@ -136,16 +136,6 @@ Shortcuts
 | `,ss` | Strip trailing whitespace | **\[n v]** |
 | `,sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
 | `,sr` | Search word under cursor and replace with user inputs | **\[n v]** |
-| `,s[` | Select inside [] include brackets  | **\[n v]** |
-| `,s]` | Select inside [] | **\[n v]** |
-| `,s{` | Select inside {} include brackets | **\[n v]** |
-| `,s}` | Select inside {} | **\[n v]** |
-| `,s(` | Select inside () include brackets | **\[n v]** |
-| `,s)` | Select inside () | **\[n v]** |
-| `,s<` | Select inside <> include brackets | **\[n v]** |
-| `,s>` | Select inside <> | **\[n v]** |
-| `,s"` | Select inside " | **\[n v]** |
-| `,s'` | Select inside ' | **\[n v]** |
 | `,yw` | Yank word under cursor | **\[n]** |
 | `,yl` | Yank current line | **\[n]** |
 | `,ls` | Send current line to console (tmux by default) | **\[n]** |

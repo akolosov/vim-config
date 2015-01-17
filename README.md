@@ -1,5 +1,5 @@
-vim-config
-==========
+Installation
+============
 
 To install just run in terminal:
 
@@ -7,7 +7,13 @@ To install just run in terminal:
 curl https://raw.githubusercontent.com/akolosov/vim-config/master/scripts/bootstrap.sh -L -o - | sh
 ```
 
-... wait until successfully installed and have fun with VIM!
+... and wait until successfully installed and have fun with VIM!
+
+
+Requirements
+============
+	- vim, macvim, neovim with +ruby, +python, +lua supports
+	- installed curl, git
 
 
 Screenshots
@@ -34,7 +40,7 @@ All variables set in `~/.vimrc.before.local` file.
 
 `g:lightline_theme` - Your favorite LightLine theme (default: hybrid)
 
-`g:dont_show_nerd_tree` - do not show NERDTree on startup
+`g:dont_show_nerd_tree` - do not show NERDTree on startup (if plugin is enabled)
 
 `g:use_arrow_keys` - allow to use arrow keys. Only hjkl! Only hardcore!
 

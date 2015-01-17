@@ -186,7 +186,9 @@ if filereadable(expand("~/.vim/plugged/.installed"))
 	set guioptions-=m
 
   " ================ Custom Settings ========================
-  so ~/.vim/settings.vim
+	for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
+		exe 'source' fpath
+	endfor
 
 	" ================ Custom Keymap ========================
   so ~/.vim/vimrc.keymap

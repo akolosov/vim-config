@@ -8,6 +8,7 @@ if !filereadable(expand("~/.vim/autoload/plug.vim"))
 endif
 
 call plug#begin('~/.vim/plugged')
+
 let g:plug_url_format  = 'https://github.com/%s.git'
 let g:plug_timeout = 300
 

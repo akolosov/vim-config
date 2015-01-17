@@ -167,3 +167,7 @@ if exists("g:tools_search")
   nnoremap <silent> <leader>qa/ :execute "Ag! '" . substitute(substitute(substitute(@/, "\\\\<", "\\\\b", ""), "\\\\>", "\\\\b", ""), "\\\\v", "", "") . "'"<CR>
 endif
 
+if exists("g:tools_bookmarks")
+
+endif
+

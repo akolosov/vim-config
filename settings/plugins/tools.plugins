@@ -70,6 +70,12 @@ if BundleExists('tools', 'multicursors')
   let g:tools_multicursors = 1
 endif
 
+if BundleExists('tools', 'bookmarks')
+  Plug 'MattesGroeger/vim-bookmarks'
+
+  let g:tools_bookmarks = 1
+endif
+
 if BundleExists('tools', 'undotree')
   Plug 'mbbill/undotree', { 'on':  ['UndotreeToggle', 'UndotreeShow'] }
 

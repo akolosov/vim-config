@@ -73,9 +73,19 @@ if exists('g:tools_tagbar')
 	imap <C-g>   <C-o>:TagbarToggle<CR>
 endif
 
-" Ctrl-/ - Comment current line.
-map <C-_> ,ci
-imap <C-_> <C-o>,cii
+if exists('g:tools_search')
+	nmap <C-@> :FZF .<CR>
+endif
+
+if exists('g:tools_commenter')
+	" Ctrl-/ - Comment current line or selection.
+	map <C-_> ,ci
+	imap <C-_> <C-o>,cii
+
+	" Comment/Uncomment current line or selection
+	map <silent> \\ ,c<Space>
+	imap <silent> \\ <C-o>,c<Space>
+endif
 
 if exists("g:use_copy_cut_paste_keys")
 	" CTRL-X and SHIFT-Del are Cut
@@ -223,12 +233,6 @@ cmap <Nul> <C-R><C-W>
  
 " Switch off search highlights
 nmap <silent> // :nohlsearch<CR><Esc>
-
-" Comment/Uncomment current line or selection
-if exists('g:tools_commenter')
-	map <silent> \\ ,c<Space>
-	imap <silent> \\ <C-o>,c<Space>
-endif
 
 " ,a - select all text in buffer
 noremap  <Leader>a    ggVG

@@ -109,3 +109,10 @@ if BundleExists('tools', 'vimshell')
   let g:tools_vimshell = 1
 endif
 
+if BundleExists('tools', 'align')
+  Plug 'junegunn/vim-easy-align'
+
+  let g:tools_align = 1
+endif
+
+

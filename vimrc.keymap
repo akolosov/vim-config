@@ -87,6 +87,10 @@ if exists('g:tools_commenter')
 	imap <silent> \\ <C-o>,c<Space>
 endif
 
+if exists('g:tools_align')
+	vnoremap <silent> <Enter> :EasyAlign<cr>
+endif
+
 if exists("g:use_copy_cut_paste_keys")
 	" CTRL-X and SHIFT-Del are Cut
 	vnoremap <C-X>   "+x

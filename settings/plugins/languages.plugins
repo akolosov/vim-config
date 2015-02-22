@@ -133,6 +133,7 @@ if BundleExists('languages', 'other')
   Plug 'cespare/vim-toml', { 'for': 'toml' }
 	Plug 'saaguero/vim-scriptease', { 'for': 'vim' }
 	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+	Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile'}
 
 	let g:languages_other = 1
 endif

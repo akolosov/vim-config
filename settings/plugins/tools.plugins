@@ -115,4 +115,10 @@ if BundleExists('tools', 'align')
   let g:tools_align = 1
 endif
 
+if BundleExists('tools', 'zeal')
+	Plug 'KabbAmine/zeavim.vim'
+
+  let g:tools_zeal = 1
+endif
+
 

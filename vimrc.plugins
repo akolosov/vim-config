@@ -17,7 +17,7 @@ source ~/.vim/settings/plugins/languages.plugins
 source ~/.vim/settings/plugins/autocomplete.plugins
 source ~/.vim/settings/plugins/tools.plugins
 
-if filereadable(expand("~/.vim/plugins/local.plugins"))
+if filereadable(expand("~/.vim/settings/plugins/local.plugins"))
   source ~/.vim/settings/plugins/local.plugins
 endif
 

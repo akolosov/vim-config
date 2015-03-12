@@ -118,6 +118,8 @@ if exists("g:tools_common")
   " Bubble multiple lines
   vmap <C-Up> [egv
   vmap <C-Down> ]egv
+
+  let g:lastplace_ignore = "gitcommit,svn"
 end
 
 if exists("g:tools_multicursors")

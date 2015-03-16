@@ -9,141 +9,141 @@ inoremap <F1> <Esc>
 map q: :q
 
 if !exists('g:hardcore_mode')
-	" Save file
-	imap <F2>   <C-o>:w<CR>
-	vmap <F2>   :<C-U>w<CR>v
-	nmap  <F2>   :w<CR>
+  " Save file
+  imap <F2>   <C-o>:w<CR>
+  vmap <F2>   :<C-U>w<CR>v
+  nmap  <F2>   :w<CR>
 
-	" Save all files
-	imap <C-F2> <C-o>:wa<CR>
-	vmap <C-F2> :<C-U>wa<CR>v
-	nmap  <C-F2> :wa<CR>
+  " Save all files
+  imap <C-F2> <C-o>:wa<CR>
+  vmap <C-F2> :<C-U>wa<CR>v
+  nmap  <C-F2> :wa<CR>
 
-	" Save file as...
-	imap <S-F2> <C-o>:w<SPACE><C-R>=expand("%:p")<CR>
-	vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
-	nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
+  " Save file as...
+  imap <S-F2> <C-o>:w<SPACE><C-R>=expand("%:p")<CR>
+  vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
+  nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
 
-	" Delete line
-	map  <C-y>  dd
-	imap <C-y>  <C-o>dd
+  " Delete line
+  map  <C-y>  dd
+  imap <C-y>  <C-o>dd
 
-	" Delete line to EOL
-	map  <C-l>  d$
-	imap <C-l>  <C-o>d$
+  " Delete line to EOL
+  map  <C-l>  d$
+  imap <C-l>  <C-o>d$
 
-	" Delete line to BOL
-	map  <C-h>  d^
-	imap <C-h>  <C-o>d^
+  " Delete line to BOL
+  map  <C-h>  d^
+  imap <C-h>  <C-o>d^
 
-	" Toggle readonly mode
-	map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
+  " Toggle readonly mode
+  map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
-	" F5 - Open the selected region in a new narrowed window
-	noremap <silent> <F5> :NR<CR>
+  " F5 - Open the selected region in a new narrowed window
+  noremap <silent> <F5> :NR<CR>
 
-	imap <F10> <ESC>:qa!<CR>
-	map <F10> :qa!<CR>
+  imap <F10> <ESC>:qa!<CR>
+  map <F10> :qa!<CR>
 
-	if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
-		noremap <silent> <Esc><Esc> :qa<CR>
-		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
-	else
-		noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
-		inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
-	endif
+  if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
+    noremap <silent> <Esc><Esc> :qa<CR>
+    inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+  else
+    noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+    inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+  endif
 
-	imap <S-F10> <C-o>:wqa!<CR>
-	map <S-F10> :wqa!<CR>
+  imap <S-F10> <C-o>:wqa!<CR>
+  map <S-F10> :wqa!<CR>
 else
-	if (&readonly || argc())
-		noremap <silent> <Esc><Esc> :qa<CR>
-		inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
-	end
+  if (&readonly || argc())
+    noremap <silent> <Esc><Esc> :qa<CR>
+    inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+  end
 
-	" Easy window navigation
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+  " Easy window navigation
+  map <C-h> <C-w>h
+  map <C-j> <C-w>j
+  map <C-k> <C-w>k
+  map <C-l> <C-w>l
 endif
 
 if exists('g:tools_tagbar')
-	map <C-g>   :TagbarToggle<CR>
-	imap <C-g>   <C-o>:TagbarToggle<CR>
+  map <C-g>   :TagbarToggle<CR>
+  imap <C-g>   <C-o>:TagbarToggle<CR>
 endif
 
 if exists('g:tools_search')
-	nmap <C-@> :FZF .<CR>
+  nmap <C-@> :FZF .<CR>
 endif
 
 if exists('g:tools_commenter')
-	" Ctrl-/ - Comment current line or selection.
-	map <C-_> ,ci
-	imap <C-_> <C-o>,cii
+  " Ctrl-/ - Comment current line or selection.
+  map <C-_> ,ci
+  imap <C-_> <C-o>,cii
 
-	" Comment/Uncomment current line or selection
-	map <silent> \\ ,c<Space>
-	imap <silent> \\ <C-o>,c<Space>
+  " Comment/Uncomment current line or selection
+  map <silent> \\ ,c<Space>
+  imap <silent> \\ <C-o>,c<Space>
 endif
 
 if exists('g:tools_align')
-	vnoremap <silent> <Enter> :EasyAlign<cr>
+  vnoremap <silent> <Enter> :EasyAlign<cr>
 endif
 
 if exists("g:use_copy_cut_paste_keys")
-	" CTRL-X and SHIFT-Del are Cut
-	vnoremap <C-X>   "+x
-	vnoremap <S-Del> "+x
+  " CTRL-X and SHIFT-Del are Cut
+  vnoremap <C-X>   "+x
+  vnoremap <S-Del> "+x
 
-	" CTRL-C and CTRL-Insert are Copy
-	vnoremap <C-C>      "+y
-	vnoremap <C-Insert> "+y
+  " CTRL-C and CTRL-Insert are Copy
+  vnoremap <C-C>      "+y
+  vnoremap <C-Insert> "+y
 
-	" CTRL-V and SHIFT-Insert are Paste
-	map  <C-V>      "+gP
-	map  <S-Insert> "+gP
+  " CTRL-V and SHIFT-Insert are Paste
+  map  <C-V>      "+gP
+  map  <S-Insert> "+gP
 
-	cmap <C-V>      <C-R>+
-	cmap <S-Insert> <C-R>+
+  cmap <C-V>      <C-R>+
+  cmap <S-Insert> <C-R>+
 
-	exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-	exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
+  exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
+  exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 
-	imap <S-Insert> <C-V>
-	vmap <S-Insert> <C-V>
-	
-	" Text selection by SHIFT+Arrows
-	imap <S-Up>    <Esc>v<Up>
-	imap <S-Down>  <Esc>v<Down>
-	imap <S-Left>  <Esc>v<Left>
-	imap <S-Right> <Esc><Right>v<Right>
-	nmap <S-Up>    v<Up>
-	nmap <S-Down>  v<Down>
-	nmap <S-Left>  v<Left>
-	nmap <S-Right> v<Right>
-	vmap <S-Up>    <Up>
-	vmap <S-Down>  <Down>
-	vmap <S-Left>  <Left>
-	vmap <S-Right> <Right>
-	imap <S-End>   <Esc>v<End>
-	imap <S-Home>  <Esc>v<Home>
-	nmap <S-End>   v<End>
-	nmap <S-Home>  v<Home>
-	vmap <S-End>   <End>
-	vmap <S-Home>  <Home>
+  imap <S-Insert> <C-V>
+  vmap <S-Insert> <C-V>
+  
+  " Text selection by SHIFT+Arrows
+  imap <S-Up>    <Esc>v<Up>
+  imap <S-Down>  <Esc>v<Down>
+  imap <S-Left>  <Esc>v<Left>
+  imap <S-Right> <Esc><Right>v<Right>
+  nmap <S-Up>    v<Up>
+  nmap <S-Down>  v<Down>
+  nmap <S-Left>  v<Left>
+  nmap <S-Right> v<Right>
+  vmap <S-Up>    <Up>
+  vmap <S-Down>  <Down>
+  vmap <S-Left>  <Left>
+  vmap <S-Right> <Right>
+  imap <S-End>   <Esc>v<End>
+  imap <S-Home>  <Esc>v<Home>
+  nmap <S-End>   v<End>
+  nmap <S-Home>  v<Home>
+  vmap <S-End>   <End>
+  vmap <S-Home>  <Home>
 endif
 
 if exists('g:tools_undotree')
-	map <C-z> :UndotreeToggle<CR>
-	imap <C-z> <C-o>:UndotreeToggle<CR>
+  map <C-z> :UndotreeToggle<CR>
+  imap <C-z> <C-o>:UndotreeToggle<CR>
 endif
 
 map <C-t> :tabnew<CR>
 imap <C-t> <C-o>:tabnew<CR>
 
 if exists('g:tools_vimshell')
-	map ~~ :VimShell<CR>
+  map ~~ :VimShell<CR>
 endif
 
 " Space for open/close folds if exist
@@ -166,22 +166,22 @@ vnoremap <silent> ] :bn<CR>
 vnoremap <silent> [ :bp<CR>
 
 if exists('g:tools_ctrlp')
-	nnoremap <silent> <C-p> :CtrlPMenu<CR>
-	vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-	inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
+  nnoremap <silent> <C-p> :CtrlPMenu<CR>
+  vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+  inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
 endif
 
 if exists('g:tools_ctrlp')
-	nnoremap <silent> .. :CtrlPBuffer<cr>
-	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
-	inoremap <silent> .. <C-o>:CtrlPBuffer<cr>
+  nnoremap <silent> .. :CtrlPBuffer<cr>
+  vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
+  inoremap <silent> .. <C-o>:CtrlPBuffer<cr>
 
-	nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
-	vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
+  nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
+  vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
 
-	nnoremap <silent> `` :CtrlPMenu<CR>
-	vnoremap <silent> `` <C-U>:CtrlPMenu<CR>
-	inoremap <silent> `` <C-o>:CtrlPMenu<CR>
+  nnoremap <silent> `` :CtrlPMenu<CR>
+  vnoremap <silent> `` <C-U>:CtrlPMenu<CR>
+  inoremap <silent> `` <C-o>:CtrlPMenu<CR>
 endif
 
 " If you visually select something and hit paste
@@ -196,23 +196,23 @@ nnoremap j gj
 nnoremap k gk
 
 if !exists('g:use_arrow_keys') && !exists('g:hardcore_mode_with_arrow_keys')
-	nnoremap <up> <nop>
-	nnoremap <down> <nop>
-	nnoremap <left> <nop>
-	nnoremap <right> <nop>
-	inoremap <up> <nop>
-	inoremap <down> <nop>
-	inoremap <left> <nop>
-	inoremap <right> <nop>
+  nnoremap <up> <nop>
+  nnoremap <down> <nop>
+  nnoremap <left> <nop>
+  nnoremap <right> <nop>
+  inoremap <up> <nop>
+  inoremap <down> <nop>
+  inoremap <left> <nop>
+  inoremap <right> <nop>
 
-	" When in insert mode, you can move the cursor by using CTRL+h, CRTL+j, CTRL+k or CTRL+l
-	inoremap <C-h> <C-o>h
-	inoremap <C-j> <C-o>j
-	inoremap <C-k> <C-o>k
-	inoremap <C-l> <C-o>l
+  " When in insert mode, you can move the cursor by using CTRL+h, CRTL+j, CTRL+k or CTRL+l
+  inoremap <C-h> <C-o>h
+  inoremap <C-j> <C-o>j
+  inoremap <C-k> <C-o>k
+  inoremap <C-l> <C-o>l
 else
-	nnoremap <Down> gj
-	nnoremap <Up> gk
+  nnoremap <Down> gj
+  nnoremap <Up> gk
 endif
 
 " A more handy Esc
@@ -437,24 +437,24 @@ nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 
 " Git
 if exists("g:tools_git")
-	nnoremap <leader>gs  :Gstatus<CR>
-	nnoremap <leader>gd  :Gvdiff<CR>
-	nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
-	nnoremap <leader>gl  :!git pull<CR>
-	nnoremap <leader>gp  :Git push<CR>
-	nnoremap <leader>ga  :Git add %<CR>
-	nnoremap <leader>gu  :Git add .<CR>
-	nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
-	nnoremap <Leader>gb  :Gblame<CR>
-	nnoremap <Leader>gr  :Gremove<CR>
+  nnoremap <leader>gs  :Gstatus<CR>
+  nnoremap <leader>gd  :Gvdiff<CR>
+  nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
+  nnoremap <leader>gl  :!git pull<CR>
+  nnoremap <leader>gp  :Git push<CR>
+  nnoremap <leader>ga  :Git add %<CR>
+  nnoremap <leader>gu  :Git add .<CR>
+  nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
+  nnoremap <Leader>gb  :Gblame<CR>
+  nnoremap <Leader>gr  :Gremove<CR>
 endif
 
 
 if exists('g:tools_nerdtree')
-	map <silent> <Leader>nd :NERDTreeToggle<CR>
+  map <silent> <Leader>nd :NERDTreeToggle<CR>
 
-	" Show current file in NERDTree
-	map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+  " Show current file in NERDTree
+  map <silent> <Leader>nf :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 endif
 
 " Insert new line before current line

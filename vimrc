@@ -151,6 +151,7 @@ if filereadable(expand("~/.vim/plugged/.installed"))
   set binary
   set noeol                                           " Don’t add empty newlines at the end of files
   set cursorline                                      " Highlight current line
+  set cursorcolumn                                    " Highlight current column
   set noerrorbells                                    " Disable error bells
   set shortmess=atI                                   " Don’t show the intro message when starting Vim
   set ttimeoutlen=50

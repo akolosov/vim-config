@@ -75,7 +75,6 @@ if filereadable(expand("~/.vim/plugged/.installed"))
   set listchars=trail:·,precedes:«,extends:»,eol:¶,tab:▸\ 
 
   set nowrap       "Don't wrap lines
-  set linebreak    "Wrap lines at convenient points
 
   " ================ Folds ============================
 
@@ -150,6 +149,7 @@ if filereadable(expand("~/.vim/plugged/.installed"))
   set gdefault                                        " Add the g flag to search/replace by default
   set binary
   set noeol                                           " Don’t add empty newlines at the end of files
+  set cursorcolumn                                    " Highlight current column
   set cursorline                                      " Highlight current line
   set cursorcolumn                                    " Highlight current column
   set noerrorbells                                    " Disable error bells

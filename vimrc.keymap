@@ -451,6 +451,11 @@ endif
 
 
 if exists('g:tools_nerdtree')
+	if !exists('g:hardcore_mode')
+		map <silent> <C-d> :NERDTreeToggle<CR>
+		map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+	endif
+
   map <silent> <Leader>nd :NERDTreeToggle<CR>
 
   " Show current file in NERDTree

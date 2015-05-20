@@ -453,7 +453,9 @@ endif
 if exists('g:tools_nerdtree')
 	if !exists('g:hardcore_mode')
 		map <silent> <C-d> :NERDTreeToggle<CR>
+		imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
 		map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+		imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
 	endif
 
   map <silent> <Leader>nd :NERDTreeToggle<CR>

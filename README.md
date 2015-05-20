@@ -65,6 +65,8 @@ Shortcuts
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-D` | Show/Hide NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-F` | Show current file in NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F2` | Save file as... (if not set `g:hardcore_mode`) | **\[n i v]** |

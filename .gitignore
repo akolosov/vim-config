@@ -9,5 +9,5 @@ plugged/*
 backups/*
 sessions/*
 autoload/*
-*local*
+settings/**/local.*
 

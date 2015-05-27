@@ -42,6 +42,43 @@ if !exists('g:hardcore_mode')
   " F5 - Open the selected region in a new narrowed window
   noremap <silent> <F5> :NR<CR>
 
+	if exists('g:tools_search')
+		map <S-F7> :FZF .<CR>
+	endif
+
+	if exists('g:tools_tagbar')
+		map <C-g>   :TagbarToggle<CR>
+		imap <C-g>   <C-o>:TagbarToggle<CR>
+	endif
+
+	if exists('g:tools_commenter')
+		" Ctrl-/ - Comment current line or selection.
+		map <C-_> ,ci
+		imap <C-_> <C-o>,cii
+	endif
+
+	if exists('g:tools_undotree')
+		map <C-z> :UndotreeToggle<CR>
+		imap <C-z> <C-o>:UndotreeToggle<CR>
+	endif
+
+	if exists('g:tools_ctrlp')
+		nnoremap <silent> <C-p> :CtrlPMenu<CR>
+		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
+	endif
+
+	map <C-t> :tabnew<CR>
+	imap <C-t> <C-o>:tabnew<CR>
+
+	if exists('g:tools_nerdtree')
+		map <silent> <C-d> :NERDTreeToggle<CR>
+		imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
+		map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+		imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
+	endif
+
+
   imap <F10> <ESC>:qa!<CR>
   map <F10> :qa!<CR>
 
@@ -69,19 +106,20 @@ else
 endif
 
 if exists('g:tools_tagbar')
-  map <C-g>   :TagbarToggle<CR>
-  imap <C-g>   <C-o>:TagbarToggle<CR>
+  map <leader>g :TagbarToggle<CR>
+  imap <leader>g <C-o>:TagbarToggle<CR>
+endif
+
+if exists('g:tools_undotree')
+	map <leader>z :UndotreeToggle<CR>
+	imap <leader>z <C-o>:UndotreeToggle<CR>
 endif
 
 if exists('g:tools_search')
-  nmap <C-@> :FZF .<CR>
+		map <leader>fz :FZF .<CR>
 endif
 
 if exists('g:tools_commenter')
-  " Ctrl-/ - Comment current line or selection.
-  map <C-_> ,ci
-  imap <C-_> <C-o>,cii
-
   " Comment/Uncomment current line or selection
   map <silent> \\ ,c<Space>
   imap <silent> \\ <C-o>,c<Space>
@@ -134,14 +172,6 @@ if exists("g:use_copy_cut_paste_keys")
   vmap <S-Home>  <Home>
 endif
 
-if exists('g:tools_undotree')
-  map <C-z> :UndotreeToggle<CR>
-  imap <C-z> <C-o>:UndotreeToggle<CR>
-endif
-
-map <C-t> :tabnew<CR>
-imap <C-t> <C-o>:tabnew<CR>
-
 if exists('g:tools_vimshell')
   map ~~ :VimShell<CR>
 endif
@@ -164,12 +194,6 @@ nnoremap <silent> ] :bn<CR>
 nnoremap <silent> [ :bp<CR>
 vnoremap <silent> ] :bn<CR>
 vnoremap <silent> [ :bp<CR>
-
-if exists('g:tools_ctrlp')
-  nnoremap <silent> <C-p> :CtrlPMenu<CR>
-  vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-  inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
-endif
 
 if exists('g:tools_ctrlp')
   nnoremap <silent> .. :CtrlPBuffer<cr>
@@ -451,13 +475,6 @@ endif
 
 
 if exists('g:tools_nerdtree')
-	if !exists('g:hardcore_mode')
-		map <silent> <C-d> :NERDTreeToggle<CR>
-		imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
-		map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
-		imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
-	endif
-
   map <silent> <Leader>nd :NERDTreeToggle<CR>
 
   " Show current file in NERDTree

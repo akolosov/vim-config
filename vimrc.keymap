@@ -111,12 +111,12 @@ if exists('g:tools_tagbar')
 endif
 
 if exists('g:tools_undotree')
-	map <leader>z :UndotreeToggle<CR>
-	imap <leader>z <C-o>:UndotreeToggle<CR>
+	map <leader>zz :UndotreeToggle<CR>
+	imap <leader>zz <C-o>:UndotreeToggle<CR>
 endif
 
 if exists('g:tools_search')
-		map <leader>fz :FZF .<CR>
+	map <leader>fz :FZF .<CR>
 endif
 
 if exists('g:tools_commenter')

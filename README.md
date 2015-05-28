@@ -73,6 +73,7 @@ Shortcuts
 | `F3` | Toggle paste mode (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F4` | Toggle readonly mode (if not set `g:hardcore_mode`) | **\[n v]** |
 | `F5` | Open the selected region in a new narrowed window (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `SHIFT-F7` | Fuzzy file finder (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F10` | Quit without saving (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `ESC-ESC` | Quit and ask for save files or close current window/buffer (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -86,7 +87,10 @@ Shortcuts
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
 | `//` | No highlights search | **\[n v]** |
-| `\\` | Comment/Uncomment current line or selection | **\[n v]** |
+| `\\` | Comment/Uncomment current line or selection | **\[n i v]** |
+| `,g` | Show/Hide TagBar (if plugin loaded) | **\[n]** |
+| `,zz` | Show/Hide UndoTree (if plugin loaded) | **\[n]** |
+| `,zf` | Fuzzy file finder (if plugin loaded) | **\[n]** |
 | `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
 | `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
 | `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |

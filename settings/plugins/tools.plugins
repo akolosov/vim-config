@@ -54,6 +54,7 @@ if BundleExists('tools', 'ctrlp')
   Plug 'ivalkeen/vim-ctrlp-tjump'
   Plug 'mattn/ctrlp-mark'
   Plug 'ompugao/ctrlp-history'
+	Plug 'fisadev/vim-ctrlp-cmdpalette'
 
   let g:tools_ctrlp = 1
 endif

@@ -66,6 +66,10 @@ if !exists('g:hardcore_mode')
 		nnoremap <silent> <C-p> :CtrlPMenu<CR>
 		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
 		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
+
+		nnoremap <silent> <C-S-p> :CtrlPCmdPalette<CR>
+		vnoremap <silent> <C-S-p> <C-U>:CtrlPCmdPalette<CR>
+		inoremap <silent> <C-S-p> <C-o>:CtrlPCmdPalette<CR>
 	endif
 
 	map <C-t> :tabnew<CR>
@@ -202,10 +206,14 @@ if exists('g:tools_ctrlp')
 
   nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
   vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
+  
+	nnoremap <silent> `` :CtrlPCmdPalette<CR>
+  vnoremap <silent> `` <C-U>:CtrlPCmdPalette<CR>
+  inoremap <silenT> `` <C-o>:CtrlPCmdPalette<CR>
 
-  nnoremap <silent> `` :CtrlPMenu<CR>
-  vnoremap <silent> `` <C-U>:CtrlPMenu<CR>
-  inoremap <silent> `` <C-o>:CtrlPMenu<CR>
+	nnoremap <silent> ;; :CtrlPMenu<CR>;
+  vnoremap <silent> ;; <C-U>:CtrlPMenu<CR>
+  inoremap <silenT> ;; <C-o>:CtrlPMenu<CR>
 endif
 
 " If you visually select something and hit paste

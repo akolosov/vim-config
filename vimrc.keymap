@@ -42,45 +42,45 @@ if !exists('g:hardcore_mode')
   " F5 - Open the selected region in a new narrowed window
   noremap <silent> <F5> :NR<CR>
 
-	if exists('g:tools_search')
-		map <S-F7> :FZF .<CR>
-	endif
+  if exists('g:tools_search')
+    map <S-F7> :FZF .<CR>
+  endif
 
-	if exists('g:tools_tagbar')
-		map <C-g>   :TagbarToggle<CR>
-		imap <C-g>   <C-o>:TagbarToggle<CR>
-	endif
+  if exists('g:tools_tagbar')
+    map <C-g>   :TagbarToggle<CR>
+    imap <C-g>   <C-o>:TagbarToggle<CR>
+  endif
 
-	if exists('g:tools_commenter')
-		" Ctrl-/ - Comment current line or selection.
-		map <C-_> ,ci
-		imap <C-_> <C-o>,cii
-	endif
+  if exists('g:tools_commenter')
+    " Ctrl-/ - Comment current line or selection.
+    map <C-_> ,ci
+    imap <C-_> <C-o>,cii
+  endif
 
-	if exists('g:tools_undotree')
-		map <C-z> :UndotreeToggle<CR>
-		imap <C-z> <C-o>:UndotreeToggle<CR>
-	endif
+  if exists('g:tools_undotree')
+    map <C-z> :UndotreeToggle<CR>
+    imap <C-z> <C-o>:UndotreeToggle<CR>
+  endif
 
-	if exists('g:tools_ctrlp')
-		nnoremap <silent> <C-p> :CtrlPMenu<CR>
-		vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
-		inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
+  if exists('g:tools_ctrlp')
+    nnoremap <silent> <C-p> :CtrlPMenu<CR>
+    vnoremap <silent> <C-p> <C-U>:CtrlPMenu<CR>
+    inoremap <silent> <C-p> <C-o>:CtrlPMenu<CR>
 
-		nnoremap <silent> <C-p>p :CtrlPCmdPalette<CR>
-		vnoremap <silent> <C-p>p <C-U>:CtrlPCmdPalette<CR>
-		inoremap <silent> <C-p>p <C-o>:CtrlPCmdPalette<CR>
-	endif
+    nnoremap <silent> <C-p>p :CtrlPCmdPalette<CR>
+    vnoremap <silent> <C-p>p <C-U>:CtrlPCmdPalette<CR>
+    inoremap <silent> <C-p>p <C-o>:CtrlPCmdPalette<CR>
+  endif
 
-	map <C-t> :tabnew<CR>
-	imap <C-t> <C-o>:tabnew<CR>
+  map <C-t> :tabnew<CR>
+  imap <C-t> <C-o>:tabnew<CR>
 
-	if exists('g:tools_nerdtree')
-		map <silent> <C-d> :NERDTreeToggle<CR>
-		imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
-		map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
-		imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
-	endif
+  if exists('g:tools_nerdtree')
+    map <silent> <C-d> :NERDTreeToggle<CR>
+    imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
+    map <silent> <C-f> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+    imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
+  endif
 
 
   imap <F10> <ESC>:qa!<CR>
@@ -115,12 +115,12 @@ if exists('g:tools_tagbar')
 endif
 
 if exists('g:tools_undotree')
-	map <leader>zz :UndotreeToggle<CR>
-	imap <leader>zz <C-o>:UndotreeToggle<CR>
+  map <leader>zz :UndotreeToggle<CR>
+  imap <leader>zz <C-o>:UndotreeToggle<CR>
 endif
 
 if exists('g:tools_search')
-	map <leader>fz :FZF .<CR>
+  map <leader>fz :FZF .<CR>
 endif
 
 if exists('g:tools_commenter')
@@ -174,6 +174,20 @@ if exists("g:use_copy_cut_paste_keys")
   nmap <S-Home>  v<Home>
   vmap <S-End>   <End>
   vmap <S-Home>  <Home>
+
+  " Line selection by ALT+SHIFT+Arrows
+  imap <S-A-Up>    <Esc>V<Up>
+  imap <S-A-Down>  <Esc>V<Down>
+  imap <S-A-Left>  <Esc>V<Left>
+  imap <S-A-Right> <Esc><Right>V<Right>
+  nmap <S-A-Up>    V<Up>
+  nmap <S-A-Down>  V<Down>
+  nmap <S-A-Left>  V<Left>
+  nmap <S-A-Right> V<Right>
+  vmap <S-A-Up>    <Up>
+  vmap <S-A-Down>  <Down>
+  vmap <S-A-Left>  <Left>
+  vmap <S-A-Right> <Right>
 endif
 
 if exists('g:tools_vimshell')
@@ -207,11 +221,11 @@ if exists('g:tools_ctrlp')
   nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
   vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
   
-	nnoremap <silent> pp :CtrlPCmdPalette<CR>
+  nnoremap <silent> pp :CtrlPCmdPalette<CR>
   vnoremap <silent> pp <C-U>:CtrlPCmdPalette<CR>
   inoremap <silenT> pp <C-o>:CtrlPCmdPalette<CR>
 
-	nnoremap <silent> pm :CtrlPMenu<CR>
+  nnoremap <silent> pm :CtrlPMenu<CR>
   vnoremap <silent> pm <C-U>:CtrlPMenu<CR>
   inoremap <silenT> pm <C-o>:CtrlPMenu<CR>
 endif

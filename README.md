@@ -58,7 +58,7 @@ Shortcuts
 | `CTRL-T` | Create new tab (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-Z` | Show/Hide UndoTree (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-G` | Show/Hide TagBar (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-Y` | Delete line (if not set `g:hardcore_mode`) |	**\[n i v]** |
+| `CTRL-Y` | Delete line (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-L` | Delete to EOL (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-H` | Delete to BOL (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |

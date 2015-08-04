@@ -1,4 +1,5 @@
 if BundleExists('languages', 'common')
+	Plug 'gilligan/vim-lldb'
   Plug 'scrooloose/syntastic'
 
   let g:languages_common = 1

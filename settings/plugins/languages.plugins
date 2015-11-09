@@ -71,6 +71,7 @@ endif
 if BundleExists('languages', 'go')
   Plug 'fatih/vim-go', { 'for': 'go' }
   Plug 'rhysd/vim-go-impl', { 'for': 'go' }
+  Plug 'garyburd/go-explorer', { 'for': 'go' }
 
   let g:languages_go = 1
 endif

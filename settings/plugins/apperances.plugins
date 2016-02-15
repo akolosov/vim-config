@@ -5,7 +5,8 @@ if BundleExists('apperances', 'lightline')
 
   let g:apperances_lightkine = 1
 elseif BundleExists('apperances', 'airline')
-  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   let g:apperances_airline = 1
 endif

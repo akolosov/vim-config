@@ -14,17 +14,6 @@ if exists("g:languages_common")
   let g:syntastic_style_warning_symbol = '≈'
 
   au BufRead,BufNewFile *.vundle setlocal ft=vim syntax=vim
-
-  " LLDB shortcuts
-  nnoremap <silent> <leader>lr :Lrun<CR>
-  nnoremap <silent> <leader>lb :Lbreakpoint<CR>
-  nnoremap <silent> <leader>lc :Lcontinue<CR>
-  nnoremap <silent> <leader>ln :Lnext<CR>
-  nnoremap <silent> <leader>ls :Lstep<CR>
-  nnoremap <silent> <leader>li :Lstepin<CR>
-  nnoremap <silent> <leader>lo :Lfinish<CR>
-  nnoremap <silent> <leader>lp :Lprint<CR>
-  nnoremap <silent> <leader>lv :Lframe variable<CR>
 endif
 
 if exists("g:languages_textobjects")

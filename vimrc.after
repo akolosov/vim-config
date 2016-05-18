@@ -7,10 +7,9 @@ au FileType less       setlocal shiftwidth=2 tabstop=2 expandtab
 au FileType scss       setlocal shiftwidth=2 tabstop=2 expandtab
 au FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
 au FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
-au FileType go         setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Avoiding tabs
-au BufWritePre {*.go,*.rb,*.coffee,*.scss,*.less,*.haml,*.slim,*.erb,*.vim,*.vundle} :%s/\t/  /e
+au BufWritePre {*.rb,*.coffee,*.scss,*.less,*.haml,*.slim,*.erb,*.vim,*.vundle} :%s/\t/  /e
 
 " Set first line when editing a git commit message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])

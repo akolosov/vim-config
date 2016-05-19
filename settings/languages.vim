@@ -12,6 +12,7 @@ if exists("g:languages_common")
   let g:syntastic_style_error_symbol = '✠'
   let g:syntastic_warning_symbol = '≈'
   let g:syntastic_style_warning_symbol = '≈'
+  let g:syntastic_aggregate_errors = 1
 
   au BufRead,BufNewFile *.vundle setlocal ft=vim syntax=vim
 endif
@@ -80,7 +81,6 @@ endif
 if exists("g:languages_go")
   let g:go_disable_autoinstall = 1
   let g:go_bin_path = expand("~/.go/bin")
-  let g:go_fmt_autosave = 0
 
   if exists("g:autocomplete_neocomplete")
     let g:go_snippet_engine = "neosnippet"
@@ -88,10 +88,21 @@ if exists("g:languages_go")
     let g:go_snippet_engine = "ultisnips"
   endif
 
+  let g:go_fmt_command = "goimports"
+
+  let g:go_fmt_fail_silently = 1
+  let g:go_fmt_autosave = 1
+
   let g:go_highlight_functions = 1
   let g:go_highlight_methods = 1
   let g:go_highlight_structs = 1
-  let g:go_fmt_command = "goimports"
+  let g:go_highlight_interfaces = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_build_constraints = 1
+
+  let g:go_list_type = "quickfix"
+  
+  let g:syntastic_go_checkers = ['golint', 'govet', 'go']
 
   " Show a list of interfaces which is implemented by the type under your cursor
   au FileType go nmap <Leader>s <Plug>(go-implements)

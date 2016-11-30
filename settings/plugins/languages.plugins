@@ -83,8 +83,10 @@ if BundleExists('languages', 'ruby')
   Plug 'tpope/vim-rvm', { 'for': 'ruby' }
   Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
   Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby', 'rspec'] }
-  Plug 'skwp/vim-iterm-rspec', { 'for': 'ruby' }
-  Plug 'skwp/vim-spec-finder', { 'for': 'ruby' }
+	if has("mac")
+		Plug 'skwp/vim-iterm-rspec', { 'for': 'ruby' }
+		Plug 'skwp/vim-spec-finder', { 'for': 'ruby' }
+	endif
   Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
   Plug 'tpope/vim-bundler', { 'for': 'ruby' }
   Plug 'tpope/vim-cucumber', { 'for': 'ruby' }

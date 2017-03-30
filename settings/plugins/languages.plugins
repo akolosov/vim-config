@@ -60,7 +60,7 @@ if BundleExists('languages', 'html/css')
   Plug 'groenewege/vim-less', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
   Plug 'skwp/vim-html-escape', { 'for': 'html' }
   Plug 'rstacruz/sparkup', { 'for': 'html' }
-  Plug 'amirh/HTML-AutoCloseTag', { 'for': 'html' }
+  Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
   Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
   Plug 'gorodinskiy/vim-coloresque', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
 

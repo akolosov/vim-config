@@ -82,7 +82,7 @@ if exists("g:tools_git")
   nnoremap <silent> <Leader>dg :diffget<CR>
   nnoremap <silent> <Leader>dp :diffput<CR>
 
-  let g:gitgutter_sign_column_always = 1
+  set signcolumn=yes
   " The tree buffer makes it easy to drill down through the directories of your
   " git repository, but it’s not obvious how you could go up a level to the
   " parent directory. Here’s a mapping of .. to the above command, but

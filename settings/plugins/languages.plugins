@@ -1,5 +1,6 @@
 if BundleExists('languages', 'common')
   Plug 'scrooloose/syntastic'
+	Plug 'w0rp/ale'
 
   let g:languages_common = 1
 endif

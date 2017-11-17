@@ -14,6 +14,15 @@ if exists("g:languages_common")
   let g:syntastic_style_warning_symbol = '≈'
   let g:syntastic_aggregate_errors = 1
 
+  let g:ale_emit_conflict_warnings = 0
+  let g:ale_fixers = {
+        \   'javascript': ['eslint'],
+        \    'ruby':      ['rubocop', 'brakeman']
+        \}
+
+  " Set this setting in vimrc if you want to fix files automatically on save.
+  " This is off by default.
+  " let g:ale_fix_on_save = 1
   au BufRead,BufNewFile *.vundle setlocal ft=vim syntax=vim
 endif
 

@@ -11,6 +11,7 @@ if BundleExists('tools', 'common')
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-speeddating'
   Plug 'Z1MM32M4N/vim-superman'
+	Plug 'ervandew/supertab'
 
   let g:tools_common = 1
 endif

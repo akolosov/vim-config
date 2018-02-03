@@ -83,16 +83,21 @@ if !exists('g:hardcore_mode')
   endif
 
 
-  imap <F10> <ESC>:qa!<CR>
-  map <F10> :qa!<CR>
+	if !has("gui_running")
+		imap <F10> <ESC>:qa!<CR>
+		map <F10> :qa!<CR>
 
-  if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
-    noremap <silent> <Esc><Esc> :qa<CR>
-    inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
-  else
-    noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
-    inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
-  endif
+ 		if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
+			noremap <silent> <Esc><Esc> :qa<CR>
+			inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
+		else
+			noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+			inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+		endif
+	else
+		noremap <silent> <Esc><Esc> :tabclose<CR>
+		inoremap <silent> <Esc><Esc> <Esc>:tabclose<CR>
+	endif
 
   imap <S-F10> <C-o>:wqa!<CR>
   map <S-F10> :wqa!<CR>

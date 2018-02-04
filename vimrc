@@ -79,8 +79,10 @@ if filereadable(expand("~/.vim/plugged/.installed"))
   " ================ Folds ============================
 
   set foldmethod=indent   "fold based on indent
-  set foldnestmax=3       "deepest fold is 3 levels
+  set foldnestmax=10      "deepest fold is 3 levels
   set nofoldenable        "dont fold by default
+	set foldlevelstart=10
+	set foldlevel=10
 
   " ================ Completion =======================
 

@@ -82,7 +82,7 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_complete_in_comments = 0
   let g:ycm_collect_identifiers_from_comments_and_strings = 0
   let g:ycm_collect_identifiers_from_tags_files = 0
-  let g:ycm_seed_identifiers_with_syntax = 0
+  let g:ycm_seed_identifiers_with_syntax = 1
   let g:ycm_extra_conf_vim_data = []
   let g:ycm_server_use_vim_stdout = 0
   let g:ycm_path_to_python_interpreter = ''

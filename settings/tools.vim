@@ -95,16 +95,11 @@ if exists("g:tools_git")
   autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
-if exists("g:tools_search")
-  "Use the silver searcher for lightning fast Gsearch command
-  set grepprg=git\ grep
-  let g:grep_cmd_opts = '--line-number'
-endif
-
 if exists("g:tools_undotree")
   let g:undotree_WindowLayout = 3
   let g:undotree_SplitWidth = 50
   let g:undotree_DiffpanelHeight = 20
+  let g:undotree_SetFocusWhenToggle = 1
 endif
 
 if exists("g:tools_common")
@@ -118,7 +113,55 @@ if exists("g:tools_common")
   vmap <C-Down> ]egv
 
   let g:lastplace_ignore = "gitcommit,svn"
+  
+  " Close Quickfix and LocList by Q
+  autocmd BufWinEnter quickfix nnoremap <silent> <buffer>
+              \   q :cclose<cr>:lclose<cr>
+
+  autocmd BufEnter * if (winnr('$') == 1 && &buftype ==# 'quickfix' ) |
+              \   bd|
+              \   q | endif
+  
+ " toggles the quickfix window.
+  command -bang -nargs=? QFix call QFixToggle(<bang>1)
+  function! QFixToggle(forced)
+    if exists("g:qfix_win") || a:forced == 0
+      cclose
+    else
+      execute "copen " . g:quickfix_win_height
+    endif
+  endfunction
+  " used to track the quickfix window
+  augroup QFixToggle
+    autocmd!
+    autocmd BufWinEnter quickfix let g:qfix_win = bufnr("$")
+    autocmd BufWinLeave * if exists("g:qfix_win") && expand("<abuf>") == g:qfix_win | unlet! g:qfix_win | endif
+  augroup END
+
+  let g:quickfix_win_height = 10
+
+ " toggles the loclist window.
+  command -bang -nargs=? LList call LListToggle(<bang>1)
+  function! LListToggle(forced)
+    if exists("g:llist_win") || a:forced == 0
+      lclose
+    else
+      execute "lopen " . g:loclist_win_height
+    endif
+  endfunction
+  " used to track the loclist window
+  augroup LListToggle
+    autocmd!
+    autocmd BufWinEnter quickfix let g:llist_win = bufnr("$")
+    autocmd BufWinLeave * if exists("g:llist_win") && expand("<abuf>") == g:llist_win | unlet! g:llist_win | endif
+  augroup END
+
+  let g:loclist_win_height = 10
 end
+
+if exists("g:tools_quickfix")
+    let g:qf_loclist_window_bottom=0
+endif
 
 if exists("g:tools_multicursors")
   " Turn off default key mappings
@@ -156,15 +199,6 @@ if exists("g:tools_undotree")
     set undodir=~/.vim/tmp/backups
     set undofile
   endif
-endif
-
-if exists("g:tools_search")
-  " Stolen from Steve Losh vimrc: https://bitbucket.org/sjl/dotfiles/src/tip/vim/.vimrc
-  " Open a Quickfix window for the last search.
-  nnoremap <silent> <leader>q/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
-
-  " Ag for the last search.
-  nnoremap <silent> <leader>qa/ :execute "Ag! '" . substitute(substitute(substitute(@/, "\\\\<", "\\\\b", ""), "\\\\>", "\\\\b", ""), "\\\\v", "", "") . "'"<CR>
 endif
 
 if exists("g:tools_bookmarks")

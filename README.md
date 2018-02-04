@@ -73,7 +73,13 @@ Shortcuts
 | `F3` | Toggle paste mode (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F4` | Toggle readonly mode (if not set `g:hardcore_mode`) | **\[n v]** |
 | `F5` | Open the selected region in a new narrowed window (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F6` | Switch Quickfix open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `SHIFT-F6` | Switch Location list open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F7` | Fuzzy file finder (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F7` | Ag search in files (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F8` | Search and Replace in current file (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F9` | Switch current folding open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `SHIFT-F9` | Switch all foldings open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F10` | Quit without saving (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `ESC-ESC` | Quit and ask for save files or close current window/buffer (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -81,8 +87,6 @@ Shortcuts
 | `CTRL-[` | Switch prev tab (if not set `g:hardcore_mode`) | **\[n v]** |
 | `]` | Switch next buffer (if not set `g:hardcore_mode`) | **\[n v]** |
 | `[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
-| `ALT-Up` | Upcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
-| `ALT-Down` | Downcase word under cursor (if not set `g:hardcore_mode`) | **\[n v]** |
 | `<tilde><tilde>` | Run VimShell (if plugin loaded and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
@@ -149,15 +153,10 @@ Shortcuts
 | `,rs` | Send current selection to console (tmux by default) | **\[v]** |
 | `,gs` | git status | **\[n]** |
 | `,gd` | git diff | **\[n]** |
-| `,gc` | git commit | **\[n]** |
-| `,gl` | git pull | **\[n]** |
-| `,gp` | git push | **\[n]** |
-| `,gpa` | git push --all | **\[n]** |
 | `,ga` | git add %currentfile% | **\[n]** |
 | `,gu` | git add all untracked files | **\[n]** |
 | `,g?` | git add user input files | **\[n]** |
 | `,gb` | git blame | **\[n]** |
-| `,gr` | git remove %currentfile% | **\[n]** |
 | `,ag` | Search in files, using ag | **\[n]** |
 | `,af` | Search file, using ag | **\[n]** |
 | `,ocf` | Open changed files (by git status) | **\[n]** |

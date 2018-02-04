@@ -159,7 +159,7 @@ endif
 if exists("g:apperances_airline")
   let g:airline#extensions#tabline#enabled = 1
 
-  if !exists('g:use_powerline_fonts') && !has("gui_running")
+  if !exists('g:use_powerline_fonts')
     let g:airline_left_sep = ''
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''
@@ -206,9 +206,9 @@ if exists("g:apperances_airline")
   let g:airline#extensions#bufferline#enabled = 1
   let g:airline#extensions#bufferline#overwrite_variables = 1
 
-  let g:airline#extensions#tabline#show_tab_type = 1
+  let g:airline#extensions#tabline#show_tab_type = 0
   let g:airline#extensions#tabline#show_tab_nr = 1
-  let g:airline#extensions#tabline#show_buffers = 1
+  let g:airline#extensions#tabline#show_buffers = 0
 
   let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
   let g:airline#extensions#quickfix#location_text = 'Location'

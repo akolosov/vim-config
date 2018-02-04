@@ -4,10 +4,6 @@ nnoremap ; :
 noremap <F1> <Esc>
 inoremap <F1> <Esc>
 
-" Get rid of most annoying typo: typing q: when I meant :q.
-" You can still get to cmdline-window easily by typing <Ctrl-F> in command mode, so loosing q: is no loss.
-map q: :q
-
 if !exists('g:hardcore_mode')
   " Save file
   imap <F2>   <C-o>:w<CR>
@@ -42,11 +38,19 @@ if !exists('g:hardcore_mode')
   " F5 - Open the selected region in a new narrowed window
   noremap <silent> <F5> :NR<CR>
 
-  if exists('g:tools_search')
-  	map <S-F7> :FZF .<CR>
-  endif
+	" Open definition in new tab
+	map <C-b> <C-w>gf
+	imap <C-b> <C-o><C-w>gf
 
-  if exists('g:tools_tagbar')
+	" Folding
+	inoremap <F9> <C-O>za
+	nnoremap <F9> za
+	onoremap <F9> <C-C>za
+	inoremap <S-F9> <C-O>zA
+	nnoremap <S-F9> zA
+	onoremap <S-F9> <C-C>zA
+
+	if exists('g:tools_tagbar')
   	map <C-g>   :TagbarToggle<CR>
   	imap <C-g>   <C-o>:TagbarToggle<CR>
   endif
@@ -124,9 +128,24 @@ if exists('g:tools_undotree')
   imap <leader>zz <C-o>:UndotreeToggle<CR>
 endif
 
-if exists('g:tools_search')
-  map <leader>fz :FZF .<CR>
+nmap <F6> :QFix<CR>
+imap <F6> <C-o>:QFix<CR>
+nmap <S-F6> :LList<CR>
+imap <S-F6> <C-o>:LList<CR>
 
+
+if exists('g:tools_search')
+  nmap <leader>fz :FZF .<CR>
+  imap <leader>fz <C-o>:FZF .<CR>
+	nmap <S-F7> :FZF .<CR>
+	imap <S-F7> <C-o>:FZF .<CR>
+	nmap <F7> :Ag ""<Left>
+	imap <F7> <C-o>:Ag ""<Left>
+	vmap <F7> y:Ag "<C-R>+"<CR>
+	nmap <F8> :%s///<Left><Left>
+	imap <F8> <C-o>:%s///<Left><Left>
+	vmap <F8> y:%s/<C-R>+//<Left>
+   
   " Open the Ag command and place the cursor into the quotes
   nmap <Leader>ag :Ag ""<Left>
   nmap <Leader>af :AgFile ""<Left>
@@ -207,12 +226,6 @@ endif
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
-" Alt-Up - upcase, Alt-Down - downcase
-map <A-Up>   gUi
-imap <A-Up>   <C-o>gUi
-map <A-Down> gui
-imap <A-Down> <C-o>gui
-
 nnoremap <silent> <C-]>  gt
 nnoremap <silent> <C-[>  gT
 vnoremap <silent> <C-]>  gt
@@ -232,11 +245,11 @@ if exists('g:tools_ctrlp')
   
   nnoremap <silent> pp :CtrlPCmdPalette<CR>
   vnoremap <silent> pp <C-U>:CtrlPCmdPalette<CR>
-  inoremap <silenT> pp <C-o>:CtrlPCmdPalette<CR>
+  inoremap <silent> pp <C-o>:CtrlPCmdPalette<CR>
 
   nnoremap <silent> pm :CtrlPMenu<CR>
   vnoremap <silent> pm <C-U>:CtrlPMenu<CR>
-  inoremap <silenT> pm <C-o>:CtrlPMenu<CR>
+  inoremap <silent> pm <C-o>:CtrlPMenu<CR>
 endif
 
 " If you visually select something and hit paste
@@ -494,14 +507,10 @@ nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 if exists("g:tools_git")
   nnoremap <leader>gs  :Gstatus<CR>
   nnoremap <leader>gd  :Gvdiff<CR>
-  nnoremap <leader>gc  :!git commit -a -m '<C-R>="'"<CR><Left>
-  nnoremap <leader>gl  :!git pull<CR>
-  nnoremap <leader>gp  :Git push<CR>
   nnoremap <leader>ga  :Git add %<CR>
   nnoremap <leader>gu  :Git add .<CR>
   nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
   nnoremap <Leader>gb  :Gblame<CR>
-  nnoremap <Leader>gr  :Gremove<CR>
 endif
 
 
@@ -524,5 +533,5 @@ nmap <silent> <leader><CR> :set list!<CR>
 " Insert new line with '=' after current line with the same length
 nnoremap <leader>= yypVr=
 
-" Insert new line with '=' after current line with the same length
+" Insert new line with '-' after current line with the same length
 nnoremap <leader>- yypVr-

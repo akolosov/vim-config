@@ -3,7 +3,7 @@ if BundleExists('apperances', 'lightline')
   Plug 'itchyny/lightline-powerful'
   Plug 'cocopon/lightline-hybrid.vim'
 
-  let g:apperances_lightkine = 1
+  let g:apperances_lightline = 1
 elseif BundleExists('apperances', 'airline')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'

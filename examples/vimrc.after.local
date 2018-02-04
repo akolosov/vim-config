@@ -1,2 +1,7 @@
 set background=dark
 
+if !exists("g:hardcore_mode")
+	let g:ale_fix_on_save = 1
+
+	set foldenable
+endif

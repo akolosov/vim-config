@@ -84,9 +84,6 @@ if !exists('g:hardcore_mode')
 
 
 	if !has("gui_running")
-		imap <F10> <ESC>:qa!<CR>
-		map <F10> :qa!<CR>
-
  		if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
 			noremap <silent> <Esc><Esc> :qa<CR>
 			inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
@@ -98,6 +95,9 @@ if !exists('g:hardcore_mode')
 		noremap <silent> <Esc><Esc> :tabclose<CR>
 		inoremap <silent> <Esc><Esc> <Esc>:tabclose<CR>
 	endif
+
+	imap <F10> <ESC>:qa!<CR>
+	map <F10> :qa!<CR>
 
   imap <S-F10> <C-o>:wqa!<CR>
   map <S-F10> :wqa!<CR>
@@ -126,6 +126,10 @@ endif
 
 if exists('g:tools_search')
   map <leader>fz :FZF .<CR>
+
+  " Open the Ag command and place the cursor into the quotes
+  nmap <Leader>ag :Ag ""<Left>
+  nmap <Leader>af :AgFile ""<Left>
 endif
 
 if exists('g:tools_commenter')

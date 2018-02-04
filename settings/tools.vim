@@ -21,17 +21,13 @@ if exists("g:tools_nerdtree")
 endif
 
 if exists("g:tools_search")
-  let g:agprg="/usr/local/bin/ag --column"
-
-  " Open the Ag command and place the cursor into the quotes
-  nmap <Leader>ag :Ag ""<Left>
-  nmap <Leader>af :AgFile ""<Left>
+  let g:ag_prg="/usr/local/bin/ag --column"
 endif
 
 if exists("g:tools_ctrlp")
   if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
+    let g:ctrlp_user_command = '/usr/local/bin/ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0

@@ -29,8 +29,8 @@ if exists("g:languages_common")
   let g:ale_lint_on_enter = 1
  
   " Write this in your vimrc file
-  let g:ale_set_loclist = 0
-  let g:ale_set_quickfix = 1
+  let g:ale_set_loclist = 1
+  let g:ale_set_quickfix = 0
   let g:ale_open_list = 0
   let g:ale_keep_list_window_open = 0 
 

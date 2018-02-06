@@ -141,7 +141,7 @@ if exists('g:tools_search')
 	imap <S-F7> <C-o>:FZF .<CR>
 	nmap <F7> :Ag ""<Left>
 	imap <F7> <C-o>:Ag ""<Left>
-	vmap <F7> y:Ag "<C-R>+"<CR>
+	vmap <F7> y:Ag "<C-R>+"<SPACE>"<C-R>=expand("%:p:h")<CR>"
 	nmap <F8> :%s///<Left><Left>
 	imap <F8> <C-o>:%s///<Left><Left>
 	vmap <F8> y:%s/<C-R>+//<Left>

@@ -129,12 +129,13 @@ Shortcuts
 | `,te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
 | `,qc` | Toggle Quickfix window | **\[n]** |
 | `,qo` | Open Quickfix window back up | **\[n]** |
-| `,#` | Surround a word with #{ruby interpolation} | **\[n v]** |
-| `,"` | Surround a word with "quotes" | **\[n v]** |
-| `,'` | Surround a word with 'single quotes' | **\[n v]** |
-| `,(` or `,)` | Surround a word with (parens) | **\[n v]** |
-| `,[` or `,]` | Surround a word with [brackets] | **\[n v]** |
-| `,{` or `,}` | Surround a word with {braces} | **\[n v]** |
+| `$` | Surround a selection with ${JS interpolation} | **\[v]** |
+| `#` | Surround a word or selection with #{ruby interpolation} | **\[n v]** |
+| `"` | Surround a word or selection with "quotes" | **\[n v]** |
+| `'` | Surround a word or selection with 'single quotes' | **\[n v]** |
+| `(` or `)` | Surround a word or selection with (parens) | **\[n v]** |
+| `[` or `]` | Surround a word or selection with [brackets] | **\[n v]** |
+| `{` or `}` | Surround a word or selection with {braces} | **\[n v]** |
 | `,rw` | Overwrite word, replace a word with what's in the yank buffer | **\[n v]** |
 | `,sw` | Swaps word under cursor and next word in line | **\[n v]** |
 | `,db` | Delete blank lines | **\[n v]** |

@@ -365,39 +365,43 @@ nnoremap <Leader>X :q!<CR>
 " Type <Leader>X! to close VIM without saving (a lot faster than :qa!<Enter>):
 nnoremap <Leader>X! :qa!<CR>
 
+" <Leader>$ Surround a word with ${JS interpolation}
+vmap $ c${<C-R>"}<ESC>
+
 " <Leader># Surround a word with #{ruby interpolation}
-map <Leader># ysiw#
-vmap <Leader># c#{<C-R>"}<ESC>
+nmap # ysiw#
+vmap # c#{<C-R>"}<ESC>
 
 " <Leader>" Surround a word with "quotes"
-map <Leader>" ysiw"
-vmap <Leader>" c"<C-R>""<ESC>
+nmap " ysiw"
+vmap " c"<C-R>""<ESC>
 
 " <Leader>' Surround a word with 'single quotes'
-map <Leader>' ysiw'
-vmap <Leader>' c'<C-R>"'<ESC>
+nmap ' ysiw'
+vmap ' c'<C-R>"'<ESC>
 
 " <Leader>) or <Leader>( Surround a word with (parens)
 " The difference is in whether a space is put in
-map <Leader>( ysiw(
-map <Leader>) ysiw)
-vmap <Leader>( c( <C-R>" )<ESC>
-vmap <Leader>) c(<C-R>")<ESC>
+nmap ( ysiw(
+nmap ) ysiw)
+vmap ( c( <C-R>" )<ESC>
+vmap ) c(<C-R>")<ESC>
 
 " <Leader>[ Surround a word with [brackets]
-map <Leader>] ysiw]
-map <Leader>[ ysiw[
-vmap <Leader>[ c[ <C-R>" ]<ESC>
-vmap <Leader>] c[<C-R>"]<ESC>
+nmap ] ysiw]
+nmap [ ysiw[
+vmap [ c[ <C-R>" ]<ESC>
+vmap ] c[<C-R>"]<ESC>
 
 " <Leader>{ Surround a word with {braces}
-map <Leader>} ysiw}
-map <Leader>{ ysiw{
-vmap <Leader>} c{ <C-R>" }<ESC>
-vmap <Leader>{ c{<C-R>"}<ESC>
+nmap } ysiw}
+nmap { ysiw{
+vmap } c{ <C-R>" }<ESC>
+vmap { c{<C-R>"}<ESC>
 
 " <Leader>` Surround a word with `apostrophes`
-map <Leader>` ysiw`
+nmap ` ysiw`
+vmap ` c`<C-R>"`<ESC>
 
 " Go to last edit location with <Leader>.
 nnoremap <Leader>. '.

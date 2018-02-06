@@ -34,7 +34,6 @@ endif
 
 if BundleExists('tools', 'search')
   Plug 'rking/ag.vim'
-  Plug 'nelstrom/vim-visual-star-search'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
   let g:tools_search = 1

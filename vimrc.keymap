@@ -135,10 +135,10 @@ imap <S-F6> <C-o>:LList<CR>
 
 
 if exists('g:tools_search')
-  nmap <leader>fz :FZF .<CR>
-  imap <leader>fz <C-o>:FZF .<CR>
-	nmap <S-F7> :FZF .<CR>
-	imap <S-F7> <C-o>:FZF .<CR>
+  nmap <leader>fz :FZF <C-R>=expand("%:p:h")<CR>
+  imap <leader>fz <C-o>:FZF <C-R>=expand("%:p:h")<CR>
+	nmap <S-F7> :FZF <C-R>=expand("%:p:h")<CR>
+	imap <S-F7> <C-o>:FZF <C-R>=expand("%:p:h")<CR>
 	nmap <F7> :Ag ""<Left>
 	imap <F7> <C-o>:Ag ""<Left>
 	vmap <F7> y:Ag "<C-R>+"<SPACE>"<C-R>=expand("%:p:h")<CR>"

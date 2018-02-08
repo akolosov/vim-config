@@ -1,15 +1,15 @@
 " Toggle ' to " or " to '
 function! ToggleQuote()
-    let q = searchpos("'", 'n', line('.'))
-    let qb = searchpos("'", 'bn', line('.'))
-    let dq = searchpos('"', 'n', line('.'))
-    let dqb = searchpos('"', 'bn', line('.'))
+  let q = searchpos("'", 'n', line('.'))
+  let qb = searchpos("'", 'bn', line('.'))
+  let dq = searchpos('"', 'n', line('.'))
+  let dqb = searchpos('"', 'bn', line('.'))
 
-    if q[0] > 0 && qb[0] > 0 && (dq[0] == 0 || dq[0] > q[0])
-        execute "normal mzcs'\"`z"
-    elseif dq[0] > 0 && dqb[0] > 0
-        execute "normal mzcs\"'`z"
-    endif
+  if q[0] > 0 && qb[0] > 0 && (dq[0] == 0 || dq[0] > q[0])
+    execute "normal mzcs'\"`z"
+  elseif dq[0] > 0 && dqb[0] > 0
+    execute "normal mzcs\"'`z"
+  endif
 endfunction
 
 " Toggle readonly mode

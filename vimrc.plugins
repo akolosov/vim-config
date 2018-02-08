@@ -1,10 +1,10 @@
 filetype off
 
 if !filereadable(expand("~/.vim/autoload/plug.vim"))
-  echo "Installing vim-plug and plugins. Restart vim after finishing the process."
-  silent call mkdir(expand("~/.vim/autoload", 1), 'p')
-  execute "!curl -fLo ".expand("~/.vim/autoload/plug.vim", 1)." https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  autocmd VimEnter * PlugInstall
+	echo "Installing vim-plug and plugins. Restart vim after finishing the process."
+	silent call mkdir(expand("~/.vim/autoload", 1), 'p')
+	execute "!curl -fLo ".expand("~/.vim/autoload/plug.vim", 1)." https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+	autocmd VimEnter * PlugInstall
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -18,7 +18,7 @@ source ~/.vim/settings/plugins/autocomplete.plugins
 source ~/.vim/settings/plugins/tools.plugins
 
 if filereadable(expand("~/.vim/settings/plugins/local.plugins"))
-  source ~/.vim/settings/plugins/local.plugins
+	source ~/.vim/settings/plugins/local.plugins
 endif
 
 call plug#end()

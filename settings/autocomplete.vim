@@ -19,14 +19,14 @@ if exists("g:autocomplete_neocomplete")
 
   " Define dictionary.
   let g:neocomplete#sources#dictionary#dictionaries = {
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
-      \ 'scheme' : $HOME.'/.gosh_completions'
-      \ }
+        \ 'default' : '',
+        \ 'vimshell' : $HOME.'/.vimshell_hist',
+        \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
 
   " Define keyword.
   if !exists('g:neocomplete#keyword_patterns')
-      let g:neocomplete#keyword_patterns = {}
+    let g:neocomplete#keyword_patterns = {}
   endif
   let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
@@ -53,22 +53,22 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_filetype_whitelist = { '*': 1 }
 
   let g:ycm_filetype_blacklist = {
-      \ 'ctrlp' : 1,
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1,
-      \ 'infolog' : 1,
-      \ 'mail' : 1
-      \}
+        \ 'ctrlp' : 1,
+        \ 'tagbar' : 1,
+        \ 'qf' : 1,
+        \ 'notes' : 1,
+        \ 'markdown' : 1,
+        \ 'unite' : 1,
+        \ 'text' : 1,
+        \ 'vimwiki' : 1,
+        \ 'pandoc' : 1,
+        \ 'infolog' : 1,
+        \ 'mail' : 1
+        \}
 
   let g:ycm_filetype_specific_completion_to_disable = {
-      \ 'gitcommit': 1
-      \}
+        \ 'gitcommit': 1
+        \}
 
   let g:ycm_show_diagnostics_ui = 0
 
@@ -98,18 +98,18 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_filepath_completion_use_working_dir = 0
 
   let g:ycm_semantic_triggers =  {
-    \   'c' : ['->', '.'],
-    \   'objc' : ['->', '.'],
-    \   'ocaml' : ['.', '#'],
-    \   'cpp,objcpp' : ['->', '.', '::'],
-    \   'perl' : ['->'],
-    \   'php' : ['->', '::'],
-    \   'cs,java,javascript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-    \   'vim' : ['re![_a-zA-Z]+[_\w]*\.'],
-    \   'ruby' : ['.', '::'],
-    \   'lua' : ['.', ':'],
-    \   'erlang' : [':'],
-    \ }
+        \   'c' : ['->', '.'],
+        \   'objc' : ['->', '.'],
+        \   'ocaml' : ['.', '#'],
+        \   'cpp,objcpp' : ['->', '.', '::'],
+        \   'perl' : ['->'],
+        \   'php' : ['->', '::'],
+        \   'cs,java,javascript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+        \   'vim' : ['re![_a-zA-Z]+[_\w]*\.'],
+        \   'ruby' : ['.', '::'],
+        \   'lua' : ['.', ':'],
+        \   'erlang' : [':'],
+        \ }
 
   let g:ycm_cache_omnifunc = 1
   let g:ycm_use_ultisnips_completer = 1
@@ -142,11 +142,11 @@ if exists("g:autocomplete_neocomplete")
 
   " SuperTab like snippets behavior.
   imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: pumvisible() ? "\<C-n>" : "\<TAB>"
+        \ "\<Plug>(neosnippet_expand_or_jump)"
+        \: pumvisible() ? "\<C-n>" : "\<TAB>"
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: "\<TAB>"
+        \ "\<Plug>(neosnippet_expand_or_jump)"
+        \: "\<TAB>"
 
   " For snippet_complete marker.
   if has('conceal')

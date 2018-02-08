@@ -28,7 +28,7 @@ if exists("g:languages_common")
 
   let g:ale_lint_on_text_changed = 'normal'
   let g:ale_lint_on_enter = 1
- 
+
   " Write this in your vimrc file
   let g:ale_set_loclist = 1
   let g:ale_set_quickfix = 0
@@ -123,7 +123,7 @@ if exists("g:languages_go")
   let g:go_highlight_build_constraints = 1
 
   let g:go_list_type = "quickfix"
-  
+
   let g:syntastic_go_checkers = ['golint', 'govet', 'go']
 
   " Show a list of interfaces which is implemented by the type under your cursor
@@ -164,8 +164,8 @@ if exists("g:languages_markdown")
   " Support for github flavored markdown
   " via https://github.com/jtratner/vim-flavored-markdown
   augroup markdown
-      au!
-      au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
   augroup END
 endif
 

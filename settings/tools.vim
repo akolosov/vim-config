@@ -84,9 +84,9 @@ if exists("g:tools_git")
   " parent directory. Here’s a mapping of .. to the above command, but
   " only for buffers containing a git blob or tree
   autocmd User fugitive
-    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-    \   nnoremap <buffer> .. :edit %:h<CR> |
-    \ endif
+        \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+        \   nnoremap <buffer> .. :edit %:h<CR> |
+        \ endif
 
   " Every time you open a git object using fugitive it creates a new buffer. 
   " This means that your buffer listing can quickly become swamped with 
@@ -113,16 +113,16 @@ if exists("g:tools_common")
   vmap <C-Down> ]egv
 
   let g:lastplace_ignore = "gitcommit,svn"
-  
+
   " Close Quickfix and LocList by Q
   autocmd BufWinEnter quickfix nnoremap <silent> <buffer>
-              \   q :cclose<cr>:lclose<cr>
+        \   q :cclose<cr>:lclose<cr>
 
   autocmd BufEnter * if (winnr('$') == 1 && &buftype ==# 'quickfix' ) |
-              \   bd|
-              \   q | endif
-  
- " toggles the quickfix window.
+        \   bd|
+        \   q | endif
+
+  " toggles the quickfix window.
   command -bang -nargs=? QFix call QFixToggle(<bang>1)
   function! QFixToggle(forced)
     if exists("g:qfix_win") || a:forced == 0
@@ -140,7 +140,7 @@ if exists("g:tools_common")
 
   let g:quickfix_win_height = 10
 
- " toggles the loclist window.
+  " toggles the loclist window.
   command -bang -nargs=? LList call LListToggle(<bang>1)
   function! LListToggle(forced)
     if exists("g:llist_win") || a:forced == 0
@@ -160,7 +160,7 @@ if exists("g:tools_common")
 end
 
 if exists("g:tools_quickfix")
-    let g:qf_loclist_window_bottom=0
+  let g:qf_loclist_window_bottom=0
 endif
 
 if exists("g:tools_multicursors")

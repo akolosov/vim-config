@@ -1,22 +1,22 @@
 if BundleExists('autocomplete', 'common')
-  Plug 'Raimondi/delimitMate'
-  Plug 'honza/vim-snippets'
+	Plug 'Raimondi/delimitMate'
+	Plug 'honza/vim-snippets'
 
-  let g:autocomplete_common = 1
+	let g:autocomplete_common = 1
 endif
 
 if BundleExists('autocomplete', 'neocomplete')
-  Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/neosnippet.vim'
-  Plug 'Shougo/neocomplete'
+	Plug 'Shougo/neosnippet-snippets'
+	Plug 'Shougo/neosnippet.vim'
+	Plug 'Shougo/neocomplete'
 
-  let g:autocomplete_neocomplete = 1
+	let g:autocomplete_neocomplete = 1
 endif
-  
-if BundleExists('autocomplete', 'youcompleteme')
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-  Plug 'SirVer/ultisnips'
 
-  let g:autocomplete_youcompleteme = 1
+if BundleExists('autocomplete', 'youcompleteme')
+	Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+	Plug 'SirVer/ultisnips'
+
+	let g:autocomplete_youcompleteme = 1
 endif
 

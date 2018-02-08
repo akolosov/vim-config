@@ -1,142 +1,142 @@
 if BundleExists('languages', 'common')
-  Plug 'scrooloose/syntastic'
+	Plug 'scrooloose/syntastic'
 	Plug 'w0rp/ale'
 
-  let g:languages_common = 1
+	let g:languages_common = 1
 endif
 
 if BundleExists('languages', 'scala')
-  Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-  Plug 'derekwyatt/vim-sbt', { 'for': 'scala' }
-  Plug 'xptemplate'
+	Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+	Plug 'derekwyatt/vim-sbt', { 'for': 'scala' }
+	Plug 'xptemplate'
 
-  let g:languages_scala = 1
+	let g:languages_scala = 1
 endif
 
 if BundleExists('languages', 'elixir')
-  Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-  Plug 'carlosgaldino/elixir-snippets', { 'for': 'elixir' }
-  Plug 'mattreduce/vim-mix', { 'for': 'elixir' }
+	Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+	Plug 'carlosgaldino/elixir-snippets', { 'for': 'elixir' }
+	Plug 'mattreduce/vim-mix', { 'for': 'elixir' }
 
-  let g:languages_elixir = 1
+	let g:languages_elixir = 1
 endif
 
 if BundleExists('languages', 'haskell')
-  Plug 'travitch/hasksyn', { 'for': 'haskell' }
-  Plug 'dag/vim2hs', { 'for': 'haskell' }
-  Plug 'Twinside/vim-haskellConceal', { 'for': 'haskell' }
-  Plug 'Twinside/vim-haskellFold', { 'for': 'haskell' }
-  Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
-  Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-  Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-  Plug 'adinapoli/cumino', { 'for': 'haskell' }
-  Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
+	Plug 'travitch/hasksyn', { 'for': 'haskell' }
+	Plug 'dag/vim2hs', { 'for': 'haskell' }
+	Plug 'Twinside/vim-haskellConceal', { 'for': 'haskell' }
+	Plug 'Twinside/vim-haskellFold', { 'for': 'haskell' }
+	Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+	Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+	Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+	Plug 'adinapoli/cumino', { 'for': 'haskell' }
+	Plug 'bitc/vim-hdevtools', { 'for': 'haskell' }
 
-  let g:languages_haskell = 1
+	let g:languages_haskell = 1
 endif
 
 if BundleExists('languages', 'javascript')
-  Plug 'briancollins/vim-jst', { 'for': ['javascript', 'coffee'] }
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'coffee'] }
-  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
-  Plug 'claco/jasmine.vim', { 'for': ['javascript', 'coffee'] }
-  Plug 'digitaltoad/vim-jade', { 'for': ['javascript', 'coffee'] }
-  Plug 'itspriddle/vim-jquery', { 'for': ['javascript', 'coffee'] }
-  Plug 'kchmck/vim-coffee-script', { 'for': ['javascript', 'coffee'] }
-  Plug 'elzr/vim-json', { 'for': ['javascript', 'coffee'] }
+	Plug 'briancollins/vim-jst', { 'for': ['javascript', 'coffee'] }
+	Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'coffee'] }
+	Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'coffee'] }
+	Plug 'claco/jasmine.vim', { 'for': ['javascript', 'coffee'] }
+	Plug 'digitaltoad/vim-jade', { 'for': ['javascript', 'coffee'] }
+	Plug 'itspriddle/vim-jquery', { 'for': ['javascript', 'coffee'] }
+	Plug 'kchmck/vim-coffee-script', { 'for': ['javascript', 'coffee'] }
+	Plug 'elzr/vim-json', { 'for': ['javascript', 'coffee'] }
 	Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 	Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
 
-  let g:languages_javascript = 1
+	let g:languages_javascript = 1
 endif
 
 if BundleExists('languages', 'markdown')
-  Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
-  Plug 'nelstrom/vim-markdown-preview', { 'for': 'markdown' }
-  Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-  Plug 'spf13/vim-preview', { 'for': 'markdown' }
+	Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
+	Plug 'nelstrom/vim-markdown-preview', { 'for': 'markdown' }
+	Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+	Plug 'spf13/vim-preview', { 'for': 'markdown' }
 
-  let g:languages_markdown = 1
+	let g:languages_markdown = 1
 endif
 
 if BundleExists('languages', 'html/css')
-  Plug 'groenewege/vim-less', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
-  Plug 'skwp/vim-html-escape', { 'for': 'html' }
-  Plug 'rstacruz/sparkup', { 'for': 'html' }
-  Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-  Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
-  Plug 'gorodinskiy/vim-coloresque', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
+	Plug 'groenewege/vim-less', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
+	Plug 'skwp/vim-html-escape', { 'for': 'html' }
+	Plug 'rstacruz/sparkup', { 'for': 'html' }
+	Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
+	Plug 'hail2u/vim-css3-syntax', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
+	Plug 'gorodinskiy/vim-coloresque', { 'for': ['html', 'css', 'less', 'sass', 'scss'] }
 
-  let g:languages_html_css = 1
+	let g:languages_html_css = 1
 endif
 
 if BundleExists('languages', 'go')
-  Plug 'fatih/vim-go', { 'for': 'go' }
-  Plug 'rhysd/vim-go-impl', { 'for': 'go' }
-  Plug 'garyburd/go-explorer', { 'for': 'go' }
+	Plug 'fatih/vim-go', { 'for': 'go' }
+	Plug 'rhysd/vim-go-impl', { 'for': 'go' }
+	Plug 'garyburd/go-explorer', { 'for': 'go' }
 
-  let g:languages_go = 1
+	let g:languages_go = 1
 endif
 
 if BundleExists('languages', 'ruby')
-  Plug 'tpope/vim-haml', { 'for': 'haml' }
-  Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
-  Plug 'tpope/vim-rails', { 'for': 'ruby' }
-  Plug 'tpope/vim-rake', { 'for': 'ruby' }
-  Plug 'tpope/vim-rvm', { 'for': 'ruby' }
-  Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-  Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby', 'rspec'] }
+	Plug 'tpope/vim-haml', { 'for': 'haml' }
+	Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
+	Plug 'tpope/vim-rails', { 'for': 'ruby' }
+	Plug 'tpope/vim-rake', { 'for': 'ruby' }
+	Plug 'tpope/vim-rvm', { 'for': 'ruby' }
+	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+	Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby', 'rspec'] }
 	if has("mac")
 		Plug 'skwp/vim-iterm-rspec', { 'for': 'ruby' }
 		Plug 'skwp/vim-spec-finder', { 'for': 'ruby' }
 	endif
-  Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
-  Plug 'tpope/vim-bundler', { 'for': 'ruby' }
-  Plug 'tpope/vim-cucumber', { 'for': 'ruby' }
+	Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
+	Plug 'tpope/vim-bundler', { 'for': 'ruby' }
+	Plug 'tpope/vim-cucumber', { 'for': 'ruby' }
 
-  let g:languages_ruby = 1
+	let g:languages_ruby = 1
 endif
 
 if BundleExists('languages', 'textobjects')
-  Plug 'austintaylor/vim-indentobject'
-  Plug 'bootleq/vim-textobj-rubysymbol', { 'for': 'ruby' }
-  Plug 'coderifous/textobj-word-column.vim'
-  Plug 'kana/vim-textobj-datetime'
-  Plug 'kana/vim-textobj-entire'
-  Plug 'kana/vim-textobj-function'
-  Plug 'kana/vim-textobj-user'
-  Plug 'lucapette/vim-textobj-underscore'
-  Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
-  Plug 'thinca/vim-textobj-function-javascript', { 'for': ['javascript', 'coffee'] }
-  Plug 'vim-scripts/argtextobj.vim'
-  Plug 'wellle/targets.vim'
-  Plug 'reedes/vim-litecorrect'
-  Plug 'reedes/vim-textobj-sentence'
-  Plug 'reedes/vim-textobj-quote'
-  Plug 'reedes/vim-wordy'
+	Plug 'austintaylor/vim-indentobject'
+	Plug 'bootleq/vim-textobj-rubysymbol', { 'for': 'ruby' }
+	Plug 'coderifous/textobj-word-column.vim'
+	Plug 'kana/vim-textobj-datetime'
+	Plug 'kana/vim-textobj-entire'
+	Plug 'kana/vim-textobj-function'
+	Plug 'kana/vim-textobj-user'
+	Plug 'lucapette/vim-textobj-underscore'
+	Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+	Plug 'thinca/vim-textobj-function-javascript', { 'for': ['javascript', 'coffee'] }
+	Plug 'vim-scripts/argtextobj.vim'
+	Plug 'wellle/targets.vim'
+	Plug 'reedes/vim-litecorrect'
+	Plug 'reedes/vim-textobj-sentence'
+	Plug 'reedes/vim-textobj-quote'
+	Plug 'reedes/vim-wordy'
 
-  let g:languages_textobjects = 1
+	let g:languages_textobjects = 1
 endif
 
 if BundleExists('languages', 'python')
-  Plug 'klen/python-mode', { 'for': 'python' }
-  Plug 'yssource/python.vim', { 'for': 'python' }
+	Plug 'klen/python-mode', { 'for': 'python' }
+	Plug 'yssource/python.vim', { 'for': 'python' }
 
 	let g:languages_python = 1
 endif
 
 if BundleExists('languages', 'php')
-  Plug 'spf13/PIV', { 'for': 'php' }
-  Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
-  Plug 'beyondwords/vim-twig', { 'for': 'php' }
+	Plug 'spf13/PIV', { 'for': 'php' }
+	Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+	Plug 'beyondwords/vim-twig', { 'for': 'php' }
 
-  let g:languages_php = 1
+	let g:languages_php = 1
 endif
 
 if BundleExists('languages', 'other')
-  Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
-  Plug 'wting/rust.vim', { 'for': 'rust' }
-  Plug 'cespare/vim-toml', { 'for': 'toml' }
+	Plug 'PotatoesMaster/i3-vim-syntax', { 'for': 'i3' }
+	Plug 'wting/rust.vim', { 'for': 'rust' }
+	Plug 'cespare/vim-toml', { 'for': 'toml' }
 	Plug 'saaguero/vim-scriptease', { 'for': 'vim' }
 	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 	Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile'}

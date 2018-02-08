@@ -1,19 +1,19 @@
 if BundleExists('tools', 'common')
-  Plug 'tomtom/tlib_vim'
-  Plug 'vim-scripts/Align'
-  Plug 'xolox/vim-misc'
-  Plug 'mattn/webapi-vim'
-  Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-endwise'
-  Plug 'tpope/vim-ragtag'
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-speeddating'
-  Plug 'Z1MM32M4N/vim-superman'
+	Plug 'tomtom/tlib_vim'
+	Plug 'vim-scripts/Align'
+	Plug 'xolox/vim-misc'
+	Plug 'mattn/webapi-vim'
+	Plug 'tpope/vim-abolish'
+	Plug 'tpope/vim-endwise'
+	Plug 'tpope/vim-ragtag'
+	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'tpope/vim-speeddating'
+	Plug 'Z1MM32M4N/vim-superman'
 	Plug 'ervandew/supertab'
-	
-  let g:tools_common = 1
+
+	let g:tools_common = 1
 endif
 
 if BundleExists('tools', 'quickfix')
@@ -23,108 +23,108 @@ if BundleExists('tools', 'quickfix')
 endif
 
 if BundleExists('tools', 'git')
-  Plug 'gregsexton/gitv'
-  Plug 'mattn/gist-vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-git'
-  Plug 'airblade/vim-gitgutter'
+	Plug 'gregsexton/gitv'
+	Plug 'mattn/gist-vim'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-git'
+	Plug 'airblade/vim-gitgutter'
 
-  let g:tools_git = 1
+	let g:tools_git = 1
 endif
 
 if BundleExists('tools', 'search')
-  Plug 'rking/ag.vim'
+	Plug 'rking/ag.vim'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
-  let g:tools_search = 1
+	let g:tools_search = 1
 endif
 
 if BundleExists('tools', 'session')
-  Plug 'xolox/vim-session'
-  Plug 'vim-scripts/sessionman.vim'
+	Plug 'xolox/vim-session'
+	Plug 'vim-scripts/sessionman.vim'
 
-  let g:tools_session = 1
+	let g:tools_session = 1
 endif
 
 if BundleExists('tools', 'tagbar')
-  Plug 'majutsushi/tagbar'
+	Plug 'majutsushi/tagbar'
 
-  let g:tools_tagbar = 1
+	let g:tools_tagbar = 1
 endif
 
 if BundleExists('tools', 'ctrlp')
-  Plug 'kien/ctrlp.vim'
-  Plug 'sgur/ctrlp-extensions.vim'
-  Plug 'jasoncodes/ctrlp-modified.vim'
-  Plug 'ivalkeen/vim-ctrlp-tjump'
-  Plug 'mattn/ctrlp-mark'
-  Plug 'ompugao/ctrlp-history'
+	Plug 'kien/ctrlp.vim'
+	Plug 'sgur/ctrlp-extensions.vim'
+	Plug 'jasoncodes/ctrlp-modified.vim'
+	Plug 'ivalkeen/vim-ctrlp-tjump'
+	Plug 'mattn/ctrlp-mark'
+	Plug 'ompugao/ctrlp-history'
 	Plug 'fisadev/vim-ctrlp-cmdpalette'
 
-  let g:tools_ctrlp = 1
+	let g:tools_ctrlp = 1
 endif
 
 if BundleExists('tools', 'nerdtree')
-  Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
-  Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
+	Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
+	Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
 
-  let g:tools_nerdtree = 1
+	let g:tools_nerdtree = 1
 endif
 
 if BundleExists('tools', 'multicursors')
-  Plug 'kristijanhusak/vim-multiple-cursors'
+	Plug 'kristijanhusak/vim-multiple-cursors'
 
-  let g:tools_multicursors = 1
+	let g:tools_multicursors = 1
 endif
 
 if BundleExists('tools', 'bookmarks')
-  Plug 'MattesGroeger/vim-bookmarks'
+	Plug 'MattesGroeger/vim-bookmarks'
 
-  let g:tools_bookmarks = 1
+	let g:tools_bookmarks = 1
 endif
 
 if BundleExists('tools', 'undotree')
-  Plug 'mbbill/undotree', { 'on':  ['UndotreeToggle', 'UndotreeShow'] }
+	Plug 'mbbill/undotree', { 'on':  ['UndotreeToggle', 'UndotreeShow'] }
 
-  let g:tools_undotree = 1
+	let g:tools_undotree = 1
 endif
 
 if BundleExists('tools', 'commenter')
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'tpope/vim-commentary'
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'tpope/vim-commentary'
 
-  let g:tools_commenter = 1
+	let g:tools_commenter = 1
 endif
 
 if BundleExists('tools', 'scratch')
-  Plug 'mtth/scratch.vim'
+	Plug 'mtth/scratch.vim'
 
-  let g:tools_scratch = 1
+	let g:tools_scratch = 1
 endif
 
 if BundleExists('tools', 'easytags')
-  Plug 'xolox/vim-easytags'
+	Plug 'xolox/vim-easytags'
 
-  let g:tools_easytags = 1
+	let g:tools_easytags = 1
 endif
 
 if BundleExists('tools', 'vimshell')
-  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-  Plug 'Shougo/vimshell'
+	Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+	Plug 'Shougo/vimshell'
 
-  let g:tools_vimshell = 1
+	let g:tools_vimshell = 1
 endif
 
 if BundleExists('tools', 'align')
-  Plug 'junegunn/vim-easy-align'
+	Plug 'junegunn/vim-easy-align'
 
-  let g:tools_align = 1
+	let g:tools_align = 1
 endif
 
 if BundleExists('tools', 'zeal')
 	Plug 'KabbAmine/zeavim.vim'
 
-  let g:tools_zeal = 1
+	let g:tools_zeal = 1
 endif
 
 

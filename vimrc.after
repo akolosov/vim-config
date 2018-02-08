@@ -9,7 +9,7 @@ au FileType css        setlocal shiftwidth=2 tabstop=2 expandtab
 au FileType html       setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Avoiding tabs
-au BufWritePre {*.rb,*.coffee,*.scss,*.less,*.haml,*.slim,*.erb,*.vim,*.vundle} :%s/\t/  /e
+au BufWritePre {*.rb,*.coffee,*.scss,*.less,*.haml,*.slim,*.erb,*.vim,*.vundle} silent! :%s/\t/  /e
 
 " Set first line when editing a git commit message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
@@ -21,58 +21,58 @@ au VimResized * exe "normal! \<c-w>="
 au InsertLeave * set nopaste
 
 if exists('g:use_autosave')
-  au FocusLost * silent! wa
-  set autowriteall
+	au FocusLost * silent! wa
+	set autowriteall
 else
-  set noautowriteall
+	set noautowriteall
 endif
 
 if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Anonymous\ Pro\ for\ Powerline\ 12
-  elseif has("gui_macvim")
-    set guifont=Anonymous\ Pro\ for\ Powerline:h16
-  endif
-  let g:airline_powerline_fonts = 1
+	if has("gui_gtk2")
+		set guifont=Anonymous\ Pro\ for\ Powerline\ 12
+	elseif has("gui_macvim")
+		set guifont=Anonymous\ Pro\ for\ Powerline:h16
+	endif
+	let g:airline_powerline_fonts = 1
 endif
 
 if exists('g:apperances_lightline')
-  if !exists('g:lightline')
-    let g:lightline = {}
-  end
+	if !exists('g:lightline')
+		let g:lightline = {}
+	end
 
-  if !exists('g:lightline_theme')
-    let g:lightline_theme = 'hybrid'
-  endif
+	if !exists('g:lightline_theme')
+		let g:lightline_theme = 'hybrid'
+	endif
 
-  let g:lightline.colorscheme = g:lightline_theme
+	let g:lightline.colorscheme = g:lightline_theme
 
-  if exists('g:use_powerline_fonts')
-    let g:lightline.separator = { 'left': "\u2b80", 'right': "\u2b82" }
-    let g:lightline.subseparator = { 'left': "\u2b81", 'right': "\u2b83" }
-  else
-    let g:lightline.separator = { 'left': "", 'right': "" }
-    let g:lightline.subseparator = { 'left': "", 'right': "" }
-  endif
+	if exists('g:use_powerline_fonts')
+		let g:lightline.separator = { 'left': "\u2b80", 'right': "\u2b82" }
+		let g:lightline.subseparator = { 'left': "\u2b81", 'right': "\u2b83" }
+	else
+		let g:lightline.separator = { 'left': "", 'right': "" }
+		let g:lightline.subseparator = { 'left': "", 'right': "" }
+	endif
 
-  call lightline#init()
+	call lightline#init()
 elseif exists("g:apperances_airline") 
-  if !exists('g:airline_theme')
-    let g:airline_theme = 'bubblegum'
-  endif
+	if !exists('g:airline_theme')
+		let g:airline_theme = 'bubblegum'
+	endif
 
-  if exists('g:use_powerline_fonts')
-    let g:airline_powerline_fonts = 1
-  endif
+	if exists('g:use_powerline_fonts')
+		let g:airline_powerline_fonts = 1
+	endif
 
-  execute 'AirlineTheme '+g:airline_theme
+	execute 'AirlineTheme '+g:airline_theme
 endif
 
 if !exists('g:color_scheme')
-  set background=dark
-  colorscheme hybrid
+	set background=dark
+	colorscheme hybrid
 else
-  let g:colors_name = g:color_scheme
+	let g:colors_name = g:color_scheme
 endif
 
 syntax enable

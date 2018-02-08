@@ -31,17 +31,17 @@ if exists("g:apperances_lightline")
 
 
   let g:lightline.mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'η',
-      \ 'i'  : 'λ',
-      \ 'R'  : 'γ',
-      \ 'c'  : 'π',
-      \ 'v'  : 'ψ',
-      \ 'V'  : 'Ψ',
-      \ '' : '^Ψ',
-      \ 's'  : 'ω',
-      \ 'S'  : 'Ω',
-      \ '' : '^Ω' }
+        \ '__' : '-',
+        \ 'n'  : 'η',
+        \ 'i'  : 'λ',
+        \ 'R'  : 'γ',
+        \ 'c'  : 'π',
+        \ 'v'  : 'ψ',
+        \ 'V'  : 'Ψ',
+        \ '' : '^Ψ',
+        \ 's'  : 'ω',
+        \ 'S'  : 'Ω',
+        \ '' : '^Ω' }
 
   function! MyModified()
     return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -118,9 +118,9 @@ if exists("g:apperances_lightline")
   endfunction
 
   let g:ctrlp_status_func = {
-    \ 'main': 'CtrlPStatusFunc_1',
-    \ 'prog': 'CtrlPStatusFunc_2',
-    \ }
+        \ 'main': 'CtrlPStatusFunc_1',
+        \ 'prog': 'CtrlPStatusFunc_2',
+        \ }
 
   function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
     let g:lightline.ctrlp_regex = a:regex
@@ -137,7 +137,7 @@ if exists("g:apperances_lightline")
   let g:tagbar_status_func = 'TagbarStatusFunc'
 
   function! TagbarStatusFunc(current, sort, fname, ...) abort
-      let g:lightline.fname = a:fname
+    let g:lightline.fname = a:fname
     return lightline#statusline(0)
   endfunction
 
@@ -172,18 +172,18 @@ if exists("g:apperances_airline")
   endif
 
   let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'η',
-      \ 'i'  : 'λ',
-      \ 'R'  : 'γ',
-      \ 'c'  : 'π',
-      \ 'v'  : 'ψ',
-      \ 'V'  : 'Ψ',
-      \ '' : '^Ψ',
-      \ 's'  : 'ω',
-      \ 'S'  : 'Ω',
-      \ '' : '^Ω',
-      \ }
+        \ '__' : '-',
+        \ 'n'  : 'η',
+        \ 'i'  : 'λ',
+        \ 'R'  : 'γ',
+        \ 'c'  : 'π',
+        \ 'v'  : 'ψ',
+        \ 'V'  : 'Ψ',
+        \ '' : '^Ψ',
+        \ 's'  : 'ω',
+        \ 'S'  : 'Ω',
+        \ '' : '^Ω',
+        \ }
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}

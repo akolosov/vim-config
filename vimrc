@@ -158,7 +158,7 @@ if filereadable(expand("~/.vim/plugged/.installed"))
 	set shortmess=atI                                   " Don’t show the intro message when starting Vim
 	set ttimeoutlen=50
 	set ssop-=options
-	set colorcolumn=100
+	set colorcolumn=120
 	set switchbuf=usetab,newtab
 	set ttyfast                                          " assume fast terminal connection
 	set completeopt-=preview

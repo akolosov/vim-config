@@ -2,7 +2,6 @@ let g:use_arrow_keys = 1
 let g:use_copy_cut_paste_keys = 1
 let g:use_powerline_fonts = 1
 let g:dont_show_nerd_tree = 1
-let g:use_arrow_keys = 1
 
 if has("gui_running")
 	let g:use_autosave = 1

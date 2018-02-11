@@ -94,6 +94,7 @@ elseif exists("g:autocomplete_youcompleteme")
   let g:ycm_max_diagnostics_to_display = 30
   let g:ycm_key_list_select_completion = ['<C-k>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-j>', '<Up>']
+  let g:ycm_key_list_stop_completion = []
   let g:ycm_key_invoke_completion = '<C-]>'
   let g:ycm_filepath_completion_use_working_dir = 0
 

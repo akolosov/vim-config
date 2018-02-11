@@ -26,8 +26,8 @@ let g:use_bundles = {
 			\}
 
 if !exists("g:hardcore_mode")
-	let g:use_bundles.autocomplete = ["common", "youcompleteme"]
-	let g:use_bundles.tools = ["common", "tagbar", "ctrlp", "commenter", "git", "scratch", "undotree", "search", "align"]
+  let g:use_bundles.autocomplete = ["common", "youcompleteme"]
+	let g:use_bundles.tools = ["common", "tagbar", "ctrlp", "commenter", "git", "undotree", "search", "align"]
 else
 	if exists("g:use_arrow_keys")
 		unlet g:use_arrow_keys

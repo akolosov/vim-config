@@ -6,9 +6,9 @@ if BundleExists('autocomplete', 'common')
 endif
 
 if BundleExists('autocomplete', 'neocomplete')
-	Plug 'Shougo/neosnippet-snippets'
-	Plug 'Shougo/neosnippet.vim'
 	Plug 'Shougo/neocomplete'
+	Plug 'Shougo/neosnippet.vim'
+	Plug 'Shougo/neosnippet-snippets'
 
 	let g:autocomplete_neocomplete = 1
 endif

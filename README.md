@@ -64,7 +64,7 @@ Shortcuts
 | `CTRL-X` or `SHIFT-Del` | Cut (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-/` or `CTRL-7` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-\` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-D` | Show/Hide NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F` | Show current file in NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -91,7 +91,7 @@ Shortcuts
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
 | `,?` | Show most plugin keybindings | **\[n]** |
 | `//` | No highlights search | **\[n v]** |
-| `\\` | Comment/Uncomment current line or selection | **\[n i v]** |
+| `\\` | Comment/Uncomment current line or selection | **\[n v]** |
 | `,g` | Show/Hide TagBar (if plugin loaded) | **\[n]** |
 | `,zz` | Show/Hide UndoTree (if plugin loaded) | **\[n]** |
 | `,zf` | Fuzzy file finder (if plugin loaded) | **\[n]** |

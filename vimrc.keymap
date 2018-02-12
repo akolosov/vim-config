@@ -56,9 +56,9 @@ if !exists('g:hardcore_mode')
 	endif
 
 	if exists('g:tools_commenter')
-		" Ctrl-/ - Comment current line or selection.
-		map <C-_> ,ci
-		imap <C-_> <C-o>,cii
+		" Ctrl-\ - Comment current line or selection.
+		map <C-\> ,ci
+		imap <C-\> <C-o>,ci
 	endif
 
 	if exists('g:tools_undotree')

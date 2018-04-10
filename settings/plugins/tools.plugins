@@ -127,4 +127,10 @@ if BundleExists('tools', 'zeal')
 	let g:tools_zeal = 1
 endif
 
+if BundleExists('tools', 'dash')
+	Plug 'rizzatti/dash.vim'
+
+	let g:tools_dash = 1
+endif
+
 

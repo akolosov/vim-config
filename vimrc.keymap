@@ -157,6 +157,10 @@ if exists('g:tools_commenter')
 	imap <silent> \\ <C-o>,c<Space>
 endif
 
+if exists('g:tools_dash')
+	nmap <silent> <leader>d <Plug>DashGlobalSearch
+endif
+
 if exists('g:tools_align')
 	vnoremap <silent> <Enter> :EasyAlign<cr>
 endif

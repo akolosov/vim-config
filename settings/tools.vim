@@ -206,6 +206,3 @@ if exists("g:tools_bookmarks")
   let g:bookmark_auto_close = 1
 endif
 
-if exists("g:tools_zeal")
-
-endif

@@ -158,7 +158,7 @@ if exists('g:tools_commenter')
 endif
 
 if exists('g:tools_dash')
-	nmap <silent> <leader>d <Plug>DashGlobalSearch
+	map <silent> <leader>d <Plug>DashGlobalSearch
 endif
 
 if exists('g:tools_align')

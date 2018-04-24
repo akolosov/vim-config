@@ -230,10 +230,10 @@ endif
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
-nnoremap <silent> <C-]>  gt
-nnoremap <silent> <C-[>  gT
-vnoremap <silent> <C-]>  gt
-vnoremap <silent> <C-[>  gT
+nnoremap <silent> <D-]>  gt
+nnoremap <silent> <D-[>   gT
+vnoremap <silent> <D-]>  gt
+vnoremap <silent> <D-[>   gT
 nnoremap <silent> ] :bn<CR>
 nnoremap <silent> [ :bp<CR>
 vnoremap <silent> ] :bn<CR>

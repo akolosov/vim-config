@@ -18,6 +18,19 @@ if exists("g:tools_nerdtree")
   let NERDTreeDirArrows = 1
   let g:NERDTreeWinSize = 30
   let NERDTreeIgnore=['tags']
+
+  let g:NERDTreeIndicatorMapCustom = {
+      \ "Modified"  : "✹",
+      \ "Staged"    : "✚",
+      \ "Untracked" : "✭",
+      \ "Renamed"   : "➜",
+      \ "Unmerged"  : "═",
+      \ "Deleted"   : "✖",
+      \ "Dirty"     : "✗",
+      \ "Clean"     : "✔︎",
+      \ 'Ignored'   : '☒',
+      \ "Unknown"   : "?"
+      \ }
 endif
 
 if exists("g:tools_search")

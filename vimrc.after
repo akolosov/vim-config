@@ -31,6 +31,7 @@ if has("gui_running")
 	if has("gui_gtk2")
 		set guifont=Anonymous\ Pro\ for\ Powerline\ 12
 	elseif has("gui_macvim")
+		set macligatures
 		set guifont=Anonymous\ Pro\ for\ Powerline:h16
 	endif
 	let g:airline_powerline_fonts = 1

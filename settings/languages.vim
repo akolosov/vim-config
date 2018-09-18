@@ -172,6 +172,11 @@ if exists("g:languages_javascript")
   autocmd BufRead,BufNewFile *.js set ft=javascript syntax=jquery
 endif
 
+if exists("g:languages_elixir")
+  let g:mix_format_on_save = 1
+  let g:mix_format_silent_errors = 1
+endif
+
 if exists("g:languages_common")
   au BufNewFile,BufRead *.plugins setlocal filetype=vim
 endif

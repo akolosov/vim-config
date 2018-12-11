@@ -10,6 +10,7 @@ if BundleExists('tools', 'common')
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-speeddating'
+	Plug 'tpope/vim-dispatch'
 	Plug 'Z1MM32M4N/vim-superman'
 	Plug 'ervandew/supertab'
 

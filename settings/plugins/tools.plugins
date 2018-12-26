@@ -13,6 +13,7 @@ if BundleExists('tools', 'common')
 	Plug 'tpope/vim-dispatch'
 	Plug 'Z1MM32M4N/vim-superman'
 	Plug 'ervandew/supertab'
+	Plug 'editorconfig/editorconfig-vim'
 
 	let g:tools_common = 1
 endif

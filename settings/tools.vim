@@ -97,7 +97,7 @@ if exists("g:tools_git")
   " parent directory. Here’s a mapping of .. to the above command, but
   " only for buffers containing a git blob or tree
   autocmd User fugitive
-        \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+        \ if get(b:, 'fugitive_type', '') =~# '^\%(tree\|blob\)$' |
         \   nnoremap <buffer> .. :edit %:h<CR> |
         \ endif
 

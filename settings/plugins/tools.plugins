@@ -69,8 +69,8 @@ endif
 if BundleExists('tools', 'nerdtree')
 	Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
 	Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
-  Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
-	
+	Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
+
 	let g:tools_nerdtree = 1
 endif
 
@@ -78,6 +78,13 @@ if BundleExists('tools', 'multicursors')
 	Plug 'kristijanhusak/vim-multiple-cursors'
 
 	let g:tools_multicursors = 1
+endif
+
+if BundleExists('tools', 'vimfiler')
+	Plug 'Shougo/unite.vim'
+	Plug 'Shougo/vimfiler.vim'
+
+	let g:tools_vimfiler = 1
 endif
 
 if BundleExists('tools', 'bookmarks')

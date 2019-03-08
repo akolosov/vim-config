@@ -86,6 +86,12 @@ if !exists('g:hardcore_mode')
 		imap <silent> <C-f> <C-o>:NERDTree<CR><C-w>p:NERDTreeFind<CR>
 	endif
 
+	if exists('g:tools_vimfiler')
+		map <silent> <C-d> :VimFilerExplorer<CR>
+		imap <silent> <C-d> <C-o>:VimFilerExplorer<CR>
+		map <silent> <C-f> :VimFilerExplorer -find<CR>
+		imap <silent> <C-f> <C-o>:VimFilerExplorer -find<CR>
+	endif
 
 	if !has("gui_running")
 		if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))

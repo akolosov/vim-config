@@ -225,8 +225,8 @@ if exists("g:use_copy_cut_paste_keys")
 	vmap <S-A-Right> <Right>
 endif
 
-if exists('g:tools_vimshell')
-	map ~~ :VimShell<CR>
+if exists('g:tools_shell')
+	map <silent> ~~ :Deol<CR>
 endif
 
 " Space for open/close folds if exist

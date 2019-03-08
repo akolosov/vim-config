@@ -118,11 +118,10 @@ if BundleExists('tools', 'easytags')
 	let g:tools_easytags = 1
 endif
 
-if BundleExists('tools', 'vimshell')
-	Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-	Plug 'Shougo/vimshell'
+if BundleExists('tools', 'shell')
+	Plug 'Shougo/deol.nvim'
 
-	let g:tools_vimshell = 1
+	let g:tools_shell = 1
 endif
 
 if BundleExists('tools', 'align')

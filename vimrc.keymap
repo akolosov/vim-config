@@ -76,9 +76,6 @@ if !exists('g:hardcore_mode')
 		inoremap <silent> <C-p>p <C-o>:CtrlPCmdPalette<CR>
 	endif
 
-	map <C-t> :tabnew<CR>
-	imap <C-t> <C-o>:tabnew<CR>
-
 	if exists('g:tools_nerdtree')
 		map <silent> <C-d> :NERDTreeToggle<CR>
 		imap <silent> <C-d> <C-o>:NERDTreeToggle<CR>
@@ -237,29 +234,26 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
 nnoremap <silent> <D-]>  gt
-nnoremap <silent> <D-[>   gT
+nnoremap <silent> <D-[>  gT
 vnoremap <silent> <D-]>  gt
-vnoremap <silent> <D-[>   gT
-nnoremap <silent> ] :bn<CR>
-nnoremap <silent> [ :bp<CR>
-vnoremap <silent> ] :bn<CR>
-vnoremap <silent> [ :bp<CR>
+vnoremap <silent> <D-[>  gT
+nnoremap <silent> <Leader>] :bn<CR>
+nnoremap <silent> <Leader>[ :bp<CR>
+vnoremap <silent> <Leader>] :bn<CR>
+vnoremap <silent> <Leader>[ :bp<CR>
 
 if exists('g:tools_ctrlp')
 	nnoremap <silent> .. :CtrlPBuffer<cr>
 	vnoremap <silent> .. <C-U>:CtrlPBuffer<cr>
-	inoremap <silent> .. <C-o>:CtrlPBuffer<cr>
 
 	nnoremap <silent> <Space><Space> :CtrlPtjump<CR>
 	vnoremap <silent> <Space><Space> :CtrlPtjumpVisual<CR>
 
 	nnoremap <silent> pp :CtrlPCmdPalette<CR>
 	vnoremap <silent> pp <C-U>:CtrlPCmdPalette<CR>
-	inoremap <silent> pp <C-o>:CtrlPCmdPalette<CR>
 
 	nnoremap <silent> pm :CtrlPMenu<CR>
 	vnoremap <silent> pm <C-U>:CtrlPMenu<CR>
-	inoremap <silent> pm <C-o>:CtrlPMenu<CR>
 endif
 
 " If you visually select something and hit paste

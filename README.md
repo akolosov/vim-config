@@ -83,52 +83,52 @@ Shortcuts
 | `F10` | Quit without saving (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F10` | Quit with saving all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `ESC-ESC` | Quit and ask for save files or close current window/buffer (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-]` | Switch next tab (if not set `g:hardcore_mode`) | **\[n v]** |
-| `CTRL-[` | Switch prev tab (if not set `g:hardcore_mode`) | **\[n v]** |
-| `]` | Switch next buffer (if not set `g:hardcore_mode`) | **\[n v]** |
-| `[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
+| `CMD-]` | Switch next tab (if not set `g:hardcore_mode`) | **\[n v]** |
+| `CMD-[` | Switch prev tab (if not set `g:hardcore_mode`) | **\[n v]** |
+| `<Leader>]` | Switch next buffer (if not set `g:hardcore_mode`) | **\[n v]** |
+| `<Leader>[` | Switch prev buffer (if not set `g:hardcore_mode`) | **\[n v]** |
 | `<tilde><tilde>` | Run VimShell (if plugin loaded and not set `g:hardcore_mode`) | **\[n v]** |
 | `'` | Toggle single quotes to double quotes and backwards | **\[n]** |
-| `,?` | Show most plugin keybindings | **\[n]** |
+| `<Leader>?` | Show most plugin keybindings | **\[n]** |
 | `//` | No highlights search | **\[n v]** |
 | `\\` | Comment/Uncomment current line or selection | **\[n v]** |
-| `,g` | Show/Hide TagBar (if plugin loaded) | **\[n]** |
-| `,zz` | Show/Hide UndoTree (if plugin loaded) | **\[n]** |
-| `,zf` | Fuzzy file finder (if plugin loaded) | **\[n]** |
-| `,gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
-| `,gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
-| `,gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
-| `,,` or `,o` | Open CtrlP (if plugin loaded) | **\[n]** |
-| `..` or `,b` | Open CtrlP buffers (if plugin loaded) | **\[n]** |
+| `<Leader>g` | Show/Hide TagBar (if plugin loaded) | **\[n]** |
+| `<Leader>zz` | Show/Hide UndoTree (if plugin loaded) | **\[n]** |
+| `<Leader>zf` | Fuzzy file finder (if plugin loaded) | **\[n]** |
+| `<Leader>gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
+| `<Leader>gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
+| `<Leader>gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |
+| `<Leader>,` or `<Leader>o` | Open CtrlP (if plugin loaded) | **\[n]** |
+| `..` or `<Leader>b` | Open CtrlP buffers (if plugin loaded) | **\[n]** |
 | `''` or `CTRL-6` | " Switch between the last two files | **\[n]** |
 | `;;` | Append semicolon at EOL | **\[n]** |
 | `;;<CR>` | Append semicolon at EOL and add new line below | **\[n]** |
-| `,hh` | Split window horizontaly | **\[n]** |
-| `,vv` | Split window verticaly | **\[n]** |
-| `,a` | Select all text in current buffer | **\[n]** |
-| `,<Down>` | Insert new line after current line | **\[n]** |
-| `,<Up>` | Insert new line before current line | **\[n]** |
-| `,<CR>` | Toggle show Space/Tab/EOL | **\[n]** |
-| `,=` | Insert new line with '=' after current line with the same length | **\[n]** |
-| `,-` | Insert new line with '-' after current line with the same length | **\[n]** |
-| `,w` | Save current file | **\[n]** |
-| `,wa` | Save all files  | **\[n]** |
-| `,w?` | Save file as... | **\[n]** |
-| `,wq` | Save current file and close it | **\[n]** |
-| `,x` | Save current file and close it | **\[n]** |
-| `,X` | Close current file and without saving | **\[n]** |
-| `,x!` | Save all files and close VIM | **\[n]** |
-| `,X!` | Close VIM without saving files | **\[n]** |
-| `,tb` | Switch all buffers to tabs | **\[n]** |
-| `,sb` | Switch all buffers to windows | **\[n v]** |
-| `,nd` | Show/Hide NERDTree (if plugin loaded) | **\[n i v]** |
-| `,nf` | Show current file in NERDTree (if plugin loaded) | **\[n]** |
-| `,.` | Go to last edit location | **\[n]** |
-| `,cd` | Set working directory to current opened file's directory | **\[n]** |
-| `,ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |
-| `,te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
-| `,qc` | Toggle Quickfix window | **\[n]** |
-| `,qo` | Open Quickfix window back up | **\[n]** |
+| `<Leader>hh` | Split window horizontaly | **\[n]** |
+| `<Leader>vv` | Split window verticaly | **\[n]** |
+| `<Leader>a` | Select all text in current buffer | **\[n]** |
+| `<Leader><Down>` | Insert new line after current line | **\[n]** |
+| `<Leader><Up>` | Insert new line before current line | **\[n]** |
+| `<Leader><CR>` | Toggle show Space/Tab/EOL | **\[n]** |
+| `<Leader>=` | Insert new line with '=' after current line with the same length | **\[n]** |
+| `<Leader>-` | Insert new line with '-' after current line with the same length | **\[n]** |
+| `<Leader>w` | Save current file | **\[n]** |
+| `<Leader>wa` | Save all files  | **\[n]** |
+| `<Leader>w?` | Save file as... | **\[n]** |
+| `<Leader>wq` | Save current file and close it | **\[n]** |
+| `<Leader>x` | Save current file and close it | **\[n]** |
+| `<Leader>X` | Close current file and without saving | **\[n]** |
+| `<Leader>x!` | Save all files and close VIM | **\[n]** |
+| `<Leader>X!` | Close VIM without saving files | **\[n]** |
+| `<Leader>tb` | Switch all buffers to tabs | **\[n]** |
+| `<Leader>sb` | Switch all buffers to windows | **\[n v]** |
+| `<Leader>nd` | Show/Hide NERDTree (if plugin loaded) | **\[n i v]** |
+| `<Leader>nf` | Show current file in NERDTree (if plugin loaded) | **\[n]** |
+| `<Leader>.` | Go to last edit location | **\[n]** |
+| `<Leader>cd` | Set working directory to current opened file's directory | **\[n]** |
+| `<Leader>ee` | Opens an edit command with the path of the currently edited file filled in | **\[n]** |
+| `<Leader>te` | Opens a tab edit command with the path of the currently edited file filled in | **\[n]** |
+| `<Leader>qc` | Toggle Quickfix window | **\[n]** |
+| `<Leader>qo` | Open Quickfix window back up | **\[n]** |
 | `$` | Surround a selection with ${JS interpolation} | **\[v]** |
 | `#` | Surround a word or selection with #{ruby interpolation} | **\[n v]** |
 | `"` | Surround a word or selection with "quotes" | **\[n v]** |
@@ -136,33 +136,33 @@ Shortcuts
 | `(` or `)` | Surround a word or selection with (parens) | **\[n v]** |
 | `[` or `]` | Surround a word or selection with [brackets] | **\[n v]** |
 | `{` or `}` | Surround a word or selection with {braces} | **\[n v]** |
-| `,rw` | Overwrite word, replace a word with what's in the yank buffer | **\[n v]** |
-| `,sw` | Swaps word under cursor and next word in line | **\[n v]** |
-| `,db` | Delete blank lines | **\[n v]** |
-| `,l'` | Surround every line in the file or selected lines with ' | **\[n v]** |
-| `,l"` | Surround every line in the file or selected lines with " | **\[n v]** |
-| `,l(` | Surround every line in the file or selected lines with () | **\[n v]** |
-| `,l[` | Surround every line in the file or selected lines with \[] | **\[n v]** |
-| `,l{` | Surround every line in the file or selected lines with {} | **\[n v]** |
-| `,ss` | Strip trailing whitespace | **\[n v]** |
-| `,sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
-| `,sr` | Search word under cursor and replace with user inputs | **\[n v]** |
-| `,yw` | Yank word under cursor | **\[n]** |
-| `,yl` | Yank current line | **\[n]** |
-| `,ls` | Send current line to console (tmux by default) | **\[n]** |
-| `,ms` | Send current motion to console (tmux by default) | **\[n]** |
-| `,rs` | Send current selection to console (tmux by default) | **\[v]** |
-| `,gs` | git status | **\[n]** |
-| `,gd` | git diff | **\[n]** |
-| `,ga` | git add %currentfile% | **\[n]** |
-| `,gu` | git add all untracked files | **\[n]** |
-| `,g?` | git add user input files | **\[n]** |
-| `,gb` | git blame | **\[n]** |
-| `,ag` | Search in files, using ag | **\[n]** |
-| `,af` | Search file, using ag | **\[n]** |
-| `,ocf` | Open changed files (by git status) | **\[n]** |
-| `,orb` | Select Outer-Ruby-Block | **\[n]** |
-| `,t=` | Align assignments (don't count logic, like == or !=) | **\[n v]** |
-| `,t,` | Align on commas | **\[n v]** |
-| `,t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
-| `,tsp` | Align on whitespace | **\[n v]** |
+| `<Leader>rw` | Overwrite word, replace a word with what's in the yank buffer | **\[n v]** |
+| `<Leader>sw` | Swaps word under cursor and next word in line | **\[n v]** |
+| `<Leader>db` | Delete blank lines | **\[n v]** |
+| `<Leader>l'` | Surround every line in the file or selected lines with ' | **\[n v]** |
+| `<Leader>l"` | Surround every line in the file or selected lines with " | **\[n v]** |
+| `<Leader>l(` | Surround every line in the file or selected lines with () | **\[n v]** |
+| `<Leader>l[` | Surround every line in the file or selected lines with \[] | **\[n v]** |
+| `<Leader>l{` | Surround every line in the file or selected lines with {} | **\[n v]** |
+| `<Leader>ss` | Strip trailing whitespace | **\[n v]** |
+| `<Leader>sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
+| `<Leader>sr` | Search word under cursor and replace with user inputs | **\[n v]** |
+| `<Leader>yw` | Yank word under cursor | **\[n]** |
+| `<Leader>yl` | Yank current line | **\[n]** |
+| `<Leader>ls` | Send current line to console (tmux by default) | **\[n]** |
+| `<Leader>ms` | Send current motion to console (tmux by default) | **\[n]** |
+| `<Leader>rs` | Send current selection to console (tmux by default) | **\[v]** |
+| `<Leader>gs` | git status | **\[n]** |
+| `<Leader>gd` | git diff | **\[n]** |
+| `<Leader>ga` | git add %currentfile% | **\[n]** |
+| `<Leader>gu` | git add all untracked files | **\[n]** |
+| `<Leader>g?` | git add user input files | **\[n]** |
+| `<Leader>gb` | git blame | **\[n]** |
+| `<Leader>ag` | Search in files, using ag | **\[n]** |
+| `<Leader>af` | Search file, using ag | **\[n]** |
+| `<Leader>ocf` | Open changed files (by git status) | **\[n]** |
+| `<Leader>orb` | Select Outer-Ruby-Block | **\[n]** |
+| `<Leader>t=` | Align assignments (don't count logic, like == or !=) | **\[n v]** |
+| `<Leader>t,` | Align on commas | **\[n v]** |
+| `<Leader>t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
+| `<Leader>tsp` | Align on whitespace | **\[n v]** |

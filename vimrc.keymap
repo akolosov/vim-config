@@ -99,8 +99,13 @@ if !exists('g:hardcore_mode')
 			inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
 		endif
 	else
-		noremap <silent> <Esc><Esc> :tabclose<CR>
-		inoremap <silent> <Esc><Esc> <Esc>:tabclose<CR>
+		if exists('g:tab_mode')
+			noremap <silent> <Esc><Esc> :tabclose<CR>
+			inoremap <silent> <Esc><Esc> <Esc>:tabclose<CR>
+		else
+			noremap <silent> <Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+			inoremap <silent> <Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+		endif
 	endif
 
 	imap <F10> <ESC>:qa!<CR>
@@ -235,14 +240,17 @@ endif
 nnoremap <silent> <Leader>f<Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Leader>f<Space> zf
 
-nnoremap <silent> <D-]>  gt
-nnoremap <silent> <D-[>  gT
-vnoremap <silent> <D-]>  gt
-vnoremap <silent> <D-[>  gT
-nnoremap <silent> <Leader>] :bn<CR>
-nnoremap <silent> <Leader>[ :bp<CR>
-vnoremap <silent> <Leader>] :bn<CR>
-vnoremap <silent> <Leader>[ :bp<CR>
+if exists('g:tab_mode')
+    nnoremap <silent> <D-]>  gt
+    nnoremap <silent> <D-[>  gT
+    vnoremap <silent> <D-]>  gt
+    vnoremap <silent> <D-[>  gT
+else
+    nnoremap <silent> <D-]>  :bn<CR>
+    nnoremap <silent> <D-[>  :bp<CR>
+    vnoremap <silent> <D-]>  :bn<CR>
+    vnoremap <silent> <D-[>  :bp<CR>
+endif
 
 if exists('g:tools_ctrlp')
 	nnoremap <silent> .. :CtrlPBuffer<cr>
@@ -545,3 +553,10 @@ nnoremap <leader>= yypVr=
 
 " Insert new line with '-' after current line with the same length
 nnoremap <leader>- yypVr-
+
+nmap <silent> <D-0> :CtrlPBuffer<CR>
+vmap <silent> <D-0> :CtrlPBuffer<CR>
+imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
+map <silent> <leader>bq :bp <BAR> bd #<CR>
+map <silent> <Leader>bp :bp<CR>
+map <silent> <Leader>bn :bn<CR>

@@ -159,7 +159,11 @@ if filereadable(expand("~/.vim/plugged/.installed"))
 	set ttimeoutlen=50
 	set ssop-=options
 	set colorcolumn=120
-	set switchbuf=usetab,newtab
+	if exists('g:tab_mode')
+		set switchbuf=usetab,newtab
+	else
+		set switchbuf=useopen
+	endif
 	set ttyfast                                          " assume fast terminal connection
 	set completeopt-=preview
 

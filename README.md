@@ -65,8 +65,8 @@ Shortcuts
 | `CTRL-C` or `CTRL-Ins` | Copy (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-V` or `SHIFT-Ins` | Paste (if set `g:use_copy_cut_paste_keys` and not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-\` | Comment/Uncomment block (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-D` | Show/Hide NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
-| `CTRL-F` | Show current file in NERDTree (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-D` | Show/Hide NERDTree or VimFiler (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
+| `CTRL-F` | Show current file in NERDTree or VimFiler (if plugin loaded and not set `g:hardcore_mode`) | **\[n i v]** |
 | `F2` | Save file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `CTRL-F2` | Save all files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F2` | Save file as... (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -76,7 +76,7 @@ Shortcuts
 | `F6` | Switch Quickfix open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F6` | Switch Location list open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F7` | Fuzzy file finder (if not set `g:hardcore_mode`) | **\[n i v]** |
-| `F7` | Ag search in files (if not set `g:hardcore_mode`) | **\[n i v]** |
+| `F7` | `Ag` search in files (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F8` | Search and Replace in current file (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `F9` | Switch current folding open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
 | `SHIFT-F9` | Switch all foldings open/close (if not set `g:hardcore_mode`) | **\[n i v]** |
@@ -147,6 +147,7 @@ Shortcuts
 | `<Leader>ss` | Strip trailing whitespace | **\[n v]** |
 | `<Leader>sf` | Search word under cursor or selected word entire files in current directory (recursively) | **\[n v]** |
 | `<Leader>sr` | Search word under cursor and replace with user inputs | **\[n v]** |
+| `<Leader>s/` | Search selected word or user input in whole project | **\[n v]** |
 | `<Leader>yw` | Yank word under cursor | **\[n]** |
 | `<Leader>yl` | Yank current line | **\[n]** |
 | `<Leader>ls` | Send current line to console (tmux by default) | **\[n]** |

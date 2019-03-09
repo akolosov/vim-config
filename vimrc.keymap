@@ -138,8 +138,7 @@ imap <S-F6> <C-o>:LList<CR>
 
 
 if exists('g:tools_search')
-	nmap <leader>fz :FZF <C-R>=expand("%:p:h")<CR>
-	imap <leader>fz <C-o>:FZF <C-R>=expand("%:p:h")<CR>
+	nmap <leader>sz :FZF <C-R>=expand("%:p:h")<CR>
 	nmap <S-F7> :FZF <C-R>=expand("%:p:h")<CR>
 	imap <S-F7> <C-o>:FZF <C-R>=expand("%:p:h")<CR>
 	nmap <F7> :Ag ""<Left>
@@ -150,8 +149,11 @@ if exists('g:tools_search')
 	vmap <F8> y:%s/<C-R>+//<Left>
 
 	" Open the Ag command and place the cursor into the quotes
-	nmap <Leader>ag :Ag ""<Left>
-	nmap <Leader>af :AgFile ""<Left>
+	nmap <Leader>sa :Ag ""<Left>
+	nmap <Leader>saf :AgFile ""<Left>
+
+	nnoremap <Leader>s/ :FlyGrep<CR>
+	vnoremap <Leader>s/ y:FlyGrep<CR><C-R>+
 endif
 
 if exists('g:tools_commenter')
@@ -230,8 +232,8 @@ if exists('g:tools_shell')
 endif
 
 " Space for open/close folds if exist
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <Space> zf
+nnoremap <silent> <Leader>f<Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Leader>f<Space> zf
 
 nnoremap <silent> <D-]>  gt
 nnoremap <silent> <D-[>  gT

@@ -75,7 +75,7 @@ if exists("g:tools_ctrlp")
 
   let g:ctrlp_cmdpalette_execute = 1
 
-  let g:ctrlp_extensions = ['tags', 'changes', 'mark', 'undo', 'tjump', 'modified', 'yankring', 'quickfix', 'menu', 'cmdpalette']
+  let g:ctrlp_extensions = ['tags', 'changes', 'mark', 'undo', 'tjump', 'modified', 'quickfix', 'yankring', 'menu', 'cmdpalette']
 endif
 
 if exists("g:tools_easytags")

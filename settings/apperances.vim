@@ -202,16 +202,20 @@ if exists("g:apperances_airline")
   let g:airline#extensions#ctrlp#show_adjacent_modes = 1
   let g:airline#extensions#syntastic#enabled = 1
   let g:airline#extensions#tagbar#enabled = 1
+  let g:airline#extensions#ycm#enabled = 1
 
   let g:airline#extensions#tabline#show_tab_type = 1
   let g:airline#extensions#tabline#show_tab_nr = 1
-
   let g:airline#extensions#tabline#close_symbol = '×'
   let g:airline#extensions#tabline#show_close_button = 1
-
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#show_buffers = 1
   let g:airline#extensions#tabline#show_tabs = 1
+  let g:airline#extensions#tabline#buffer_nr_show = 1
+  let g:airline#extensions#tabline#ignore_bufadd_pat = 'gundo|undotree|vimfiler|tagbar|nerd_tree|!'
+  let g:airline#extensions#tabline#exclude_preview = 1
+  let g:airline#extensions#tabline#exclude_buffers = ['tagbar', 'gundo', 'vimfiler', 'nerdtree', 'tagbar', 'startify']
+
   let g:airline#extensions#bufferline#enabled = 1
   let g:airline#extensions#bufferline#overwrite_variables = 1
 
@@ -222,5 +226,5 @@ if exists("g:apperances_airline")
 endif
 
 if exists("g:apperances_numbers")
-  let g:numbers_exclude = [ 'tagbar', 'gundo', 'minibufexpl', 'nerdtree', 'unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m' ]
+  let g:numbers_exclude = [ 'tagbar', 'gundo', 'minibufexpl', 'nerdtree', 'unite', 'vimfiler', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m' ]
 endif

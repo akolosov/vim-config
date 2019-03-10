@@ -95,8 +95,10 @@ if exists("g:tools_tagbar")
       \ 'e:exports',
       \ 's:styled components'
       \ ]}
+
+  let g:tern#command = [ '/usr/local/bin/tern' ]
 endif
-      
+
 if exists("g:tools_easytags")
   if !argc()
     let g:easytags_events = ['BufWritePost']

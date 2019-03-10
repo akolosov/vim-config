@@ -50,7 +50,9 @@ if BundleExists('tools', 'session')
 endif
 
 if BundleExists('tools', 'tagbar')
-	Plug 'majutsushi/tagbar'
+	Plug 'ternjs/tern_for_vim'
+	Plug 'ludovicchabant/vim-gutentags'
+	Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 	let g:tools_tagbar = 1
 endif

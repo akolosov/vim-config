@@ -78,6 +78,25 @@ if exists("g:tools_ctrlp")
   let g:ctrlp_extensions = ['tags', 'changes', 'mark', 'undo', 'tjump', 'modified', 'quickfix', 'yankring', 'menu', 'cmdpalette']
 endif
 
+if exists("g:tools_tagbar")
+  let g:tagbar_type_javascript = {
+      \ 'ctagstype': 'javascript',
+      \ 'kinds': [
+      \ 'a:arrays',
+      \ 'p:properties',
+      \ 't:tags',
+      \ 'o:objects',
+      \ 'g:generator functions',
+      \ 'f:functions',
+      \ 'c:constructors/classes',
+      \ 'm:methods',
+      \ 'v:variables',
+      \ 'i:imports',
+      \ 'e:exports',
+      \ 's:styled components'
+      \ ]}
+endif
+      
 if exists("g:tools_easytags")
   if !argc()
     let g:easytags_events = ['BufWritePost']

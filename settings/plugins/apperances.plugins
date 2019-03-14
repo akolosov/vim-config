@@ -23,6 +23,12 @@ if BundleExists('apperances', 'indentline')
 	let g:apperances_indentline = 1
 endif
 
+if BundleExists('apperances', 'startscreen')
+	Plug 'mhinz/vim-startify'
+
+	let g:apperances_startscreen = 1
+endif
+
 if BundleExists('apperances', 'common')
 	Plug 'chrisbra/color_highlight'
 	Plug 'akolosov/vim-colors'

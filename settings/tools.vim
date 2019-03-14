@@ -82,33 +82,32 @@ if exists("g:tools_tagbar")
   let g:tagbar_type_javascript = {
       \ 'ctagstype': 'javascript',
       \ 'kinds': [
-      \ 'a:arrays',
-      \ 'p:properties',
-      \ 't:tags',
-      \ 'o:objects',
-      \ 'g:generator functions',
       \ 'f:functions',
-      \ 'c:constructors/classes',
+      \ 'c:classes',
       \ 'm:methods',
-      \ 'v:variables',
-      \ 'i:imports',
-      \ 'e:exports',
-      \ 's:styled components'
+      \ 'p:properties',
+      \ 'v:global variables',
+      \ 'A:Arrays',
+      \ 'P:Properties',
+      \ 'T:Tags',
+      \ 'O:Objects',
+      \ 'G:Generator functions',
+      \ 'F:Functions',
+      \ 'C:Constructors/Classes',
+      \ 'M:Methods',
+      \ 'V:Variables',
+      \ 'I:Imports',
+      \ 'E:Exports',
+      \ 'S:Styled components'
       \ ]}
 
-  let g:tern#command = [ '/usr/local/bin/tern' ]
+  let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 endif
 
 if exists("g:tools_easytags")
-  if !argc()
-    let g:easytags_events = ['BufWritePost']
-    let g:easytags_async = 1
-  else
-    let g:easytags_events = []
-    let g:easytags_async = 0
-  endif
-
-  let g:easytags_file = '~/.vim/tmp/tags'
+  let g:easytags_events = ['BufWritePost']
+  let g:easytags_async = 1
+  let g:easytags_file = '~/.vimtags'
   let g:easytags_auto_highlight = 0
   let g:easytags_always_enabled = 0
   let g:easytags_on_cursorhold = 0

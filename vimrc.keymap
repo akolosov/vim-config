@@ -554,41 +554,13 @@ nnoremap <leader>= yypVr=
 " Insert new line with '-' after current line with the same length
 nnoremap <leader>- yypVr-
 
-if !exists('g:tab_mode')
-	nmap <silent> <D-1> :b 1<CR>
-	vmap <silent> <D-1> :b 1<CR>
-	imap <silent> <D-1> <C-o>:b 1<CR>
-	nmap <silent> <D-2> :b 2<CR>
-	vmap <silent> <D-2> :b 2<CR>
-	imap <silent> <D-2> <C-o>:b 2<CR>
-	nmap <silent> <D-3> :b 3<CR>
-	vmap <silent> <D-3> :b 3<CR>
-	imap <silent> <D-3> <C-o>:b 3<CR>
-	nmap <silent> <D-4> :b 4<CR>
-	vmap <silent> <D-4> :b 4<CR>
-	imap <silent> <D-4> <C-o>:b 4<CR>
-	nmap <silent> <D-5> :b 5<CR>
-	vmap <silent> <D-5> :b 5<CR>
-	imap <silent> <D-5> <C-o>:b 5<CR>
-	nmap <silent> <D-6> :b 6<CR>
-	vmap <silent> <D-6> :b 6<CR>
-	imap <silent> <D-6> <C-o>:b 6<CR>
-	nmap <silent> <D-7> :b 7<CR>
-	vmap <silent> <D-7> :b 7<CR>
-	imap <silent> <D-7> <C-o>:b 7<CR>
-	nmap <silent> <D-8> :b 8<CR>
-	vmap <silent> <D-8> :b 8<CR>
-	imap <silent> <D-8> <C-o>:b 8<CR>
-	nmap <silent> <D-9> :b 9<CR>
-	vmap <silent> <D-9> :b 9<CR>
-	imap <silent> <D-9> <C-o>:b 9<CR>
-	nmap <silent> <D-0> :b 10<CR>
-	vmap <silent> <D-0> :b 10<CR>
-	imap <silent> <D-0> <C-o>:b 10<CR>
+if exists('g:apperances_startscreen')
+	map <silent> <Leader>bh :Startify<CR>
+endif
 
-	nmap <silent> <D-+> :CtrlPBuffer<CR>
-	vmap <silent> <D-+> :CtrlPBuffer<CR>
-	imap <silent> <D-+> <C-o>:CtrlPBuffer<CR>
+if !exists('g:tab_mode')
+	nmap <silent> <D-0> :CtrlPBuffer<CR>
+	imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
 	map <silent> <leader>bq :bp <BAR> bd #<CR>
 	map <silent> <Leader>bp :bp<CR>
 	map <silent> <Leader>bn :bn<CR>

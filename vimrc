@@ -136,15 +136,8 @@ if filereadable(expand("~/.vim/plugged/.installed"))
 	set t_vb=
 	set pastetoggle=<F3>
 
-	if exists('g:tools_vimshell')
-		set noautochdir
-		set tags=./tags;
-	else
-		set autochdir
-		set tags=tags;
-
-		au BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
-	endif
+	set noautochdir
+	set tags+=~/.vimtags
 
 	set noshowmode
 	set confirm

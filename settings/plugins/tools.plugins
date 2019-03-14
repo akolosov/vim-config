@@ -77,7 +77,7 @@ if BundleExists('tools', 'nerdtree')
 endif
 
 if BundleExists('tools', 'multicursors')
-	Plug 'kristijanhusak/vim-multiple-cursors'
+	Plug 'terryma/vim-multiple-cursors'
 
 	let g:tools_multicursors = 1
 endif

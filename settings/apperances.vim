@@ -157,8 +157,6 @@ if exists("g:apperances_lightline")
 endif
 
 if exists("g:apperances_airline")
-  let g:airline#extensions#tabline#enabled = 1
-
   if !exists('g:use_powerline_fonts')
     let g:airline_left_sep = ''
     let g:airline_left_alt_sep = ''
@@ -188,16 +186,21 @@ if exists("g:apperances_airline")
     let g:airline_symbols = {}
   endif
 
+  let g:airline_symbols.crypt = '∞'
   let g:airline_symbols.linenr = '¶'
   let g:airline_symbols.branch = '⎇ '
   let g:airline_symbols.paste = 'ρ'
   let g:airline_symbols.whitespace = 'Ξ'
-  let g:airline_symbols.readonly = '⭤'
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.maxlinenr = '↓'
+  let g:airline_symbols.spell = '√'
+  let g:airline_symbols.notexists = 'Ø'
 
   let g:airline#extensions#whitespace#enabled = 1
   let g:airline#extensions#whitespace#trailing_format = 'τ[%s]'
   let g:airline#extensions#whitespace#mixed_indent_format = 'μ[%s]'
 
+  let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#nrrwrgn#enabled = 1
   let g:airline#extensions#ctrlp#show_adjacent_modes = 1
   let g:airline#extensions#syntastic#enabled = 1
@@ -222,6 +225,7 @@ if exists("g:apperances_airline")
   let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
   let g:airline#extensions#quickfix#location_text = 'Location'
 
+  let g:airline_skip_empty_sections = 1
   let g:airline_exclude_preview = 1
 endif
 

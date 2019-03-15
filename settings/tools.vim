@@ -42,6 +42,10 @@ if exists("g:tools_vimfiler")
   let g:vimfiler_tree_closed_icon = '▸'
   let g:vimfiler_file_icon = '-'
   let g:vimfiler_marked_file_icon = '*'
+
+  if exists('g:tab_mode')
+    call vimfiler#custom#profile('default', 'context', { 'edit_action': 'tabopen' })
+  endif
 endif
 
 if exists("g:tools_search")

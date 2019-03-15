@@ -91,17 +91,22 @@ if !exists('g:hardcore_mode')
 	endif
 
 	if !has("gui_running")
-		if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in") && ((exists('g:nerdtree_tabs_open_on_console_startup') && g:nerdtree_tabs_open_on_console_startup != 1) && (exists('g:nerdtree_tabs_open_on_gui_startup') && g:nerdtree_tabs_open_on_gui_startup != 1)) || (!exists("g:tools_nerd_tree"))
+		if (&readonly || argc() || !isdirectory(argv(0))) && !exists("s:std_in")
 			noremap <silent> <Esc><Esc> :qa<CR>
 			inoremap <silent> <Esc><Esc> <Esc>:qa<CR>
 		else
-			noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
-			inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+			if exists('g:tab_mode')
+				noremap <silent> <Esc><Esc><Esc> :bd<CR>
+				inoremap <silent> <Esc><Esc><Esc> <Esc>:bd<CR>
+			else
+				noremap <silent> <Esc><Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
+				inoremap <silent> <Esc><Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
+			endif
 		endif
 	else
 		if exists('g:tab_mode')
-			noremap <silent> <Esc><Esc> :tabclose<CR>
-			inoremap <silent> <Esc><Esc> <Esc>:tabclose<CR>
+			noremap <silent> <Esc><Esc> :bd<CR>
+			inoremap <silent> <Esc><Esc> <Esc>:bd<CR>
 		else
 			noremap <silent> <Esc><Esc> :call CloseWindowOrKillBuffer()<CR>
 			inoremap <silent> <Esc><Esc> <Esc>:call CloseWindowOrKillBuffer()<CR>
@@ -558,10 +563,9 @@ if exists('g:apperances_startscreen')
 	map <silent> <Leader>bh :Startify<CR>
 endif
 
-if !exists('g:tab_mode')
-	nmap <silent> <D-0> :CtrlPBuffer<CR>
-	imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
-	map <silent> <leader>bq :bp <BAR> bd #<CR>
-	map <silent> <Leader>bp :bp<CR>
-	map <silent> <Leader>bn :bn<CR>
-endif
+nmap <silent> <D-0> :CtrlPBuffer<CR>
+imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
+map <silent> <leader>bq :bp <BAR> bd #<CR>
+map <silent> <leader>bd :bd<CR>
+map <silent> <Leader>bp :bp<CR>
+map <silent> <Leader>bn :bn<CR>

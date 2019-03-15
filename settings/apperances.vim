@@ -207,20 +207,29 @@ if exists("g:apperances_airline")
   let g:airline#extensions#tagbar#enabled = 1
   let g:airline#extensions#ycm#enabled = 1
 
-  let g:airline#extensions#tabline#show_tab_type = 1
-  let g:airline#extensions#tabline#show_tab_nr = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#show_tab_type = 0
   let g:airline#extensions#tabline#close_symbol = '×'
   let g:airline#extensions#tabline#show_close_button = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#show_buffers = 1
-  let g:airline#extensions#tabline#show_tabs = 1
-  let g:airline#extensions#tabline#buffer_nr_show = 1
-  let g:airline#extensions#tabline#ignore_bufadd_pat = 'gundo|undotree|vimfiler|tagbar|nerd_tree|!'
   let g:airline#extensions#tabline#exclude_preview = 1
-  let g:airline#extensions#tabline#exclude_buffers = ['tagbar', 'gundo', 'vimfiler', 'nerdtree', 'tagbar', 'startify']
+  let g:airline#extensions#tabline#formatter = 'unique_tail'
+  let g:airline#extensions#tabline#fnamemod = ':p:.'
+  let g:airline#extensions#tabline#fnamecollapse = 1
 
-  let g:airline#extensions#bufferline#enabled = 1
-  let g:airline#extensions#bufferline#overwrite_variables = 1
+  if exists('g:tab_mode')
+    let g:airline#extensions#tabline#show_tabs = 1
+    let g:airline#extensions#tabline#show_buffers = 0
+    let g:airline#extensions#tabline#show_tab_nr = 1
+    let g:airline#extensions#tabline#tab_nr_type = 2
+    let g:airline#extensions#bufferline#enabled = 0
+    autocmd BufDelete * call airline#extensions#tabline#buflist#invalidate()
+  else
+    let g:airline#extensions#tabline#show_tabs = 0
+    let g:airline#extensions#tabline#show_buffers = 1
+    let g:airline#extensions#tabline#buffer_nr_show = 1
+    let g:airline#extensions#bufferline#enabled = 1
+    let g:airline#extensions#bufferline#overwrite_variables = 1
+  endif
 
   let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
   let g:airline#extensions#quickfix#location_text = 'Location'

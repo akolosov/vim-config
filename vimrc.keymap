@@ -20,9 +20,13 @@ if !exists('g:hardcore_mode')
 	vmap <S-F2> :<C-U>w<SPACE><C-R>=expand("%:p")<CR>
 	nmap  <S-F2> :w<SPACE><C-R>=expand("%:p")<CR>
 
-	" Delete line
-	noremap  <C-y>  dd
-	inoremap <C-y>  <C-o>dd
+	" Delete line without yank
+	noremap  <C-y>  "_dd
+	inoremap <C-y>  <C-o>"_dd
+
+	" Delete char without yank
+	nnoremap <Del> "_x
+	inoremap <Del> <C-o>"_x
 
 	" Delete line to EOL
 	map  <C-l>  d$
@@ -35,8 +39,7 @@ if !exists('g:hardcore_mode')
 	" Toggle readonly mode
 	map <silent> <F4> <Esc>:call ToggleReadonly()<CR>
 
-	" F5 - Open the selected region in a new narrowed window
-	noremap <silent> <F5> :NR<CR>
+	vnoremap <silent> <F5> :sort<CR>
 
 	" Open definition in new tab
 	map <C-b> <C-w>gf
@@ -148,22 +151,27 @@ imap <S-F6> <C-o>:LList<CR>
 
 
 if exists('g:tools_search')
-	nmap <leader>sz :FZF <C-R>=expand("%:p:h")<CR>
-	nmap <S-F7> :FZF <C-R>=expand("%:p:h")<CR>
-	imap <S-F7> <C-o>:FZF <C-R>=expand("%:p:h")<CR>
-	nmap <F7> :Ag ""<Left>
-	imap <F7> <C-o>:Ag ""<Left>
-	vmap <F7> y:Ag "<C-R>+"<SPACE>"<C-R>=expand("%:p:h")<CR>"
+	if exists('g:tools_search_fzf')
+		nmap <leader>sz :FZF <C-R>=expand("%:p:h")<CR>
+		nmap <S-F7> :FZF <C-R>=expand("%:p:h")<CR>
+		imap <S-F7> <C-o>:FZF <C-R>=expand("%:p:h")<CR>
+	end
+	if exists('g:tools_search_ag')
+		nmap <F7> :Ag ""<Left>
+		imap <F7> <C-o>:Ag ""<Left>
+		vmap <F7> y:Ag "<C-R>+"<SPACE>"<C-R>=expand("%:p:h")<CR>"
+		" Open the Ag command and place the cursor into the quotes
+		nmap <Leader>sa :Ag ""<Left>
+		nmap <Leader>saf :AgFile ""<Left>
+	endif
+	if exists('g:tools_search_flygrep')
+		nnoremap <Leader>s/ :FlyGrep<CR>
+		vnoremap <Leader>s/ y:FlyGrep<CR><C-R>+
+	endif
+
 	nmap <F8> :%s///<Left><Left>
 	imap <F8> <C-o>:%s///<Left><Left>
 	vmap <F8> y:%s/<C-R>+//<Left>
-
-	" Open the Ag command and place the cursor into the quotes
-	nmap <Leader>sa :Ag ""<Left>
-	nmap <Leader>saf :AgFile ""<Left>
-
-	nnoremap <Leader>s/ :FlyGrep<CR>
-	vnoremap <Leader>s/ y:FlyGrep<CR><C-R>+
 endif
 
 if exists('g:tools_commenter')
@@ -246,15 +254,15 @@ nnoremap <silent> <Leader>f<Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Leader>f<Space> zf
 
 if exists('g:tab_mode')
-    nnoremap <silent> <D-]>  gt
-    nnoremap <silent> <D-[>  gT
-    vnoremap <silent> <D-]>  gt
-    vnoremap <silent> <D-[>  gT
+    noremap <silent> <D-]>  gt
+    noremap <silent> <D-[>  gT
+    inoremap <silent> <D-]>  <C-o>gt
+    inoremap <silent> <D-[>  <C-o>gT
 else
-    nnoremap <silent> <D-]>  :bn<CR>
-    nnoremap <silent> <D-[>  :bp<CR>
-    vnoremap <silent> <D-]>  :bn<CR>
-    vnoremap <silent> <D-[>  :bp<CR>
+    noremap <silent> <D-]>  :bn<CR>
+    inoremap <silent> <D-]> <C-o>:bn<CR>
+    noremap <silent> <D-[>  :bp<CR>
+    inoremap <silent> <D-[> <C-o>:bp<CR>
 endif
 
 if exists('g:tools_ctrlp')
@@ -356,7 +364,7 @@ nnoremap <Leader>gfw :sp +e <cfile><CR>
 nnoremap <Leader>gft :tabe <cfile><CR>
 
 " Open changed files in current repository
-nnoremap <Leader>ocf :OpenChangedFiles<CR>
+nnoremap <silent> <Leader>ocf :OpenChangedFiles<CR>
 " CtrlP filemanager
 nnoremap <Leader>o :CtrlP<CR>
 
@@ -429,13 +437,15 @@ nnoremap <Leader>. '.
 nnoremap '' <c-^>
 
 " Set working directory
-nnoremap <silent> <leader>cd :lcd %:p:h<CR>
+nnoremap <silent> <leader>cd :cd! %:p:h<CR>
 
-" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+if exists('g:tab_mode')
+	" Opens a tab edit command with the path of the currently edited file filled
+	noremap <Leader>ee :tabe <C-R>=expand("%:p:h") . "/" <CR>
+else
+	" Opens an edit command with the path of the currently edited file filled in
+	noremap <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
+endif
 
 " <Leader>qc to toggle quickfix window (where you have stuff like Ag)
 " <Leader>qo to open it back up (rare)
@@ -528,12 +538,12 @@ nmap <silent> <leader>f9 :set foldlevel=9<CR>:set foldcolumn=9<CR>
 
 " Git
 if exists("g:tools_git")
-	nnoremap <leader>gs  :Gstatus<CR>
-	nnoremap <leader>gd  :Gvdiff<CR>
-	nnoremap <leader>ga  :Git add %<CR>
-	nnoremap <leader>gu  :Git add .<CR>
-	nnoremap <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
-	nnoremap <Leader>gb  :Gblame<CR>
+	nnoremap <silent> <leader>gs  :Gstatus<CR>
+	nnoremap <silent> <leader>gd  :Gvdiff<CR>
+	nnoremap <silent> <leader>ga  :Git add %<CR>
+	nnoremap <silent> <leader>gA  :Git add .<CR>
+	nnoremap <silent> <leader>g?  :Git add <C-R>=expand("%:p:h") . "/"<CR>
+	nnoremap <silent> <Leader>gb  :Gblame<CR>
 endif
 
 
@@ -563,9 +573,21 @@ if exists('g:apperances_startscreen')
 	map <silent> <Leader>bh :Startify<CR>
 endif
 
+if exists('g:tab_mode')
+	map <silent> gf <C-w>gf
+	map <silent> gF <C-w>gF
+endif
+
 nmap <silent> <D-0> :CtrlPBuffer<CR>
 imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
 map <silent> <leader>bq :bp <BAR> bd #<CR>
 map <silent> <leader>bd :bd<CR>
 map <silent> <Leader>bp :bp<CR>
 map <silent> <Leader>bn :bn<CR>
+
+" Undo/Redo
+nnoremap <D-z> u
+inoremap <D-z> <C-o>u
+nnoremap <D-S-z> <C-r>
+inoremap <D-S-z> <C-o><C-r>
+

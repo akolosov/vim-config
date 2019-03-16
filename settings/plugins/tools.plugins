@@ -35,9 +35,18 @@ if BundleExists('tools', 'git')
 endif
 
 if BundleExists('tools', 'search')
-	Plug 'wsdjeg/FlyGrep.vim'
-	Plug 'rking/ag.vim'
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+	if BundleExists('tools', 'search/flygrep')
+		Plug 'wsdjeg/FlyGrep.vim'
+		let g:tools_search_flygrep = 1
+	endif
+	if BundleExists('tools', 'search/ag')
+		Plug 'rking/ag.vim'
+		let g:tools_search_ag = 1
+	endif
+	if BundleExists('tools', 'search/fzf')
+		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+		let g:tools_search_fzf = 1
+	end
 
 	let g:tools_search = 1
 endif

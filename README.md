@@ -156,7 +156,7 @@ Shortcuts
 | `<Leader>gs` | git status | **\[n]** |
 | `<Leader>gd` | git diff | **\[n]** |
 | `<Leader>ga` | git add %currentfile% | **\[n]** |
-| `<Leader>gu` | git add all untracked files | **\[n]** |
+| `<Leader>gA` | git add all untracked files | **\[n]** |
 | `<Leader>g?` | git add user input files | **\[n]** |
 | `<Leader>gb` | git blame | **\[n]** |
 | `<Leader>ag` | Search in files, using ag | **\[n]** |
@@ -167,3 +167,4 @@ Shortcuts
 | `<Leader>t,` | Align on commas | **\[n v]** |
 | `<Leader>t<pipe>` | Align on vertical bars/pipes | **\[n v]** |
 | `<Leader>tsp` | Align on whitespace | **\[n v]** |
+

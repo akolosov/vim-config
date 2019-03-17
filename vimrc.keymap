@@ -578,8 +578,11 @@ if exists('g:tab_mode')
 	map <silent> gF <C-w>gF
 endif
 
-nmap <silent> <D-0> :CtrlPBuffer<CR>
-imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
+if exists('g:tools_ctrlp')
+	nmap <silent> <D-0> :CtrlPBuffer<CR>
+	imap <silent> <D-0> <C-o>:CtrlPBuffer<CR>
+endif
+
 map <silent> <leader>bq :bp <BAR> bd #<CR>
 map <silent> <leader>bd :bd<CR>
 map <silent> <Leader>bp :bp<CR>

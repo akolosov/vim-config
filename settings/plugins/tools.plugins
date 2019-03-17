@@ -36,7 +36,7 @@ endif
 
 if BundleExists('tools', 'search')
 	if BundleExists('tools', 'search/flygrep')
-		Plug 'wsdjeg/FlyGrep.vim'
+		Plug 'akolosov/FlyGrep.vim'
 		let g:tools_search_flygrep = 1
 	endif
 	if BundleExists('tools', 'search/ag')

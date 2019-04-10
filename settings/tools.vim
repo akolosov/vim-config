@@ -13,11 +13,18 @@ if exists("g:tools_nerdtree")
 
   autocmd BufRead,BufWinEnter,WinEnter,BufEnter NERD_tree_\d\+ setlocal nolist
 
+  if exists('g:tab_mode')
+    let NERDTreeMapOpenInTab='<ENTER>'
+  endif
+
   " Make nerdtree look nice
   let NERDTreeMinimalUI = 1
   let NERDTreeDirArrows = 1
   let g:NERDTreeWinSize = 30
   let NERDTreeIgnore=['tags']
+
+  let NERDTreeQuitOnOpen = 1
+  let NERDTreeAutoDeleteBuffer = 1
 
   let g:NERDTreeIndicatorMapCustom = {
       \ "Modified"  : "✹",

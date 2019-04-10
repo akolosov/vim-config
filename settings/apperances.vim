@@ -30,7 +30,8 @@ if exists("g:apperances_lightline")
         \ }
 
 
-  let g:lightline.mode_map = {
+  if exists('g:new_mode_indicators')
+    let g:lightline.mode_map = {
         \ '__' : '-',
         \ 'n'  : 'η',
         \ 'i'  : 'λ',
@@ -42,6 +43,7 @@ if exists("g:apperances_lightline")
         \ 's'  : 'ω',
         \ 'S'  : 'Ω',
         \ '' : '^Ω' }
+  endif
 
   function! MyModified()
     return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -169,7 +171,8 @@ if exists("g:apperances_airline")
     let g:airline_right_alt_sep = ''
   endif
 
-  let g:airline_mode_map = {
+  if exists('g:new_mode_indicators')
+    let g:airline_mode_map = {
         \ '__' : '-',
         \ 'n'  : 'η',
         \ 'i'  : 'λ',
@@ -181,6 +184,7 @@ if exists("g:apperances_airline")
         \ 's'  : 'ω',
         \ 'S'  : 'Ω',
         \ '' : '^Ω' }
+  endif
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}

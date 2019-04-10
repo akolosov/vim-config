@@ -80,7 +80,10 @@ if BundleExists('tools', 'nerdtree')
 	Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
 	Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
 	Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
-
+	if exists('g:tab_mode')
+	    Plug 'Nopik/vim-nerdtree-direnter', { 'on':  ['NERDTreeToggle', 'NERDTreeFind', 'NERDTree', 'NERDTreeShow'] }
+	endif
+	
 	let g:tools_nerdtree = 1
 endif
 

@@ -576,6 +576,8 @@ endif
 if exists('g:tab_mode')
 	map <silent> gf <C-w>gf
 	map <silent> gF <C-w>gF
+	map <D-A-Down> <C-w>gf
+	map <D-A-S-Down> <C-w>gF
 endif
 
 if exists('g:tools_ctrlp')

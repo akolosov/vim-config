@@ -94,7 +94,7 @@ Shortcuts
 | `\\` | Comment/Uncomment current line or selection | **\[n v]** |
 | `<Leader>g` | Show/Hide TagBar (if plugin loaded) | **\[n]** |
 | `<Leader>zz` | Show/Hide UndoTree (if plugin loaded) | **\[n]** |
-| `<Leader>zf` | Fuzzy file finder (if plugin loaded) | **\[n]** |
+| `<Leader>sz` | Fuzzy file finder (if plugin loaded) | **\[n]** |
 | `<Leader>gf` | Open file with filename under cursor, create new if not exists | **\[n]** |
 | `<Leader>gfw` | Open file in windows with filename under cursor, create new if not exists | **\[n]** |
 | `<Leader>gft` | Open file in tab with filename under cursor, create new if not exists | **\[n]** |

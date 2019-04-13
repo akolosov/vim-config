@@ -20,11 +20,11 @@ if exists("g:tools_nerdtree")
   " Make nerdtree look nice
   let NERDTreeMinimalUI = 1
   let NERDTreeDirArrows = 1
-  let g:NERDTreeWinSize = 40
+  let g:NERDTreeWinSize = 45
   let NERDTreeIgnore=['tags']
 
-  let NERDTreeQuitOnOpen = 1
-  let NERDTreeAutoDeleteBuffer = 1
+  let NERDTreeQuitOnOpen = 0
+  let NERDTreeAutoDeleteBuffer = 0
 
   let g:NERDTreeIndicatorMapCustom = {
       \ "Modified"  : "✹",
